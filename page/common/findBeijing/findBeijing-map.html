@@ -1,0 +1,290 @@
+ <!DOCTYPE html>
+  <html lang="en">
+   <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>发现北京</title>
+
+   <!-- Bootstrap -->
+     <link href="static/css/bootstrap.min.css" rel="stylesheet">
+     <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+
+   <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+   <![endif]-->
+  
+     <link href="static/css/defined.css" rel="stylesheet"> 
+     <style type="text/css">
+      .pengh{position:absolute;left:44px;top:252px; z-index:11;}
+     </style>
+
+<script>
+$(document).ready(function(){
+  $('.shunyi').bind('mouseover',function(){
+    $('#shunyi').show();
+  });
+   $('.shunyi').bind('mouseout',function(){
+    $('#shunyi').hide();
+  });
+  
+});
+</script>
+   </head>
+
+  <body>
+ <!--# include file="/common/top.html"  -->
+
+    <div>
+    <img src="images/themeimage4.jpg" class="header_image">
+    </div>
+
+  <div class="container">
+
+    <ol class="breadcrumb">
+      <li><a href="#">首页</a></li>
+      <li class="active">发现北京</li>
+    </ol>
+   
+    <div class="row">
+      <div class="col-xs-12 col-sm-7 col-md-7 beijingmap">
+        <!-- <img id="map_bg" usemap="#Map" src="images/beijing-map.png" style="display: block;" class="img-responsive"> <h2 class="find_beijing_title">北京</h2>
+          -->
+          <style type="text/css">
+         .miyun{margin-left: 63%;margin-top: -142%;} 
+          </style>
+         <img id="map_bg" src="images/beijing-map.png" width="685" height="677" usemap="#Map" border="0"  style="display: block;"/>
+        
+         <map name="Map" id="Map">
+            <area shape="poly" coords="507,230,487,347,545,296,564,290,595,271,582,242,592,234,622,213,645,193,665,180,628,186,604,185,575,176,554,173,520,170,507,161,491,141,476,141,461,150,461,165,441,172,434,191,429,196,427,214,426,227,428,243,425,247,429,259,433,268,430,282,431,292,441,304,447,313,446,326,467,316,473,324,479,339,486,348,486,348" href="#" onmouseover="show_map('miyun')" />
+
+            <area shape="poly" coords="404,204,404,335,370,329,349,319,335,304,318,297,300,280,301,268,376,213,391,199,377,179,364,172,373,158,366,140,349,112,353,96,361,88,359,66,374,64,384,61,395,64,408,50,409,34,422,41,422,73,432,86,436,95,439,101,453,104,466,116,471,120,474,126,421,205,408,218,410,230,415,247,426,288,432,310,434,327,426,330,420,334,419,334,413,333,412,330,408,330" href="#" onmouseover="show_map('huairou')"/>
+  
+            <area shape="poly" coords="256,230,200,304,231,299,265,288,288,270,300,243,358,217,371,188,355,171,349,143,312,142,289,140,255,179,230,202,206,213,172,205,147,218,131,236,138,254,157,272,170,286,182,297,194,312" href="#" onmouseover="show_map('yanqin')" />
+  
+            <area shape="poly" coords="285,343,306,296,271,294,242,312,201,329,179,350,165,368,187,387,204,398,274,375,293,396,340,402,350,365,345,327,312,305,307,303" href="#" onmouseover="show_map('changping')">
+   
+            <area shape="poly" coords="433,379,414,428,438,424,473,417,505,411,505,387,494,365,481,349,459,333,431,338,416,346,376,337,355,348,355,371,363,392,375,409,390,423,412,427" href="#" onmouseover="show_map('shunyi')">
+  
+            <area shape="poly" coords="565,355,546,409,588,395,619,380,634,361,618,339,604,323,588,295,559,302,528,317,515,340,503,360,515,391,516,416,543,410" href="#" onmouseover="show_map('pinggu')">
+  
+            <area shape="poly" coords="434,518,479,502,464,492,446,477,438,435,424,435,411,434,407,460,403,480,393,504,373,507,376,527,374,545,417,552,437,580,452,585,467,567,478,556,486,530,496,514,480,501" href="#" onmouseover="show_map('tongzhou')">
+    
+            <area shape="poly" coords="312,456,309,504,331,507,352,499,377,494,398,477,399,451,396,435,362,410,329,419,307,413,264,383,244,391,225,404,249,429,242,446,249,467,236,485,232,504,247,511,277,501,292,513,307,502" href="#" onmouseover="show_map('zhongxin')">
+   
+            <area shape="poly" coords="136,422,139,368,131,376,117,385,91,389,61,405,38,416,26,444,40,457,51,474,63,498,129,456,155,464,174,459,212,484,235,477,232,456,236,433,226,421,212,408,185,404,165,384,148,377,138,367" href="#" onmouseover="show_map('mentougou')">
+   
+            <area shape="poly" coords="144,531,134,609,166,595,175,582,199,584,240,596,261,588,264,570,269,548,271,531,255,523,225,510,220,496,192,493,180,479,160,468,138,469,120,468,106,481,90,489,73,501,61,512,30,514,36,531,43,546,46,562,52,578,76,578,99,579,111,603,126,610,135,614" href="#" onmouseover="show_map('fangshan')">
+  
+            <area shape="poly" coords="321,563,330,614,361,595,386,575,422,573,405,559,380,551,363,547,363,530,365,509,346,513,335,519,321,525,309,517,297,523,282,519,280,537,275,550,272,578,274,599,280,621,297,629,309,636,330,641" href="#" onmouseover="show_map('daxing')">
+         </map>
+
+         <a href="#" target="_blank" class="" >
+           <img class="miyun" src="images/miyun.png" style="display: none;">
+         </a>
+
+         <a href="#" target="_blank" class="city_active">
+           <img class="huairou" src="" style="display: none;">
+         </a>
+
+         <a href="#" target="_blank" class="city_active">
+           <img class="yanqin" src="" style="display: none;">
+         </a>
+
+         <a href="#" target="_blank" class="city_active">
+           <img class="changping" src="" style="display: none;">
+         </a>
+
+         <a href="#" target="_blank" class="city_active">
+           <img class="shunyi" src="" style="display: none;">
+         </a>
+
+         <a href="#" target="_blank" class="city_active">
+           <img class="pinggu" src="" style="display: none;">
+         </a>
+
+         <a href="#" target="_blank" class="city_active">
+           <img class="tongzhou" src="" style="display: none;">
+         </a>
+
+         <a href="#" target="_blank" class="city_active">
+           <img class="zhongxin" src="" style="display: none;">
+         </a>
+
+         <a href="#" target="_blank" class="city_active">
+           <img class="mentougou" src="" style="display: none;">
+         </a>
+
+         <a href="#" target="_blank" class="city_active">
+           <img class="fangshan" src="" style="display: none;">
+         </a>
+
+         <a href="#" target="_blank" class="city_active">
+           <img class="daxing" src="" style="display: none;">
+         </a>
+
+
+      </div>
+
+      <div class="col-xs-12 col-sm-5 col-md-5">
+         <div class="col-xs-12 col-sm-12 col-md-12">
+              <h4 class="spot_search_text">北京地点搜索</h4>
+
+              <form class="navbar-form navbar-left" role="search" action="http://www.go2tw.cn/findtw/search">
+              <div class="col-xs-8 col-sm-8 col-md-8">
+                <input type="text" class="form-control" name="n" placeholder="请输入您想要去的地点">
+              </div>
+              <div class="col-xs-4 col-sm-4 col-md-4">
+              <button type="submit" class="btn btn-default">搜索</button>
+              </div>
+              </form>
+         </div>
+
+
+           <div class="col-xs-12 col-sm-12 col-md-12">
+              <h4 class="spot_search_text">按县市查看</h4>
+           </div>
+           <div class="col-xs-12 col-sm-12 col-md-12 filter_body">
+                  
+                  <ul class="city" style="">
+                       <div class="col-xs-3 col-sm-3 col-md-3 ">                       
+                        <li name="miyun"> <a href="#" target="_blank" class="" _hover-ignore="1">密云县</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">怀柔县</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">延庆县</a></li>
+                        
+                       </div>
+
+                       <div class="col-xs-3 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">昌平区</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">顺义区</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">平谷区</a></li>
+                       </div>
+
+                       <div class="col-xs-3 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">通州区</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">中心区</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">门头沟</a></li>
+                       </div>
+
+                       <div class="col-xs-3 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">房山区</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">大兴区</a></li>
+                       </div>
+                  </ul>
+                    
+            <!--  <ul class="city" style="list-style:none;">
+                <li name="miyun"><a href="#" target="_blank" class="" _hover-ignore="1">密云县</a></li>
+                <li name="huairou"><a href="#" target="_blank" class="" _hover-ignore="1">怀柔县</a></li>
+                <li name="yanqin"><a href="#" target="_blank" class="" _hover-ignore="1">延庆县</a></li>
+                <li name="changping"><a href="#" target="_blank" class="" _hover-ignore="1">昌平区</a></li>
+                <li name="shunyi"><a href="#" target="_blank" class="">顺义区</a></li>
+                <li name="pinggu"><a href="#" target="_blank" class="" _hover-ignore="1">平谷区</a></li>
+                <li name="tongzhou"><a href="#" target="_blank" class="">通州区</a></li>
+                <li name="zhongxin"><a href="#" target="_blank" class="">中心区</a></li>
+                <li name="mentougou"><a href="#" target="_blank" class="">门头沟区</a></li>
+                <li name="fangshan"><a href="#" target="_blank" class="">房山区</a></li>
+                <li name="daxing"><a href="#" target="_blank" class="">大兴区</a></li>      
+              </ul> -->
+           </div>
+           
+           <div class="col-xs-12 col-sm-12 col-md-12">
+              <h4 class="spot_search_text">热门推荐</h4>
+           </div>
+           <div class="col-xs-12 col-sm-12 col-md-12 spot_search_text">
+
+               <p><a><strong>露营：</strong></a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+               </p>
+
+               <p><a><strong>露营：</strong></a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+               </p>
+
+               <p><a><strong>露营：</strong></a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+               </p>
+               
+
+           </div>
+      </div>
+    </div>
+  </div>
+
+ <!--# include file="/common/footer.html"  -->
+  <script src="js/jquery-1.11.3.js"></script> 
+  <script src="js/bootstrap.min.js"></script>
+   <script>
+ $(function(){
+  $('[data-toggle="popover"]').popover({ html: "true",
+  });
+});
+
+  $(function () {
+            //判断是否宽屏
+            var winWide =$(window).width() ;
+            
+            var wideScreen = false;
+            if (winWide <= 768) {//768及以下分辨率
+                $("#collapseOne").attr("class", "collapse row filter_body ");
+                $("#collapseTwo").attr("class", "collapse row filter_body ");
+                $("#collapseThree").attr("class", "collapse row filter_body ");
+                $("#collapseFour").attr("class", "collapse row filter_body ");
+                $("#find_tour_theme").attr("class", "collapse row filter_body ");
+                $("#find_tour_partner").attr("class", "collapse row filter_body ");
+                $("#find_tour_time").attr("class", "collapse row filter_body ");
+            } else {
+                $("#collapseOne").attr("class", "collapse in row filter_body ");
+                $("#collapseTwo").attr("class", "collapse in row filter_body ");
+                $("#collapseThree").attr("class", "collapse in row filter_body ");
+                $("#collapseFour").attr("class", "collapse in row filter_body ");
+                $("#find_tour_theme").attr("class", "collapse in row filter_body ");
+                $("#find_tour_partner").attr("class", "collapse in row filter_body ");
+                $("#find_tour_time").attr("class", "collapse in row filter_body ");
+                wideScreen = true; //是宽屏
+            }
+})
+</script>
+
+         <script type="text/javascript">
+             $(document).ready(function(){
+             $('.miyun').show();
+             var imgs=$('.beijingmap').find('img');
+             var citys=$('.city li');
+             citys.mouseover(function(){
+             citys.find('a').removeClass('city_active');
+             $(this).find('a').addClass('city_active');
+             imgs.hide();
+             imgs.eq(0).show();
+             $('.'+$(this).attr('name')).show();<!--鼠标移到右边的城市上，对应的左边的城市小图显示 -->
+               });
+             });
+ 
+             function show_map(str)
+             {
+               var imgs=$('.beijingmap').find('img');
+               var citys=$('.city li');
+               var city_len=citys.length;
+               imgs.hide();
+               imgs.eq(0).show();
+               $('.'+str).show();
+               for(var i=0;i<city_len;i++){
+               if(citys.eq(i).attr('name')==str){
+               citys.find('a').removeClass('city_active');
+               citys.eq(i).find('a').addClass('city_active');
+                  }
+                 }
+
+              }
+
+         </script>
+
+  </body>
+
+</html>

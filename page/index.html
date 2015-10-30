@@ -1,21 +1,604 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Welcome to nginx!</title>
-<!--# include file="/common/include.html"  -->
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
-</head>
-<body>
+ <!DOCTYPE html>
+  <html lang="en">
+   <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>发现北京</title>
+
+   <!-- Bootstrap -->
+     <link href="static/css/bootstrap.min.css" rel="stylesheet">
+     <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="static/css/error.css">
+
+   <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+   <![endif]-->
+  
+     <link href="static/css/defined.css" rel="stylesheet"> 
+   </head>
+
+  <body>
+    
+    <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">x</button>
+              <h2 class="text-center text-primary">登录周游趣</h2>
+              <h3 class="text-center text-primary">带你玩转周末</h3>
+            </div>
+            <div class="modal-body">
+              <form action="" id="login-form" class="form col-md-12 center-block">
+               
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" name="login" id="login" class="form-control input-lg myClass" placeholder="请输入用户名/邮箱/手机号" />
+                    
+                  </div>
+                   <div class="h_10"></div> 
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type="password"  class="form-control input-lg" placeholder="请输入6-18位数字、字母或常用符号" />
+                    
+                  </div>
+                  <div class="h_10"></div> 
+                </div>
+                
+                <div class="form-group">
+                  <button class="btn btn-primary btn-lg btn-block">立刻登录</button>
+                  <div style="height:10px;"></div>
+                  <input type="checkbox">记住密码
+                  <span><a href="#" class="pull-right" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">还没有账号？立即注册</a></span>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div id="registerModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">x</button>
+            <h2 class="text-center text-primary">注册周游趣</h2>
+            <h3 class="text-center text-primary">带你玩转周末</h3>
+          </div>
+          <div class="modal-body">
+            <form action="" id="register-form" class="form center-block">
+             
+              <div class="form-group div-phone">
+               <div class="input-group">
+                  <a class="input-group-addon"><i class="fa fa-user"></i></a>
+                  <input type="text" name="phone" id="phone" class="form-control input-lg" placeholder="请输入11位手机号码" />
+                  <span class="input-group-addon send1" onclick="sends.send();">发送验证码</span>
+                </div>
+               <div class="h_10"></div> 
+              </div>
+             
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-flickr"></i></span>
+                  <input type="text" name="code_number" id="code_number" class="form-control input-lg" placeholder="请输入验证码"/>
+                </div>
+                <div class="h_10"></div>
+              </div>
+             
+              
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                  <input  type="password" name="password" id="password" class="form-control input-lg" maxlength="12" placeholder="请输入6-12位数字、字母或常用符号" />
+                  <span id="level" class="input-group-addon"></span>
+                </div>
+                <div class="h_10"></div> 
+              </div>
+              
+              
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                  <input type="password" name="confirm-password" id="confirm-password" class="form-control input-lg" placeholder="请再次输入密码" />
+                </div>
+                <div class="h_10"></div> 
+              </div>
+              
+              
+              <p style="text-align:center">注册视为同意<a href="#" class="r-service-protocol" target="_blank">《周游趣服务条款》</a></p>
+              
+              <div class="form-group">
+                <button class="btn btn-primary btn-lg btn-block">立刻注册</button>
+                <div style="height:10px;"></div>
+                
+                <span><a href="#" class="pull-right" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">已有账号？立即登录</a></span>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            
+          </div>
+        </div>
+      </div>
+    </div>
 <!--# include file="/common/top.html"  -->
+    <div>
+    <img src="static/images/themeimage4.jpg" class="header_image">
+    </div>
 
-<h1>this is index page.</h1>
+    <div class="container">
 
-<!--#include file="common/footer.html"-->
-</body>
+    <ol class="breadcrumb">
+      <li><a href="#">首页</a></li>
+      <li><a href="#">发现北京</a></li>
+      <li class="active">门头沟区</li>
+    </ol>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-6">
+          <div class="panel-group panel-group_defined filter_height">
+             <div class="filter1_title in_center" data-toggle="collapse" data-target="#find_tour_theme">
+               <h4><i class="fa fa-coffee"></i>&nbsp;游玩主题</h4>
+             </div>
+             <div class="row filter_body" id="find_tour_theme">
+                       <div class="col-xs-3 col-sm-3 col-md-3 ">
+                         <a href="javascript:;" val="1">露营</a>
+                         <a href="javascript:;" val="1">骑行</a>
+                         <a href="javascript:;" val="1">烧烤</a>
+                       </div>
+
+                       <div class="col-xs-3 col-sm-3 col-md-3">
+                         <a href="javascript:;" val="1">骑行</a>
+                         <a href="javascript:;" val="1">滑雪</a>
+                         <a href="javascript:;" val="1">烧烤</a>
+                       </div>
+
+                       <div class="col-xs-3 col-sm-3 col-md-3">
+                         <a href="javascript:;" val="1">骑行</a>
+                         <a href="javascript:;" val="1">滑雪</a>
+                         <a href="javascript:;" val="1">烧烤</a>
+                       </div>
+
+                       <div class="col-xs-3 col-sm-3 col-md-3">
+                         <a href="javascript:;" val="1">骑行</a>
+                         <a href="javascript:;" val="1">滑雪</a>
+                         <a href="javascript:;" val="1">烧烤</a>
+                       </div>
+             </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class="panel-group panel-group_defined filter_height">
+             <div class="filter2_title in_center" data-toggle="collapse" data-target="#find_tour_partner">
+               <h4><i class="fa fa-group"></i>&nbsp;游玩同伴</h4>
+             </div>
+             <div class="row filter_body collapse in" id="find_tour_partner">
+                       <div class="col-xs-6 col-sm-6 col-md-6 ">
+                         <a href="javascript:;" val="1">老人</a>
+                         <a href="javascript:;" val="1">小孩</a>
+                         <a href="javascript:;" val="1">同学</a>
+                       </div>
+
+                       <div class="col-xs-6 col-sm-6 col-md-6">
+                         <a href="javascript:;" val="1">同事</a>
+                         <a href="javascript:;" val="1">朋友</a>
+                         <a href="javascript:;" val="1">朋友</a>
+                       </div>
+
+             </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <div class="panel-group panel-group_defined filter_height">
+             <div class="filter3_title in_center" data-toggle="collapse" data-target="#find_tour_time">
+               <h4><i class="fa fa-suitcase"></i>&nbsp;出游时间</h4>
+             </div>
+             <div class="row filter_body collapse in" id="find_tour_time">
+                       <div class="col-xs-6 col-sm-6 col-md-6 ">
+                         <a href="javascript:;" val="1">当季</a>
+                         <a href="javascript:;" val="1">春</a>
+                       </div>
+
+                       <div class="col-xs-6 col-sm-6 col-md-6">
+                         <a href="javascript:;" val="1">夏</a>
+                         <a href="javascript:;" val="1">秋</a>
+                       </div>
+
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img src="static/images/adimage.jpg" class="ad_image">
+      </div>
+
+       <div class="row images_list">
+         <div class="col-xs-12 col-sm-6 col-md-3">
+           <div class="inner">
+             <div>
+               <img src="static/images/findbeijing2.png" class="img-responsive">
+             </div>
+
+             <div class="spot_description">
+               <div class="row">
+                 <div class="col-md-12">
+                   <p class="find_title">水峪村</p>
+                   <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
+                 </div>
+               </div>  
+             </div>
+      
+           </div>
+         </div>
+
+         <div class="col-xs-12 col-sm-6 col-md-3">
+           <div class="inner">
+             <div>
+               <img src="static/images/findbeijing2.png" class="img-responsive">
+             </div>
+
+             <div class="spot_description">
+               <div class="row">
+                 <div class="col-md-12">
+                   <p class="find_title">水峪村</p>
+                   <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
+                 </div>
+               </div>  
+             </div>
+      
+           </div>
+         </div>
+
+         <div class="col-xs-12 col-sm-6 col-md-3">
+           <div class="inner">
+             <div>
+               <img src="static/images/findbeijing2.png" class="img-responsive">
+             </div>
+
+             <div class="spot_description">
+               <div class="row">
+                 <div class="col-md-12">
+                   <p class="find_title">水峪村</p>
+                   <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
+                 </div>
+               </div>  
+             </div>
+      
+           </div>
+         </div>
+
+         <div class="col-xs-12 col-sm-6 col-md-3">
+           <div class="inner">
+             <div>
+               <img src="static/images/findbeijing2.png" class="img-responsive">
+             </div>
+
+             <div class="spot_description">
+               <div class="row">
+                 <div class="col-md-12">
+                   <p class="find_title">水峪村</p>
+                   <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
+                 </div>
+               </div>  
+             </div>
+      
+           </div>
+         </div>
+       </div>
+ 
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <hr style="border: none;border-top: 2px dashed rgba(0, 102, 204, 0.16);margin: 0px;margin-bottom: 20px;" /> 
+        </div>
+
+       <div class="row images_list">
+         <div class="col-xs-12 col-sm-6 col-md-3">
+           <div class="inner">
+             <div>
+               <img src="static/images/findbeijing2.png" class="img-responsive">
+             </div>
+
+             <div class="spot_description">
+               <div class="row">
+                 <div class="col-md-12">
+                   <p class="find_title">水峪村</p>
+                   <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
+                 </div>
+               </div>  
+             </div>
+      
+           </div>
+         </div>
+
+         <div class="col-xs-12 col-sm-6 col-md-3">
+           <div class="inner">
+             <div>
+               <img src="static/images/findbeijing2.png" class="img-responsive">
+             </div>
+
+             <div class="spot_description">
+               <div class="row">
+                 <div class="col-md-12">
+                   <p class="find_title">水峪村</p>
+                   <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
+                 </div>
+               </div>  
+             </div>
+      
+           </div>
+         </div>
+
+         <div class="col-xs-12 col-sm-6 col-md-3">
+           <div class="inner">
+             <div>
+               <img src="static/images/findbeijing2.png" class="img-responsive">
+             </div>
+
+             <div class="spot_description">
+               <div class="row">
+                 <div class="col-md-12">
+                   <p class="find_title">水峪村</p>
+                   <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
+                 </div>
+               </div>  
+             </div>
+      
+           </div>
+         </div>
+
+         <div class="col-xs-12 col-sm-6 col-md-3">
+           <div class="inner">
+             <div>
+               <img src="static/images/findbeijing2.png" class="img-responsive">
+             </div>
+
+             <div class="spot_description">
+               <div class="row">
+                 <div class="col-md-12">
+                   <p class="find_title">水峪村</p>
+                   <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
+                 </div>
+               </div>  
+             </div>
+      
+           </div>
+         </div>
+       </div>
+
+       <div class="col-xs-12 col-sm-12 col-md-12 all in_center">
+          <ul class="pagination">
+             <li><a href="#">&laquo;</a></li>
+             <li class="active"><a href="#">1</a></li>
+             <li><a href="#">2</a></li>
+             <li><a href="#">3</a></li>
+             <li><a href="#">4</a></li>
+             <li><a href="#">5</a></li>
+             <li><a href="#">&raquo;</a></li>
+          </ul>
+       </div>
+    </div>
+
+<!--# include file="/common/footer.html"  -->
+  <script src="static/js/jquery-1.11.3.js"></script> 
+  <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.validate.js"></script>
+     <script type="text/javascript"> 
+
+      /**密码强度检测**/
+      $(function(){ 
+        $('#password').keyup(function () { 
+          var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g"); 
+          var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g"); 
+          var enoughRegex = new RegExp("(?=.{6,}).*", "g"); 
+        
+          if (false == enoughRegex.test($(this).val())) { 
+            $("#level").html("密码过短");
+             
+             //密码小于六位的时候，密码强度图片都为灰色 
+          } 
+          else if (strongRegex.test($(this).val())) { 
+            
+            $('#level').html("强");
+             //密码为八位及以上并且字母数字特殊字符三项都包括,强度最强 
+          } 
+          else if (mediumRegex.test($(this).val())) { 
+            $("#level").html("中");
+           
+             //密码为七位及以上并且字母、数字、特殊字符三项中有两项，强度是中等 
+          } 
+          else { 
+            $("#level").html("弱");
+            
+             //如果密码为6为及以下，就算字母、数字、特殊字符三项都包括，强度也是弱的 
+          } 
+          return true; 
+        }); 
+      }) 
+      </script>
+
+      <script type="text/javascript">
+      /**手机号验证**/
+      jQuery.validator.addMethod("mobile", function (value, element) {
+          var mobile = /^1[3|4|5|7|8]\d{9}$/;
+        return this.optional(element) || (mobile.test(value));
+      }, "手机号码格式不正确");
+      /**登录名验证**/
+      jQuery.validator.addMethod("NameMobileEmail", function (value, element) {
+          var user =  /^[a-zA-Z]\w{5,17}$/;
+          var mobile1 = /^1[3|4|5|7|8]\d{9}$/;
+          var email1 =  /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+        return this.optional(element) || (mobile1.test(value)||(email1.test(value)||(user.test(value))));
+      }, "请输入正确的用户名/手机号/邮箱");
+
+      </script>
+     
+      <!--validate插件-->
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $("#login-form").validate({
+            debug:true,      //调试模式（并不会提交）
+            errorPlacement: function(error, element) {  
+                error.appendTo(element.parent().next());  
+            },
+            rules:{
+
+              password:{
+                required:true,
+                rangelength:[6,12]
+              },
+             
+              login:{
+                required:true,
+                NameMobileEmail:true
+              }
+            },
+            
+            //自定义提示
+            messages:{
+            
+              password:{
+                required:"请输入密码",
+                rangelength:"密码长度在6~12"
+              },
+              login:{
+                required:"不能为空"
+              }
+            }
+          });
+        $("#register-form").validate({
+          debug:true,      //调试模式（并不会提交）
+          errorPlacement: function(error, element) {  
+              error.appendTo(element.parent().next());  
+          },
+          rules:{
+
+            username:{                
+              required:true,        //开启必填项
+              rangelength:[2,12]    //请输入的数值在2至12位之间
+            },
+            number:{
+              required:true
+            },
+            email:{
+              required:true
+            },
+            password:{
+              required:true,
+              rangelength:[6,12]
+            },
+            url:{
+              required:true
+            },
+            date:{
+
+            },
+            "confirm-password":{
+              equalTo:"#password"     //必须密码相同
+            },
+            phone:{
+              mobile:true
+            },
+            code_number:{                
+              required:true,        //开启必填项
+              rangelength:[6,6],
+              number:true    //请输入的数值在2至12位之间
+            }
+          },
+          
+          //自定义提示
+          messages:{
+            username:{
+              required:"用户名不能留空",      //用户名的必填项提示
+              rangelength:"请检查您输入的数值的长度是否在2至10之间"    //用户名的长度提示
+            },
+            password:{
+              required:"密码不能为空",
+              rangelength:"密码长度在6~12"
+            },
+            "confirm-password":{
+              equalTo:"两次密码输入不一致"     //必须密码相同
+            },
+            code_number:{
+              required:"请输入验证码",
+              rangelength:"验证码长度为6位",
+              number:"请输入合法数字"
+            }
+          }
+        });
+          });
+      </script>
+  <!--发送验证码倒计时-->
+      <script type="text/javascript">
+
+            var sends = {
+              checked:1,
+              send:function(){
+                /**当手机号码输入正确时才能发送验证码，并且30秒后才能重发**/
+                if (($("#register-form").validate().element($("#phone")))&&(!($('#phone').val()==""))&&($('.div-phone span').html()=="发送验证码")) {
+                  var time = 30;
+                  function timeCountDown(){
+                    if(time==0){
+                      clearInterval(timer);
+                      $('.div-phone span').html("发送验证码");
+                      sends.checked = 1;
+                      return true;
+                    }
+                    $('.div-phone span').html(time+"S后再次发送");
+                    time--;
+                    return false;
+                    sends.checked = 0;
+                  }
+                  timeCountDown();
+                  var timer = setInterval(timeCountDown,1000);
+                }
+              }
+            };
+           
+      </script>
+
+
+   <script>
+ $(function(){
+  $('[data-toggle="popover"]').popover({ html: "true",
+  });
+});
+
+  $(function () {
+            //判断是否宽屏
+            var winWide =$(window).width() ;
+            
+            var wideScreen = false;
+            if (winWide <= 768) {//768及以下分辨率
+                $("#collapseOne").attr("class", "collapse row filter_body ");
+                $("#collapseTwo").attr("class", "collapse row filter_body ");
+                $("#collapseThree").attr("class", "collapse row filter_body ");
+                $("#collapseFour").attr("class", "collapse row filter_body ");
+                $("#find_tour_theme").attr("class", "collapse row filter_body ");
+                $("#find_tour_partner").attr("class", "collapse row filter_body ");
+                $("#find_tour_time").attr("class", "collapse row filter_body ");
+            } else {
+                $("#collapseOne").attr("class", "collapse in row filter_body ");
+                $("#collapseTwo").attr("class", "collapse in row filter_body ");
+                $("#collapseThree").attr("class", "collapse in row filter_body ");
+                $("#collapseFour").attr("class", "collapse in row filter_body ");
+                $("#find_tour_theme").attr("class", "collapse in row filter_body ");
+                $("#find_tour_partner").attr("class", "collapse in row filter_body ");
+                $("#find_tour_time").attr("class", "collapse in row filter_body ");
+                wideScreen = true; //是宽屏
+            }
+})
+</script>
+
+  </body>
+
 </html>
