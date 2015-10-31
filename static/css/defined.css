@@ -17,8 +17,8 @@
   text-decoration: none;
   }
 .in_center{text-align: center;}
-.in_left{text-align: left;padding-left: 15px;}
-.in_right{text-align: right;padding-right: 15px;}
+.in_left{text-align: left;padding-left: 5px;padding-right: 5px;}
+.in_right{text-align: right;padding-right: 5px;}
 /* 主页 */
 .theme_image1{background-image: url(../images/themeimage1.jpg);width:100%;background-repeat: no-repeat;height:375px;background-size:cover;}
 .theme_image2{background-image: url(../images/themeimage2.png);width:100%;background-repeat: no-repeat;height:375px;background-size:cover;}
@@ -78,10 +78,19 @@ margin-top: -21px;
 margin-left: 79px;
 margin-bottom: 8px;
 }*/
-#summary-container .col-md-4 {padding-left: 12px;padding-right: 12px;}  
+#summary-container .col-md-4 {padding-left: 10px;padding-right: 10px;}  
+#route1_title .col-md-12{padding-left: 10px;padding-right: 10px;}
+.route1_discription .col-md-12{padding-left: 10px;padding-right: 10px;}
+.route1_discription .col-md-6{padding-left: 10px;padding-right: 10px;}
+
 #summary-container .col-md-8 {padding-left: 12px;padding-right: 12px;}
+
 #summary-container .col-md-3 {padding-left: 1px;padding-right: 1px;}
+.find_discription{margin-left: -15px;margin-right: -15px;}
+.house_discription{margin-left: -15px;margin-right: -15px;}
+.house_price{margin-left: -15px;margin-right: -15px;}
 #summary-container{margin-bottom: 40px;}
+#summary-container .row{margin-left:0px;margin-right: 0px;}
 .headline{font-size:30px;}
 .subline{font-size:16px;margin-top: -10px;margin-bottom: 15px;}
 .more {font-size: 20px;font-family: 宋体;line-height: 50px;margin-top: -10px;}
@@ -91,7 +100,8 @@ margin-bottom: 8px;
 
 
 /*经典线路样式*/
-.inner{padding-bottom: 24px;}
+.homepage_route_back{background: #fff;}
+.inner{margin-bottom: 20px;}
 .bg {
   display: block;
   height: 80px;
@@ -106,9 +116,9 @@ margin-bottom: 8px;
 .route1_title{height:60px;zoom: 1;margin-top: -60px;background: #000;}
 .title_text1{font-size:20px;color:#FFF;margin-top:2px;margin-bottom:0px;}
 .title_text2{font-size:15px;color:#FFF;margin-top:4px;}
-.route1_discription{ background: #fff;padding-bottom: 10px;}
+.route1_discription{ padding-bottom: 10px;}
 .route1_discription p{margin-bottom:5px;font-size:13px;}
-.discription_left1{padding-top: 15px;}
+.discription_left1{padding-top: 15px;color: #443E3E;}
 .discription_left2{padding-top: 5px;color:#09C;}
 .discription_right1{padding-top: 5px;font-size:12px;color: #868080;}
 
@@ -143,7 +153,7 @@ padding-top: 4px;
 }
 .left{float: left;padding-left: 20px;}
 .right1{float: right;padding-right: 20px;}
-.right2{float: right;padding-right: 8px;}
+.right2{float: right;padding-right: 8px;color:#4ea1f5;}
 
 /*底部样式*/
 #bottom {background: #525050;padding-top: 40px;padding-bottom: 40px;color: #B4B2B2;font-size: 10px;}
@@ -241,6 +251,7 @@ color: #fff;
 
 /*右边列表*/
 .route_back{margin-top: 10px;padding:15px;}
+.route_left_title{color:#332D2D;}
 .text1{font-size: 14px;color:#666;}
 .text2{font-size: 12px;color:#4ea1f5;margin-top: 10px;}
 .price_right {float: right;color: #ACA8A5;font-size: 15px;font-family: 黑体;}
@@ -258,7 +269,8 @@ color: #fff;
 .spot_search_text{margin-left:15px;color:#797777;}
 .city_active{background: #78A8DA;border-color:#fff;color:#fff;}
 .hot_spot {margin-right:10px;}
-
+.display_in{display: inherit;}
+.display_none{display: none;}
 
 
 /*面包屑导航*/
@@ -291,7 +303,7 @@ border: 1px rgba(170, 170, 170, 0.47) solid;
 .ad_image{height: 100px;width: 100%;margin-bottom: 20px;}
 .images_list .col-md-3{padding-left:5px;padding-right:5px;}
 .images_list {margin-left: 0px;margin-right: 0px; }
-.spot_description{margin-top:-130px;width: 100%;height: 130px;padding: 20px;
+.spot_discription{margin-top:-130px;width: 100%;height: 130px;padding: 20px;
   background: url(https://gtms03.alicdn.com/tps/i3/TB19JS3HVXXXXafXpXXxIHh6FXX-230-130.png) repeat;}
 .find_title{color: #fff;font-size: 16px;}
 .find_text{color: #fff;font-size: 12px;}  

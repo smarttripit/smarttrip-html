@@ -20,17 +20,7 @@
       .pengh{position:absolute;left:44px;top:252px; z-index:11;}
      </style>
 
-<script>
-$(document).ready(function(){
-  $('.shunyi').bind('mouseover',function(){
-    $('#shunyi').show();
-  });
-   $('.shunyi').bind('mouseout',function(){
-    $('#shunyi').hide();
-  });
-  
-});
-</script>
+
    </head>
 
   <body>
@@ -43,16 +33,16 @@ $(document).ready(function(){
   <div class="container">
 
     <ol class="breadcrumb">
-      <li><a href="#">首页</a></li>
+      <li><a href="/index.html">首页</a></li>
       <li class="active">发现北京</li>
     </ol>
    
     <div class="row">
-      <div class="col-xs-12 col-sm-7 col-md-7 beijingmap">
+      <div class="col-xs-12 col-sm-12 col-md-7 beijingmap" id="beijingmap">
         <!-- <img id="map_bg" usemap="#Map" src="/static/images/beijing-map.png" style="display: block;" class="img-responsive"> <h2 class="find_beijing_title">北京</h2>
           -->
           <style type="text/css">
-         .miyun{margin-left: 63%;margin-top: -142%;} 
+            .miyun{margin-left: 63%;margin-top: -142%;} 
           </style>
          <img id="map_bg" src="/static/images/beijing-map.png" width="685" height="677" usemap="#Map" border="0"  style="display: block;"/>
         
@@ -127,7 +117,7 @@ $(document).ready(function(){
 
       </div>
 
-      <div class="col-xs-12 col-sm-5 col-md-5">
+      <div class="col-xs-12 col-sm-12 col-md-5">
          <div class="col-xs-12 col-sm-12 col-md-12">
               <h4 class="spot_search_text">北京地点搜索</h4>
 
@@ -228,27 +218,34 @@ $(document).ready(function(){
 
   $(function () {
             //判断是否宽屏
-            var winWide =$(window).width() ;
+if (window.innerWidth) 
+winWidth = window.innerWidth; 
+else if ((document.body) && (document.body.clientWidth)) 
+winWidth = document.body.clientWidth; 
+//获取窗口高度 
+if (window.innerHeight) 
+winHeight = window.innerHeight; 
+else if ((document.body) && (document.body.clientHeight)) 
+winHeight = document.body.clientHeight; 
+//通过深入Document内部对body进行检测，获取窗口大小 
+if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) 
+{ 
+winHeight = document.documentElement.clientHeight; 
+winWidth = document.documentElement.clientWidth; 
+} 
+           
+
+
+         /*  var winWidth =$(window).width() ;*/
             
             var wideScreen = false;
-            if (winWide <= 768) {//768及以下分辨率
-                $("#collapseOne").attr("class", "collapse row filter_body ");
-                $("#collapseTwo").attr("class", "collapse row filter_body ");
-                $("#collapseThree").attr("class", "collapse row filter_body ");
-                $("#collapseFour").attr("class", "collapse row filter_body ");
-                $("#find_tour_theme").attr("class", "collapse row filter_body ");
-                $("#find_tour_partner").attr("class", "collapse row filter_body ");
-                $("#find_tour_time").attr("class", "collapse row filter_body ");
-            } else {
-                $("#collapseOne").attr("class", "collapse in row filter_body ");
-                $("#collapseTwo").attr("class", "collapse in row filter_body ");
-                $("#collapseThree").attr("class", "collapse in row filter_body ");
-                $("#collapseFour").attr("class", "collapse in row filter_body ");
-                $("#find_tour_theme").attr("class", "collapse in row filter_body ");
-                $("#find_tour_partner").attr("class", "collapse in row filter_body ");
-                $("#find_tour_time").attr("class", "collapse in row filter_body ");
-                wideScreen = true; //是宽屏
-            }
+             $(window).resize(function(){  
+        if (winWidth <= 1200) {//768及以下分辨率
+                $("#beijingmap").attr("class", "display_none");
+            } 
+    
+    });  
+            
 })
 </script>
 
