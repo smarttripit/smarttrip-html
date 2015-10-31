@@ -217,8 +217,11 @@
   });
 });
 
-  $(function () {
-            //判断是否宽屏
+var winWidth = 0; 
+var winHeight = 0; 
+function findDimensions() //函数：获取尺寸 
+{ 
+//获取窗口宽度 
 if (window.innerWidth) 
 winWidth = window.innerWidth; 
 else if ((document.body) && (document.body.clientWidth)) 
@@ -234,20 +237,23 @@ if (document.documentElement && document.documentElement.clientHeight && documen
 winHeight = document.documentElement.clientHeight; 
 winWidth = document.documentElement.clientWidth; 
 } 
-           
+//结果输出至两个文本框 
+return winWidth;
+} 
 
-
-         /*  var winWidth =$(window).width() ;*/
-            
-            var wideScreen = false;
-             $(window).resize(function(){  
+$(function(){
+ findDimensions();
+ window.onresize=findDimensions; 
+  $(window).resize(function(){  
         if (winWidth <= 1200) {//768及以下分辨率
                 $("#beijingmap").attr("class", "display_none");
             } 
+});
+});
+
+              
     
-    });  
-            
-})
+   
 </script>
 
          <script type="text/javascript">
