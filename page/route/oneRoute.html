@@ -30,6 +30,11 @@
     <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    
+    <style type="text/css">
+    #allmap {width: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+    </style>
+    
 
 
 
@@ -46,10 +51,6 @@
 
     <!--# include file="/common/top.html"  -->
     <div id="wrapper">
-        
-            
-        
-
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                    <div class="bgimg"></div> 
@@ -74,35 +75,32 @@
             </div>
             <div class="container">
             <div class="row">
-
-                    <nav id="des" class="mynav" role="navigation">
-                       <div class="navbar-header">
+                <nav id="des" class="mynav" role="navigation">
+                   <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" 
                                  data-target="#example-navbar-collapse">
-                                 <span class="sr-only">切换导航</span>
-                                 <span class="icon-bar"></span>
-                                 <span class="icon-bar"></span>
-                                 <span class="icon-bar"></span>
-                              </button>
-                          <a class="navbar-brand" href="#">黄草梁2日游</a>
-                       </div>
-                       <div class="collapse navbar-collapse" id="example-navbar-collapse">
-                          <ul class="nav navbar-nav">
-                             <li><a href="#product">产品详情</a></li>
-                             <li><a href="#introduce">行程介绍</a></li>
-                             <li><a href="#transport-map">交通地图</a></li>
-                             <li><a href="#cost">费用说明</a></li>
-                             <li><a href="#book">预定须知</a></li>
-                             <li><a href="#comment">周周点评</a></li>
-                             
-                             
-                          </ul>
-                       </div>
-                    </nav>
+                             <span class="sr-only">切换导航</span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">黄草梁2日游</a>
+                   </div>
+                   <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                      <ul class="nav navbar-nav">
+                         <li><a href="#product">产品详情</a></li>
+                         <li><a href="#introduce">行程介绍</a></li>
+                         <li><a href="#transport-map">交通地图</a></li>
+                         <li><a href="#cost">费用说明</a></li>
+                         <li><a href="#book">预定须知</a></li>
+                         <li><a href="#comment">周周点评</a></li>
+                         
+                         
+                      </ul>
+                   </div>
+                </nav>
                 
-                
-                <!-- /.row -->
-                <!-- /.panel -->
+                <!-- 行程介绍/.panel -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <i id="introduce" class="fa fa-clock-o fa-fw"></i>行程介绍
@@ -227,7 +225,16 @@
                     </div>
                     <!-- /.panel-body -->
                 </div>
-                <!-- /.panel -->
+                <!-- 交通地图/.panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i id="transport-map" class="fa fa-clock-o fa-fw"></i>交通地图
+                    </div>
+                    <div class="panel-body">
+                        <div id="allmap" style="height:300px;"></div>
+                    </div>
+                </div>
+            
                 <!-- 模态框（Modal） -->
                 <div class="modal fade" id="myModalHLX" tabindex="-1" role="dialog" 
                    aria-labelledby="myModalLabel" aria-hidden="true">
@@ -263,9 +270,6 @@
             </div>
         </div>
             <!-- /.row -->
-      
-        
-
     </div>
     <!--# include file="/common/footer.html"  -->
     <!-- /#wrapper -->
@@ -276,16 +280,17 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/js/bootstrap.min.js"></script>
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="/static/js/metisMenu.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=WGSH3pwHG4z5uyduhjOmC6nh"></script>
+    <script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+    map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+    map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    </script>
 
-    <!-- Morris Charts JavaScript -->
-    <script src="/static/js/raphael-min.js"></script>
-    <script src="/static/js/morris.min.js"></script>
-
-
-    <!-- Custom Theme JavaScript -->
-    <script src="/static/js/sb-admin-2.js"></script>
+   
     <script>window.onscroll=function(){
 
     //变量t就是滚动条滚动时，到顶部的距离
