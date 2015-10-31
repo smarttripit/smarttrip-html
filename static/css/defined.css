@@ -269,9 +269,9 @@ color: #fff;
 .spot_search_text{margin-left:15px;color:#797777;}
 .city_active{background: #78A8DA;border-color:#fff;color:#fff;}
 .hot_spot {margin-right:10px;}
-.display_in{display: inherit;}
+.display_in{display: run-in;}
 .display_none{display: none;}
-
+.right_back{background: #fff;}
 
 /*面包屑导航*/
 .breadcrumb{background-color: #fff;}

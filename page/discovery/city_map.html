@@ -38,14 +38,47 @@
       <li class="active">发现北京</li>
     </ol>
    
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-7 beijingmap" id="beijingmap">
+    <div class="row row_space">
+      <div class="col-xs-12 col-sm-12 col-md-6 beijingmap" id="beijingmap" >
         <!-- <img id="map_bg" usemap="#Map" src="/static/images/beijing-map.png" style="display: block;" class="img-responsive"> <h2 class="find_beijing_title">北京</h2>
           -->
           <style type="text/css">
-            .miyun{margin-left: 63%;margin-top: -142%;} 
+            .miyun{margin-left: 60%;margin-top: -107%;} 
           </style>
-         <img id="map_bg" src="/static/images/beijing-map.png" width="685" height="677" usemap="#Map" border="0"  style="display: block;"/>
+
+          <img src="/static/images/beijing-map (3).png" width="500" height="456" usemap="#Map" border="0" style="display: block;margin-left:50px;" id="map_bg"  />
+          <map name="Map" id="Map">
+
+  <area shape="poly" coords="342,166,348,129,388,130,417,138,436,144,404,165,394,177,391,200,370,205,353,215,343,227,337,238,325,234,319,227,310,219,302,218,298,213,293,198,293,184,288,171,289,155,295,135,304,129,313,118,324,108,337,117,341,122,345,126"  href="#" onmouseover="show_map('miyun')"/>
+  
+  <area shape="poly" coords="270,149,269,60,285,50,291,76,307,89,320,98,279,156,286,187,290,225,274,230,258,229,239,227,237,219,224,212,209,205,204,194,259,147,257,132,248,126,251,116,229,76,242,74,247,59,261,58,265,61,269,60" href="#"  onmouseover="show_map('huairou')"/>
+  
+  <area shape="poly" coords="177,164,192,106,219,109,243,111,242,133,251,143,235,163,214,174,195,185,189,196,171,198,161,209,143,209,128,214,120,206,105,197,98,182,91,170,95,157,107,152,124,146,154,149,162,141,174,132,184,122,187,117,189,117" href="#" onmouseover="show_map('yanqin')"/>
+  
+  
+  <area shape="poly" coords="184,233,218,217,233,232,234,254,233,273,223,278,208,276,187,262,172,253,157,260,135,271,122,260,111,253,117,243,129,230,139,224,147,216,162,216,177,212,180,206,196,206,204,206,209,210,214,215" href="#" onmouseover="show_map('changping')" />
+  
+  
+  <area shape="poly" coords="290,262,320,238,335,259,341,277,315,281,299,282,282,286,266,286,253,278,240,263,240,252,241,239,253,236,266,237,281,237,288,235,296,234,310,230,317,232,317,238" href="#"  onmouseover="show_map('shunyi')"/>
+  
+  
+  <area shape="poly" coords="379,242,389,209,405,214,414,229,422,244,421,259,404,264,387,274,369,276,343,284,350,270,346,247,344,234,355,227,363,216,375,212,384,209,390,209" href="#" onmouseover="show_map('pinggu')"/>
+  
+  <area shape="poly" coords="294,344,289,296,302,317,318,337,335,343,328,356,322,365,313,378,306,382,298,386,289,377,282,365,270,362,254,362,251,354,255,340,270,333,270,322,275,312,279,305,286,299,293,300" href="#" onmouseover="show_map('tongzhou')"/>
+  
+  
+  <area shape="poly" coords="204,307,228,286,252,283,260,297,266,311,263,327,250,334,235,336,226,336,220,343,206,340,199,339,189,336,184,329,177,334,164,342,153,329,167,315,166,300,174,291,164,280,154,277,162,269,171,265,177,260,190,276,203,285,215,289,222,290" href="#" onmouseover="show_map('tongzhou')"/>
+  
+  
+  <area shape="poly" coords="94,282,90,256,103,261,112,263,122,270,134,278,146,275,155,287,161,295,159,307,160,320,147,327,134,324,115,311,98,314,86,308,66,312,50,324,33,333,33,316,26,305,17,298,18,289,27,281,48,273,57,270,73,263,80,262,90,262" href="#" onmouseover="show_map('mentougou')"/>
+  
+  
+  <area shape="poly" coords="101,359,115,321,124,331,137,336,148,338,153,350,172,353,181,351,177,366,177,383,173,394,152,397,130,392,116,393,104,397,92,404,82,404,69,396,61,384,52,384,36,386,28,378,25,360,25,349,44,345,47,333,70,324,86,314,97,318,104,318,111,318,112,322" href="#" onmouseover="show_map('fangshan')"/>
+  
+  
+  <area shape="poly" coords="214,382,220,355,235,344,245,347,246,363,257,370,269,369,277,382,254,386,239,394,233,404,223,407,214,414,212,422,199,418,190,411,185,401,185,391,182,370,185,363,191,358,200,348,205,347,211,352,213,354,215,357" href="#" onmouseover="show_map('daxing')"/>
+          </map>
+       <!--  <img id="map_bg" src="/static/images/beijing-map.png" width="685" height="677" usemap="#Map" border="0"  style="display: block;"/>
         
          <map name="Map" id="Map">
             <area shape="poly" coords="507,230,487,347,545,296,564,290,595,271,582,242,592,234,622,213,645,193,665,180,628,186,604,185,575,176,554,173,520,170,507,161,491,141,476,141,461,150,461,165,441,172,434,191,429,196,427,214,426,227,428,243,425,247,429,259,433,268,430,282,431,292,441,304,447,313,446,326,467,316,473,324,479,339,486,348,486,348" href="#" onmouseover="show_map('miyun')" />
@@ -69,7 +102,7 @@
             <area shape="poly" coords="144,531,134,609,166,595,175,582,199,584,240,596,261,588,264,570,269,548,271,531,255,523,225,510,220,496,192,493,180,479,160,468,138,469,120,468,106,481,90,489,73,501,61,512,30,514,36,531,43,546,46,562,52,578,76,578,99,579,111,603,126,610,135,614" href="#" onmouseover="show_map('fangshan')">
   
             <area shape="poly" coords="321,563,330,614,361,595,386,575,422,573,405,559,380,551,363,547,363,530,365,509,346,513,335,519,321,525,309,517,297,523,282,519,280,537,275,550,272,578,274,599,280,621,297,629,309,636,330,641" href="#" onmouseover="show_map('daxing')">
-         </map>
+         </map> -->
 
          <a href="#" target="_blank" class="" >
            <img class="miyun" src="/static/images/miyun.png" style="display: none;">
@@ -118,7 +151,8 @@
 
       </div>
 
-      <div class="col-xs-12 col-sm-12 col-md-5">
+      <div class="col-xs-12 col-sm-12 col-md-5 row_space" >
+       <div class="col-xs-12 col-sm-12 col-md-12 right_back"  id="right_back"> 
          <div class="col-xs-12 col-sm-12 col-md-12">
               <h4 class="spot_search_text">北京地点搜索</h4>
 
@@ -204,7 +238,10 @@
                
 
            </div>
+     
+        </div> 
       </div>
+
     </div>
   </div>
 
@@ -246,12 +283,47 @@ $(function(){
  window.onresize=findDimensions; 
   $(window).resize(function(){  
         if (winWidth <= 1200) {//768及以下分辨率
-                $("#beijingmap").attr("class", "display_none");
-            } 
-});
+                $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_none");
+                $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-12 right_back");
+            } else
+            { $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_in");
+              $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-12");
+          }
+
 });
 
-              
+             //判断是否宽屏
+            var winWide =$(window).width() ;
+            
+            var wideScreen = false;
+            if (winWide <= 1200) {//768及以下分辨率
+                $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_none");
+                 $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-12 right_back");
+            } else {
+$("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_in");
+$("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-12");
+                wideScreen = true; //是宽屏
+            }
+});
+
+ $(function () {
+            //判断是否宽屏
+            var winWide =$(window).width() ;
+            
+            var wideScreen = false;
+            if (winWide <= 768) {//768及以下分辨率
+                $("#collapseOne").attr("class", "collapse");
+                $("#collapseTwo").attr("class", "collapse");
+                $("#collapseThree").attr("class", "collapse");
+                $("#collapseFour").attr("class", "collapse");
+            } else {
+                $("#collapseOne").attr("class", "collapse in");
+                $("#collapseTwo").attr("class", "collapse in");
+                $("#collapseThree").attr("class", "collapse in");
+                $("#collapseFour").attr("class", "collapse in");
+                wideScreen = true; //是宽屏
+            }
+})              
     
    
 </script>
