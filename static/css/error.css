@@ -4,7 +4,7 @@
   color: #E74C3C;
   width: 100%;
   display: inline-block;
-  background: url(../images/error-icon.png) no-repeat left center;
+  background: url(/static/images/error-icon.png) no-repeat left center;
   padding-left: 28px;
   top: 0;
   border-color: #E74C3C;

@@ -7,7 +7,7 @@
      <title>发现北京</title>
 
    <!-- Bootstrap -->
-     <link href="static/css/bootstrap.min.css" rel="stylesheet">
+     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
      <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
 
    <!--[if lt IE 9]>
@@ -15,7 +15,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
    <![endif]-->
   
-     <link href="static/css/defined.css" rel="stylesheet"> 
+     <link href="/static/css/defined.css" rel="stylesheet"> 
      <style type="text/css">
       .pengh{position:absolute;left:44px;top:252px; z-index:11;}
      </style>
@@ -35,10 +35,10 @@ $(document).ready(function(){
 
   <body>
  <!--# include file="/common/top.html"  -->
-
     <div>
-    <img src="images/themeimage4.jpg" class="header_image">
+     <img src="/static/images/themeimage4.jpg" class="header_image">
     </div>
+
 
   <div class="container">
 
@@ -49,12 +49,12 @@ $(document).ready(function(){
    
     <div class="row">
       <div class="col-xs-12 col-sm-7 col-md-7 beijingmap">
-        <!-- <img id="map_bg" usemap="#Map" src="images/beijing-map.png" style="display: block;" class="img-responsive"> <h2 class="find_beijing_title">北京</h2>
+        <!-- <img id="map_bg" usemap="#Map" src="/static/images/beijing-map.png" style="display: block;" class="img-responsive"> <h2 class="find_beijing_title">北京</h2>
           -->
           <style type="text/css">
          .miyun{margin-left: 63%;margin-top: -142%;} 
           </style>
-         <img id="map_bg" src="images/beijing-map.png" width="685" height="677" usemap="#Map" border="0"  style="display: block;"/>
+         <img id="map_bg" src="/static/images/beijing-map.png" width="685" height="677" usemap="#Map" border="0"  style="display: block;"/>
         
          <map name="Map" id="Map">
             <area shape="poly" coords="507,230,487,347,545,296,564,290,595,271,582,242,592,234,622,213,645,193,665,180,628,186,604,185,575,176,554,173,520,170,507,161,491,141,476,141,461,150,461,165,441,172,434,191,429,196,427,214,426,227,428,243,425,247,429,259,433,268,430,282,431,292,441,304,447,313,446,326,467,316,473,324,479,339,486,348,486,348" href="#" onmouseover="show_map('miyun')" />
@@ -81,7 +81,7 @@ $(document).ready(function(){
          </map>
 
          <a href="#" target="_blank" class="" >
-           <img class="miyun" src="images/miyun.png" style="display: none;">
+           <img class="miyun" src="/static/images/miyun.png" style="display: none;">
          </a>
 
          <a href="#" target="_blank" class="city_active">
@@ -218,8 +218,8 @@ $(document).ready(function(){
   </div>
 
  <!--# include file="/common/footer.html"  -->
-  <script src="js/jquery-1.11.3.js"></script> 
-  <script src="js/bootstrap.min.js"></script>
+  <script src="/static/js/jquery.min.js"></script> 
+  <script src="/static/js/bootstrap.min.js"></script>
    <script>
  $(function(){
   $('[data-toggle="popover"]').popover({ html: "true",
