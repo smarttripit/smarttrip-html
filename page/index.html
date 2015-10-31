@@ -17,116 +17,9 @@
      <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
    </head>
    <body>
-        <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">x</button>
-                <h2 class="text-center text-primary">登录周游趣</h2>
-                <h3 class="text-center text-primary">带你玩转周末</h3>
-              </div>
-              <div class="modal-body">
-                <form action="" id="login-form" class="form col-md-12 center-block">
-                 
-                  <div class="form-group">
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                      <input type="text" name="login" id="login" class="form-control input-lg myClass" placeholder="请输入用户名/邮箱/手机号" />
-                      
-                    </div>
-                     <div class="h_10"></div> 
-                  </div>
-
-                  <div class="form-group">
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                      <input type="password"  class="form-control input-lg" placeholder="请输入6-18位数字、字母或常用符号" />
-                      
-                    </div>
-                    <div class="h_10"></div> 
-                  </div>
-                  
-                  <div class="form-group">
-                    <button class="btn btn-primary btn-lg btn-block">立刻登录</button>
-                    <div style="height:10px;"></div>
-                    <input type="checkbox">记住密码
-                    <span><a href="#" class="pull-right" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">还没有账号？立即注册</a></span>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                
-              </div>
-            </div>
-          </div>
-        </div>
-
-      <div id="registerModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">x</button>
-              <h2 class="text-center text-primary">注册周游趣</h2>
-              <h3 class="text-center text-primary">带你玩转周末</h3>
-            </div>
-            <div class="modal-body">
-              <form action="" id="register-form" class="form center-block">
-               
-                <div class="form-group div-phone">
-                 <div class="input-group">
-                    <a class="input-group-addon"><i class="fa fa-user"></i></a>
-                    <input type="text" name="phone" id="phone" class="form-control input-lg" placeholder="请输入11位手机号码" />
-                    <span class="input-group-addon send1" onclick="sends.send();">发送验证码</span>
-                  </div>
-                 <div class="h_10"></div> 
-                </div>
-               
-                <div class="form-group">
-                  <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-flickr"></i></span>
-                    <input type="text" name="code_number" id="code_number" class="form-control input-lg" placeholder="请输入验证码"/>
-                  </div>
-                  <div class="h_10"></div>
-                </div>
-               
-                
-                <div class="form-group">
-                  <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                    <input  type="password" name="password" id="password" class="form-control input-lg" maxlength="12" placeholder="请输入6-12位数字、字母或常用符号" />
-                    <span id="level" class="input-group-addon"></span>
-                  </div>
-                  <div class="h_10"></div> 
-                </div>
-                
-                
-                <div class="form-group">
-                  <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                    <input type="password" name="confirm-password" id="confirm-password" class="form-control input-lg" placeholder="请再次输入密码" />
-                  </div>
-                  <div class="h_10"></div> 
-                </div>
-                
-                
-                <p style="text-align:center">注册视为同意<a href="#" class="r-service-protocol" target="_blank">《周游趣服务条款》</a></p>
-                
-                <div class="form-group">
-                  <button class="btn btn-primary btn-lg btn-block">立刻注册</button>
-                  <div style="height:10px;"></div>
-                  
-                  <span><a href="#" class="pull-right" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">已有账号？立即登录</a></span>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              
-            </div>
-          </div>
-        </div>
-      </div>
-
-
+      
+      
+    <!--# include file="/common/login.html"  -->
      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="z-index:999;"> 
       <!-- Indicators 
       <ol class="carousel-indicators">
@@ -245,28 +138,24 @@
        </div>
 
        <div class="row">
-         <div class="col-xs-12 col-sm-4 col-md-4 ">
+         <div class="col-xs-12 col-sm-4 col-md-4">
           <a href="/route/oneroute.html">
-           <div class="inner homepage_route_back">
+           <div class="inner">
              <div><img src="/static/images/route1.jpg" class="img-responsive">
                <span class="bg"></span>
              </div>
 
-             <div class="route1_title" id="route1_title">
+             <div class="route1_title">
                <div class="row">
-                 <div class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="col-md-12">
                    <p class="title_text1">爨底下黄岭西</p>
                    <p class="title_text2">自然&nbsp;家庭&nbsp;古韵&nbsp;二日游</p>
                  </div>
-               </div>
+               </div>  
              </div>
 
              <div class="route1_discription">
-              <div class="row"> 
-                 <div class=" col-xs-12 col-sm-12 col-md-12">
-                   <p class="discription_left1 in_left"><strong>推荐理由：</strong>黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭</p>  
-                 </div>
-              </div>
+               <p class="discription_left1 in_left"><strong>推荐理由：</strong>黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西</p>  
                <div class="row">           
                  <div class=" col-xs-6 col-sm-6 col-md-6">
                     <p class="discription_left2 in_left"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></p>
@@ -285,28 +174,23 @@
           </a>
          </div>
          
-         <div class="col-xs-12 col-sm-4 col-md-4 ">
-          <a href="/route/oneroute.html">
-           <div class="inner homepage_route_back">
+         <div class="col-xs-12 col-sm-4 col-md-4">
+           <div class="inner">
              <div><img src="/static/images/route2.jpg" class="img-responsive">
                <span class="bg"></span>
              </div>
 
-             <div class="route1_title" id="route1_title">
+             <div class="route1_title">
                <div class="row">
-                 <div class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="col-md-12">
                    <p class="title_text1">爨底下黄岭西</p>
                    <p class="title_text2">自然&nbsp;家庭&nbsp;古韵&nbsp;二日游</p>
                  </div>
-               </div>
+               </div>  
              </div>
 
              <div class="route1_discription">
-              <div class="row"> 
-                 <div class=" col-xs-12 col-sm-12 col-md-12">
-                   <p class="discription_left1 in_left"><strong>推荐理由：</strong>黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭</p>  
-                 </div>
-              </div>
+               <p class="discription_left1 in_left"><strong>推荐理由：</strong>黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西</p>  
                <div class="row">           
                  <div class=" col-xs-6 col-sm-6 col-md-6">
                     <p class="discription_left2 in_left"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></p>
@@ -322,31 +206,25 @@
              </div>
       
            </div>
-          </a>
          </div>
-
-         <div class="col-xs-12 col-sm-4 col-md-4 ">
-          <a href="/route/oneroute.html">
-           <div class="inner homepage_route_back">
+       
+         <div class="col-xs-12 col-sm-4 col-md-4">
+           <div class="inner">
              <div><img src="/static/images/route1.jpg" class="img-responsive">
                <span class="bg"></span>
              </div>
 
-             <div class="route1_title" id="route1_title">
+             <div class="route1_title">
                <div class="row">
-                 <div class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="col-md-12">
                    <p class="title_text1">爨底下黄岭西</p>
                    <p class="title_text2">自然&nbsp;家庭&nbsp;古韵&nbsp;二日游</p>
                  </div>
-               </div>
+               </div>  
              </div>
 
              <div class="route1_discription">
-              <div class="row"> 
-                 <div class=" col-xs-12 col-sm-12 col-md-12">
-                   <p class="discription_left1 in_left"><strong>推荐理由：</strong>黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭</p>  
-                 </div>
-              </div>
+               <p class="discription_left1 in_left"><strong>推荐理由：</strong>黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西</p>  
                <div class="row">           
                  <div class=" col-xs-6 col-sm-6 col-md-6">
                     <p class="discription_left2 in_left"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></p>
@@ -362,13 +240,12 @@
              </div>
       
            </div>
-          </a>
          </div>
        </div>
 
     
        <div class="row">
-         <div class="col-xs-12 col-sm-12 col-md-12">
+         <div class="col-md-12">
            <div class="more"><a href="route/route.html" style=""> 更多>> </a> </div>
          </div>
        </div>
@@ -378,13 +255,13 @@
 
      <div class="container in_center" id="summary-container">
        <div class="row ">
-         <div class="col-xs-12 col-sm-12 col-md-12">
+         <div class="col-md-12">
            <p class="headline">发现北京</p>
          </div>
        </div>
 
        <div class="row">
-         <div class="col-xs-12 col-sm-12 col-md-12">
+         <div class="col-md-12">
            <p class="subline">跟我们一起出游吧</p>
          </div>
        </div>
@@ -464,7 +341,7 @@
        </div>
     
        <div class="row">
-         <div class="col-xs-12 col-sm-12 col-md-12">
+         <div class="col-md-12">
            <div class="more"><a href="discovery/city.html" style="">更多>></a> </div>
          </div>
        </div>
@@ -472,13 +349,13 @@
 
      <div class="container in_center" id="summary-container">
        <div class="row">
-         <div class="col-xs-12 col-sm-12 col-md-12">
+         <div class="col-md-12">
            <p class="headline">度假民宿</p>
          </div>
        </div>
      
        <div class="row">
-         <div class="col-xs-12 col-sm-12 col-md-12">
+         <div class="col-md-12">
            <p class="subline">跟我们一起出游吧</p>
          </div>
        </div>
@@ -640,7 +517,7 @@
        </div>
 
        <div class="row" >
-         <div class="col-xs-12 col-sm-12 col-md-12">
+         <div class="col-md-12">
           <div class="more" style="margin-top:-10px;"><a herf="#" style="">更多>></a> </div>
          </div>
        </div> 
