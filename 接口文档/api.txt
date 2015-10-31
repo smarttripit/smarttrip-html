@@ -5,6 +5,12 @@ url:
 userName
 password
 
+退出登录
+url:
+/visitor/logOut
+参数：
+无
+
 检查用户名是否已经被注册
 url:
 /visitor/isNameRegister
