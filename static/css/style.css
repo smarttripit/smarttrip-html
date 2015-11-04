@@ -26,6 +26,8 @@
 
 .bgimg{
   background: url(/static/images/4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 375px;
   margin-bottom: 20px;
 }
