@@ -1,45 +1,45 @@
-  <div id="loginModal" class="modal modal-vcenter fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">x</button>
-          <h2 class="text-center text-primary">登录周游趣</h2>
-          <h3 class="text-center text-primary">带你玩转周末</h3>
-        </div>
-        <div class="modal-body">
-          <form action="" id="login-form" class="form col-md-12 center-block">
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                <input type="text" name="login" id="login" class="form-control input-lg myClass" placeholder="请输入用户名/邮箱/手机号" />
-                
-              </div>
-               <div class="h_10"></div> 
+<div id="loginModal" class="modal modal-vcenter fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">x</button>
+        <h2 class="text-center text-primary">登录周游趣</h2>
+        <h3 class="text-center text-primary">带你玩转周末</h3>
+      </div>
+      <div class="modal-body">
+        <form action="" id="login-form" class="form col-md-12 center-block">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+              <input type="text" name="login" id="login" class="form-control input-lg myClass" placeholder="请输入用户名/邮箱/手机号" />
+              
             </div>
+             <div class="h_10"></div> 
+          </div>
 
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="password"  class="form-control input-lg" placeholder="请输入6-18位数字、字母或常用符号" />
-                
-              </div>
-              <div class="h_10"></div> 
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+              <input type="password"  class="form-control input-lg" placeholder="请输入6-18位数字、字母或常用符号" />
+              
             </div>
-            
-            <div class="form-group">
-              <button class="btn btn-primary btn-lg btn-block">立刻登录</button>
-              <div style="height:10px;"></div>
-              <input type="checkbox">记住密码
-              <span><a href="#" class="pull-right" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">还没有账号？立即注册</a></span>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
+            <div class="h_10"></div> 
+          </div>
           
-        </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-lg btn-block">立刻登录</button>
+            <div style="height:10px;"></div>
+            <input type="checkbox">记住密码
+            <span><a href="#" class="pull-right" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">还没有账号？立即注册</a></span>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        
       </div>
     </div>
   </div>
+</div>
 
 <div id="registerModal" class="modal modal-vcenter fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -54,10 +54,10 @@
          <div class="form-group">
            <div class="input-group">
              <span class="input-group-addon"><i class="fa fa-user"></i></span>
-             <input type="text" name="username" class="form-control input-lg myClass" placeholder="请设置用户名" />
+             <input type="text" name="username" id="username" class="form-control input-lg myClass" placeholder="请设置用户名" />
              
            </div>
-            <div class="h_10"></div> 
+            <div class="h_10 txtHint"></div> 
          </div>
 
           <div class="form-group div-phone">
@@ -115,25 +115,5 @@
 </div>
 
 
-<script type="text/javascript">
-    /* center modal */
-    function centerModals($element) {
-      var $modals;
-      if ($element.length) {
-        $modals = $element;
-      } else {
-        $modals = $('.modal-vcenter:visible');
-      }
-      $modals.each( function(i) {
-        var $clone = $(this).clone().css('display', 'block').appendTo('body');
-        var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
-        top = top > 0 ? top : 0;
-        $clone.remove();
-        $(this).find('.modal-content').css("margin-top", top);
-      });
-    }
-    $('.modal-vcenter').on('show.bs.modal', function(e) {
-      centerModals($(this));
-    });
-    $(window).on('resize', centerModals);
-</script>
+
+
