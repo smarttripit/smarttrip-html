@@ -733,6 +733,24 @@
           errorPlacement: function(error, element) {  
               error.appendTo(element.parent().next());  
           },
+          submitHandler:function(form){
+              $.ajax({
+                  cache: false,
+                  type: "POST",
+                  url:"/visitor/login",
+                  data:{userName:$("#login").val(),password:$("#password").val()},
+                  async: false,
+                  error: function(request) {
+                  },
+                  success: function(data) {
+                	  if(data.status == 'success'){
+                		  alert('success');
+                	  } else {
+                		  alert(data.tipMsg);
+                	  }
+                  }
+              });
+          },
           rules:{
 
             password:{
