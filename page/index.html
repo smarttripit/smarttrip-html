@@ -765,14 +765,19 @@
         },
         submitHandler:function(form){
             $.ajax({
-                cache: true,
+                cache: false,
                 type: "POST",
                 url:"/visitor/register",
                 data:{mobileNo:$("#phone").val(), name:$("#username").val(),password:$("#password").val(),passwordAgain:$("#confirm-password").val(),verifyCode:$("#code_number").val()},
                 async: false,
                 error: function(request) {
                 },
-                success: function(data) {
+                success: function(result) {
+                	if(result.status == 'success'){
+                		alert("注册成功");
+                	}else{
+                		alert(result.tipMsg);
+                	}
                 }
             });
         },
@@ -850,7 +855,9 @@
 		             dataType: "json",
 		             success: function(data){
 		                        if(data.status == 'success'){
-		                          //手机号未被注册，则发送验证码
+		                          	//手机号未被注册，则发送验证码
+		                          	timeCountDown();
+		                          	var timer = setInterval(timeCountDown,1000);
 		         			         $.ajax({
 		         			             type: "GET",
 		         			             cache: false,
@@ -884,8 +891,8 @@
                   return false;
                   sends.checked = 0;
                 }
-                timeCountDown();
-                var timer = setInterval(timeCountDown,1000);
+                //timeCountDown();
+                //var timer = setInterval(timeCountDown,1000);
               }
             }
           };
