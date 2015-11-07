@@ -763,6 +763,19 @@
         errorPlacement: function(error, element) {  
             error.appendTo(element.parent().next());  
         },
+        submitHandler:function(form){
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url:"/visitor/register",
+                data:{mobileNo:$("#phone").val(), name:$("#username").val(),password:$("#password").val(),passwordAgain:$("#confirm-password").val(),verifyCode:$("#code_number").val()},
+                async: false,
+                error: function(request) {
+                },
+                success: function(data) {
+                }
+            });
+        },
         rules:{
 
           username:{                
@@ -822,13 +835,43 @@
     </script>
     <!--发送验证码倒计时-->
     <script type="text/javascript">
-
           var sends = {
             checked:1,
             send:function(){
               /**当手机号码输入正确时才能发送验证码，并且30秒后才能重发**/
               if (($("#register-form").validate().element($("#phone")))&&(!($('#phone').val()==""))&&($('.div-phone span').html()=="发送验证码")) {
                 var time = 30;
+                //验证手机号是否已经被注册
+		         $.ajax({
+		             type: "GET",
+		             cache: false,
+		             url: "/visitor/isMobileNoRegister",
+		             data: {mobileNo:$("#phone").val()},
+		             dataType: "json",
+		             success: function(data){
+		                        if(data.status == 'success'){
+		                          //手机号未被注册，则发送验证码
+		         			         $.ajax({
+		         			             type: "GET",
+		         			             cache: false,
+		         			             url: "/authCode/send",
+		         			             data: {mobileNo:$("#phone").val()},
+		         			             dataType: "json",
+		         			             success: function(data){
+		         			                        if(data.status == 'success'){
+		         			                        	
+		         			                        }else{
+		         										alert(data.tipMsg);
+		         			                        };
+		         			                      }
+		         			         });
+		                        }else{
+									alert(data.tipMsg);
+		                        };
+		                      }
+			         });
+                
+                
                 function timeCountDown(){
                   if(time==0){
                     clearInterval(timer);
@@ -858,22 +901,22 @@
 <script type="text/javascript" src="/static/js/defined_c.js"></script>
   <!--ajax测试-->
 <script>
-   $('#username').blur(function(){
-         $.ajax({
-             type: "GET",
-             cache:false,
-             url: "/visitor/isNameRegister",
-             data: {name:$("#username").val()},
-             dataType: "json",
-             success: function(result){
-            	 		 if(result.status == 'success'){
-            	 			alert(result.status);
-            	 		 }
-            	 		 else {
-							alert(result.tipMsg);
-                        	}
-                      }
-         });
+$('#username').blur(function(){
+    $.ajax({
+        type: "GET",
+        cache:false,
+        url: "/visitor/isNameRegister",
+        data: {name:$("#username").val()},
+        dataType: "json",
+        success: function(result){
+       	 		 if(result.status == 'success'){
+       	 			alert(result.status);
+       	 		 }
+       	 		 else {
+						alert(result.tipMsg);
+                   	}
+                 }
+    });
 });
 </script>
   </body>
