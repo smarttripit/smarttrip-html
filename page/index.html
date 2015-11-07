@@ -861,15 +861,17 @@
    $('#username').blur(function(){
          $.ajax({
              type: "GET",
-             url: "/visitor/login",
-             data: {username:$("#username").val(), password:$("#password").val()},
+             cache:false,
+             url: "/visitor/isNameRegister",
+             data: {name:$("#username").val()},
              dataType: "json",
-             success: function(data){
-                        if(data.status == 'success'){
-                          //提示
-                        }else{
-
-                        };
+             success: function(result){
+            	 		 if(result.status == 'success'){
+            	 			alert(result.status);
+            	 		 }
+            	 		 else {
+							alert(result.tipMsg);
+                        	}
                       }
          });
 });
