@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE html>
   <html lang="en">
    <head>
@@ -2706,6 +2707,936 @@
   <!--ajax测试-->
 <script>
 >>>>>>> origin/master
+=======
+  <!DOCTYPE html>
+  <html lang="en">
+   <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>主页</title>
+
+   <!-- Bootstrap -->
+     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+   <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+   <![endif]-->
+     <link href="/static/css/defined.css" rel="stylesheet"> 
+     <link rel="stylesheet" type="text/css" href="/static/css/error.css">
+     <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+   </head>
+   <body>
+      
+      
+    <!--# include file="/common/login.html"  -->
+     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="z-index:999;"> 
+      <!-- Indicators 
+      <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      </ol>--> 
+      <!-- Wrapper for slides -->
+       <div class="carousel-inner" role="listbox">
+          <div class="item active theme_image1" >
+            <div class="carousel-caption">
+              <p>远离城市喧嚣</p>
+            </div>
+          </div>
+        
+          <div class="item theme_image_all theme_image2" > 
+            <div class="carousel-caption">
+              <p>和孩子一起亲近大自然</p>
+            </div>
+          </div>
+       
+          <div class="item theme_image_all theme_image3"> 
+            <div class="carousel-caption">
+              <p>住在农家小院</p>
+            </div>
+          </div>
+       
+          <div class="item theme_image_all theme_image4"> 
+            <div class="carousel-caption">
+              <p>鸟语·花香·泥土·蛙鸣</p>
+            </div>
+          </div>
+       </div>
+     
+     <!-- Controls  --> 
+       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> 
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>     
+          <span class="sr-only">Previous</span> 
+       </a> 
+     
+       <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> 
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>     
+          <span class="sr-only">Next</span> 
+       </a>
+    
+       <nav class="navbar navbar-default navbar_defined_homepage">
+        <div class="container"> 
+           <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"       data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> 
+             <span class="sr-only">Toggle navigation</span> 
+             <span class="icon-bar" style="background-color:#fff;"></span> 
+             <span class="icon-bar "style="background-color:#fff;"></span>
+             <span class="icon-bar "style="background-color:#fff;"></span> 
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top" style="margin-top:-10px;">
+            <img src="/static/images/logo.png"/>
+            </a>
+            <!--    <a class="navbar-brand" href="#">周游迹</a> -->
+          </div>
+         
+         <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+               <li class="hidden active"><a href="#page-top"></a></li>
+               <li><a class="page-scroll" href="#">首页</a></li>     
+               <li><a class="page-scroll" href="route/route.html">经典线路</a></li>
+               <!--   <li class="dropdown"> <a href="#" class="dropdown-toggle page-scroll" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">经典线路<span class="caret"></span></a>
+                <ul class="dropdown-menu dropdown_narrow">               
+                 <li><a class="page-scroll" href="#">亲子游</a></li>
+                 <li><a class="page-scroll" href="#">户外游</a></li>
+                 <li><a class="page-scroll" href="#">乡村游</a></li>              
+                </ul>
+                </li>-->
+               <li><a class="page-scroll" href="#">度假民宿</a></li>
+               <li><a class="page-scroll" href="discovery/city.html">发现北京</a></li>
+            </ul>
+            <!--表单
+            <form class="navbar-form navbar-left" role="search">
+             <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+             </div>
+             <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            -->
+           <ul class="nav navbar-nav navbar-right">
+            <!--  <li><img src="/static/images/weibo.png" style="width:25px;height:25px;margin-top:12.5px;margin-left:15px;"></li>
+             <li><img src="/static/images/weichat.png" style="width:25px;height:25px;margin-top:12.5px;margin-left:15px;"></li> -->
+             <li><a href="#" data-toggle="modal" data-target="#loginModal">登录</a></li>
+             <li><a href="#" data-toggle="modal" data-target="#registerModal">注册</a></li>
+             <li><button class="mobilephone_tdc" data-container="body"  data-placement="bottom" data-toggle="popover" 
+             data-content='<div id="popoverBox"><img src="/static/images/2weima.jpg" style="width:99px;height:99px;" /></div>'>手机端 </button>
+             </li>
+             <!--  <li><button class="btn choose_city" type="button" href="#" data-toggle="modal" data-target="#choosecity">
+                 北京<span class="caret"></span>
+                 </button>
+             </li> -->
+           </ul>
+          </div>
+          <!-- /.navbar-collapse --> 
+         </div>
+       <!-- /.container-fluid --> 
+       </nav>
+     </div>
+
+     <div class="container in_center" id="summary-container">
+       <div class="row">
+         <div class="col-md-12">
+           <p class="headline">经典线路</p>
+         </div>
+       </div>
+     
+       <div class="row">
+         <div class="col-md-12">
+           <p class="subline">跟我们一起出游吧</p>
+         </div>
+       </div>
+
+       <div class="row">
+         <div class="col-xs-12 col-sm-4 col-md-4">
+          <a href="/route/oneroute.html">
+           <div class="inner">
+             <div><img src="/static/images/route1.jpg" class="img-responsive">
+               <span class="bg"></span>
+             </div>
+
+             <div class="route1_title">
+               <div class="row">
+                 <div class="col-md-12">
+                   <p class="title_text1">爨底下黄岭西</p>
+                   <p class="title_text2">自然&nbsp;家庭&nbsp;古韵&nbsp;二日游</p>
+                 </div>
+               </div>  
+             </div>
+
+             <div class="route1_discription">
+               <p class="discription_left1 in_left"><strong>推荐理由：</strong>黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西</p>  
+               <div class="row">           
+                 <div class=" col-xs-6 col-sm-6 col-md-6">
+                    <p class="discription_left2 in_left"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></p>
+                 </div>
+          
+                 <div class="col-xs-6 col-sm-6 col-md-6">
+                    <p class="discription_right1 in_right">
+                      <span>231人付款</span>
+                    </p>
+                 </div>
+
+               </div>    
+             </div>
+      
+           </div>
+          </a>
+         </div>
+         
+         <div class="col-xs-12 col-sm-4 col-md-4">
+           <div class="inner">
+             <div><img src="/static/images/route2.jpg" class="img-responsive">
+               <span class="bg"></span>
+             </div>
+
+             <div class="route1_title">
+               <div class="row">
+                 <div class="col-md-12">
+                   <p class="title_text1">爨底下黄岭西</p>
+                   <p class="title_text2">自然&nbsp;家庭&nbsp;古韵&nbsp;二日游</p>
+                 </div>
+               </div>  
+             </div>
+
+             <div class="route1_discription">
+               <p class="discription_left1 in_left"><strong>推荐理由：</strong>黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西</p>  
+               <div class="row">           
+                 <div class=" col-xs-6 col-sm-6 col-md-6">
+                    <p class="discription_left2 in_left"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></p>
+                 </div>
+          
+                 <div class="col-xs-6 col-sm-6 col-md-6">
+                    <p class="discription_right1 in_right">
+                      <span>231人付款</span>
+                    </p>
+                 </div>
+
+               </div>    
+             </div>
+      
+           </div>
+         </div>
+       
+         <div class="col-xs-12 col-sm-4 col-md-4">
+           <div class="inner">
+             <div><img src="/static/images/route1.jpg" class="img-responsive">
+               <span class="bg"></span>
+             </div>
+
+             <div class="route1_title">
+               <div class="row">
+                 <div class="col-md-12">
+                   <p class="title_text1">爨底下黄岭西</p>
+                   <p class="title_text2">自然&nbsp;家庭&nbsp;古韵&nbsp;二日游</p>
+                 </div>
+               </div>  
+             </div>
+
+             <div class="route1_discription">
+               <p class="discription_left1 in_left"><strong>推荐理由：</strong>黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西</p>  
+               <div class="row">           
+                 <div class=" col-xs-6 col-sm-6 col-md-6">
+                    <p class="discription_left2 in_left"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></p>
+                 </div>
+          
+                 <div class="col-xs-6 col-sm-6 col-md-6">
+                    <p class="discription_right1 in_right">
+                      <span>231人付款</span>
+                    </p>
+                 </div>
+
+               </div>    
+             </div>
+      
+           </div>
+         </div>
+       </div>
+
+    
+       <div class="row">
+         <div class="col-md-12">
+           <div class="more"><a href="route/route.html" style=""> 更多>> </a> </div>
+         </div>
+       </div>
+
+     </div>
+ 
+
+     <div class="container in_center" id="summary-container">
+       <div class="row ">
+         <div class="col-md-12">
+           <p class="headline">发现北京</p>
+         </div>
+       </div>
+
+       <div class="row">
+         <div class="col-md-12">
+           <p class="subline">跟我们一起出游吧</p>
+         </div>
+       </div>
+
+       <div class="row">
+         <div class="col-xs-6 col-sm-3 col-md-3">
+           <div class="inner">
+             <div>
+               <img src="/static/images/findbeijing4.png" class="img-responsive">
+             </div>
+
+            <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 ">
+                 <div class="find_discription"> 
+                   <strong class="find_discription_title">水峪村</strong>
+                   <p>山清水秀，天人合一</p>               
+                 </div>
+               </div>
+            </div> 
+      
+           </div>
+         </div>
+
+         <div class="col-xs-6 col-sm-3 col-md-3">
+           <div class="inner">
+             <div>
+               <img src="/static/images/findbeijing4.png" class="img-responsive">
+             </div>
+
+            <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 ">
+                 <div class="find_discription"> 
+                   <strong class="find_discription_title">水峪村</strong>
+                   <p>山清水秀，天人合一</p>               
+                 </div>
+               </div>
+            </div> 
+      
+           </div>
+         </div>
+
+         <div class="col-xs-6 col-sm-3 col-md-3">
+           <div class="inner">
+             <div>
+               <img src="/static/images/findbeijing4.png" class="img-responsive">
+             </div>
+
+            <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 ">
+                 <div class="find_discription"> 
+                   <strong class="find_discription_title">水峪村</strong>
+                   <p>山清水秀，天人合一</p>               
+                 </div>
+               </div>
+            </div> 
+      
+           </div>
+         </div>
+
+         <div class="col-xs-6 col-sm-3 col-md-3">
+           <div class="inner">
+             <div>
+               <img src="/static/images/findbeijing4.png" class="img-responsive">
+             </div>
+
+            <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 ">
+                 <div class="find_discription"> 
+                   <strong class="find_discription_title">水峪村</strong>
+                   <p>山清水秀，天人合一</p>               
+                 </div>
+               </div>
+            </div> 
+      
+           </div>
+         </div>
+       </div>
+    
+       <div class="row">
+         <div class="col-md-12">
+           <div class="more"><a href="discovery/city.html" style="">更多>></a> </div>
+         </div>
+       </div>
+     </div>
+
+     <div class="container in_center" id="summary-container">
+       <div class="row">
+         <div class="col-md-12">
+           <p class="headline">度假民宿</p>
+         </div>
+       </div>
+     
+       <div class="row">
+         <div class="col-md-12">
+           <p class="subline">跟我们一起出游吧</p>
+         </div>
+       </div>
+     
+       <div class="row">
+         <div class="col-xs-12 col-sm-12 col-md-4">
+           <div class="inner">
+             <div>
+               <img src="/static/images/scenery_spot8.jpg" class="img-responsive">
+             </div>
+
+             <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="house_price"><span class="h3"><strong>￥400</strong></span><span class="h5">&nbsp;起</span>
+                 </div>
+               </div>
+             </div>  
+        
+             <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 ">
+                 <div class="house_discription"> 
+                   <span class="left">台南-景宇景香饭店</span>
+                   <span class="right1">台南-景宇</span>
+                   <span class="glyphicon glyphicon-map-marker place_icon right2" aria-hidden="true"></span>
+                 </div>
+               </div>
+             </div> 
+           </div>
+         </div>
+ 
+         <div class="col-xs-12 col-sm-12 col-md-4">
+           <div class="inner">
+             <div>
+               <img src="/static/images/scenery_spot8.jpg" class="img-responsive">
+             </div>
+
+             <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="house_price"><span class="h3"><strong>￥400</strong></span><span class="h5">&nbsp;起</span>
+                 </div>
+               </div>
+             </div>  
+        
+             <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 ">
+                 <div class="house_discription"> 
+                   <span class="left">台南-景宇景香饭店</span>
+                   <span class="right1">台南-景宇</span>
+                   <span class="glyphicon glyphicon-map-marker place_icon right2" aria-hidden="true"></span>
+                 </div>
+               </div>
+             </div> 
+           </div>
+         </div>
+
+         <div class="col-xs-12 col-sm-12 col-md-4">
+           <div class="inner">
+             <div>
+               <img src="/static/images/scenery_spot8.jpg" class="img-responsive">
+             </div>
+
+             <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="house_price"><span class="h3"><strong>￥400</strong></span><span class="h5">&nbsp;起</span>
+                 </div>
+               </div>
+             </div>  
+        
+             <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 ">
+                 <div class="house_discription"> 
+                   <span class="left">台南-景宇景香饭店</span>
+                   <span class="right1">台南-景宇</span>
+                   <span class="glyphicon glyphicon-map-marker place_icon right2" aria-hidden="true"></span>
+                 </div>
+               </div>
+             </div> 
+           </div>
+         </div>
+
+       </div>
+
+       <div class="row">
+         <div class="col-xs-12 col-sm-12 col-md-4">
+           <div class="inner">
+             <div>
+               <img src="/static/images/scenery_spot8.jpg" class="img-responsive">
+             </div>
+
+             <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="house_price"><span class="h3"><strong>￥400</strong></span><span class="h5">&nbsp;起</span>
+                 </div>
+               </div>
+             </div>  
+        
+             <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 ">
+                 <div class="house_discription"> 
+                   <span class="left">台南-景宇景香饭店</span>
+                   <span class="right1">台南-景宇</span>
+                   <span class="glyphicon glyphicon-map-marker place_icon right2" aria-hidden="true"></span>
+                 </div>
+               </div>
+             </div> 
+           </div>
+         </div>
+ 
+         <div class="col-xs-12 col-sm-12 col-md-4">
+           <div class="inner">
+             <div>
+               <img src="/static/images/scenery_spot8.jpg" class="img-responsive">
+             </div>
+
+             <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="house_price"><span class="h3"><strong>￥400</strong></span><span class="h5">&nbsp;起</span>
+                 </div>
+               </div>
+             </div>  
+        
+             <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 ">
+                 <div class="house_discription"> 
+                   <span class="left">台南-景宇景香饭店</span>
+                   <span class="right1">台南-景宇</span>
+                   <span class="glyphicon glyphicon-map-marker place_icon right2" aria-hidden="true"></span>
+                 </div>
+               </div>
+             </div> 
+           </div>
+         </div>
+
+         <div class="col-xs-12 col-sm-12 col-md-4">
+           <div class="inner">
+             <div>
+               <img src="/static/images/scenery_spot8.jpg" class="img-responsive">
+             </div>
+
+             <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="house_price"><span class="h3"><strong>￥400</strong></span><span class="h5">&nbsp;起</span>
+                 </div>
+               </div>
+             </div>  
+        
+             <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 ">
+                 <div class="house_discription"> 
+                   <span class="left">台南-景宇景香饭店</span>
+                   <span class="right1">台南-景宇</span>
+                   <span class="glyphicon glyphicon-map-marker place_icon right2" aria-hidden="true"></span>
+                 </div>
+               </div>
+             </div> 
+           </div>
+         </div>
+
+       </div>
+
+       <div class="row" >
+         <div class="col-md-12">
+          <div class="more" style="margin-top:-10px;"><a herf="#" style="">更多>></a> </div>
+         </div>
+       </div> 
+     </div>
+
+   <!--# include file="/common/footer.html"  -->
+
+
+
+
+  
+   <!--<div id="backtotop"><a href="#top"><image data-spy="affix" data-offset-bottom="5" src="/static/images/uptop.png"/></a></div>-->
+
+       <!--     <div class="modal" id="choosecity">
+                 <div class="modal-dialog">
+                    <div class="modal-content">
+                       <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                          <p class="modal-title text-primary"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;请选择您所在的城市</p>
+                      </div>
+                      <div class="modal-body">
+                        <div class="citylist_box">
+                          <div class="city_list">
+                                <strong>热门城市：</strong>
+                                <a href="#" title="">上海</a>
+                                <a href="#" title="">北京</a>
+                                <a href="#" title="">广州</a>
+                                <a href="#" title="">深圳</a>
+                                <a href="#" title="">武汉</a>
+                                <a href="#" title="">天津</a>
+                                <a href="#" title="">西安</a>
+                                <a href="#" title="">南京</a>
+                                <a href="#" title="">杭州</a>
+                                <a href="#" title="">成都</a>
+                          </div>
+                          
+                          <div class="city_list">
+                             <strong>华北东北：</strong>
+                             <div class="city_1">                            
+                              <a href="#" title="">上海</a>                           
+                              <a href="#" title="">北京</a>
+                              <a href="#" title="">广州</a>
+                              <a href="#" title="">深圳</a>
+                              <a href="#" title="">武汉</a>
+                              <a href="#" title="">天津</a>
+                              <a href="#" title="">西安</a>
+                              <a href="#" title="">南京</a>
+                              <a href="#" title="">杭州</a>
+                              <a href="#" title="">成都</a>
+                             </div>
+                             
+                             <div class="city_2">                            
+                              <a href="#" title="">上海</a>                           
+                              <a href="#" title="">北京</a>
+                              <a href="#" title="">广州</a>
+                              <a href="#" title="">深圳</a>
+                              <a href="#" title="">武汉</a>
+                             </div>
+                          </div>
+                            
+                          <div class="city_list">
+                             <strong>华东地区：</strong>
+                             <div class="city_1">                            
+                              <a href="#" title="">上海</a>                           
+                              <a href="#" title="">北京</a>
+                              <a href="#" title="">广州</a>
+                              <a href="#" title="">深圳</a>
+                              <a href="#" title="">武汉</a>
+                              <a href="#" title="">天津</a>
+                              <a href="#" title="">西安</a>
+                              <a href="#" title="">南京</a>
+                              <a href="#" title="">杭州</a>
+                              <a href="#" title="">成都</a>
+                             </div>
+
+                              <div class="city_2">                            
+                              <a href="#" title="">上海</a>                           
+                              <a href="#" title="">北京</a>
+                              <a href="#" title="">广州</a>
+                              <a href="#" title="">深圳</a>
+                              <a href="#" title="">武汉</a>
+                              <a href="#" title="">天津</a>
+                              <a href="#" title="">西安</a>
+                              <a href="#" title="">南京</a>
+                             </div>
+                          </div>
+
+                          <div class="city_list">
+                             <strong>中部西部：</strong>
+                             <div class="city_1">                            
+                              <a href="#" title="">上海</a>                           
+                              <a href="#" title="">北京</a>
+                              <a href="#" title="">广州</a>
+                              <a href="#" title="">深圳</a>
+                              <a href="#" title="">武汉</a>
+                              <a href="#" title="">天津</a>
+                              <a href="#" title="">西安</a>
+                              <a href="#" title="">南京</a>
+                              <a href="#" title="">杭州</a>
+                              <a href="#" title="">成都</a>
+                             </div>
+
+                              <div class="city_2">                            
+                              <a href="#" title="">上海</a>                           
+                              <a href="#" title="">北京</a>
+                              <a href="#" title="">广州</a>
+                              <a href="#" title="">深圳</a>
+                              <a href="#" title="">武汉</a>
+                             </div>
+                          </div>
+
+                          <div class="city_list">
+                             <strong>华南地区：</strong>
+                             <div class="city_1">                            
+                              <a href="#" title="">上海</a>                           
+                              <a href="#" title="">北京</a>
+                              <a href="#" title="">广州</a>
+                              <a href="#" title="">深圳</a>
+                              <a href="#" title="">武汉</a>
+                              <a href="#" title="">天津</a>
+                              <a href="#" title="">西安</a>
+                              <a href="#" title="">南京</a>
+                              <a href="#" title="">杭州</a>
+                              <a href="#" title="">成都</a>
+                             </div>
+
+                             <div class="city_2">                            
+
+                              <a href="#" title="">上海</a>                           
+                              <a href="#" title="">北京</a>
+                              <a href="#" title="">广州</a>
+                              <a href="#" title="">深圳</a>
+                              <a href="#" title="">武汉</a>
+                              <a href="#" title="">天津</a>
+                              <a href="#" title="">西安</a>
+                             </div>
+                          </div>
+
+                          <div class="city_list">
+                             <strong>港澳台：</strong>
+                             <div class="city_1">                            
+                              <a href="#" title="">上海</a>                           
+                              <a href="#" title="">北京</a>
+                              <a href="#" title="">广州</a>
+                             </div>
+                          </div>
+
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+           </div>  -->
+   
+
+  <script src="/static/js/jquery.min.js"></script> 
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/jquery.validate.js"></script>
+
+    <script type="text/javascript"> 
+    /**密码强度检测**/
+    $(function(){ 
+      $('#password').keyup(function () { 
+        var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g"); 
+        var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g"); 
+        var enoughRegex = new RegExp("(?=.{6,}).*", "g"); 
+      
+        if (false == enoughRegex.test($(this).val())) { 
+          $("#level").html("密码过短");
+           
+           //密码小于六位的时候，密码强度图片都为灰色 
+        } 
+        else if (strongRegex.test($(this).val())) { 
+          
+          $('#level').html("强");
+           //密码为八位及以上并且字母数字特殊字符三项都包括,强度最强 
+        } 
+        else if (mediumRegex.test($(this).val())) { 
+          $("#level").html("中");
+         
+           //密码为七位及以上并且字母、数字、特殊字符三项中有两项，强度是中等 
+        } 
+        else { 
+          $("#level").html("弱");
+          
+           //如果密码为6为及以下，就算字母、数字、特殊字符三项都包括，强度也是弱的 
+        } 
+        return true; 
+      }); 
+    }) 
+    </script>
+
+    <script type="text/javascript">
+    /**手机号验证**/
+    jQuery.validator.addMethod("mobile", function (value, element) {
+        var mobile = /^1[3|4|5|7|8]\d{9}$/;
+      return this.optional(element) || (mobile.test(value));
+    }, "手机号码格式不正确");
+    /**登录名验证**/
+    jQuery.validator.addMethod("NameMobileEmail", function (value, element) {
+        var user =  /^[a-zA-Z]\w{5,17}$/;
+        var mobile1 = /^1[3|4|5|7|8]\d{9}$/;
+        var email1 =  /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+      return this.optional(element) || (mobile1.test(value)||(email1.test(value)||(user.test(value))));
+    }, "请输入正确的用户名/手机号/邮箱");
+
+    </script>
+   
+    <!--validate插件-->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#login-form").validate({
+          debug:true,      //调试模式（并不会提交）
+          errorPlacement: function(error, element) {  
+              error.appendTo(element.parent().next());  
+          },
+          submitHandler:function(form){
+              $.ajax({
+                  cache: false,
+                  type: "POST",
+                  url:"/visitor/login",
+                  data:{userName:$("#login").val(),password:$("#password").val()},
+                  async: false,
+                  error: function(request) {
+                  },
+                  success: function(data) {
+                	  if(data.status == 'success'){
+                		  alert('success');
+                	  } else {
+                		  alert(data.tipMsg);
+                	  }
+                  }
+              });
+          },
+          rules:{
+
+            password:{
+              required:true,
+              rangelength:[6,12]
+            },
+           
+            login:{
+              required:true,
+              NameMobileEmail:true
+            }
+          },
+          
+          //自定义提示
+          messages:{
+          
+            password:{
+              required:"请输入密码",
+              rangelength:"密码长度在6~12"
+            },
+            login:{
+              required:"不能为空"
+            }
+          }
+        });
+      $("#register-form").validate({
+        debug:true,      //调试模式（并不会提交）
+        errorPlacement: function(error, element) {  
+            error.appendTo(element.parent().next());  
+        },
+        submitHandler:function(form){
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url:"/visitor/register",
+                data:{mobileNo:$("#phone").val(), name:$("#username").val(),password:$("#password").val(),passwordAgain:$("#confirm-password").val(),verifyCode:$("#code_number").val()},
+                async: false,
+                error: function(request) {
+                },
+                success: function(result) {
+                	if(result.status == 'success'){
+                		alert("注册成功");
+                	}else{
+                		alert(result.tipMsg);
+                	}
+                }
+            });
+        },
+        rules:{
+
+          username:{                
+            required:true,        //开启必填项
+            rangelength:[2,12]    //请输入的数值在2至12位之间
+          },
+          number:{
+            required:true
+          },
+          email:{
+            required:true
+          },
+          password:{
+            required:true,
+            rangelength:[6,12]
+          },
+          url:{
+            required:true
+          },
+          date:{
+
+          },
+          "confirm-password":{
+            equalTo:"#password"     //必须密码相同
+          },
+          phone:{
+            mobile:true
+          },
+          code_number:{                
+            required:true,        //开启必填项
+            rangelength:[6,6],
+            number:true    //请输入的数值在2至12位之间
+          }
+        },
+        
+        //自定义提示
+        messages:{
+          username:{
+            required:"用户名不能留空",      //用户名的必填项提示
+            rangelength:"请检查您输入的数值的长度是否在2至10之间"    //用户名的长度提示
+          },
+          password:{
+            required:"密码不能为空",
+            rangelength:"密码长度在6~12"
+          },
+          "confirm-password":{
+            equalTo:"两次密码输入不一致"     //必须密码相同
+          },
+          code_number:{
+            required:"请输入验证码",
+            rangelength:"验证码长度为6位",
+            number:"请输入合法数字"
+          }
+        }
+      });
+        });
+    </script>
+    <!--发送验证码倒计时-->
+    <script type="text/javascript">
+          var sends = {
+            checked:1,
+            send:function(){
+              /**当手机号码输入正确时才能发送验证码，并且30秒后才能重发**/
+              if (($("#register-form").validate().element($("#phone")))&&(!($('#phone').val()==""))&&($('.div-phone span').html()=="发送验证码")) {
+                var time = 30;
+                //验证手机号是否已经被注册
+		         $.ajax({
+		             type: "GET",
+		             cache: false,
+		             url: "/visitor/isMobileNoRegister",
+		             data: {mobileNo:$("#phone").val()},
+		             dataType: "json",
+		             success: function(data){
+		                        if(data.status == 'success'){
+		                          	//手机号未被注册，则发送验证码
+		                          	timeCountDown();
+		                          	var timer = setInterval(timeCountDown,1000);
+		         			         $.ajax({
+		         			             type: "GET",
+		         			             cache: false,
+		         			             url: "/authCode/send",
+		         			             data: {mobileNo:$("#phone").val()},
+		         			             dataType: "json",
+		         			             success: function(data){
+		         			                        if(data.status == 'success'){
+		         			                        	
+		         			                        }else{
+		         										alert(data.tipMsg);
+		         			                        };
+		         			                      }
+		         			         });
+		                        }else{
+									alert(data.tipMsg);
+		                        };
+		                      }
+			         });
+                
+                
+                function timeCountDown(){
+                  if(time==0){
+                    clearInterval(timer);
+                    $('.div-phone span').html("发送验证码");
+                    sends.checked = 1;
+                    return true;
+                  }
+                  $('.div-phone span').html(time+"S后再次发送");
+                  time--;
+                  return false;
+                  sends.checked = 0;
+                }
+                //timeCountDown();
+                //var timer = setInterval(timeCountDown,1000);
+              }
+            }
+          };
+         
+    </script>
+  
+<script>
+  $(function(){
+    $('[data-toggle="popover"]').popover({ html: "true",
+  });
+});
+</script>
+<script type="text/javascript" src="/static/js/defined_c.js"></script>
+  <!--ajax测试-->
+<script>
+>>>>>>> origin/master
 $('#username').blur(function(){
     $.ajax({
         type: "GET",
@@ -2722,6 +3653,13 @@ $('#username').blur(function(){
                    	}
                  }
     });
+<<<<<<< HEAD
+});
+</script>
+  </body>
+  </html>
+>>>>>>> origin/master
+=======
 });
 </script>
   </body>
