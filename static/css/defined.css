@@ -315,7 +315,7 @@ border: 1px rgba(170, 170, 170, 0.47) solid;
 .scenery_spot1{background-image: url(../images/scenery_spot3.jpg);width:100%;background-repeat: no-repeat;height:375px;background-size:cover;}
 .spot_back_title{background: rgba(87, 85, 85, 0.58);
 padding: 2px;
-margin-top: -330px;
+margin-top: -340px;
 color: #fff;}
 .spot_back{background: rgba(214, 213, 213, 0.58);padding: 15px;}
 .spot_back p{padding-left: 20px;
@@ -336,3 +336,12 @@ border-color: transparent;
 background-color: #45A4C9;
 }
 .basic_information{padding: 20px;}
+.anchor_place{position:relative;height:0px;top:-70px;}
+
+/*吃喝玩乐*/
+.happy_eat{background: rgba(14, 14, 14, 0.32);margin-top: -220px;color: #fff;height: 180px;padding: 20px;}
+@media screen and (max-width:992px){.happy_eat{margin-top:0px;background: #fff;color: #000;padding: 20px;}                    
+                                    } 
+.traffic_and_tickets{padding-left: 20px;padding-right:20px;padding-top:0px;}
+.traffic_and_tickets h5{color:rgba(228, 130, 23, 1);}
+.traffic_and_tickets p b{color:rgba(228, 130, 23, 1);}

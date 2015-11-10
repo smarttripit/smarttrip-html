@@ -20,7 +20,7 @@ margin-left: 0px;
 
 .row.featurette:nth-child(even){
  
-  padding-bottom:50px;
+ 
 }
 
 .isStuck{
@@ -164,6 +164,6 @@ color: #fff;
 
 @media (min-width: 992px) {
   .featurette-heading {
-    margin-top: 70px;
+
   }
 }
