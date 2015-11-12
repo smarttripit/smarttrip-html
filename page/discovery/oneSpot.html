@@ -78,8 +78,7 @@
                 </div> 
                <div class="navbar-collapse collapse">
                  <ul class="nav navbar-nav">
-               <!--    <li class="menuItem active"><a href="#home">基本信息</a></li> -->
-                   <li class="menuItem"><a href="#basic_information">基本信息</a></li>
+                   <li class="menuItem active"><a href="#basic_information">基本信息</a></li>
                    <li class="menuItem"><a href="#happy_eat">吃喝玩乐</a></li>
                    <li class="menuItem"><a href="#travel_notes">周友记</a></li>
                    <li class="menuItem"><a href="#traffic_guidance">交通指南</a></li>
@@ -99,8 +98,8 @@
       <div id='contents'class="container">  
 
       <!-- START THE basic_information -->
-      <div id="basic_information" class="anchor_place"></div>   
-        <div id="" class="row featurette  panel panel-default"> 
+      <div id="" class="anchor_place"></div>   
+        <div id="basic_information" class="row featurette  panel panel-default"> 
            <div class="panel-heading">
             <h4 class="featurette-heading"><i class="fa fa-tag fa-fw"></i>基本信息</h4>
            </div>
@@ -110,8 +109,8 @@
         </div> <!-- END basic_information -->
 
       <!-- START THE happy_eat -->
-      <div id="happy_eat" class="anchor_place"></div> <!-- 锚点位置-->
-      <div class="row featurette panel panel-default">
+      <div  class="anchor_place"></div> <!-- 锚点位置-->
+      <div id="happy_eat" class="row featurette panel panel-default">
         <div class="panel-heading">
           <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>吃喝玩乐</h4>
         </div>
@@ -159,8 +158,8 @@
       </div> <!-- END UPDATES -->
 
       <!-- START THE travel_notes -->
-      <div id="travel_notes" class="anchor_place"></div> 
-      <div id="" class="row featurette panel panel-default">
+      <div id="" class="anchor_place"></div> 
+      <div id="travel_notes" class="row featurette panel panel-default">
         <div class="panel-heading">
           <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>周友记</h4>
         </div>
@@ -176,8 +175,8 @@
       </div>  <!-- END travel_notes -->
 
       <!-- START THE traffic_guidance -->
-      <div id="traffic_guidance" class="anchor_place"></div> 
-      <div id="" class="row featurette panel panel-default">
+      <div id="" class="anchor_place"></div> 
+      <div id="traffic_guidance" class="row featurette panel panel-default">
         <div class="panel-heading">
           <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>交通指南</h4>
         </div>
@@ -194,8 +193,8 @@
       </div>  <!-- END traffic_guidance -->
 
       <!-- START THE spot_tickets -->
-      <div id="spot_tickets" class="anchor_place"></div> 
-      <div id="" class="row featurette panel panel-default">
+      <div id="" class="anchor_place"></div> 
+      <div id="spot_tickets" class="row featurette panel panel-default">
         <div class="panel-heading">
           <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>门票信息</h4>
         </div>
@@ -211,8 +210,8 @@
       </div> <!-- END spot_tickets -->
 
       <!-- START THE specialty -->
-      <div id="specialty" class="anchor_place"></div>
-      <div id="" class="row featurette panel panel-default">
+      <div id="" class="anchor_place"></div>
+      <div id="specialty" class="row featurette panel panel-default">
         <div class="panel-heading">
           <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>特产</h4>
         </div>
@@ -241,8 +240,8 @@
       </div> <!-- END specialty -->
 
       <!-- START THE tips -->
-      <div id="tips" class="anchor_place"></div>
-      <div id="" class="row featurette panel panel-default">
+      <div id="" class="anchor_place"></div>
+      <div id="tips" class="row featurette panel panel-default">
         <div class="panel-heading">
           <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>小贴士</h4>
         </div>
@@ -269,7 +268,7 @@
 
     <!-- ### IMPORTANT ### stickUp javascript file -->
     <!-- ######################################### --> 
-    <script src="/static/js/stickUp.min.js"></script>
+    <script src="/static/js/stickUp.js"></script>
     <!-- ######################################### -->
 
     <!-- ### IMPORTANT ### stickUp options in use -->
@@ -278,8 +277,7 @@
       jQuery(function($) {
         $(document).ready( function() {
           $('.navbar-wrapper').stickUp({
-                        parts: {
-                          
+                        parts: {                         
                           0:'basic_information',
                           1: 'happy_eat',
                           2: 'travel_notes',
