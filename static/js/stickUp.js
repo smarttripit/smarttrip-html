@@ -82,12 +82,13 @@ function($) {
 						testView = contentTop[i] - contentView;
 						console.log(contentView);
 						console.error(testView);
-						if(varscroll > testView){
-							$('.'+itemClass).removeClass(itemHover);
-							$('.'+itemClass+':eq('+i+')').addClass(itemHover);
-						} else if(varscroll < 850){
+						if(varscroll < 889||varscroll == 889){
 							$('.'+itemClass).removeClass(itemHover);
 							$('.'+itemClass+':eq(0)').addClass(itemHover);
+						}
+						 else if(varscroll > testView){
+							$('.'+itemClass).removeClass(itemHover);
+							$('.'+itemClass+':eq('+i+')').addClass(itemHover);
 						}
 					}
 					if(scrollDir == 'down' && varscroll > contentTop[i]-50 && varscroll < contentTop[i]+50) {
