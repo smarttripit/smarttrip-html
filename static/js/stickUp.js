@@ -19,10 +19,10 @@ function($) {
    			var st = $(this).scrollTop();
    			if (st > lastScrollTop){
        			scrollDir = 'down';
-       			//console.log('down');
+       			console.log('down');
    			} else {
       			scrollDir = 'up';
-      			//console.log('up');
+      			console.log('up');
    			}
   			lastScrollTop = st;
 		});
@@ -71,21 +71,21 @@ function($) {
 		}
 		$(document).on('scroll', function() {
 			varscroll = parseInt($(document).scrollTop());
-			//console.log(varscroll);
+			console.log(varscroll);
 			if(menuSize != null){
 				for(var i=0;i < menuSize;i++)
 				{
 					contentTop[i] = $('#'+content[i]+'').offset().top;
-					//console.log(contentTop);
+					console.log(contentTop);
 					function bottomView(i) {
 						contentView = $('#'+content1[i]+'').height()*.2;
 						testView = contentTop[i] - contentView;
-						//console.log(contentView);
-						//console.error(testView);
+						console.log(contentView);
+						console.error(testView);
 						if(varscroll > testView){
 							$('.'+itemClass).removeClass(itemHover);
 							$('.'+itemClass+':eq('+i+')').addClass(itemHover);
-						} else if(varscroll < 50){
+						} else if(varscroll < 850){
 							$('.'+itemClass).removeClass(itemHover);
 							$('.'+itemClass+':eq(0)').addClass(itemHover);
 						}
