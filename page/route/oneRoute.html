@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>oneRouter</title>
+    <title>oneRoute</title>
 
-    <!-- Bootstrap Core CSS -->
+    <!-- Bootstrap & Snippet plugin core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/defined.css" rel="stylesheet">
 
@@ -24,234 +21,256 @@
     <!-- Custom CSS -->
     <link href="/static/css/sb-admin-2.css" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-
+    <!-- Custom styles for this template -->
+    <link href="/static/css/stickup.css" rel="stylesheet">   
+    <link href="/static/css/defined.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet"> 
+  </head>
+  <body>
 
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    
-    <style type="text/css">
-    #allmap {width: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
-    </style>
-    
+    <!-- START THE COVER -->
+    <div id="home" class="carousel">
+      <div class="carousel-inner">
+        <!--# include file="/common/login.html"  -->
+        <!--# include file="/common/top.html"  -->
+       
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+               <div class="bgimg"></div> 
+            </div>
+        </div>
 
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-    <!--# include file="/common/login.html"  -->
-    <!--# include file="/common/top.html"  -->
-    <div id="wrapper">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                   <div class="bgimg"></div> 
+        <div class="row">
+            
+            <div class="col-md-1 col-sm-1 col-xs-1">
+            </div>
+           
+            <div class="col-md-4 col-sm-6 col-xs-10 description">
+                <span>爨柏、黄草梁|<i>自然与人情的融合</i></span>
+                <div class="h_10"></div>
+                <p>推荐理由：黄草梁自然风景区的花三季不断，是北京野生动物的王国，禽翔集草甸，走兽出没丛林。爨底下、柏峪、黄岭西，每一个村子都有着它独特的历史与文化，迄今为止仍然保留着当年的那一份古韵。</p>
+                <div class="h_10"></div>
+                <p style="display:inline;margin-right:20px;">自然.家庭.古韵</p>
+                <button type="button" class="btn btn-danger" style="display:inline;float:right;">立即预定</button>
+            </div>
+            
+            <div class="col-xs-1">
+            </div>
+        </div>
+       
+        <div class="container row_top_space row_bottom_space" >
+            <div class="row in_center">
+                <div class="col-md-12 col-sm-12 col-xs-12 row_space">
+                    <h4 style="color:#DB6464;"><strong>路线图</strong></h4>
                 </div>
             </div>
-
             <div class="row">
-                <div class="col-md-1 col-sm-1 col-xs-1">
+                <div class="col-md-12 col-sm-12 col-xs-12 inner_img">
+                    <img src="/static/images/spot_map.png" class="img-responsive" />
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-10 description">
-                    <span>爨柏、黄草梁|<i>自然与人情的融合</i></span>
-                    <div class="h_10"></div>
-                    <p>推荐理由：黄草梁自然风景区的花三季不断，是北京野生动物的王国，禽翔集草甸，走兽出没丛林。爨底下、柏峪、黄岭西，每一个村子都有着它独特的历史与文化，迄今为止仍然保留着当年的那一份古韵。</p>
-                    <div class="h_10"></div>
-                    <p style="display:inline;margin-right:20px;">自然.家庭.古韵</p>
-                    <button type="button" class="btn btn-danger" style="display:inline;float:right;">立即预定</button>
-                </div>
-                <div class="col-xs-1">
-                </div>
-
-                
             </div>
-            <div class="container">
-            <div class="row">
-                <nav id="des" class="mynav" role="navigation">
-                   <div class="navbar-header">
-                        <button type="button" class="navbar-toggle mytoggle" data-toggle="collapse" 
-                                 data-target="#example-navbar-collapse">
-                             <span class="sr-only">切换导航</span>
-                             <span class="icon-bar myicon-bar"></span>
-                             <span class="icon-bar myicon-bar"></span>
-                             <span class="icon-bar myicon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">黄草梁2日游</a>
-                   </div>
-                   <div class="collapse navbar-collapse" id="example-navbar-collapse">
-                      <ul class="nav navbar-nav">
-                         <li><a href="#product">产品详情</a></li>
-                         <li><a href="#introduce">行程介绍</a></li>
-                         <li><a href="#transport-map">交通地图</a></li>
-                         <li><a href="#cost">费用说明</a></li>
-                         <li><a href="#book">预定须知</a></li>
-                         <li><a href="#comment">周周点评</a></li>
- 
-                      </ul>
-                   </div>
-                </nav>
-                <!-- 产品详情/.panel -->
-                <div style="position:relative;height:0px;top:-100px;" id="product"></div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <i class="fa fa-tag fa-fw"></i>产品详情
-                    </div>
-                    <div class="panel-body">
-                       <h3>【御林汤泉度假村，2人1晚私汤泡池房】</h3>
-                       北京御林汤泉度假村成立于2005年，占地350亩，位于北京市昌平区小汤山现代农业科技示范园西区，集现代生态农业观光、餐饮休闲度假、果品采摘、垂钓、种植、养殖、参观旅游为一体，以环保、绿色、有机、健康为经营理念，以生态农业为旅游、观光休闲的有效载体，通过农业观光、采摘，现代农业技术的展示，农业科普，以及农村生活体验，将农业与旅游有机结合，构建了个性化的特色旅游。在美丽的山、水、田、园、林、花中，使人产生自然全新的感受。
-                       <img src="/static/images/6.jpg" class="img-responsive">
-                       <img src="/static/images/7.jpg" class="img-responsive">
-                    </div>
-                </div>
-                <!-- 行程介绍/.panel -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <i id="introduce" class="fa fa-clock-o fa-fw"></i>行程介绍
-                    </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <ul class="timeline">
-                            
-                            <li>
-                                <div id="day1" class="tldate">Day1</div>
-                            </li>
-                            <li>
-                                <div class="timeline-badge"><i class="fa fa-bus"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">驾车</h4>
-                                        <a><small class="text-muted"><i class="fa fa-clock-o"></i> 约20分钟</small>
-                                        </a>
-                                    </div> 
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-badge warning"><i class="fa fa-money"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">爨柏景区入口购票</h4>
-                                        <p><small class="text-muted">经过购票窗口向前200米左右有岔路口，左拐即可</small>
-                                        </p>
-                                    </div> 
-                                </div>
-                            </li>
-                            <!--黄岭西图片和文字-->
-                            <li data-toggle="modal" data-target="#myModalHLX">
-                                <div class="timeline-badge danger"><i class="fa fa-map-marker"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-body">
-                                        <img src="/static/images/2.jpg" class="img-responsive">
-                                    </div>
-                                    <div class="panel-footer" id="HLX">黄岭西</div>
-                                </div>
-                            </li>
+        </div>
+      </div><!-- END COVER -->
 
-                            <li>
-                                <div id="day2" class="tldate">Day2</div>
-                            </li>
-                            <li>
-                                <div class="timeline-badge"><i class="fa fa-plane"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">驾车</h4>
-                                        <p><small class="text-muted"><i class="fa fa-clock-o"></i> 约3分钟</small>
-                                        </p>
-                                    </div> 
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-badge danger"><i class="fa fa-map-marker"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-body">
-                                        <img src="/static/images/2.jpg" class="img-responsive">
-                                    </div>
-                                    <div class="panel-footer">黄草梁</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline-badge info"><i class="fa fa-save"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>
-                                        <hr>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-                                                <i class="fa fa-gear"></i>  <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Action</a>
-                                                </li>
-                                                <li><a href="#">Another action</a>
-                                                </li>
-                                                <li><a href="#">Something else here</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li><a href="#">Separated link</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam. Officia quam qui adipisci quas consequuntur nostrum sequi. Consequuntur, commodi.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.panel-body -->
-                </div>
-                <!-- 交通地图/.panel -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <i id="transport-map" class="fa fa-map fa-fw"></i>交通地图
-                    </div>
-                    <div class="panel-body">
-                        <div id="allmap" style="height:300px;"></div>
-                    </div>
-                </div>
-                <!-- 费用详情/.panel -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <i id="cost" class="fa fa-credit-card fa-fw"></i>费用说明
-                    </div>
-                    <div class="panel-body">
-                       费用包含<br/>
+    <!-- START THE NAVBAR -->
+      <div class="navbar-wrapper">
+        <div class="container">
+          <div class="navwrapper">
+            <div class="navbar navbar-inverse navbar-static-top">
+               <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                 </button>
+                <a class="navbar-brand" href="#"><b class="spot_title_color">黄草梁2日游</b></a>
+                </div> 
+               <div class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+                   <li class="menuItem"><a href="#product_detail">产品详情</a></li>
+                   <li class="menuItem"><a href="#introduce">行程介绍</a></li>
+                   <li class="menuItem"><a href="#transport-map">交通地图</a></li>
+                   <li class="menuItem"><a href="#cost">费用说明</a></li>
+                   <li class="menuItem"><a href="#book">预订须知</a></li>
+                   <li class="menuItem"><a href="#comment">周周点评</a></li>
+                   <li class="menuItem"><a href="#tips">小贴士</a></li>   
+                 </ul>
+               </div>
+          
+            </div> 
+          </div><!-- End Navbar -->
+      
+        </div>
+      </div> <!-- END NAVBAR -->
+
+    <!-- START THE CONTENT -->
+      <div id='contents' class="container">  
+
+      <!-- START THE product_detail -->
+      <div id="product_detail" class="anchor_place"></div>   
+        <div id="product_detail1" class="row featurette  panel panel-default"> 
+           <div class="panel-heading">
+            <h4 class="featurette-heading"><i class="fa fa-tag fa-fw"></i>产品详情</h4>
+           </div>
+           <div class="col-xs-12 col-sm-12 col-md-12 panel-body .product_detail">
+             <p><b>御林汤泉度假村，2人1晚私汤泡池房</b>北京御林汤泉度假村成立于2005年，占地350亩，位于北京市昌平区小汤山现代农业科技示范园西区，集现代生态农业观光、餐饮休闲度假、果品采摘、垂钓、种植、养殖、参观旅游为一体，以环保、绿色、有机、健康为经营理念，以生态农业为旅游、观光休闲的有效载体，通过农业观光、采摘，现代农业技术的展示，农业科普，以及农村生活体验，将农业与旅游有机结合，构建了个性化的特色旅游。在美丽的山、水、田、园、林、花中，使人产生自然全新的感受。</p>
+           </div>
+        </div> <!-- END product_detail -->
+
+      <!-- START THE introduce -->
+      <div id="introduce" class="anchor_place"></div> <!-- 锚点位置-->
+      <div id="introduce1" class="row featurette panel panel-default">
+        <div class="panel-heading">
+          <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>行程介绍</h4>
+        </div>
+      <div class="panel-body">
+          <ul class="timeline">
+              
+              <li>
+                  <div id="day1" class="tldate">Day1</div>
+              </li>
+              <li>
+                  <div class="timeline-badge"><i class="fa fa-bus"></i>
+                  </div>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4 class="timeline-title">驾车</h4>
+                          <a><small class="text-muted"><i class="fa fa-clock-o"></i> 约20分钟</small>
+                          </a>
+                      </div> 
+                  </div>
+              </li>
+              <li class="timeline-inverted">
+                  <div class="timeline-badge warning"><i class="fa fa-money"></i>
+                  </div>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4 class="timeline-title">爨柏景区入口购票</h4>
+                          <p><small class="text-muted">经过购票窗口向前200米左右有岔路口，左拐即可</small>
+                          </p>
+                      </div> 
+                  </div>
+              </li>
+              <!--黄岭西图片和文字-->
+              <li data-toggle="modal" data-target="#myModalHLX">
+                  <div class="timeline-badge danger"><i class="fa fa-map-marker"></i>
+                  </div>
+                  <div class="timeline-panel">
+                      <div class="timeline-body">
+                          <img src="/static/images/2.jpg" class="img-responsive">
+                      </div>
+                      <div class="panel-footer" id="HLX">黄岭西</div>
+                  </div>
+              </li>
+
+              <li>
+                  <div id="day2" class="tldate">Day2</div>
+              </li>
+              <li>
+                  <div class="timeline-badge"><i class="fa fa-plane"></i>
+                  </div>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4 class="timeline-title">驾车</h4>
+                          <p><small class="text-muted"><i class="fa fa-clock-o"></i> 约3分钟</small>
+                          </p>
+                      </div> 
+                  </div>
+              </li>
+              <li class="timeline-inverted">
+                  <div class="timeline-badge danger"><i class="fa fa-map-marker"></i>
+                  </div>
+                  <div class="timeline-panel">
+                      <div class="timeline-body">
+                          <img src="/static/images/2.jpg" class="img-responsive">
+                      </div>
+                      <div class="panel-footer">黄草梁</div>
+                  </div>
+              </li>
+              <li>
+                  <div class="timeline-badge info"><i class="fa fa-save"></i>
+                  </div>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                      </div>
+                      <div class="timeline-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>
+                          <hr>
+                          <div class="btn-group">
+                              <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                  <i class="fa fa-gear"></i>  <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu" role="menu">
+                                  <li><a href="#">Action</a>
+                                  </li>
+                                  <li><a href="#">Another action</a>
+                                  </li>
+                                  <li><a href="#">Something else here</a>
+                                  </li>
+                                  <li class="divider"></li>
+                                  <li><a href="#">Separated link</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                      </div>
+                      <div class="timeline-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam. Officia quam qui adipisci quas consequuntur nostrum sequi. Consequuntur, commodi.</p>
+                      </div>
+                  </div>
+              </li>
+              <li class="timeline-inverted">
+                  <div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>
+                  </div>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                      </div>
+                      <div class="timeline-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.</p>
+                      </div>
+                  </div>
+              </li>
+          </ul>
+      </div>
+      <!-- /.panel-body -->
+      </div> <!-- END UPDATES -->
+
+      <!-- START THE transport-map -->
+      <div id="transport-map" class="anchor_place"></div> 
+      <div id="transport-map1" class="row featurette panel panel-default">
+        <div class="panel-heading">
+          <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>交通地图</h4>
+        </div>
+        <div class="panel-body col-xs-12 col-sm-12 col-md-12">
+          <div class="col-xs-12 col-sm-2 col-md-1">
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-10">
+            <img src="/static/images/introduce1.jpg" class="img-responsive" />
+          </div>
+          <div class="col-xs-12 col-sm-2 col-md-1">
+          </div>
+        </div>
+      </div>  <!-- END transport-map -->
+
+      <!-- START THE cost -->
+      <div id="cost" class="anchor_place"></div> 
+      <div id="cost1" class="row featurette panel panel-default">
+        <div class="panel-heading">
+          <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>费用说明</h4>
+        </div>
+        <div class="panel-body col-xs-12 col-sm-12 col-md-12">
+          <div class="col-xs-12 col-sm-12 col-md-12 panel-body traffic_and_tickets">
+              费用包含<br/>
                        1.套餐内容：<br/>
                        房型以购买时所选为准 <br/>
                        1）御林汤泉一期温泉小院标准间 <br/>
@@ -267,15 +286,20 @@
                        一期温泉放水时间：08:00-24:00 ； 二期温泉放水时间：08:00-24:00<br/>
                        费用不包含<br/>
                        不含早餐正餐及酒店其他自费项目<br/>
-                    </div>
-                </div>
-                <!-- 预定须知/.panel -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <i id="book" class="fa fa-info-circle fa-fw"></i>预定须知
-                    </div>
-                    <div class="panel-body">
-                       本产品由上海驴妈妈兴旅国际旅行社有限公司及具有合法资质的地接社提供相关服务。<br/>
+          </div>
+        </div>       
+      </div>  <!-- END cost -->
+
+      <!-- START THE book -->
+      <div id="book" class="anchor_place"></div> 
+      <div id="book1" class="row featurette panel panel-default">
+        <div class="panel-heading">
+          <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>预订须知</h4>
+        </div>
+
+        <div class="panel-body col-xs-12 col-sm-12 col-md-12">
+          <div class="col-xs-12 col-sm-12 col-md-12 panel-body traffic_and_tickets">           
+              本产品由上海驴妈妈兴旅国际旅行社有限公司及具有合法资质的地接社提供相关服务。<br/>
                        行前须知<br/>
                        1.御林汤泉地址：北京市昌平区小汤山现代农业科技示范园西区，电话：010-61784288<br/>
                        2.游客到入住酒店凭有效证件办理入住手续，领取钥匙，换取旅游门票后即可开始旅程。<br/>
@@ -289,105 +313,140 @@
 
                        退改说明<br/>
                        此为限量特惠产品，是否有房以商家回复确认为准，且预订成功以后不可退改！<br/>
-                    </div>
-                </div>
-                <!-- 周周点评/.panel -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <i id="comment" class="fa fa-thumbs-up fa-fw"></i>周周点评
-                    </div>
-                    <div class="panel-body">
-                        <div class="container">
-                           <div class="row">
-                                <div class="col-md-4">
-                                    <i>100</i>
-                                    <span>%</span>
-                                    <em>好评率</em>
-                                </div>
-                                <div class="col-md-4">
-                                    <i>100</i>
-                                    <span>%</span>
-                                    <em>好评率</em>
-                                </div>
-                           </div>
-                        </div>
-                    </div>
-                </div>            
-                <!-- 模态框（Modal） -->
-                <div class="modal fade" id="myModalHLX" tabindex="-1" role="dialog" 
-                   aria-labelledby="myModalLabel" aria-hidden="true">
-                   <div class="modal-dialog">
-                      <div class="modal-content">
-                         <div class="modal-header">
-                            <button type="button" class="close" 
-                               data-dismiss="modal" aria-hidden="true">
-                                  &times;
-                            </button>
-                            <h4 class="modal-title" id="myModalLabel">
-                               景区详情
-                            </h4>
-                         </div>
-                        
-                         <div class="modal-body">
-                            <p><i class="fa fa-map-marker"></i>地点：黄岭西<p>
-                            
-                            <p><i class="fa fa-quote-left">景区概况:</i></p>
-                            <p>黄岭西曾名黄龙西，全村整体布局成“人”字结构，山青、水绿、潭深。这里的山山水水养育了黄岭西几十代人，原以农耕为主的当地村民勤劳朴实、热情好客，保存了大量的旧式传统生产工具和生活用具，在改革开放和新农村建设的今天，该村以百姓人家为主题搞起了旅游，开办了化石展馆、生产农具展馆、生活物品展馆，建起了农家大食堂，组建了红歌演出队，让您在游览的同时既能欣赏红歌表演又能品尝地道的农家美食。来黄岭西古山村百姓人家尽情体验民俗生活</p>
+          </div>
+        </div>  
 
-                            <p><i class="fa fa-quote-left">景区特色:</i></p>
-                            <p>黄岭西曾名黄龙西，全村整体布局成“人”字结构，山青、水绿、潭深。这里的山山水水养育了黄岭西几十代人，原以农耕为主的当地村民勤劳朴实、热情好客，保存了大量的旧式传统生产工具和生活用具，在改革开放和新农村建设的今天，该村以百姓人家为主题搞起了旅游，开办了化石展馆、生产农具展馆、生活物品展馆，建起了农家大食堂，组建了红歌演出队，让您在游览的同时既能欣赏红歌表演又能品尝地道的农家美食。来黄岭西古山村百姓人家尽情体验民俗生活</p>
-                            
-                            <p><i class="fa fa-clock-o"></i>建议时间：1小时<p>
+      </div> <!-- END book -->
 
-
-                         </div>
-                         
-                      </div><!-- /.modal-content -->
-                </div><!-- /.modal -->
-
-            </div>
+      <!-- START THE comment -->
+      <div id="comment" class="anchor_place"></div>
+      <div id="comment1" class="row featurette panel panel-default">
+        <div class="panel-heading">
+          <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>周周点评</h4>
         </div>
-            <!-- /.row -->
-    </div>
+        <div class="panel-body col-xs-12 col-sm-12 col-md-12">
+          <div class="row row_bottom_space">
+            <div class="col-xs-12 col-sm-2 col-md-1">
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-10 inner_img">
+              <img src="/static/images/happy_eat1.jpg" class="img-responsive inner_img" />
+              <div class="row"> 
+                <div class="col-xs-12 col-sm-12 col-md-2">              
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-8 introduce">                
+                    <div class="row">
+                                
+                    </div>              
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">              
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-1">
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- END comment -->
+    
+      <!-- START THE tips -->
+      
+        <div id="tips" class="anchor_place"></div>
+        <div id="tips1" class="row featurette panel panel-default">
+          <div class="panel-heading">
+            <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>小贴士</h4>
+          </div>
+          <div class="panel-body col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-2 col-md-1">
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-10">
+              <img src="/static/images/happy_eat1.jpg" class="img-responsive" />
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-1">
+            </div>
+          </div>
+        </div> <!-- END tips -->
+          <!-- 模态框（Modal） -->
+      <div class="modal modal-vcenter fade" id="myModalHLX" tabindex="-1" role="dialog" 
+         aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" 
+                     data-dismiss="modal" aria-hidden="true">
+                        &times;
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">
+                     景区详情
+                  </h4>
+               </div>
+              
+               <div class="modal-body">
+                  <p><i class="fa fa-map-marker"></i>地点：黄岭西<p>
+                  
+                  <p><i class="fa fa-quote-left">景区概况:</i></p>
+                  <p>黄岭西曾名黄龙西，全村整体布局成“人”字结构，山青、水绿、潭深。这里的山山水水养育了黄岭西几十代人，原以农耕为主的当地村民勤劳朴实、热情好客，保存了大量的旧式传统生产工具和生活用具，在改革开放和新农村建设的今天，该村以百姓人家为主题搞起了旅游，开办了化石展馆、生产农具展馆、生活物品展馆，建起了农家大食堂，组建了红歌演出队，让您在游览的同时既能欣赏红歌表演又能品尝地道的农家美食。来黄岭西古山村百姓人家尽情体验民俗生活</p>
+
+                  <p><i class="fa fa-quote-left">景区特色:</i></p>
+                  <p>黄岭西曾名黄龙西，全村整体布局成“人”字结构，山青、水绿、潭深。这里的山山水水养育了黄岭西几十代人，原以农耕为主的当地村民勤劳朴实、热情好客，保存了大量的旧式传统生产工具和生活用具，在改革开放和新农村建设的今天，该村以百姓人家为主题搞起了旅游，开办了化石展馆、生产农具展馆、生活物品展馆，建起了农家大食堂，组建了红歌演出队，让您在游览的同时既能欣赏红歌表演又能品尝地道的农家美食。来黄岭西古山村百姓人家尽情体验民俗生活</p>
+                  
+                  <p><i class="fa fa-clock-o"></i>建议时间：1小时<p>
+
+
+               </div>
+               
+            </div><!-- /.modal-content -->
+      </div><!-- /.modal -->
+       </div>
+
+      
+    <!-- END CONTENT -->
     <!--# include file="/common/footer.html"  -->
-    <!-- /#wrapper -->
 
-    <!-- jQuery -->
+
+    <!-- Bootstrap & Plugins core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
     <script src="/static/js/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="/static/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=WGSH3pwHG4z5uyduhjOmC6nh"></script>
+    <!-- ### IMPORTANT ### stickUp javascript file -->
+    <!-- ######################################### --> 
+    <script src="/static/js/stickUp.js"></script>
+    <!-- ######################################### -->
+
+    <!-- ### IMPORTANT ### stickUp options in use -->
+    <!-- ######################################## -->
     <script type="text/javascript">
-    // 百度地图API功能
-    var map = new BMap.Map("allmap");    // 创建Map实例
-    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-    map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-    map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+      jQuery(function($) {
+        $(document).ready( function() {
+          $('.navbar-wrapper').stickUp({
+                        parts: {                         
+                          0:'product_detail',
+                          1: 'introduce',
+                          2: 'transport-map',
+                          3: 'cost',
+                          4: 'book',
+                          5: 'comment',
+                          6: 'tips'
+                        },
+                        parts1: {                         
+                          0:'product_detail1',
+                          1: 'introduce1',
+                          2: 'transport-map1',
+                          3: 'cost1',
+                          4: 'book1',
+                          5: 'comment1',
+                          6: 'tips1'
+                        },
+                        itemClass: 'menuItem',
+                        itemHover: 'active',
+                        topMargin: 'auto'
+                      });
+        });
+      });
     </script>
-
-   
-    <script>window.onscroll=function(){
-
-    //变量t就是滚动条滚动时，到顶部的距离
-    var t =document.documentElement.scrollTop||document.body.scrollTop;
-
-    var des =$("#des");
-    
-    if( t >=210) {     //当拖动到距离顶部100px处时，左边导航固定，不随滚动条滚动
-
-         des.addClass("navbar-fixed-top");
-         
-    }
-    else{
-
-            //恢复正常        
-         des.removeClass("navbar-fixed-top");}
-        }</script>
     <script type="text/javascript" src="/static/js/defined_c.js"></script>
-
-</body>
-
+    <!-- ######################################## -->
+  </body>
 </html>
