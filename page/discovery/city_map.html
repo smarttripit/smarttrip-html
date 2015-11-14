@@ -38,12 +38,12 @@
       <li class="active">发现北京</li>
     </ol>
    
-    <div class="row row_space">
+    
       <div class="col-xs-12 col-sm-12 col-md-6 beijingmap" id="beijingmap" >
         <!-- <img id="map_bg" usemap="#Map" src="/static/images/beijing-map.png" style="display: block;" class="img-responsive"> <h2 class="find_beijing_title">北京</h2>
           -->
           <style type="text/css">
-            .miyun{margin-left: 60%;margin-top: -107%;} 
+            .miyun{margin-left: 61.5%;margin-top: -110.5%;} 
           </style>
 
           <img src="/static/images/beijing-map (3).png" width="500" height="456" usemap="#Map" border="0" style="display: block;margin-left:50px;" id="map_bg"  />
@@ -126,17 +126,17 @@
 
 
       </div>
-
-      <div class="col-xs-12 col-sm-12 col-md-5 row_space" >
-       <div class="col-xs-12 col-sm-12 col-md-12 right_back"  id="right_back"> 
-         <div class="col-xs-12 col-sm-12 col-md-12">
+       
+        <div class="col-xs-12 col-sm-12 col-md-12 row_bottom_space"  id="right_back">
+        <div class="row padfour">
+         <div class="col-xs-12 col-sm-12 col-md-12 row_bottom_space">
               <h4 class="spot_search_text">北京地点搜索</h4>
 
               <form class="row" role="search" action="http://www.go2tw.cn/findtw/search">
-              <div class="col-xs-10 col-sm-10 col-md-10">
+              <div class="col-xs-8 col-sm-9 col-md-9 padRight">
                 <input type="text" class="form-control" name="n" placeholder="请输入您想要去的地点">
               </div>
-              <div class="col-xs-2 col-sm-2 col-md-2" style="padding-left:0px;padding-right:0px;">
+              <div class="col-xs-4 col-sm-3 col-md-3 padRight">
               <button type="submit" class="btn btn_defined">搜索</button>
               </div>
               </form>
@@ -149,8 +149,8 @@
            <div class="col-xs-12 col-sm-12 col-md-12 filter_body">
                   
                   <ul class="city row" style="">
-                       <div class="col-xs-3 col-sm-3 col-md-3 ">                       
-                        <li name="miyun"> <a href="city.html" target="_blank" class="" _hover-ignore="1">密云县</a></li>
+                       <div class="col-xs-3 col-sm-3 col-md-3">                       
+                         <li name="miyun"> <a href="city.html" target="_blank" class="" _hover-ignore="1">密云县</a></li>
                          <li><a href="#" target="_blank" class="" _hover-ignore="1">怀柔县</a></li>
                          <li><a href="#" target="_blank" class="" _hover-ignore="1">延庆县</a></li>
                         
@@ -192,33 +192,66 @@
            <div class="col-xs-12 col-sm-12 col-md-12">
               <h4 class="spot_search_text">热门推荐</h4>
            </div>
-           <div class="col-xs-12 col-sm-12 col-md-12 spot_search_text">
+           <div class="col-xs-12 col-sm-12 col-md-12 spot_search_text padRight">
 
                <p><a><strong>露营：</strong></a>
                   <a class="hot_spot">黄岭西</a>
                   <a class="hot_spot">黄岭西</a>
                   <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭</a>
                </p>
 
                <p><a><strong>露营：</strong></a>
                   <a class="hot_spot">黄岭西</a>
                   <a class="hot_spot">黄岭西</a>
                   <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭</a>
                </p>
 
                <p><a><strong>露营：</strong></a>
                   <a class="hot_spot">黄岭西</a>
                   <a class="hot_spot">黄岭西</a>
                   <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭</a>
                </p>
+
+               <p><a><strong>露营：</strong></a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭</a>
+               </p>
+
+               <p><a><strong>露营：</strong></a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭西</a>
+                  <a class="hot_spot">黄岭</a>
+               </p>
+
+
                
 
            </div>
-     
-        </div> 
-      </div>
-
-    </div>
+         </div> 
+      
+       </div>
+    
   </div>
 
  <!--# include file="/common/footer.html"  -->
@@ -260,10 +293,10 @@ $(function(){
   $(window).resize(function(){  
         if (winWidth <= 1200) {//768及以下分辨率
                 $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_none");
-                $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-12 right_back");
+                $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-12 right_back row_bottom_space");
             } else
             { $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_in");
-              $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-12");
+              $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-5 row_bottom_space");
           }
 
 });
@@ -274,10 +307,10 @@ $(function(){
             var wideScreen = false;
             if (winWide <= 1200) {//768及以下分辨率
                 $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_none");
-                 $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-12 right_back");
+                 $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-12 right_back row_bottom_space");
             } else {
 $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_in");
-$("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-12");
+$("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-5 row_bottom_space");
                 wideScreen = true; //是宽屏
             }
 });

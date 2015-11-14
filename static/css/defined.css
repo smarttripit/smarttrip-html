@@ -265,10 +265,11 @@ color: #fff;
 
 /*//发现北京样式//*/
 /*发现北京地图页*/
-.city{list-style:none;-webkit-padding-start: 0px;}
+.city{list-style:none;-webkit-padding-start: 0px;margin-bottom:0px;}
 .city li{margin-bottom:5px;}
 .city li a{width:100%;}
 .spot_search_text{color:#797777;}
+.spot_search_text p a strong{font-size: 15px;color:#78A8DA;}
 .city_active{background: #78A8DA;border-color:#fff;color:#fff;}
 .hot_spot {margin-right:10px;}
 .display_in{display: run-in;}
@@ -287,9 +288,9 @@ color: #fff;
 /*.filter {border: 2px #ececec solid;width:100%;background: #fff;font-size: 16px;
           height: 250px;padding:10px;margin-bottom: 15px;} */
 /*.filter_height{height: 250px;}*/
-.filter1_title{color: #75B9CE;border-bottom: 2px rgba(209, 209, 209, 0.36) solid;margin-left:5%;margin-right:5%;} 
-.filter2_title{color: #4AA825;border-bottom: 2px rgba(209, 209, 209, 0.36) solid;margin-left:5%;margin-right:5%;} 
-.filter3_title{color: #EB9D55;border-bottom: 2px rgba(209, 209, 209, 0.36) solid;margin-left:5%;margin-right:5%;} 
+.filter1_title{color: #75B9CE;} 
+.filter2_title{color: #4AA825;} 
+.filter3_title{color: #EB9D55;} 
 .filter_body a{display: inline-block;
 width: 100%;
 margin-bottom: 4px;
@@ -299,8 +300,26 @@ text-align: center;
 border: 1px rgba(170, 170, 170, 0.47) solid;
 }
 
+.filter_2{padding:10px;background:#fff;margin-bottom:15px;}
+
+.filter_body_2 p a{display: inline-block;
+margin: 5px 10px;
+border-radius: 4px;
+padding: 5px 10px;
+text-align: center;
+border: 1px rgba(170, 170, 170, 0.47) solid;
+}
+
+.filter_body_2{
+    padding-left: 0px;
+    margin-left: -50px;
+}
+
+.season_pad{padding: 5px 17px;}
+.padRight{padding-right:0px;}
+.padfour{padding-top: 15px;padding-bottom: 15px;padding-left: 10px;padding-right:25px;}
+.filter_body .col-md-3{padding-right: 0px;}
 .filter_body .col-md-4{padding-left:5px;padding-right:5px;}
-.filter_body .col-md-3{padding-right:0px;}
 .filter_body .col-md-6{padding-left:5px;padding-right:5px;}
 
 .ad_image{height: 100px;width: 100%;margin-bottom: 20px;}
