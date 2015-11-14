@@ -33,7 +33,7 @@ margin-left: 0px;
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
   position: relative;
-  z-index: 15;
+  z-index: 999;
 
 }
 

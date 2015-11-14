@@ -48,3 +48,31 @@
   background-color: blue;
 }
 
+
+/**固定在底部的预定按钮**/
+.fixed_btn{
+  position:fixed; 
+  right:10px; 
+  bottom:10px;  
+  overflow:hidden; 
+  cursor:default;
+   -moz-user-select:none;
+}
+   
+/**登陆注册错误提示**/
+.form-group label.error {
+  
+  color: #E74C3C;
+  width: 100%;
+  display: inline-block;
+  background: url(/static/images/error-icon.png) no-repeat left center;
+  padding-left: 28px;
+  top: 0;
+  border-color: #E74C3C;
+   }
+
+  .r-service-protocol{color:#337AB7;text-align: center;}  
+
+  .h_10{
+    height: 10px;
+  }
