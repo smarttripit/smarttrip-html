@@ -82,17 +82,4 @@
   color: #5D96C3;
 }
 
-.my-dialog{
-  height: 80%;
-  overflow-y:auto;
-  position: relative;
-}
-
-.ceshi{
-  position: absolute;
-  left: 900px;
-  top: 50px;
-  background-color: blue;
-  width: 100px;
-  height: 100px;
-}
+  
