@@ -449,7 +449,14 @@
     <!-- ######################################## -->
 
     <script type="text/javascript">
-    $(".oneLocal"). height($(window).height()*0.8);
+    function place(klass){
+      $(klass).height($(window).height()*0.7);
+    }
+      
+
+    $('#myModalHLX').on('show.bs.modal',place('.oneLocal'));
+
+
     </script>
   </body>
 </html>
