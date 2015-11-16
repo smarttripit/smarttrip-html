@@ -57,6 +57,8 @@
   overflow:hidden; 
   cursor:default;
    -moz-user-select:none;
+   background-color: rgba(0,0,0,0.2); 
+   border: 0px;
 }
    
 /**登陆注册错误提示**/
@@ -82,4 +84,4 @@
   color: #5D96C3;
 }
 
-  
+

@@ -18,3 +18,8 @@
       centerModals($(this));
     });
     $(window).on('resize', centerModals);
+
+
+    
+    
+    

@@ -170,7 +170,7 @@
                   <div id="day2" class="tldate">Day2</div>
               </li>
               <li>
-                  <div class="timeline-badge"><i class="fa fa-plane"></i>
+                  <div class="timeline-badge"><i class="fa fa-bus"></i>
                   </div>
                   <div class="timeline-panel">
                       <div class="timeline-heading">
@@ -180,7 +180,7 @@
                       </div> 
                   </div>
               </li>
-              <li class="timeline-inverted">
+              <li class="timeline-inverted" data-toggle="modal" data-target="#myModalHLX">
                   <div class="timeline-badge danger"><i class="fa fa-map-marker"></i>
                   </div>
                   <div class="timeline-panel">
@@ -190,57 +190,40 @@
                       <div class="panel-footer">黄草梁</div>
                   </div>
               </li>
-              <li>
-                  <div class="timeline-badge info"><i class="fa fa-save"></i>
+              <li data-toggle="modal" data-target="#myModalHCL">
+                  <div class="timeline-badge danger"><i class="fa fa-map-marker"></i>
                   </div>
                   <div class="timeline-panel">
-                      <div class="timeline-heading">
-                          <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                      </div>
                       <div class="timeline-body">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>
-                          <hr>
-                          <div class="btn-group">
-                              <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-                                  <i class="fa fa-gear"></i>  <span class="caret"></span>
-                              </button>
-                              <ul class="dropdown-menu" role="menu">
-                                  <li><a href="#">Action</a>
-                                  </li>
-                                  <li><a href="#">Another action</a>
-                                  </li>
-                                  <li><a href="#">Something else here</a>
-                                  </li>
-                                  <li class="divider"></li>
-                                  <li><a href="#">Separated link</a>
-                                  </li>
-                              </ul>
-                          </div>
+                          <img src="/static/images/njl.jpg" class="img-responsive">
                       </div>
+                      <div class="panel-footer">**餐厅</div>
+                  </div>
+              </li>
+              <li class="timeline-inverted" data-toggle="modal" data-target="#myModalCT">
+                  <div class="timeline-badge danger"><i class="fa fa-map-marker"></i>
+                  </div>
+                  <div class="timeline-panel">
+                      <div class="timeline-body">
+                          <img src="/static/images/restaurant.jpg" class="img-responsive">
+                      </div>
+                      <div class="panel-footer">***客栈</div>
                   </div>
               </li>
               <li>
-                  <div class="timeline-panel">
-                      <div class="timeline-heading">
-                          <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                      </div>
-                      <div class="timeline-body">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam. Officia quam qui adipisci quas consequuntur nostrum sequi. Consequuntur, commodi.</p>
-                      </div>
-                  </div>
-              </li>
-              <li class="timeline-inverted">
-                  <div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>
-                  </div>
-                  <div class="timeline-panel">
-                      <div class="timeline-heading">
-                          <h4 class="timeline-title">Lorem ipsum dolor</h4>
-                      </div>
-                      <div class="timeline-body">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.</p>
-                      </div>
-                  </div>
-              </li>
+                 <div class="timeline-badge"><i class="fa fa-bus"></i>
+                 </div>
+                 <div class="timeline-panel">
+                     <div class="timeline-heading">
+                         <h4 class="timeline-title">驾车</h4>
+                         <p><small class="text-muted"><i class="fa fa-clock-o"></i> 约3分钟</small>
+                         </p>
+                     </div> 
+                 </div>
+             </li>
+             <li>
+                 <div id="day1" class="tldate">北京</div>
+             </li>
           </ul>
       </div>
       <!-- /.panel-body -->
@@ -367,41 +350,92 @@
             </div>
           </div>
         </div> <!-- END tips -->
-          <!-- 模态框（Modal） -->
-      <div class="modal modal-vcenter fade" id="myModalHLX" tabindex="-1" role="dialog" 
-         aria-labelledby="myModalLabel" aria-hidden="true">
+          <!-- 黄岭西模态框（myModalHLX） -->
+          <div class="modal modal-vcenter fade" id="myModalHLX" tabindex="-1" role="dialog" 
+             aria-labelledby="myModalLabel" aria-hidden="true">
 
-           <div class="modal-dialog">
-              <div class="modal-content">
-                 <div class="modal-header">
-                    <button type="button" class="close" 
-                       data-dismiss="modal" aria-hidden="true">
-                          &times;
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">
-                       景区详情
-                    </h4>
-                 </div>
-                
-                 <div class="modal-body"> 
-                    <iframe class="oneLocal" width="100%" frameborder="0" src="oneLocal.html"></iframe>
-                 </div>
-                 
-              </div><!-- /.modal-content -->
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" 
+                           data-dismiss="modal" aria-hidden="true">
+                              &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                           景区详情
+                        </h4>
+                     </div>
+                    
+                     <div class="modal-body"> 
+                        <iframe class="oneLocal" width="100%" frameborder="0" src="oneLocal.html"></iframe>
+                     </div>
+                     
+                  </div><!-- /.modal-content -->
 
-              
+                  
 
-           </div><!-- /.modal-dialog -->
-         
-       </div>
+               </div><!-- /.modal-dialog -->   
+          </div>
+
+          <!-- 黄草梁模态框（myModalHCL） -->
+          <div class="modal modal-vcenter fade" id="myModalHCL" tabindex="-1" role="dialog" 
+             aria-labelledby="myModalLabel" aria-hidden="true">
+
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" 
+                           data-dismiss="modal" aria-hidden="true">
+                              &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                           景区详情
+                        </h4>
+                     </div>
+                    
+                     <div class="modal-body"> 
+                        <iframe class="oneLocal" width="100%" frameborder="0" src="oneLocal.html"></iframe>
+                     </div>
+                     
+                  </div><!-- /.modal-content -->
+
+                  
+
+               </div><!-- /.modal-dialog -->   
+          </div>
+
+          <!-- **餐厅模态框（myModalCT） -->
+          <div class="modal modal-vcenter fade" id="myModalCT" tabindex="-1" role="dialog" 
+             aria-labelledby="myModalLabel" aria-hidden="true">
+
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" 
+                           data-dismiss="modal" aria-hidden="true">
+                              &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                           景区详情
+                        </h4>
+                     </div>
+                    
+                     <div class="modal-body"> 
+                        <iframe class="oneLocal" width="100%" frameborder="0" src="oneLocal.html"></iframe>
+                     </div>
+                     
+                  </div><!-- /.modal-content -->
+
+                  
+
+               </div><!-- /.modal-dialog -->   
+          </div>
 
      </div> 
     <!-- END CONTENT -->
     <!--# include file="/common/footer.html"  -->
     
     <button type="button" class="btn btn-danger fixed_btn">立即预定</button>
-
-
     <!-- Bootstrap & Plugins core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -419,6 +453,7 @@
     <script type="text/javascript">
       jQuery(function($) {
         $(document).ready( function() {
+          //导航栏切换效果
           $('.navbar-wrapper').stickUp({
                         parts: {                         
                           0:'product_detail',
@@ -441,22 +476,42 @@
                         itemClass: 'menuItem',
                         itemHover: 'active',
                         topMargin: 'auto'
-                      });
+          });
+          
+          //弹出框
+          function place(klass){
+            $(klass).height($(window).height()*0.7);
+          }
+          
+          $('#myModalHLX').on('show.bs.modal',place('.oneLocal'));
+          $('#myModalHCL').on('show.bs.modal',place('.oneLocal'));
+          $('#myModalCT').on('show.bs.modal',place('.oneLocal'));
+          
+          //timeline每一个列表项的鼠标移入移出事件  
+          var lis =  $('ul.timeline li');
+          var fas = $('#contents .fa');
+          lis.each(function(){
+            lis.mouseover(function(){
+                $(this).css('color','grey');
+            });
+            lis.mouseout(function(){
+                $(this).css('color','black');
+            });
+          });
+
+          fas.each(function(){
+            fas.mouseover(function(){
+              $(this).css('color','blue');
+            });
+            fas.mouseout(function(){
+              $(this).css('color','white');
+            })
+          })
+
         });
       });
     </script>
     <script type="text/javascript" src="/static/js/defined_c.js"></script>
-    <!-- ######################################## -->
-
-    <script type="text/javascript">
-    function place(klass){
-      $(klass).height($(window).height()*0.7);
-    }
-      
-
-    $('#myModalHLX').on('show.bs.modal',place('.oneLocal'));
-
-
-    </script>
+    <!-- ######################################## --> 
   </body>
 </html>
