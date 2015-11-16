@@ -29,144 +29,246 @@
     </div>
     <div class="container">
 
-    <ol class="breadcrumb">
-      <li><a href="/index.html">首页</a></li>
-      <li><a href="/discovery/city_map.html">发现北京</a></li>
-      <li class="active">门头沟区</li>
-    </ol>
 
-     <div  class="col-xs-12 col-sm-12 col-md-12 filter_2"> 
-        <div class="col-xs-12 col-sm-2 col-md-2">
-           <h4 class="filter1_title"><i class="fa fa-coffee"></i>&nbsp;游玩主题：</h4>
+    <div class="col-xs-12 col-sm-12 col-md-12 search_back">
+     <div class="col-xs-12 col-sm-6 col-md-8">
+      <ol class="breadcrumb">
+        <li><a href="/index.html">首页</a></li>
+        <li><a href="/discovery/city_map.html">发现北京</a></li>
+        <li class="active">门头沟区</li>
+      </ol>
+     </div>
+     <div class="col-xs-12 col-sm-6 col-md-4  search_back">
+       <form class="row" role="search" action="http://www.go2tw.cn/findtw/search">
+        <div class="col-xs-8 col-sm-9 col-md-9">
+           <input type="text" class="form-control" name="n" placeholder="请输入您想要去的地方">
         </div>
-        <div class="col-xs-12 col-sm-10 col-md-10 filter_body_2" >
-             <p style="margin-bottom:0px;"><a href="javascript:;" val="1">滑雪</a>
-                <a href="javascript:;" val="1">露营</a>
-                <a href="javascript:;" val="1">骑行</a>
-                <a href="javascript:;" val="1">滑雪</a>
-                <a href="javascript:;" val="1">烧烤</a>
-                <a href="javascript:;" val="1">亲子</a>
-                <a href="javascript:;" val="1">登山</a>
-                <a href="javascript:;" val="1">骑行</a>
-                <a href="javascript:;" val="1">滑雪</a>
-                <a href="javascript:;" val="1">烧烤</a>
-                <a href="javascript:;" val="1">亲子</a>
-                <a href="javascript:;" val="1">登山</a>
-             </p>
-
-             <p><a href="javascript:;" val="1">露营</a>
-                <a href="javascript:;" val="1">骑行</a>
-                <a href="javascript:;" val="1">滑雪</a>
-                <a href="javascript:;" val="1">烧烤</a>
-                <a href="javascript:;" val="1">亲子</a>
-                <a href="javascript:;" val="1">登山</a>
-                <a href="javascript:;" val="1">骑行</a>
-                <a href="javascript:;" val="1">滑雪</a>
-                <a href="javascript:;" val="1">烧烤</a>
-                <a href="javascript:;" val="1">亲子</a>
-                <a href="javascript:;" val="1">登山</a>
-             </p>
+        <div class="col-xs-4 col-sm-3 col-md-3">
+           <button type="submit" class="btn btn_defined">搜索</button>
         </div>
-
-        <div class="col-xs-12 col-sm-2 col-md-2">
-           <h4 class="filter2_title"><i class="fa fa-group"></i>&nbsp;游玩同伴：</h4>
-        </div>
-        <div class="col-xs-12 col-sm-10 col-md-10 filter_body_2">
-             <p ><a href="javascript:;" val="1">老人</a>
-                <a href="javascript:;" val="1">小孩</a>
-                <a href="javascript:;" val="1">同学</a>
-                <a href="javascript:;" val="1">老人</a>
-                <a href="javascript:;" val="1">小孩</a>
-                <a href="javascript:;" val="1">同学</a>
-                <a href="javascript:;" val="1">老人</a>
-                <a href="javascript:;" val="1">小孩</a>
-                <a href="javascript:;" val="1">同学</a>
-                <a href="javascript:;" val="1">老人</a>
-                <a href="javascript:;" val="1">小孩</a>
-                <a href="javascript:;" val="1">同学</a>
-             </p>
-        </div>
-
-        <div class="col-xs-12 col-sm-2 col-md-2">
-           <h4 class="filter3_title"><i class="fa fa-suitcase"></i>&nbsp;游玩季节：</h4>
-        </div>
-        <div class="col-xs-12 col-sm-10 col-md-10 filter_body_2">
-             <p style="margin-bottom:0px;"><a href="javascript:;" val="1">当季</a>
-                <a href="javascript:;" val="1" style="padding: 5px 17px;">春</a>
-                <a href="javascript:;" val="1" style="padding: 5px 17px;">夏</a>
-                <a href="javascript:;" val="1" style="padding: 5px 17px;">秋</a>
-             </p>
-        </div>
+       </form>
+      </div>
      </div>
 
+     <div  class="col-xs-12 col-sm-12 col-md-12 filter_2"> 
+       <div class="col-xs-12 col-sm-12 col-md-6 beijingmap" id="beijingmap" >
+         <style type="text/css">
+            .miyun{margin-left: 63%;margin-top: -112%;} 
+          </style>
 
+          <img src="/static/images/beijing-map (3).png" width="500" height="456" usemap="#Map" border="0" style="display: block;margin-left:50px;" id="map_bg"  />
+          <map name="Map" id="Map">
 
+            <area shape="poly" coords="342,166,348,129,388,130,417,138,436,144,404,165,394,177,391,200,370,205,353,215,343,227,337,238,325,234,319,227,310,219,302,218,298,213,293,198,293,184,288,171,289,155,295,135,304,129,313,118,324,108,337,117,341,122,345,126"  href="#" onmouseover="show_map('miyun')"/>
+  
+            <area shape="poly" coords="270,149,269,60,285,50,291,76,307,89,320,98,279,156,286,187,290,225,274,230,258,229,239,227,237,219,224,212,209,205,204,194,259,147,257,132,248,126,251,116,229,76,242,74,247,59,261,58,265,61,269,60" href="#"  onmouseover="show_map('huairou')"/>
+  
+            <area shape="poly" coords="177,164,192,106,219,109,243,111,242,133,251,143,235,163,214,174,195,185,189,196,171,198,161,209,143,209,128,214,120,206,105,197,98,182,91,170,95,157,107,152,124,146,154,149,162,141,174,132,184,122,187,117,189,117" href="#" onmouseover="show_map('yanqin')"/>
+  
+  
+            <area shape="poly" coords="184,233,218,217,233,232,234,254,233,273,223,278,208,276,187,262,172,253,157,260,135,271,122,260,111,253,117,243,129,230,139,224,147,216,162,216,177,212,180,206,196,206,204,206,209,210,214,215" href="#" onmouseover="show_map('changping')" />
+  
+  
+            <area shape="poly" coords="290,262,320,238,335,259,341,277,315,281,299,282,282,286,266,286,253,278,240,263,240,252,241,239,253,236,266,237,281,237,288,235,296,234,310,230,317,232,317,238" href="#"  onmouseover="show_map('shunyi')"/>
+  
+  
+            <area shape="poly" coords="379,242,389,209,405,214,414,229,422,244,421,259,404,264,387,274,369,276,343,284,350,270,346,247,344,234,355,227,363,216,375,212,384,209,390,209" href="#" onmouseover="show_map('pinggu')"/>
+  
+            <area shape="poly" coords="294,344,289,296,302,317,318,337,335,343,328,356,322,365,313,378,306,382,298,386,289,377,282,365,270,362,254,362,251,354,255,340,270,333,270,322,275,312,279,305,286,299,293,300" href="#" onmouseover="show_map('tongzhou')"/>
+  
+  
+            <area shape="poly" coords="204,307,228,286,252,283,260,297,266,311,263,327,250,334,235,336,226,336,220,343,206,340,199,339,189,336,184,329,177,334,164,342,153,329,167,315,166,300,174,291,164,280,154,277,162,269,171,265,177,260,190,276,203,285,215,289,222,290" href="#" onmouseover="show_map('tongzhou')"/>
+  
+  
+            <area shape="poly" coords="94,282,90,256,103,261,112,263,122,270,134,278,146,275,155,287,161,295,159,307,160,320,147,327,134,324,115,311,98,314,86,308,66,312,50,324,33,333,33,316,26,305,17,298,18,289,27,281,48,273,57,270,73,263,80,262,90,262" href="#" onmouseover="show_map('mentougou')"/>
+  
+  
+            <area shape="poly" coords="101,359,115,321,124,331,137,336,148,338,153,350,172,353,181,351,177,366,177,383,173,394,152,397,130,392,116,393,104,397,92,404,82,404,69,396,61,384,52,384,36,386,28,378,25,360,25,349,44,345,47,333,70,324,86,314,97,318,104,318,111,318,112,322" href="#" onmouseover="show_map('fangshan')"/>
+  
+  
+            <area shape="poly" coords="214,382,220,355,235,344,245,347,246,363,257,370,269,369,277,382,254,386,239,394,233,404,223,407,214,414,212,422,199,418,190,411,185,401,185,391,182,370,185,363,191,358,200,348,205,347,211,352,213,354,215,357" href="#" onmouseover="show_map('daxing')"/>
+          </map>
 
+          <a href="city.html" target="_blank" class="" >
+           <img class="miyun" src="/static/images/miyun.png" style="display: none;">
+          </a>
 
+          <a href="#" target="_blank" class="city_active">
+           <img class="huairou" src="" style="display: none;">
+          </a>
 
-     <!--   <div class="col-xs-12 col-sm-4 col-md-3">
-          <div class="panel-group panel-group_defined filter_height">
-             <div class="filter2_title in_center" data-toggle="collapse" data-target="#find_tour_partner">
-               <h4><i class="fa fa-group"></i>&nbsp;游玩同伴</h4>
-             </div>
-             <div class="row filter_body collapse in" id="find_tour_partner">
-                       <div class="col-xs-6 col-sm-6 col-md-6 ">
-                         <a href="javascript:;" val="1">老人</a>
-                         <a href="javascript:;" val="1">小孩</a>
-                         <a href="javascript:;" val="1">同学</a>
+          <a href="#" target="_blank" class="city_active">
+           <img class="yanqin" src="" style="display: none;">
+          </a>
+
+          <a href="#" target="_blank" class="city_active">
+           <img class="changping" src="" style="display: none;">
+          </a>
+
+          <a href="#" target="_blank" class="city_active">
+           <img class="shunyi" src="" style="display: none;">
+          </a>
+
+          <a href="#" target="_blank" class="city_active">
+           <img class="pinggu" src="" style="display: none;">
+          </a>
+
+          <a href="#" target="_blank" class="city_active">
+           <img class="tongzhou" src="" style="display: none;">
+          </a>
+
+          <a href="#" target="_blank" class="city_active">
+           <img class="zhongxin" src="" style="display: none;">
+          </a>
+
+          <a href="#" target="_blank" class="city_active">
+           <img class="mentougou" src="" style="display: none;">
+          </a>
+
+          <a href="#" target="_blank" class="city_active">
+           <img class="fangshan" src="" style="display: none;">
+          </a>
+
+          <a href="#" target="_blank" class="city_active">
+           <img class="daxing" src="" style="display: none;">
+          </a>
+       </div>
+
+       <div class="col-xs-12 col-sm-12 col-md-6 right_back">
+         <div class="col-xs-12 col-sm-3 col-md-3 filter_title_2">
+           <h4 class="filter1_title"><i class="fa fa-coffee"></i>&nbsp;游玩地区：</h4>
+         </div>
+         <div class="col-xs-12 col-sm-9 col-md-9 filter_body_2" >
+            <ul class="city row" style="">
+                       <div class="col-xs-6 col-sm-3 col-md-3">                       
+                         <li name="miyun"> <a href="city.html" target="_blank" class="" _hover-ignore="1">密云</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">怀柔</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">延庆</a></li>
+                        
                        </div>
 
-                       <div class="col-xs-6 col-sm-6 col-md-6">
-                         <a href="javascript:;" val="1">同事</a>
-                         <a href="javascript:;" val="1">朋友</a>
-                         <a href="javascript:;" val="1">朋友</a>
+                       <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">昌平</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">顺义</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">平谷</a></li>
                        </div>
 
-             </div>
-          </div>
-        </div> -->
-
-     <!--  <div class="col-xs-12 col-sm-4 col-md-3">
-          <div class="panel-group panel-group_defined filter_height">
-             <div class="filter3_title in_center" data-toggle="collapse" data-target="#find_tour_time">
-               <h4><i class="fa fa-suitcase"></i>&nbsp;出游时间</h4>
-             </div>
-             <div class="row filter_body collapse in" id="find_tour_time">
-                       <div class="col-xs-6 col-sm-6 col-md-6 ">
-                         <a href="javascript:;" val="1">当季</a>
-                         <a href="javascript:;" val="1">春</a>
+                       <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">通州</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">大兴</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">门头沟</a></li>
                        </div>
 
-                       <div class="col-xs-6 col-sm-6 col-md-6">
-                         <a href="javascript:;" val="1">夏</a>
-                         <a href="javascript:;" val="1">秋</a>
+                       <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">房山</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">中心</a></li>
+                       </div>
+            </ul>   
+         </div>
+        
+         <div class="col-xs-12 col-sm-3 col-md-3 filter_title_2">
+           <h4 class="filter2_title"><i class="fa fa-coffee"></i>&nbsp;游玩主题：</h4>
+         </div>
+         <div class="col-xs-12 col-sm-9 col-md-9 filter_body_2" >
+            <ul class="city row" style="">
+                  <div class="col-xs-6 col-sm-3 col-md-3">                       
+                         <li> <a href="city.html" target="_blank" class="" _hover-ignore="1">烧烤</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">爬山</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">滑雪</a></li>
+                        
+                  </div>
+
+                  <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">骑行</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">垂钓</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">爬山</a></li>
+                  </div>
+
+                  <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">滑雪</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">骑行</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">爬山</a></li>
+                  </div>
+
+                  <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">徒步</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">骑行</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">滑雪</a></li>
+                  </div>
+            </ul> 
+         </div>
+
+         <div class="col-xs-12 col-sm-3 col-md-3 filter_title_2">
+           <h4 class="filter3_title"><i class="fa fa-group"></i>&nbsp;游玩同伴：</h4>
+         </div>
+         <div class="col-xs-12 col-sm-9 col-md-9 filter_body_2">
+            <ul class="city row" style="">
+                       <div class="col-xs-6 col-sm-3 col-md-3">                       
+                         <li> <a href="city.html" target="_blank" class="" _hover-ignore="1">老人</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">小孩</a></li>                       
                        </div>
 
-             </div>
-          </div>
-        </div> -->
-     
+                       <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">同学</a></li>
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">朋友</a></li>
+                       </div>
 
-      <div>
+                       <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">同事</a></li>
+                       </div>
+
+                       <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">老人</a></li>
+                       </div>
+            </ul> 
+         </div>
+
+         <div class="col-xs-12 col-sm-3 col-md-3 filter_title_2">
+           <h4 class="filter4_title"><i class="fa fa-suitcase"></i>&nbsp;游玩季节：</h4>
+         </div>
+         <div class="col-xs-12 col-sm-9 col-md-9 filter_body_2">
+           <ul class="city row" style="">
+                       <div class="col-xs-6 col-sm-3 col-md-3">                       
+                         <li> <a href="city.html" target="_blank" class="" _hover-ignore="1">当季</a></li>                       
+                       </div>
+
+                       <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">春</a></li>
+                       </div>
+
+                       <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">夏</a></li>
+                       </div>
+
+                       <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a href="#" target="_blank" class="" _hover-ignore="1">秋</a></li>
+                       </div>
+           </ul> 
+         </div>
+       </div>
+
+     </div>
+
+     <!-- <div>
         <img src="/static/images/adimage.jpg" class="ad_image">
-      </div>
+      </div> -->
 
        <div class="row images_list">
          <div class="col-xs-12 col-sm-6 col-md-3">
            <a href="/discovery/oneSpot.html">
               <div class="inner">
-             <div>
-               <img src="/static/images/findbeijing2.png" class="img-responsive">
-             </div>
+                <div>
+                  <img src="/static/images/findbeijing2.png" class="img-responsive">
+                </div>
 
-             <div class="spot_discription">
+                <div class="spot_discription">
                <div class="row">
                  <div class="col-md-12">
-                   <p class="find_title">水峪村</p>
+                   <p class="find_title">水峪村 <span style="float:right;font-size:10px;"><span class="glyphicon glyphicon-thumbs-up"  aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></span></p>
                    <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
                  </div>
                </div>  
-             </div>
+                </div>
       
               </div>
            </a>
@@ -175,18 +277,18 @@
          <div class="col-xs-12 col-sm-6 col-md-3">
            <a href="/discovery/oneSpot.html">
               <div class="inner">
-             <div>
-               <img src="/static/images/findbeijing2.png" class="img-responsive">
-             </div>
+                <div>
+                  <img src="/static/images/findbeijing2.png" class="img-responsive">
+                </div>
 
-             <div class="spot_discription">
+                <div class="spot_discription">
                <div class="row">
                  <div class="col-md-12">
-                   <p class="find_title">水峪村</p>
+                   <p class="find_title">水峪村 <span style="float:right;font-size:10px;"><span class="glyphicon glyphicon-thumbs-up"  aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></span></p>
                    <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
                  </div>
                </div>  
-             </div>
+                </div>
       
               </div>
            </a>
@@ -195,42 +297,42 @@
          <div class="col-xs-12 col-sm-6 col-md-3">
            <a href="/discovery/oneSpot.html">
               <div class="inner">
-             <div>
-               <img src="/static/images/findbeijing2.png" class="img-responsive">
-             </div>
+                <div>
+                  <img src="/static/images/findbeijing2.png" class="img-responsive">
+                </div>
 
-             <div class="spot_discription">
+                <div class="spot_discription">
                <div class="row">
                  <div class="col-md-12">
-                   <p class="find_title">水峪村</p>
+                   <p class="find_title">水峪村 <span style="float:right;font-size:10px;"><span class="glyphicon glyphicon-thumbs-up"  aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></span></p>
                    <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
                  </div>
                </div>  
-             </div>
+                </div>
       
               </div>
            </a>
          </div>
-         
+
          <div class="col-xs-12 col-sm-6 col-md-3">
            <a href="/discovery/oneSpot.html">
               <div class="inner">
-             <div>
-               <img src="/static/images/findbeijing2.png" class="img-responsive">
-             </div>
+                <div>
+                  <img src="/static/images/findbeijing2.png" class="img-responsive">
+                </div>
 
-             <div class="spot_discription">
+                <div class="spot_discription">
                <div class="row">
                  <div class="col-md-12">
-                   <p class="find_title">水峪村</p>
+                   <p class="find_title">水峪村 <span style="float:right;font-size:10px;"><span class="glyphicon glyphicon-thumbs-up"  aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></span></p>
                    <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
                  </div>
                </div>  
-             </div>
+                </div>
       
               </div>
            </a>
-         </div>
+         </div>        
        </div>
  
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -241,18 +343,18 @@
          <div class="col-xs-12 col-sm-6 col-md-3">
            <a href="/discovery/oneSpot.html">
               <div class="inner">
-             <div>
-               <img src="/static/images/findbeijing2.png" class="img-responsive">
-             </div>
+                <div>
+                  <img src="/static/images/findbeijing2.png" class="img-responsive">
+                </div>
 
-             <div class="spot_discription">
+                <div class="spot_discription">
                <div class="row">
                  <div class="col-md-12">
-                   <p class="find_title">水峪村</p>
+                   <p class="find_title">水峪村 <span style="float:right;font-size:10px;"><span class="glyphicon glyphicon-thumbs-up"  aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></span></p>
                    <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
                  </div>
                </div>  
-             </div>
+                </div>
       
               </div>
            </a>
@@ -261,38 +363,18 @@
          <div class="col-xs-12 col-sm-6 col-md-3">
            <a href="/discovery/oneSpot.html">
               <div class="inner">
-             <div>
-               <img src="/static/images/findbeijing2.png" class="img-responsive">
-             </div>
+                <div>
+                  <img src="/static/images/findbeijing2.png" class="img-responsive">
+                </div>
 
-             <div class="spot_discription">
+                <div class="spot_discription">
                <div class="row">
                  <div class="col-md-12">
-                   <p class="find_title">水峪村</p>
+                   <p class="find_title">水峪村 <span style="float:right;font-size:10px;"><span class="glyphicon glyphicon-thumbs-up"  aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></span></p>
                    <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
                  </div>
                </div>  
-             </div>
-      
-              </div>
-           </a>
-         </div>
-         
-         <div class="col-xs-12 col-sm-6 col-md-3">
-           <a href="/discovery/oneSpot.html">
-              <div class="inner">
-             <div>
-               <img src="/static/images/findbeijing2.png" class="img-responsive">
-             </div>
-
-             <div class="spot_discription">
-               <div class="row">
-                 <div class="col-md-12">
-                   <p class="find_title">水峪村</p>
-                   <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
-                 </div>
-               </div>  
-             </div>
+                </div>
       
               </div>
            </a>
@@ -301,22 +383,42 @@
          <div class="col-xs-12 col-sm-6 col-md-3">
            <a href="/discovery/oneSpot.html">
               <div class="inner">
-             <div>
-               <img src="/static/images/findbeijing2.png" class="img-responsive">
-             </div>
+                <div>
+                  <img src="/static/images/findbeijing2.png" class="img-responsive">
+                </div>
 
-             <div class="spot_discription">
+                <div class="spot_discription">
                <div class="row">
                  <div class="col-md-12">
-                   <p class="find_title">水峪村</p>
+                   <p class="find_title">水峪村 <span style="float:right;font-size:10px;"><span class="glyphicon glyphicon-thumbs-up"  aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></span></p>
                    <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
                  </div>
                </div>  
-             </div>
+                </div>
       
               </div>
            </a>
-         </div>       
+         </div>
+
+         <div class="col-xs-12 col-sm-6 col-md-3">
+           <a href="/discovery/oneSpot.html">
+              <div class="inner">
+                <div>
+                  <img src="/static/images/findbeijing2.png" class="img-responsive">
+                </div>
+
+                <div class="spot_discription">
+               <div class="row">
+                 <div class="col-md-12">
+                   <p class="find_title">水峪村 <span style="float:right;font-size:10px;"><span class="glyphicon glyphicon-thumbs-up"  aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></span></p>
+                   <p class="find_text">一条S型的青石砌成的古道贯穿全村，村落成圆形，面南朝北，依山而建，形成独具特色的建筑风格，其最具代表性建筑有杨家大院、瓮门、娘娘庙</p>
+                 </div>
+               </div>  
+                </div>
+      
+              </div>
+           </a>
+         </div>        
        </div>
 
        <div class="col-xs-12 col-sm-12 col-md-12 all in_center">
@@ -511,87 +613,91 @@
       </script>
 
 
-   <script>
+<script>
  $(function(){
   $('[data-toggle="popover"]').popover({ html: "true",
-  });
-});
+                                      });
+             });
 
-  $(function () {
-            //判断是否宽屏
-            var winWide =$(window).width() ;
-            
-            var wideScreen = false;
-            if (winWide <= 768) {//768及以下分辨率
-                $("#collapseOne").attr("class", "collapse row filter_body ");
-                $("#collapseTwo").attr("class", "collapse row filter_body ");
-                $("#collapseThree").attr("class", "collapse row filter_body ");
-                $("#collapseFour").attr("class", "collapse row filter_body ");
-                $("#find_tour_theme").attr("class", "collapse row filter_body ");
-                $("#find_tour_partner").attr("class", "collapse row filter_body ");
-                $("#find_tour_time").attr("class", "collapse row filter_body ");
-            } else {
-                $("#collapseOne").attr("class", "collapse in row filter_body ");
-                $("#collapseTwo").attr("class", "collapse in row filter_body ");
-                $("#collapseThree").attr("class", "collapse in row filter_body ");
-                $("#collapseFour").attr("class", "collapse in row filter_body ");
-                $("#find_tour_theme").attr("class", "collapse in row filter_body ");
-                $("#find_tour_partner").attr("class", "collapse in row filter_body ");
-                $("#find_tour_time").attr("class", "collapse in row filter_body ");
-                wideScreen = true; //是宽屏
-            }
-})
-</script>
+ var winWidth = 0; 
+ var winHeight = 0; 
+ function findDimensions() //函数：获取尺寸 
+ { 
+   //获取窗口宽度 
+  if (window.innerWidth) 
+     winWidth = window.innerWidth; 
+  else if ((document.body) && (document.body.clientWidth)) 
+     winWidth = document.body.clientWidth; 
+  //获取窗口高度 
+  if (window.innerHeight) 
+     winHeight = window.innerHeight; 
+  else if ((document.body) && (document.body.clientHeight)) 
+     winHeight = document.body.clientHeight; 
+ //通过深入Document内部对body进行检测，获取窗口大小 
+  if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) 
+  { 
+    winHeight = document.documentElement.clientHeight; 
+    winWidth = document.documentElement.clientWidth; 
+  } 
+  //结果输出至两个文本框 
+   return winWidth;
+ } 
 
-<script>
-
-var winWidth = 0; 
-var winHeight = 0; 
-function findDimensions() //函数：获取尺寸 
-{ 
-//获取窗口宽度 
-if (window.innerWidth) 
-winWidth = window.innerWidth; 
-else if ((document.body) && (document.body.clientWidth)) 
-winWidth = document.body.clientWidth; 
-//获取窗口高度 
-if (window.innerHeight) 
-winHeight = window.innerHeight; 
-else if ((document.body) && (document.body.clientHeight)) 
-winHeight = document.body.clientHeight; 
-//通过深入Document内部对body进行检测，获取窗口大小 
-if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) 
-{ 
-winHeight = document.documentElement.clientHeight; 
-winWidth = document.documentElement.clientWidth; 
-} 
-//结果输出至两个文本框 
-return winWidth;
-} 
-$(function(){
- findDimensions();
- window.onresize=findDimensions; 
-  $(window).resize(function(){  
+  $(function(){
+    findDimensions();
+    window.onresize=findDimensions; 
+    $(window).resize(function(){  
         if (winWidth <= 1200) {//768及以下分辨率
-                 $("#filter_body_2").attr("class", "filter_body_2_small");             
+                $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_none");               
             } else
-            { $("#filter_body_2").attr("class", "filter_body_2");             
-          }
-
-});
+            { $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_in");}
+   });
 
              //判断是否宽屏
             var winWide =$(window).width() ;
             
             var wideScreen = false;
             if (winWide <= 1200) {//768及以下分辨率
-                $("#filter_body_2").attr("class", "filter_body_2_small");
-               
+                $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_none");
             } else {
-               $("#filter_body_2").attr("class", "filter_body_2");
+                  $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_in");
                 wideScreen = true; //是宽屏
             }
-});
+  });
+                  
+</script>
+
+<script type="text/javascript">
+             $(document).ready(function(){
+             $('.miyun').show();
+             var imgs=$('.beijingmap').find('img');
+             var citys=$('.city li');
+             citys.mouseover(function(){
+             citys.find('a').removeClass('city_active');
+             $(this).find('a').addClass('city_active');
+             imgs.hide();
+             imgs.eq(0).show();
+             $('.'+$(this).attr('name')).show();<!--鼠标移到右边的城市上，对应的左边的城市小图显示 -->
+               });
+             });
+ 
+             function show_map(str)
+             {
+               var imgs=$('.beijingmap').find('img');
+               var citys=$('.city li');
+               var city_len=citys.length;
+               imgs.hide();
+               imgs.eq(0).show();
+               $('.'+str).show();
+               for(var i=0;i<city_len;i++){
+               if(citys.eq(i).attr('name')==str){
+               citys.find('a').removeClass('city_active');
+               citys.eq(i).find('a').addClass('city_active');
+                  }
+                 }
+
+              }
+
 </script>
 <script type="text/javascript" src="/static/js/defined_c.js"></script>
   </body>

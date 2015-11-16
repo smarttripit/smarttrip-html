@@ -172,21 +172,7 @@
                          <li><a href="#" target="_blank" class="" _hover-ignore="1">房山区</a></li>
                          <li><a href="#" target="_blank" class="" _hover-ignore="1">大兴区</a></li>
                        </div>
-                  </ul>
-                    
-            <!--  <ul class="city" style="list-style:none;">
-                <li name="miyun"><a href="#" target="_blank" class="" _hover-ignore="1">密云县</a></li>
-                <li name="huairou"><a href="#" target="_blank" class="" _hover-ignore="1">怀柔县</a></li>
-                <li name="yanqin"><a href="#" target="_blank" class="" _hover-ignore="1">延庆县</a></li>
-                <li name="changping"><a href="#" target="_blank" class="" _hover-ignore="1">昌平区</a></li>
-                <li name="shunyi"><a href="#" target="_blank" class="">顺义区</a></li>
-                <li name="pinggu"><a href="#" target="_blank" class="" _hover-ignore="1">平谷区</a></li>
-                <li name="tongzhou"><a href="#" target="_blank" class="">通州区</a></li>
-                <li name="zhongxin"><a href="#" target="_blank" class="">中心区</a></li>
-                <li name="mentougou"><a href="#" target="_blank" class="">门头沟区</a></li>
-                <li name="fangshan"><a href="#" target="_blank" class="">房山区</a></li>
-                <li name="daxing"><a href="#" target="_blank" class="">大兴区</a></li>      
-              </ul> -->
+                  </ul>                    
            </div>
            
            <div class="col-xs-12 col-sm-12 col-md-12">
@@ -257,40 +243,40 @@
  <!--# include file="/common/footer.html"  -->
   <script src="/static/js/jquery.min.js"></script> 
   <script src="/static/js/bootstrap.min.js"></script>
-   <script>
+<script>
  $(function(){
   $('[data-toggle="popover"]').popover({ html: "true",
-  });
-});
+                                      });
+             });
 
-var winWidth = 0; 
-var winHeight = 0; 
-function findDimensions() //函数：获取尺寸 
-{ 
-//获取窗口宽度 
-if (window.innerWidth) 
-winWidth = window.innerWidth; 
-else if ((document.body) && (document.body.clientWidth)) 
-winWidth = document.body.clientWidth; 
-//获取窗口高度 
-if (window.innerHeight) 
-winHeight = window.innerHeight; 
-else if ((document.body) && (document.body.clientHeight)) 
-winHeight = document.body.clientHeight; 
-//通过深入Document内部对body进行检测，获取窗口大小 
-if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) 
-{ 
-winHeight = document.documentElement.clientHeight; 
-winWidth = document.documentElement.clientWidth; 
-} 
-//结果输出至两个文本框 
-return winWidth;
-} 
+ var winWidth = 0; 
+ var winHeight = 0; 
+ function findDimensions() //函数：获取尺寸 
+ { 
+   //获取窗口宽度 
+  if (window.innerWidth) 
+     winWidth = window.innerWidth; 
+  else if ((document.body) && (document.body.clientWidth)) 
+     winWidth = document.body.clientWidth; 
+  //获取窗口高度 
+  if (window.innerHeight) 
+     winHeight = window.innerHeight; 
+  else if ((document.body) && (document.body.clientHeight)) 
+     winHeight = document.body.clientHeight; 
+ //通过深入Document内部对body进行检测，获取窗口大小 
+  if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) 
+  { 
+    winHeight = document.documentElement.clientHeight; 
+    winWidth = document.documentElement.clientWidth; 
+  } 
+  //结果输出至两个文本框 
+   return winWidth;
+ } 
 
-$(function(){
- findDimensions();
- window.onresize=findDimensions; 
-  $(window).resize(function(){  
+  $(function(){
+    findDimensions();
+    window.onresize=findDimensions; 
+    $(window).resize(function(){  
         if (winWidth <= 1200) {//768及以下分辨率
                 $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_none");
                 $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-12 right_back row_bottom_space");
@@ -299,7 +285,7 @@ $(function(){
               $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-5 row_bottom_space");
           }
 
-});
+   });
 
              //判断是否宽屏
             var winWide =$(window).width() ;
@@ -309,35 +295,15 @@ $(function(){
                 $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_none");
                  $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-12 right_back row_bottom_space");
             } else {
-$("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_in");
-$("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-5 row_bottom_space");
+                  $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_in");
+                  $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-5 row_bottom_space");
                 wideScreen = true; //是宽屏
             }
-});
-
- $(function () {
-            //判断是否宽屏
-            var winWide =$(window).width() ;
-            
-            var wideScreen = false;
-            if (winWide <= 768) {//768及以下分辨率
-                $("#collapseOne").attr("class", "collapse");
-                $("#collapseTwo").attr("class", "collapse");
-                $("#collapseThree").attr("class", "collapse");
-                $("#collapseFour").attr("class", "collapse");
-            } else {
-                $("#collapseOne").attr("class", "collapse in");
-                $("#collapseTwo").attr("class", "collapse in");
-                $("#collapseThree").attr("class", "collapse in");
-                $("#collapseFour").attr("class", "collapse in");
-                wideScreen = true; //是宽屏
-            }
-})              
-    
-   
+  });
+                  
 </script>
 
-         <script type="text/javascript">
+<script type="text/javascript">
              $(document).ready(function(){
              $('.miyun').show();
              var imgs=$('.beijingmap').find('img');
@@ -368,7 +334,7 @@ $("#right_back").attr("class", "col-xs-12 col-sm-12 col-md-5 row_bottom_space");
 
               }
 
-         </script>
+</script>
 <script type="text/javascript" src="/static/js/defined_c.js"></script>
   </body>
 
