@@ -351,6 +351,9 @@ font-size: 16px;}
 
 .row_top_space{margin-top: 10px;}
 .row_bottom_space{margin-bottom: 10px;}
+#basic_information1 .panel-body {
+padding: 15px 25px;
+}
  /*某一景点的固定顶部导航栏*/
 
 
@@ -362,10 +365,80 @@ background-color: #45A4C9;
 .basic_information{padding: 20px;}
 .anchor_place{position:relative;height:0px;top:-70px;}
 
-/*吃喝玩乐*/
+/*基本信息*/
+/*左侧图片集*/
+ .sp-wrap {
+    display:none;
+    line-height:0;
+    font-size:0;
+    background:#eee;
+    position:relative;
+    border: 1px solid #E4E4E4;
+}
+.sp-large {
+    position:relative;
+    overflow:hidden;
+}
+.sp-large a img {
+    max-width:100%;
+    height:auto;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+}
+
+.sp-large a {
+    display:inline-block;
+}
+.sp-thumbs {
+    width:100%;
+    text-align:left;
+}
+.sp-thumbs img {
+    width:60px;
+    height:60px;
+    
+}
+.sp-thumbs a:link, .sp-thumbs a:visited {
+    border:5px solid #eee;
+    display:inline-block;
+}
+.sp-thumbs a:hover, .sp-thumbs a:active, .sp-current {
+    border:5px solid rgba(228, 130, 23, 0.61)!important;
+}
+.sp-zoom {
+    position:absolute;
+    left:0;
+    top:0;
+    cursor:zoom;
+    cursor: -webkit-zoom-out;
+    cursor: -moz-zoom-out;
+    display:none;
+}
+
+/*旅游详情*/
 .travel_details{background: rgba(14, 14, 14, 0.32);margin-top: -220px;color: #fff;height: 180px;padding: 20px;}
 @media screen and (max-width:992px){.travel_details{margin-top:0px;background: #fff;color: #000;padding: 20px;}                    
                                     } 
 .traffic_and_tickets{padding-left: 20px;padding-right:20px;padding-top:0px;}
 .traffic_and_tickets h5{color:rgba(228, 130, 23, 1);}
 .traffic_and_tickets p b{color:rgba(228, 130, 23, 1);}
+.hotel_name{font-size: 15px;}
+.hotel_price_old{color: #5B6468;font-size: 15px;margin-top: 2px;}
+.hotel_price_now{color: #DF893A;font-size: 18px;}
+.hotel_price_save{border: 1px solid #ffa338;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+-ms-border-radius: 2px;
+border-radius: 2px;
+color: #ffa338;
+padding: 2px;
+display: inline-block;}
+.look_more{margin-top: 2px;}
+.look_more a {background:rgba(69, 164, 201, 0.77);color:#fff;padding:5px 10px;}
+
+/*周周点评*/
+#zhouzhou_comment1 .panel-body {
+padding: 15px 100px;
+}
+#tourist_comment .col-md-3{margin-right: -15px;}
+.comment_time{margin-top: 8px;color: #8F8E8E;margin-right: 10px;text-align: right;}
