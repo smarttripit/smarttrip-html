@@ -82,7 +82,7 @@ function($) {
 						testView = contentTop[i] - contentView;
 						//console.log(contentView);
 						//console.error(testView);
-						if(varscroll < 889||varscroll == 889){
+						if(varscroll < contentTop[0]||varscroll == contentTop[0]){
 							$('.'+itemClass).removeClass(itemHover);
 							$('.'+itemClass+':eq(0)').addClass(itemHover);
 						}
