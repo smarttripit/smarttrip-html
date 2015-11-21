@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
     <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
  
     <!--[if lt IE 9]>
      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -32,11 +33,10 @@
   
     
     <div class="container">
-      <div class="row">
-        
+      <div class="row">  
         <div class="panel panel-default">
           <div class="panel-heading">
-            <div class="row hotel_choice">
+            <div class="row">
               <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="info">
                   <div>
@@ -58,17 +58,16 @@
                  <input type="text" id="date_2" placeholder="请选择退房日期">
               </div>
 
-              
             </div>
           </div>
           <div class="panel-heading">
             <ul id="hotelList_nav" class="nav nav-pills">
-               <li class="active itemClass"><a href="#">描述相符</a></li>
-               <li class="itemClass"><a href="#">舒适程度</a></li>
-               <li class="itemClass"><a href="#">整洁卫生</a></li>
-               <li class="itemClass"><a href="#">特色</a></li>
-               <li class="itemClass"><a href="#">安全程度</a></li>
-               <li class="itemClass"><a href="#">性价比</a></li>
+               <li class="active itemClass"><a href="#">描述相符<i class="fa fa-arrow-down"></i></a></li>
+               <li class="itemClass"><a href="#">舒适程度<i class="fa fa-arrow-down"></i></a></li>
+               <li class="itemClass"><a href="#">整洁卫生<i class="fa fa-arrow-down"></i></a></li>
+               <li class="itemClass"><a href="#">特色<i class="fa fa-arrow-down"></i></a></li>
+               <li class="itemClass"><a href="#">安全程度<i class="fa fa-arrow-down"></i></a></li>
+               <li class="itemClass"><a href="#">性价比<i class="fa fa-arrow-down"></i></a></li>
             </ul> 
           
           </div>
@@ -78,7 +77,7 @@
                  <a href="#">
                     <div class="inner">
                       <div>
-                        <img src="/static/images/hotel.jpg" class="img-responsive hotel_img">
+                        <img src="/static/images/2001.jpg" class="img-responsive hotel_img">
                         <div class="row">
                           <div class="col-xs-6 col-sm-4 col-md-6">
                             <p class="hotel_name">某某某农家乐</p>
@@ -96,7 +95,7 @@
                  <a href="#">
                     <div class="inner">
                       <div>
-                        <img src="/static/images/hotel.jpg" class="img-responsive hotel_img">
+                        <img src="/static/images/2002.jpg" class="img-responsive hotel_img">
                         <div class="row">
                           <div class="col-xs-6 col-sm-4 col-md-6">
                             <p class="hotel_name">某某某农家乐</p>
@@ -114,7 +113,7 @@
                  <a href="#">
                     <div class="inner">
                       <div>
-                        <img src="/static/images/hotel.jpg" class="img-responsive hotel_img">
+                        <img src="/static/images/2003.jpg" class="img-responsive hotel_img">
                         <div class="row">
                           <div class="col-xs-6 col-sm-4 col-md-6">
                             <p class="hotel_name">某某某农家乐</p>
@@ -132,7 +131,7 @@
                  <a href="#">
                     <div class="inner">
                       <div>
-                        <img src="/static/images/hotel.jpg" class="img-responsive hotel_img">
+                        <img src="/static/images/2001.jpg" class="img-responsive hotel_img">
                         <div class="row">
                           <div class="col-xs-6 col-sm-4 col-md-6">
                             <p class="hotel_name">某某某农家乐</p>
@@ -224,6 +223,17 @@
           </div>
         </div>
       </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 all in_center">
+       <ul class="pagination">
+         <li><a href="#">&laquo;</a></li>
+         <li class="active"><a href="#">1</a></li>
+         <li><a href="#">2</a></li>
+         <li><a href="#">3</a></li>
+         <li><a href="#">4</a></li>
+         <li><a href="#">5</a></li>
+         <li><a href="#">&raquo;</a></li>
+       </ul>
+    </div>
     </div>
     <!--# include file="/common/footer.html"  -->
   </body>
@@ -251,11 +261,21 @@
     <!--导航栏active切换-->
     <script>
       var hotelList_nav_lis = $("#hotelList_nav li");
-      hotelList_nav_lis.each(function(){
-      hotelList_nav_lis.click(function(){
-      $('.itemClass').removeClass('active');
-      $(this).addClass('active');
-        })
+      $.each(hotelList_nav_lis,function(key,val){
+        $(this).click(function(){
+          var this_index = key;
+          $('.itemClass').removeClass('active');
+          $(this).addClass('active');
+          var this_className = $('.itemClass i')[this_index].className;
+           if(this_className =='fa fa-arrow-down')
+          {
+           $('.itemClass i')[this_index].className="";
+           $('.itemClass i')[this_index].className="fa fa-arrow-up"; 
+          }else{
+            $('.itemClass i')[this_index].className="";
+            $('.itemClass i')[this_index].className="fa fa-arrow-down"; 
+          }
+         })
       }) 
     </script>
 
