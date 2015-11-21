@@ -50,16 +50,14 @@
 
 
 /**固定在底部的预定按钮**/
-.fixed_btn{
-  position:fixed; 
-  right:10px; 
-  bottom:10px;  
-  overflow:hidden; 
-  cursor:default;
-   -moz-user-select:none;
-   background-color: rgba(0,0,0,0.2); 
-   border: 0px;
+.btn-book{
+  margin-top: 8px;
 }
+
+.img_des{
+  cursor: pointer;
+}
+
    
 /**登陆注册错误提示**/
 .form-group label.error {
@@ -95,9 +93,11 @@
 }
 
 .hotel_name{
-  color:#BEA8AD; 
   font-size: 18px;
-  margin-top: 10px;}
+  margin-top: 10px;
+  color:#555555;
+}
+
 .hotel_img{
   opacity: 1;
   transition:opacity 0.1s;
@@ -118,10 +118,21 @@
   color: #BA8A49;
 }
 
+
+.hotel_des{
+  padding: 0 20px;
+  color: #131313;
+}
+
+.hotel_des .fa-quote-left,.fa-quote-right{
+  color: #D2CFCF;
+}
 /**三级联动**/
 .top{ margin:5px auto; color:#990000; text-align:center;}
 .info select{ border:1px  solid; background:#FFFFFF;}
 .info{ margin:5px; text-align:center;}
 .info #show{ color:#3399FF; }
 .bottom{ text-align:right; font-size:12px; color:#CCCCCC; width:1000px;}
+
+
 

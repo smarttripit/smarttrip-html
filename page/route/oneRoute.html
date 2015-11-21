@@ -96,6 +96,7 @@
                    <li class="menuItem"><a href="#comment">周周点评</a></li>
                    <li class="menuItem"><a href="#tips">小贴士</a></li>   
                  </ul>
+                 <button type="button" class="btn btn-danger btn-book">立即预定</button>
                </div>
           
             </div> 
@@ -159,10 +160,10 @@
                   <div class="timeline-badge danger"><i class="fa fa-map-marker"></i>
                   </div>
                   <div class="timeline-panel">
-                      <div class="timeline-body">
+                      <div class="timeline-body img_des">
                           <img src="/static/images/2.jpg" class="img-responsive">
                       </div>
-                      <div class="panel-footer" id="HLX">黄岭西</div>
+                       <div class="panel-footer"><p>**餐厅</p>走进华纳电影世界，纵情狂欢体验影视娱乐惊险刺激<br/><small class="text-muted"><i class="fa fa-clock-o"></i> 约30分钟</small></div>
                   </div>
               </li>
 
@@ -184,30 +185,30 @@
                   <div class="timeline-badge danger"><i class="fa fa-map-marker"></i>
                   </div>
                   <div class="timeline-panel">
-                      <div class="timeline-body">
+                      <div class="timeline-body img_des">
                           <img src="/static/images/2.jpg" class="img-responsive">
                       </div>
-                      <div class="panel-footer">黄草梁</div>
+                       <div class="panel-footer"><p>**餐厅</p>走进华纳电影世界，纵情狂欢体验影视娱乐惊险刺激<br/><small class="text-muted"><i class="fa fa-clock-o"></i> 约30分钟</small></div>
                   </div>
               </li>
               <li data-toggle="modal" data-target="#myModalHCL">
                   <div class="timeline-badge danger"><i class="fa fa-map-marker"></i>
                   </div>
                   <div class="timeline-panel">
-                      <div class="timeline-body">
+                      <div class="timeline-body img_des">
                           <img src="/static/images/njl.jpg" class="img-responsive">
                       </div>
-                      <div class="panel-footer">**餐厅</div>
+                       <div class="panel-footer"><p>**餐厅</p>走进华纳电影世界，纵情狂欢体验影视娱乐惊险刺激<br/><small class="text-muted"><i class="fa fa-clock-o"></i> 约30分钟</small></div>
                   </div>
               </li>
               <li class="timeline-inverted" data-toggle="modal" data-target="#myModalCT">
                   <div class="timeline-badge danger"><i class="fa fa-map-marker"></i>
                   </div>
-                  <div class="timeline-panel">
+                  <div class="timeline-panel img_des">
                       <div class="timeline-body">
                           <img src="/static/images/restaurant.jpg" class="img-responsive">
                       </div>
-                      <div class="panel-footer">***客栈</div>
+                      <div class="panel-footer"><p>**餐厅</p>走进华纳电影世界，纵情狂欢体验影视娱乐惊险刺激<br/><small class="text-muted"><i class="fa fa-clock-o"></i> 约30分钟</small></div>
                   </div>
               </li>
               <li>
@@ -302,36 +303,246 @@
 
       </div> <!-- END book -->
 
-      <!-- START THE comment -->
-      <div id="comment" class="anchor_place"></div>
+      <!-- START THE zhouzhou_comment -->
+      <div id="comment" class="anchor_place"></div> 
       <div id="comment1" class="row featurette panel panel-default">
         <div class="panel-heading">
           <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>周周点评</h4>
         </div>
         <div class="panel-body col-xs-12 col-sm-12 col-md-12">
-          <div class="row row_bottom_space">
-            <div class="col-xs-12 col-sm-2 col-md-1">
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-10 inner_img">
-              <img src="/static/images/happy_eat1.jpg" class="img-responsive inner_img" />
-              <div class="row"> 
-                <div class="col-xs-12 col-sm-12 col-md-2">              
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-8 introduce">                
-                    <div class="row">
-                                
-                    </div>              
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-2">              
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-2 col-md-1">
-            </div>
-          </div>
+         <div class="row" id="navpills">
+              <div class="col-xs-9 col-sm-6 col-md-8">
+             <ul class="nav nav-pills">
+              <li class=""><a href="#" class="defined_active">综合</a></li>
+                <li><a href="#" class="nav-pills_defined">好评率</a></li>
+                <li class="dropdown"><a class="dropdown-toggle nav-pills_defined" data-toggle="dropdown">价格<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#price_up">价格由低到高</a></li>
+                    <li><a href="#price_down">价格由高到低</a></li>
+                  </ul>
+                </li>
 
+             </ul>
+              </div>
+              <div class="col-xs-3 col-sm-6 col-md-4">
+             <ul class="pager" id="pager">
+              <li><a href="#"><</a></li>
+              <li><a href="#">></a></li>
+             </ul>
+              </div> 
+           </div>
+                        
+           <div class="col-xs-12 col-sm-12 col-md-12">
+             <hr style="border: none;border-top:2px dashed rgba(204, 122, 0, 0.16);margin: 0px;margin-bottom: 20px;margin-top: 10px;"> 
+             <div class="col-xs-12 col-sm-2 col-md-2 in_center">
+              <img src="/static/images/tourist_icon.jpg"class="img-circle" style="width:80px;height:80px;"/>
+              <p>小高高</p>
+             </div>
+             <div class="col-xs-10 col-sm-10 col-md-10"style="margin-left:-15px;">   
+             <div class="row">                                            
+                <div class="col-xs-9 col-sm-9 col-md-9">
+                <h4><strong>其中给人印象最深刻的地方就是大昭寺了</strong></h4>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                <p class="comment_time">2015-11-17&nbsp;&nbsp;19:01</p>
+                </div>
+                </div>
+                <p>在拉萨，很多地方都会闻到那浓烈的藏香味，听到诵经的声音，这其中给人印象最深刻的地方么就是大昭寺了。大昭寺位于拉萨市中心，是千年拉萨的见证和象征，是拉萨乃至整个藏区最重要的寺院。在八廓街广场磕长头做礼拜的身影更是占满了光场，他们大多人都是从西藏的各个地方来到这里，这里就是他们朝拜的终点，每天都会有大量的藏民信徒来这里朝拜，前来朝拜的人们，手中都会带着一个热水壶，进入大殿后，每到一尊佛像前就会往佛像前面的烛台倒酥油。</p>
+                <div class="row" id="tourist_comment">
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment1.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment2.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment3.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <p style="margin-top:80px;"><a href="#" style="color:#337ab7;">共3张>></a></p>
+                  </div>
+                </div>                                                                
+             </div>
+           </div>
+          
+           <div class="col-xs-12 col-sm-12 col-md-12">
+             <hr style="border: none;border-top:2px dashed rgba(204, 122, 0, 0.16);margin: 0px;margin-bottom: 20px;margin-top: 10px;"> 
+             <div class="col-xs-12 col-sm-2 col-md-2 in_center">
+              <img src="/static/images/tourist_icon.jpg"class="img-circle" style="width:80px;height:80px;"/>
+              <p>小高高</p>
+             </div>
+             <div class="col-xs-10 col-sm-10 col-md-10"style="margin-left:-15px;">   
+             <div class="row">                                            
+                <div class="col-xs-9 col-sm-9 col-md-9">
+                <h4><strong>其中给人印象最深刻的地方就是大昭寺了</strong></h4>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                <p class="comment_time">2015-11-17&nbsp;&nbsp;19:01</p>
+                </div>
+                </div>
+                <p>在拉萨，很多地方都会闻到那浓烈的藏香味，听到诵经的声音，这其中给人印象最深刻的地方么就是大昭寺了。大昭寺位于拉萨市中心，是千年拉萨的见证和象征，是拉萨乃至整个藏区最重要的寺院。在八廓街广场磕长头做礼拜的身影更是占满了光场，他们大多人都是从西藏的各个地方来到这里，这里就是他们朝拜的终点，每天都会有大量的藏民信徒来这里朝拜，前来朝拜的人们，手中都会带着一个热水壶，进入大殿后，每到一尊佛像前就会往佛像前面的烛台倒酥油。</p>
+                <div class="row" id="tourist_comment">
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment1.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment2.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment3.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <p style="margin-top:80px;"><a href="#" style="color:#337ab7;">共3张>></a></p>
+                  </div>
+                </div>                                                                
+             </div>
+           </div>
+
+           <div class="col-xs-12 col-sm-12 col-md-12">
+             <hr style="border: none;border-top:2px dashed rgba(204, 122, 0, 0.16);margin: 0px;margin-bottom: 20px;margin-top: 10px;"> 
+             <div class="col-xs-12 col-sm-2 col-md-2 in_center">
+              <img src="/static/images/tourist_icon.jpg"class="img-circle" style="width:80px;height:80px;"/>
+              <p>小高高</p>
+             </div>
+             <div class="col-xs-10 col-sm-10 col-md-10"style="margin-left:-15px;">   
+             <div class="row">                                            
+                <div class="col-xs-9 col-sm-9 col-md-9">
+                <h4><strong>其中给人印象最深刻的地方就是大昭寺了</strong></h4>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                <p class="comment_time">2015-11-17&nbsp;&nbsp;19:01</p>
+                </div>
+                </div>
+                <p>在拉萨，很多地方都会闻到那浓烈的藏香味，听到诵经的声音，这其中给人印象最深刻的地方么就是大昭寺了。大昭寺位于拉萨市中心，是千年拉萨的见证和象征，是拉萨乃至整个藏区最重要的寺院。在八廓街广场磕长头做礼拜的身影更是占满了光场，他们大多人都是从西藏的各个地方来到这里，这里就是他们朝拜的终点，每天都会有大量的藏民信徒来这里朝拜，前来朝拜的人们，手中都会带着一个热水壶，进入大殿后，每到一尊佛像前就会往佛像前面的烛台倒酥油。</p>
+                <div class="row" id="tourist_comment">
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment1.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment2.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment3.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <p style="margin-top:80px;"><a href="#" style="color:#337ab7;">共3张>></a></p>
+                  </div>
+                </div>                                                                
+             </div>
+           </div>
+      
+           <div class="col-xs-12 col-sm-12 col-md-12">
+             <hr style="border: none;border-top:2px dashed rgba(204, 122, 0, 0.16);margin: 0px;margin-bottom: 20px;margin-top: 10px;"> 
+             <div class="col-xs-12 col-sm-2 col-md-2 in_center">
+              <img src="/static/images/tourist_icon.jpg"class="img-circle" style="width:80px;height:80px;"/>
+              <p>小高高</p>
+             </div>
+             <div class="col-xs-10 col-sm-10 col-md-10"style="margin-left:-15px;">   
+             <div class="row">                                            
+                <div class="col-xs-9 col-sm-9 col-md-9">
+                <h4><strong>其中给人印象最深刻的地方就是大昭寺了</strong></h4>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                <p class="comment_time">2015-11-17&nbsp;&nbsp;19:01</p>
+                </div>
+                </div>
+                <p>在拉萨，很多地方都会闻到那浓烈的藏香味，听到诵经的声音，这其中给人印象最深刻的地方么就是大昭寺了。大昭寺位于拉萨市中心，是千年拉萨的见证和象征，是拉萨乃至整个藏区最重要的寺院。在八廓街广场磕长头做礼拜的身影更是占满了光场，他们大多人都是从西藏的各个地方来到这里，这里就是他们朝拜的终点，每天都会有大量的藏民信徒来这里朝拜，前来朝拜的人们，手中都会带着一个热水壶，进入大殿后，每到一尊佛像前就会往佛像前面的烛台倒酥油。</p>
+                <div class="row" id="tourist_comment">
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment1.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment2.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment3.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <p style="margin-top:80px;"><a href="#" style="color:#337ab7;">共3张>></a></p>
+                  </div>
+                </div>                                                                
+             </div>
+           </div>
+
+           <div class="col-xs-12 col-sm-12 col-md-12">
+             <hr style="border: none;border-top:2px dashed rgba(204, 122, 0, 0.16);margin: 0px;margin-bottom: 20px;margin-top: 10px;"> 
+             <div class="col-xs-12 col-sm-2 col-md-2 in_center">
+              <img src="/static/images/tourist_icon.jpg"class="img-circle" style="width:80px;height:80px;"/>
+              <p>小高高</p>
+             </div>
+             <div class="col-xs-10 col-sm-10 col-md-10"style="margin-left:-15px;">   
+             <div class="row">                                            
+                <div class="col-xs-9 col-sm-9 col-md-9">
+                <h4><strong>其中给人印象最深刻的地方就是大昭寺了</strong></h4>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                <p class="comment_time">2015-11-17&nbsp;&nbsp;19:01</p>
+                </div>
+                </div>
+                <p>在拉萨，很多地方都会闻到那浓烈的藏香味，听到诵经的声音，这其中给人印象最深刻的地方么就是大昭寺了。大昭寺位于拉萨市中心，是千年拉萨的见证和象征，是拉萨乃至整个藏区最重要的寺院。在八廓街广场磕长头做礼拜的身影更是占满了光场，他们大多人都是从西藏的各个地方来到这里，这里就是他们朝拜的终点，每天都会有大量的藏民信徒来这里朝拜，前来朝拜的人们，手中都会带着一个热水壶，进入大殿后，每到一尊佛像前就会往佛像前面的烛台倒酥油。</p>
+                <div class="row" id="tourist_comment">
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment1.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment2.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment3.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <p style="margin-top:80px;"><a href="#" style="color:#337ab7;">共3张>></a></p>
+                  </div>
+                </div>                                                                
+             </div>
+           </div>
+
+           <div class="col-xs-12 col-sm-12 col-md-12">
+             <hr style="border: none;border-top:2px dashed rgba(204, 122, 0, 0.16);margin: 0px;margin-bottom: 20px;margin-top: 10px;"> 
+             <div class="col-xs-12 col-sm-2 col-md-2 in_center">
+              <img src="/static/images/tourist_icon.jpg"class="img-circle" style="width:80px;height:80px;"/>
+              <p>小高高</p>
+             </div>
+             <div class="col-xs-10 col-sm-10 col-md-10"style="margin-left:-15px;">   
+             <div class="row">                                            
+                <div class="col-xs-9 col-sm-9 col-md-9">
+                <h4><strong>其中给人印象最深刻的地方就是大昭寺了</strong></h4>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                <p class="comment_time">2015-11-17&nbsp;&nbsp;19:01</p>
+                </div>
+                </div>
+                <p>在拉萨，很多地方都会闻到那浓烈的藏香味，听到诵经的声音，这其中给人印象最深刻的地方么就是大昭寺了。大昭寺位于拉萨市中心，是千年拉萨的见证和象征，是拉萨乃至整个藏区最重要的寺院。在八廓街广场磕长头做礼拜的身影更是占满了光场，他们大多人都是从西藏的各个地方来到这里，这里就是他们朝拜的终点，每天都会有大量的藏民信徒来这里朝拜，前来朝拜的人们，手中都会带着一个热水壶，进入大殿后，每到一尊佛像前就会往佛像前面的烛台倒酥油。</p>
+                <div class="row" id="tourist_comment">
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment1.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment2.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="/static/images/spot_comment3.jpg" style="width:100%;height:100px;"/>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 col-md-3">
+                    <p style="margin-top:80px;"><a href="#" style="color:#337ab7;">共3张>></a></p>
+                  </div>
+                </div>                                                                
+             </div>
+           </div>
+                       
+           <div class="col-xs-12 col-sm-12 col-md-12 all in_center">
+                 <ul class="pagination">
+                   <li><a href="#">&laquo;</a></li>
+                   <li class="active"><a href="#">1</a></li>
+                   <li><a href="#">2</a></li>
+                   <li><a href="#">3</a></li>
+                   <li><a href="#">4</a></li>
+                   <li><a href="#">5</a></li>
+                   <li><a href="#">&raquo;</a></li>
+                 </ul>
+           </div>
         </div>
-      </div> <!-- END comment -->
+      </div>  <!-- END zhouzhou_comment -->
     
       <!-- START THE tips -->
       
@@ -435,7 +646,7 @@
     <!-- END CONTENT -->
     <!--# include file="/common/footer.html"  -->
     
-    <button type="button" class="btn btn-danger fixed_btn">立即预定</button>
+    
     <!-- Bootstrap & Plugins core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -488,25 +699,7 @@
           $('#myModalCT').on('show.bs.modal',place('.oneLocal'));
           
           //timeline每一个列表项的鼠标移入移出事件  
-          var lis =  $('ul.timeline li');
-          var fas = $('#contents .fa');
-          lis.each(function(){
-            lis.mouseover(function(){
-                $(this).css('color','grey');
-            });
-            lis.mouseout(function(){
-                $(this).css('color','black');
-            });
-          });
-
-          fas.each(function(){
-            fas.mouseover(function(){
-              $(this).css('color','blue');
-            });
-            fas.mouseout(function(){
-              $(this).css('color','white');
-            })
-          })
+         
 
         });
       });
