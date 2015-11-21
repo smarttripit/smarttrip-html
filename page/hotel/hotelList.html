@@ -50,11 +50,11 @@
                 </div>
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-1">
+              <div class="col-xs-6 col-sm-6 col-md-4">
                 <input type="text" id="date_1"  placeholder="请选择入住日期">
               </div>
 
-              <div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-1">
+              <div class="col-xs-6 col-sm-6 col-md-4">
                  <input type="text" id="date_2" placeholder="请选择退房日期">
               </div>
 
@@ -63,12 +63,12 @@
           </div>
           <div class="panel-heading">
             <ul id="hotelList_nav" class="nav nav-pills">
-               <li class="active"><a href="#">描述相符</a></li>
-               <li><a href="#">舒适程度</a></li>
-               <li><a href="#">整洁卫生</a></li>
-               <li><a href="#">特色</a></li>
-               <li><a href="#">安全程度</a></li>
-               <li><a href="#">性价比</a></li>
+               <li class="active itemClass"><a href="#">描述相符</a></li>
+               <li class="itemClass"><a href="#">舒适程度</a></li>
+               <li class="itemClass"><a href="#">整洁卫生</a></li>
+               <li class="itemClass"><a href="#">特色</a></li>
+               <li class="itemClass"><a href="#">安全程度</a></li>
+               <li class="itemClass"><a href="#">性价比</a></li>
             </ul> 
           
           </div>
@@ -247,4 +247,16 @@
         }
     
     </script> 
+
+    <!--导航栏active切换-->
+    <script>
+      var hotelList_nav_lis = $("#hotelList_nav li");
+      hotelList_nav_lis.each(function(){
+      hotelList_nav_lis.click(function(){
+      $('.itemClass').removeClass('active');
+      $(this).addClass('active');
+        })
+      }) 
+    </script>
+
 </html>
