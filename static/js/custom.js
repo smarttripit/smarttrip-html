@@ -12,14 +12,41 @@ jQuery(document).ready(function() {
 	});
 	
 });
-jQuery(function(){var winWide =$(window).width() ;
+
+
+    var winWidth = 0; 
+    var winHeight = 0; 
+    function findDimensions() //函数：获取尺寸 
+    { 
+       //获取窗口宽度 
+      if (window.innerWidth) 
+        { winWidth = window.innerWidth; }
+      else if ((document.body) && (document.body.clientWidth)) 
+        { winWidth = document.body.clientWidth; }
+       //获取窗口高度 
+      if (window.innerHeight) 
+        { winHeight = window.innerHeight; }
+      else if ((document.body) && (document.body.clientHeight)) 
+        { winHeight = document.body.clientHeight; }
+       //通过深入Document内部对body进行检测，获取窗口大小 
+      if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) 
+       { 
+          winHeight = document.documentElement.clientHeight; 
+          winWidth = document.documentElement.clientWidth; 
+        } 
+        //结果输出至两个文本框 
+        return winWidth;
+        return winHeight;
+        
+ }
+
 	
-});
+
 //图滚动
-jQuery.noConflict();
-jQuery(window).load(function(){
+jQuery.noConflict();//返回$的控制权
+jQuery(window).load(function(){//页面所有元素(包括html标签以及引用到得所有图片,Flash等媒体)加载完毕之后执行的
 	var $featured_content = jQuery('#featured'),
-		et_disable_toptier = jQuery("meta[name=et_disable_toptier]").attr('content'),
+		et_disable_toptier = jQuery("meta[name=et_disable_toptier]").attr('content'),//获取meta[name=et_disable_toptier]内容的content属性值
 		et_cufon = jQuery("meta[name=et_cufon]").attr('content'),
 		et_featured_slider_pause = jQuery("meta[name=et_featured_slider_pause]").attr('content'),
 		et_featured_slider_auto = jQuery("meta[name=et_featured_slider_auto]").attr('content'),
@@ -39,21 +66,26 @@ jQuery(window).load(function(){
 			top_slide_pos,
 			left_slide_pos,
 			slide_opacity;
-		
-		$featured_content.css( 'backgroundImage', 'none' );
+		    findDimensions();
+		    console.log(winWidth);
+		    console.error(winHeight);
+		//$featured_content.css( 'backgroundImage', 'none' );
 		
 		$featured_slides.each(function(index, domEle){//遍历每一个dom对象
-			var $this_slide = jQuery(domEle);
+			var $this_slide = jQuery(domEle);//   index就是索引值  domEle 表示获取遍历每一个dom对象
 			
-			top_slide_pos =260 ;
+			top_slide_pos =365 ;
 			slide_opacity = 0.3;
+
+			
 			
 			if ( index === 0 ) {
 				top_slide_pos = 250;
 				slide_opacity = 1;
-				left_slide_pos = winWidth*0.5;
+				left_slide_pos = (winWidth-720)*0.5;
+				console.log(left_slide_pos);
 			}
-			if ( index === 1 ) left_slide_pos = 620;
+			if ( index === 1 ) left_slide_pos = winWidth*0.2;
 			if ( index === 2 ) left_slide_pos = 90;
 			if ( index > 2 ) {
 				if ( index % 2 === 1 ) left_slide_pos = slides_pos[index-2].left + small_slide_width + slide_margin;
@@ -62,8 +94,8 @@ jQuery(window).load(function(){
 			
 			if ( index !== 0 ) {
 				$this_slide.find('img').attr({
-					width: '720',
-					height: '400'
+					width: '250',
+					height: '170'
 				});
 			}
 							
