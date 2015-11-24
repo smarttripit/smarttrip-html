@@ -1,0 +1,31 @@
+{
+   "status" : "success",
+   "tipCode" : null,
+   "tipMsg" : null,
+   "data" : [
+      {
+         "thumbnail" : "http://www.baidu.com/1.png",
+         "name" : "爨底下村",
+         "themes" : "亲子 家庭 古韵",
+         "briefRecommendation" : "这里显示简短推荐理由",
+         "commentRatio" : "98.9%",
+         "purchaseCount" : "98"
+      },
+      {
+         "thumbnail" : "http://www.baidu.com/1.png",
+         "name" : "爨底下村",
+         "themes" : "亲子 家庭 古韵",
+         "briefRecommendation" : "这里显示简短推荐理由",
+         "commentRatio" : "98.9%",
+         "purchaseCount" : "98"
+      },
+      {
+         "thumbnail" : "http://www.baidu.com/1.png",
+         "name" : "爨底下村",
+         "themes" : "亲子 家庭 古韵",
+         "briefRecommendation" : "这里显示简短推荐理由",
+         "commentRatio" : "98.9%",
+         "purchaseCount" : "98"
+      }
+   ]
+}
