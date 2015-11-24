@@ -1,5 +1,5 @@
 // Add some markup & set some CSS
-$('.sp-wrap').append('<div class="sp-large"></div><div class="sp-thumbs sp-tb-active"></div>');
+$('.sp-wrap').append('<div class="sp-large"></div><div class="sp-thumbs sp-tb-active"></div>');//在.sp-wrap这个div后面加2个div
 $('.sp-wrap a').appendTo('.sp-thumbs');
 $('.sp-thumbs a:first').addClass('sp-current').clone().removeClass('sp-current').appendTo('.sp-large');
 $('.sp-wrap').css('display', 'inline-block');
@@ -8,7 +8,7 @@ var maxWidth = $('.sp-large img').width();
 
 // Prevent clicking while things are happening
 $(document.body).on('click', '.sp-thumbs' ,function(event){
-    event.preventDefault();
+    event.preventDefault();//该方法将通知 Web 浏览器不要执行与事件关联的默认动作（如果存在这样的动作）
 });
 
 // Clicking a thumbnail
@@ -38,7 +38,7 @@ $(document.body).on('click', '.sp-thumbs' ,function(event){
 });
 
 // Zoom In
-$(document.body).on('click', '.sp-large a' ,function(event){
+/*$(document.body).on('click', '.sp-large a' ,function(event){
     var largeUrl = $(this).attr('href');
     $('.sp-large').append('<div class="sp-zoom"><img src="' + largeUrl + '"/></div>');
     $('.sp-zoom').fadeIn();
@@ -48,10 +48,10 @@ $(document.body).on('click', '.sp-large a' ,function(event){
     });
     
     event.preventDefault();
-});
+});*/
 
 // Panning zoomed image
-$(document).ready(function () {
+/*$(document).ready(function () {
     $('.sp-large').mousemove(function (e) {
         var viewWidth = $('.sp-large').width();
         var viewHeight = $('.sp-large').height();
@@ -71,7 +71,7 @@ $(document).ready(function () {
     }).mouseout(function () {
         //
     });
-});
+});*/
 
 // Panning on mobile devices using Gyroscope. Aw Yeah.
 window.ondeviceorientation = function(event) {
@@ -109,8 +109,9 @@ window.ondeviceorientation = function(event) {
 
 
 // Zoom out
-$(document.body).on('click', '.sp-zoom' ,function(event){
+/*$(document.body).on('click', '.sp-zoom' ,function(event){
     $(this).fadeOut(function () {
         $(this).remove();
     });
 });
+*/
