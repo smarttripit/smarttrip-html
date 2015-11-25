@@ -1,7 +1,7 @@
 {
 	"status":"success",
-	"tipCode":null,
-	"tipMsg":null,
+	"tipCode":"",
+	"tipMsg":"",
 	"data":{
 		"spotId":"spotId",
 		"name":"景点名称",

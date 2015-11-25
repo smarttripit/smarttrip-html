@@ -1,6 +1,6 @@
 {
-    "status": "success",
-    "tipCode": null,
-    "tipMsg": null,
+    "status":"success",
+	"tipCode":"",
+	"tipMsg":"",
     "data": null
 }

@@ -1,7 +1,7 @@
 ﻿{
 	"status":"success",
-	"tipCode":null,
-	"tipMsg":null,
+	"tipCode":"",
+	"tipMsg":"",
 	"data":[
 		{
 			
