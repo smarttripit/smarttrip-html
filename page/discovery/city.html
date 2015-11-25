@@ -9,7 +9,7 @@
    <!-- Bootstrap -->
      <link href="/static/css/bootstrap.min.css" rel="stylesheet">
      <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
-     <link rel="stylesheet" type="text/css" href="/static/css/error.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/static/css/error.css">>
 
    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -52,10 +52,20 @@
      <div  class="col-xs-12 col-sm-12 col-md-12 filter_2"> 
        <div class="col-xs-12 col-sm-12 col-md-6 beijingmap" id="beijingmap" >
          <style type="text/css">
-            .miyun{margin-left: 63%;margin-top: -112%;} 
+            .miyun{left: 53.2%;top: 23%;position: absolute;}
+            .huairou{left: 0%;top: 20%;position: absolute;}
+            .yanqin{left: 0%;top: 20%;position: absolute;}
+            .changping{left: 0%;top: 20%;position: absolute;}
+            .shunyi{left: 0%;top: 20%;position: absolute;}
+            .pinggu{left: 0%;top: 20%;position: absolute;}
+            .tongzhou{left: 0%;top: 20%;position: absolute;}
+            .zhongxin{left: 0%;top: 20%;position: absolute;}
+            .mentougou{left: 0%;top: 20%;position: absolute;}
+            .fangshan{left: 0%;top: 20%;position: absolute;}
+            .daxing{left: 0%;top: 20%;position: absolute;}
           </style>
 
-          <img src="/static/images/beijing-map (3).png" width="500" height="456" usemap="#Map" border="0" style="display: block;margin-left:50px;" id="map_bg"  />
+          <img src="/static/images/beijing-map (3).png" width="500" height="456" usemap="#Map" border="0" style="display: block;margin-left:0px;" id="map_bg"  />
           <map name="Map" id="Map">
 
             <area shape="poly" coords="342,166,348,129,388,130,417,138,436,144,404,165,394,177,391,200,370,205,353,215,343,227,337,238,325,234,319,227,310,219,302,218,298,213,293,198,293,184,288,171,289,155,295,135,304,129,313,118,324,108,337,117,341,122,345,126"  href="#" onmouseover="show_map('miyun')"/>
@@ -76,7 +86,7 @@
             <area shape="poly" coords="294,344,289,296,302,317,318,337,335,343,328,356,322,365,313,378,306,382,298,386,289,377,282,365,270,362,254,362,251,354,255,340,270,333,270,322,275,312,279,305,286,299,293,300" href="#" onmouseover="show_map('tongzhou')"/>
   
   
-            <area shape="poly" coords="204,307,228,286,252,283,260,297,266,311,263,327,250,334,235,336,226,336,220,343,206,340,199,339,189,336,184,329,177,334,164,342,153,329,167,315,166,300,174,291,164,280,154,277,162,269,171,265,177,260,190,276,203,285,215,289,222,290" href="#" onmouseover="show_map('tongzhou')"/>
+            <area shape="poly" coords="204,307,228,286,252,283,260,297,266,311,263,327,250,334,235,336,226,336,220,343,206,340,199,339,189,336,184,329,177,334,164,342,153,329,167,315,166,300,174,291,164,280,154,277,162,269,171,265,177,260,190,276,203,285,215,289,222,290" href="#" onmouseover="show_map('zhongxin')"/>
   
   
             <area shape="poly" coords="94,282,90,256,103,261,112,263,122,270,134,278,146,275,155,287,161,295,159,307,160,320,147,327,134,324,115,311,98,314,86,308,66,312,50,324,33,333,33,316,26,305,17,298,18,289,27,281,48,273,57,270,73,263,80,262,90,262" href="#" onmouseover="show_map('mentougou')"/>
@@ -88,48 +98,48 @@
             <area shape="poly" coords="214,382,220,355,235,344,245,347,246,363,257,370,269,369,277,382,254,386,239,394,233,404,223,407,214,414,212,422,199,418,190,411,185,401,185,391,182,370,185,363,191,358,200,348,205,347,211,352,213,354,215,357" href="#" onmouseover="show_map('daxing')"/>
           </map>
 
-          <a href="city.html" target="_blank" class="" >
-           <img class="miyun" src="/static/images/miyun.png" style="display: none;">
+          <a href="city.html" target="_blank" class="miyun" style="display: none;">
+           <img class="" src="/static/images/miyun.png" >
           </a>
 
-          <a href="#" target="_blank" class="city_active">
-           <img class="huairou" src="" style="display: none;">
+          <a href="#" target="_blank" class="huairou" style="display: none;">
+           <img class="" src="" >
           </a>
 
-          <a href="#" target="_blank" class="city_active">
-           <img class="yanqin" src="" style="display: none;">
+          <a href="#" target="_blank" class="yanqin" style="display: none;">
+           <img class="" src="" >
           </a>
 
-          <a href="#" target="_blank" class="city_active">
-           <img class="changping" src="" style="display: none;">
+          <a href="#" target="_blank" class="changping" style="display: none;">
+           <img class="" src="" >
           </a>
 
-          <a href="#" target="_blank" class="city_active">
-           <img class="shunyi" src="" style="display: none;">
+          <a href="#" target="_blank" class="shunyi" style="display: none;">
+           <img class="" src="" >
           </a>
 
-          <a href="#" target="_blank" class="city_active">
-           <img class="pinggu" src="" style="display: none;">
+          <a href="#" target="_blank" class="pinggu" style="display: none;">
+           <img class="" src="" >
           </a>
 
-          <a href="#" target="_blank" class="city_active">
-           <img class="tongzhou" src="" style="display: none;">
+          <a href="#" target="_blank" class="tongzhou" style="display: none;">
+           <img class="" src="" >
           </a>
 
-          <a href="#" target="_blank" class="city_active">
-           <img class="zhongxin" src="" style="display: none;">
+          <a href="#" target="_blank" class="zhongxin" style="display: none;">
+           <img class="" src="" >
           </a>
 
-          <a href="#" target="_blank" class="city_active">
-           <img class="mentougou" src="" style="display: none;">
+          <a href="#" target="_blank" class="mentougou" style="display: none;">
+           <img class="" src="" >
           </a>
 
-          <a href="#" target="_blank" class="city_active">
-           <img class="fangshan" src="" style="display: none;">
+          <a href="#" target="_blank" class="fangshan" style="display: none;">
+           <img class="" src="" >
           </a>
 
-          <a href="#" target="_blank" class="city_active">
-           <img class="daxing" src="" style="display: none;">
+          <a href="#" target="_blank" class="daxing" style="display: none;">
+           <img class="" src="" >
           </a>
        </div>
 
@@ -141,26 +151,26 @@
             <ul class="city row" style="">
                        <div class="col-xs-6 col-sm-3 col-md-3">                       
                          <li name="miyun"> <a href="city.html" target="_blank" class="" _hover-ignore="1">密云</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">怀柔</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">延庆</a></li>
+                         <li name="huairou"><a href="#" target="_blank" class="" _hover-ignore="1">怀柔</a></li>
+                         <li name="yanqin"><a href="#" target="_blank" class="" _hover-ignore="1">延庆</a></li>
                         
                        </div>
 
                        <div class="col-xs-6 col-sm-3 col-md-3">
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">昌平</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">顺义</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">平谷</a></li>
+                         <li name="changping"><a href="#" target="_blank" class="" _hover-ignore="1">昌平</a></li>
+                         <li name="shunyi"><a href="#" target="_blank" class="" _hover-ignore="1">顺义</a></li>
+                         <li name="pinggu"><a href="#" target="_blank" class="" _hover-ignore="1">平谷</a></li>
                        </div>
 
                        <div class="col-xs-6 col-sm-3 col-md-3">
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">通州</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">大兴</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">门头沟</a></li>
+                         <li name="tongzhou"><a href="#" target="_blank" class="" _hover-ignore="1">通州</a></li>
+                         <li name="daxing"><a href="#" target="_blank" class="" _hover-ignore="1">大兴</a></li>
+                         <li name="mentougou"><a href="#" target="_blank" class="" _hover-ignore="1">门头沟</a></li>
                        </div>
 
                        <div class="col-xs-6 col-sm-3 col-md-3">
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">房山</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">中心</a></li>
+                         <li name="fangshan"><a href="#" target="_blank" class="" _hover-ignore="1">房山</a></li>
+                         <li name="zhongxin"><a href="#" target="_blank" class="" _hover-ignore="1">中心</a></li>
                        </div>
             </ul>   
          </div>
@@ -168,31 +178,30 @@
          <div class="col-xs-12 col-sm-3 col-md-3 filter_title_2">
            <h4 class="filter2_title"><i class="fa fa-coffee"></i>&nbsp;游玩主题：</h4>
          </div>
-         <div class="col-xs-12 col-sm-9 col-md-9 filter_body_2" >
-            <ul class="city row" style="">
+         <div class="col-xs-12 col-sm-9 col-md-9 filter_body_2 else_one" >
+            <ul class="row" style="">
                   <div class="col-xs-6 col-sm-3 col-md-3">                       
-                         <li> <a href="city.html" target="_blank" class="" _hover-ignore="1">烧烤</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">爬山</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">滑雪</a></li>
-                        
+                         <li><a class="else_active">烧烤√</a></li>
+                         <li><a class="">爬山</a></li>
+                         <li><a class="">滑雪</a></li>                       
                   </div>
 
                   <div class="col-xs-6 col-sm-3 col-md-3">
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">骑行</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">垂钓</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">爬山</a></li>
+                         <li><a  class="">骑行</a></li>
+                         <li><a  class="">垂钓</a></li>
+                         <li><a  class="">爬山</a></li>
                   </div>
 
                   <div class="col-xs-6 col-sm-3 col-md-3">
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">滑雪</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">骑行</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">爬山</a></li>
+                         <li><a class="" >滑雪</a></li>
+                         <li><a class="" >骑行</a></li>
+                         <li><a class="" >爬山</a></li>
                   </div>
 
                   <div class="col-xs-6 col-sm-3 col-md-3">
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">徒步</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">骑行</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">滑雪</a></li>
+                         <li><a class="">徒步</a></li>
+                         <li><a class="">骑行</a></li>
+                         <li><a class="">滑雪</a></li>
                   </div>
             </ul> 
          </div>
@@ -200,24 +209,24 @@
          <div class="col-xs-12 col-sm-3 col-md-3 filter_title_2">
            <h4 class="filter3_title"><i class="fa fa-group"></i>&nbsp;游玩同伴：</h4>
          </div>
-         <div class="col-xs-12 col-sm-9 col-md-9 filter_body_2">
-            <ul class="city row" style="">
+         <div class="col-xs-12 col-sm-9 col-md-9 filter_body_2 else_two">
+            <ul class="row" style="">
                        <div class="col-xs-6 col-sm-3 col-md-3">                       
-                         <li> <a href="city.html" target="_blank" class="" _hover-ignore="1">老人</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">小孩</a></li>                       
+                         <li> <a class="else_active" >老人√</a></li>
+                         <li><a  class="">小孩</a></li>                       
                        </div>
 
                        <div class="col-xs-6 col-sm-3 col-md-3">
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">同学</a></li>
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">朋友</a></li>
+                         <li><a class="">同学</a></li>
+                         <li><a class="">朋友</a></li>
                        </div>
 
                        <div class="col-xs-6 col-sm-3 col-md-3">
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">同事</a></li>
+                         <li><a class="">同事</a></li>
                        </div>
 
                        <div class="col-xs-6 col-sm-3 col-md-3">
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">老人</a></li>
+                         <li><a class="">老人</a></li>
                        </div>
             </ul> 
          </div>
@@ -225,22 +234,22 @@
          <div class="col-xs-12 col-sm-3 col-md-3 filter_title_2">
            <h4 class="filter4_title"><i class="fa fa-suitcase"></i>&nbsp;游玩季节：</h4>
          </div>
-         <div class="col-xs-12 col-sm-9 col-md-9 filter_body_2">
-           <ul class="city row" style="">
+         <div class="col-xs-12 col-sm-9 col-md-9 filter_body_2 else_three">
+           <ul class="row" style="">
                        <div class="col-xs-6 col-sm-3 col-md-3">                       
-                         <li> <a href="city.html" target="_blank" class="" _hover-ignore="1">当季</a></li>                       
+                         <li > <a class="else_active">当季√</a></li>                       
                        </div>
 
                        <div class="col-xs-6 col-sm-3 col-md-3">
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">春</a></li>
+                         <li><a class="">春</a></li>
                        </div>
 
                        <div class="col-xs-6 col-sm-3 col-md-3">
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">夏</a></li>
+                         <li><a class="">夏</a></li>
                        </div>
 
                        <div class="col-xs-6 col-sm-3 col-md-3">
-                         <li><a href="#" target="_blank" class="" _hover-ignore="1">秋</a></li>
+                         <li><a class="">秋</a></li>
                        </div>
            </ul> 
          </div>
@@ -670,24 +679,26 @@
 <script type="text/javascript">
              $(document).ready(function(){
              $('.miyun').show();
-             var imgs=$('.beijingmap').find('img');
+             var imgs=$('.beijingmap').find('a');
              var citys=$('.city li');
              citys.mouseover(function(){
              citys.find('a').removeClass('city_active');
              $(this).find('a').addClass('city_active');
              imgs.hide();
-             imgs.eq(0).show();
+            // imgs.eq(0).show();
              $('.'+$(this).attr('name')).show();<!--鼠标移到右边的城市上，对应的左边的城市小图显示 -->
                });
+
+
              });
  
              function show_map(str)
              {
-               var imgs=$('.beijingmap').find('img');
+               var imgs=$('.beijingmap').find('a');
                var citys=$('.city li');
                var city_len=citys.length;
                imgs.hide();
-               imgs.eq(0).show();
+               //imgs.eq(0).show();
                $('.'+str).show();
                for(var i=0;i<city_len;i++){
                if(citys.eq(i).attr('name')==str){
@@ -697,6 +708,30 @@
                  }
 
               }
+
+   $(document).ready(function(){ 
+    var textvalue=[];
+    var len1=$(".else_three ul div li a").length;
+    var len2=$(".else_three ul div li a").eq(0).text().length;
+    textvalue[0]=$(".else_three ul div li a").eq(0).text().substring(0,len2-1);
+    for(i=1;i<len1;i++)
+      { textvalue[i]=$(".else_three ul div li a").eq(i).text();}
+
+     // console.log(textvalue);
+    
+
+
+       $(".else_three ul div li a").click( 
+         function(){
+          var inx = $(this).parent("li").parent("div").index();//定义变量inx,返回这个元素在同辈中的索引位置
+         // var textvalue =$(this).parent("li").find("a").text();
+         console.log(inx);
+          if($(".else_three ul div li").eq(inx).find("a").hasClass("else_active"))
+              {$(".else_three ul div li").eq(inx).find("a").removeClass("else_active").text(textvalue[inx]); }
+          else{$(".else_three ul div li").eq(inx).find("a").addClass("else_active").text(textvalue[inx]+"√");}
+          });       
+       
+     });   
 
 </script>
 <script type="text/javascript" src="/static/js/defined_c.js"></script>
