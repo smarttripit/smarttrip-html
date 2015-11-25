@@ -265,9 +265,6 @@ color: #fff;
 
 /*//发现北京样式//*/
 /*发现北京地图页*/
-.city{list-style:none;-webkit-padding-start: 0px;margin-bottom:0px;}
-.city li{margin-bottom:5px;}
-.city li a{width:100%;}
 .spot_search_text{color:#797777;}
 .spot_search_text p a strong{font-size: 15px;color:#78A8DA;}
 .city_active{background: #78A8DA;border-color:#fff;color:#fff;}
@@ -275,6 +272,10 @@ color: #fff;
 .display_in{display: run-in;}
 .display_none{display: none;}
 .right_back{padding:20px 10px 0px 0px;}
+.right_back ul{list-style:none;-webkit-padding-start: 0px;margin-bottom:5px;}
+.right_back ul li{}
+.right_back ul li a{width:100%;}
+.else_active{background: #78A8DA;border-color:#fff;color:#fff;}
 .btn_defined{background: #78A8DA;width: 100%;color:#fff;}
 
 /*面包屑导航*/
