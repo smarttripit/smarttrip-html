@@ -5,22 +5,22 @@
 	"data":[
 		{
 			
-			"id":"1234",	
-			"thumbnail":"http://www.baidu.com/1.png",
-			"name":"水峪村",
-			"feature":"山清水秀，天人合一"
-		}
+			"spotId":"spotId",	
+			"thumbnail":"缩略图的url",
+			"name":"景点名称",
+			"feature":"景点特色"
+		},
 		{
-			"id":"1234",	
-			"thumbnail":"http://www.baidu.com/1.png",
-			"name":"水峪村",
-			"feature":"山清水秀，天人合一"
+			"spotId":"spotId",	
+			"thumbnail":"缩略图的url",
+			"name":"景点名称",
+			"feature":"景点特色"
 		}, 
 		{
-			"id":"1234",	
-			"thumbnail":"http://www.baidu.com/1.png",
-			"name":"水峪村",
-			"feature":"山清水秀，天人合一"
+			"spotId":"spotId",	
+			"thumbnail":"缩略图的url",
+			"name":"景点名称",
+			"feature":"景点特色"
 		}
 	]
 }
