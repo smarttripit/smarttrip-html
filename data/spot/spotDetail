@@ -8,7 +8,7 @@
 		"recommendation":"推荐理由",
 		"commentRatio":"好评率，后台需要先转换成98.9%这种形式",
 		"duration":"建议游玩时间",
-		"travelTime":"适宜季节",
+		"travelTime":"适宜季节，以空格分隔",
 		"map":"游览导图",
 		"basicInfo":"基本信息文本部分",
 		"ticketInfo":"门票信息",
