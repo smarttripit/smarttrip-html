@@ -1,0 +1,19 @@
+{
+	"status":"success",
+	"tipCode":null,
+	"tipMsg":null,
+	"data":{
+		"spotId":"spotId",
+		"name":"景点名称",
+		"recommendation":"推荐理由",
+		"commentRatio":"好评率，后台需要先转换成98.9%这种形式",
+		"duration":"建议游玩时间",
+		"travelTime":"适宜季节",
+		"map":"游览导图",
+		"basicInfo":"基本信息文本部分",
+		"ticketInfo":"门票信息",
+		"transportInfo":"交通指南",
+		"notice":"周周贴士",
+		"spotLocationInfo":"旅游详情文字部分"
+	}
+}
