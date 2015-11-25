@@ -271,13 +271,14 @@ color: #fff;
 .hot_spot {margin-right:10px;}
 .display_in{display: run-in;}
 .display_none{display: none;}
-.right_back{padding:20px 10px 0px 0px;}
+.right_back{padding:90px 10px 20px 0px;}
 .right_back ul{list-style:none;-webkit-padding-start: 0px;margin-bottom:5px;}
 .right_back ul li{}
 .right_back ul li a{width:100%;}
 .else_active{background: #78A8DA;border-color:#fff;color:#fff;}
 .btn_defined{background: #78A8DA;width: 100%;color:#fff;}
-
+.beijingmap{padding-left: 0px;}
+.else_one ul div li a:hover{color:#fff;background: }
 /*面包屑导航*/
 .breadcrumb{background-color: #fff;margin-bottom: 0px;padding: 8px 8px;}
 .breadcrumb a{color:#588DC2;}
@@ -303,7 +304,7 @@ text-align: center;
 border: 1px rgba(170, 170, 170, 0.47) solid;
 }
 
-.filter_2{padding:10px;background:#fff;margin-bottom:15px;margin-top:15px;}
+.filter_2{background:#fff;margin-bottom:15px;margin-top:15px;}
 .filter_title_2{padding-right:0px;}
 .filter_body_2 ul li a{display: inline-block;
 margin: 5px 10px;
