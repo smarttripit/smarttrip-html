@@ -1,31 +1,34 @@
 {
-   "status" : "success",
-   "tipCode" : null,
-   "tipMsg" : null,
-   "data" : [
-      {
-         "thumbnail" : "http://www.baidu.com/1.png",
-         "name" : "爨底下村",
-         "themes" : "亲子 家庭 古韵",
-         "briefRecommendation" : "这里显示简短推荐理由",
-         "commentRatio" : "98.9%",
-         "purchaseCount" : "98"
-      },
-      {
-         "thumbnail" : "http://www.baidu.com/1.png",
-         "name" : "爨底下村",
-         "themes" : "亲子 家庭 古韵",
-         "briefRecommendation" : "这里显示简短推荐理由",
-         "commentRatio" : "98.9%",
-         "purchaseCount" : "98"
-      },
-      {
-         "thumbnail" : "http://www.baidu.com/1.png",
-         "name" : "爨底下村",
-         "themes" : "亲子 家庭 古韵",
-         "briefRecommendation" : "这里显示简短推荐理由",
-         "commentRatio" : "98.9%",
-         "purchaseCount" : "98"
-      }
-   ]
+	"status":"success",
+	"tipCode":null,
+	"tipMsg":null,
+	"data":[
+		{
+			"routeId":"routeId",
+			"thumbnail":"缩略图的url",
+			"name":"经典线路的名称",
+			"themes":"经典线路的所有主题，用空格分隔",
+			"briefRecommendation":"简短的推荐理由",
+			"commentRatio":"好评率，后台要转换成98.92%这种形式",
+			"purchaseCount":"购买数"
+		},
+		{
+			"routeId":"routeId",
+			"thumbnail":"缩略图的url",
+			"name":"经典线路的名称",
+			"themes":"经典线路的所有主题，用空格分隔",
+			"briefRecommendation":"简短的推荐理由",
+			"commentRatio":"好评率，后台要转换成98.92%这种形式",
+			"purchaseCount":"购买数"
+		},
+		{
+			"routeId":"routeId",
+			"thumbnail":"缩略图的url",
+			"name":"经典线路的名称",
+			"themes":"经典线路的所有主题，用空格分隔",
+			"briefRecommendation":"简短的推荐理由",
+			"commentRatio":"好评率，后台要转换成98.92%这种形式",
+			"purchaseCount":"购买数"
+		}
+	]
 }
