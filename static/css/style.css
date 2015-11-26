@@ -143,11 +143,21 @@
 .my_input{
   width: 100%;
 }
-.address{
+.my_border{
   padding: 20px;
   border: 1px solid #E0E0E0;
 }
 
 .hotel_title{
   background-color: #EBF7FC;
+}
+
+.hotel_img{
+  height:50px;float:left;
+}
+.hotel_text{
+  float:left;height:50px;line-height:50px;
+}
+.susu_text{
+  height: 34px;line-height: 34px;
 }
