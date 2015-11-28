@@ -1,0 +1,26 @@
+{
+	"status":"success",
+	"tipCode":"",
+	"tipMsg":"",
+	"data":{
+		"total":"总共多少条记录",
+		"rows":[
+			{
+				
+				"spotId":"spotId",
+				"thumbnail":"缩略图地址",
+				"name":"景点的名称",
+				"commentRatio":"好评率，后台要转换成98.92%这种形式",
+				"recommendation":"推荐理由"
+			},
+			{
+				
+				"spotId":"spotId",
+				"thumbnail":"缩略图地址",
+				"name":"景点的名称",
+				"commentRatio":"好评率，后台要转换成98.92%这种形式",
+				"recommendation":"推荐理由"
+			}
+		]
+	}
+}
