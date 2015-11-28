@@ -26,9 +26,12 @@
     <link href="/static/css/defined.css" rel="stylesheet">
     <link href="/static/css/style.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet"> 
+    <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
 
-    
+    <style type="text/css">
+    .modal-open{
+      overflow: auto !important;
+      }</style>
   </head>
   <body>
 
@@ -94,7 +97,7 @@
                    <li class="menuItem"><a href="#cost">费用说明</a></li>
                    <li class="menuItem"><a href="#book">预订须知</a></li>
                    <li class="menuItem"><a href="#comment">周周点评</a></li>
-                   <li class="menuItem"><a href="#tips">小贴士</a></li>   
+                      
                  </ul>
                  <button type="button" class="btn btn-danger btn-book">立即预定</button>
                </div>
@@ -546,21 +549,7 @@
     
       <!-- START THE tips -->
       
-        <div id="tips" class="anchor_place"></div>
-        <div id="tips1" class="row featurette panel panel-default">
-          <div class="panel-heading">
-            <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>小贴士</h4>
-          </div>
-          <div class="panel-body col-xs-12 col-sm-12 col-md-12">
-            <div class="col-xs-12 col-sm-2 col-md-1">
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-10">
-              <img src="/static/images/happy_eat1.jpg" class="img-responsive" />
-            </div>
-            <div class="col-xs-12 col-sm-2 col-md-1">
-            </div>
-          </div>
-        </div> <!-- END tips -->
+        
           <!-- 黄岭西模态框（myModalHLX） -->
           <div class="modal modal-vcenter fade" id="myModalHLX" tabindex="-1" role="dialog" 
              aria-labelledby="myModalLabel" aria-hidden="true">
@@ -664,6 +653,7 @@
     <script type="text/javascript">
       jQuery(function($) {
         $(document).ready( function() {
+
           //导航栏切换效果
           $('.navbar-wrapper').stickUp({
                         parts: {                         
@@ -672,8 +662,8 @@
                           2: 'transport-map',
                           3: 'cost',
                           4: 'book',
-                          5: 'comment',
-                          6: 'tips'
+                          5: 'comment'
+                         
                         },
                         parts1: {                         
                           0:'product_detail1',
@@ -681,8 +671,8 @@
                           2: 'transport-map1',
                           3: 'cost1',
                           4: 'book1',
-                          5: 'comment1',
-                          6: 'tips1'
+                          5: 'comment1'
+                         
                         },
                         itemClass: 'menuItem',
                         itemHover: 'active',
