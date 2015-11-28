@@ -683,11 +683,19 @@
           function place(klass){
             $(klass).height($(window).height()*0.7);
           }
-          function adjustNav(myId){
+          function adjustNavShow(myId){
             $(myId).on('show.bs.modal',function(){
               if($('#navId').hasClass('isStuck')){
-                $('.isStuck').css('width','1349px');
+                $('.stuckMenu').css('width','1349px');
               }
+            });
+          }
+
+          function adjustNavHide(myId){
+            $(myId).on('hidden.bs.modal',function(){
+              
+                $('.stuckMenu').css('width','100%');
+              
             });
           }
          
@@ -695,9 +703,12 @@
 
           $('#myModalHCL').on('show.bs.modal',place('.oneLocal'));
           $('#myModalCT').on('show.bs.modal',place('.oneLocal'));
-          adjustNav('#myModalHLX');
-          adjustNav('#myModalHCL');
-          adjustNav('#myModalCT');
+          adjustNavShow('#myModalHLX');
+          adjustNavShow('#myModalHCL');
+          adjustNavShow('#myModalCT');
+          adjustNavHide('#myModalHLX');
+          adjustNavHide('#myModalHCL');
+          adjustNavHide('#myModalCT');
           
           //timeline每一个列表项的鼠标移入移出事件  
          
