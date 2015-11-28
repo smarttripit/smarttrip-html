@@ -1,0 +1,37 @@
+{
+	"status":"success",
+	"tipCode":"",
+	"tipMsg":"",
+	"data":[
+		{
+			"scheduleId":"scheduleId",
+			"scheduleType":"类型。1；驾车；2：住宿；3：餐饮；4：景点",
+			"name":"行程的名字",
+			"summary":"行程的简介",
+			"description":"行程的详情",
+			"thumbnail":"缩略图",
+			"direction":"左还是右。0：左；1：右。",
+			"link":"链接"
+		},
+		{
+			"scheduleId":"scheduleId",
+			"scheduleType":"类型。1；驾车；2：住宿；3：餐饮；4：景点",
+			"name":"行程的名字",
+			"summary":"行程的简介",
+			"description":"行程的详情",
+			"thumbnail":"缩略图",
+			"direction":"左还是右。0：左；1：右。",
+			"link":"链接"
+		},
+		{
+			"scheduleId":"scheduleId",
+			"scheduleType":"类型。1；驾车；2：住宿；3：餐饮；4：景点",
+			"name":"行程的名字",
+			"summary":"行程的简介",
+			"description":"行程的详情",
+			"thumbnail":"缩略图",
+			"direction":"左还是右。0：左；1：右。",
+			"link":"链接"
+		}
+	]
+}
