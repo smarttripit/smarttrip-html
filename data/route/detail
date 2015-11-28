@@ -1,0 +1,18 @@
+{
+	"status":"success",
+	"tipCode":"",
+	"tipMsg":"",
+	"data":{
+		"routeId":"routeId",
+		"name":"线路名称",
+		"backgroundImg":"线路的背景图片，用于显示在线路详情页的顶部",
+		"feature":"特色（线路详情页上部名称后面的一句话）",
+		"detailRecommendation":"详细的推荐理由（放在线路详情页上部的图片上）",
+		"commentRatio":"好评率，后台需要先转换成98.9%这种形式",
+		"period":"游玩天数",
+		"detail":"线路详情",
+		"map":"交通地图",
+		"feeDescription":"费用说明",
+		"bookingNotice":"预定须知"
+	}
+}
