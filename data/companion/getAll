@@ -1,0 +1,27 @@
+{
+	"status":"success",
+	"tipCode":"",
+	"tipMsg":"",
+	"data":[
+		{
+			"companionId":"companionId",
+			"companionName":"老人"
+		},
+		{
+			"companionId":"companionId",
+			"companionName":"同学"
+		},
+		{
+			"companionId":"companionId",
+			"companionName":"同事"
+		},
+		{
+			"companionId":"companionId",
+			"companionName":"小孩"
+		},
+		{
+			"companionId":"companionId",
+			"companionName":"朋友"
+		}
+	]
+}
