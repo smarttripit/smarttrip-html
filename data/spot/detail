@@ -3,18 +3,18 @@
 	"tipCode":"",
 	"tipMsg":"",
 	"data":{
-		"spotId":"spotId",
-		"backgroundImg":"景点的背景图片，用于显示在景点详情页的顶部",
-		"name":"景点名称",
-		"recommendation":"推荐理由",
-		"commentRatio":"好评率，后台需要先转换成98.9%这种形式",
-		"duration":"建议游玩时间",
-		"travelTime":"适宜季节，以空格分隔",
-		"map":"游览导图",
-		"basicInfo":"基本信息文本部分",
-		"ticketInfo":"门票信息",
-		"transportInfo":"交通指南",
-		"notice":"周周贴士",
-		"spotLocationInfo":"旅游详情文字部分"
+		"spotId":"1",
+		"backgroundImg":"http://st-alpha.oss-cn-beijing.aliyuncs.com/59c6b649feb3429492c0def9add3f395",
+		"name":"这里显示景点名称",
+		"recommendation":"这里显示推荐理由",
+		"commentRatio":"99.5%",
+		"duration":"5小时",
+		"travelTime":"春 夏 秋 冬",
+		"map":"http://st-alpha.oss-cn-beijing.aliyuncs.com/9b6d68023dc54eaead80502a3be4c92c",
+		"basicInfo":"这里显示基本信息文本部分",
+		"ticketInfo":"这里显示门票信息",
+		"transportInfo":"这里显示交通指南",
+		"notice":"这里显示周周贴士",
+		"spotLocationInfo":"这里显示旅游详情文字部分"
 	}
 }
