@@ -4,6 +4,7 @@
 	"tipMsg":"",
 	"data":{
 		"spotId":"spotId",
+		"backgroundImg":"景点的背景图片，用于显示在景点详情页的顶部",
 		"name":"景点名称",
 		"recommendation":"推荐理由",
 		"commentRatio":"好评率，后台需要先转换成98.9%这种形式",
