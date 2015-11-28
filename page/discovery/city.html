@@ -194,7 +194,32 @@
                   <div class="col-xs-6 col-sm-3 col-md-3">
                          <li><a class="">徒步</a></li>
                          <li><a class="">骑行</a></li>
-                         <li><a class="">滑雪</a></li>
+                        <a class="city_theme_all" href="javascript:;">全部</a>
+                  </div>
+            </ul> 
+            <ul class="row" style="display:none;" id="city_remain" >
+                  <div class="col-xs-6 col-sm-3 col-md-3">                       
+                         <li><a class="">烧烤</a></li>
+                         <li><a class="">爬山</a></li>
+                         <li><a class="">滑雪</a></li>                       
+                  </div>
+
+                  <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a  class="">骑行</a></li>
+                         <li><a  class="">垂钓</a></li>
+                         <li><a  class="">爬山</a></li>
+                  </div>
+
+                  <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a class="" >滑雪</a></li>
+                         <li><a class="" >骑行</a></li>
+                         <li><a class="" >爬山</a></li>
+                  </div>
+
+                  <div class="col-xs-6 col-sm-3 col-md-3">
+                         <li><a class="">徒步</a></li>
+                         <li><a class="">骑行</a></li>
+                         <li><a class="">骑行</a></li>
                   </div>
             </ul> 
          </div>
@@ -674,7 +699,7 @@
              $('.miyun').show();
              var imgs=$('.beijingmap').find('a');
              var citys=$('.city li');            
-             console.log(citys);
+          //   console.log(citys);
              citys.mouseover(function(){
              citys.find('a').removeClass('city_active');
              $(this).find('a').addClass('city_active');
@@ -709,8 +734,8 @@
          var len2_2=$(this).text().length;
          var textvalue2_1=$(this).text();
          var textvalue2_2=$(this).text().substring(0,len2_2-1);
-         console.log(textvalue2_1);
-         console.log(textvalue2_2);
+        // console.log(textvalue2_1);
+        // console.log(textvalue2_2);
          if($(this).hasClass("else_active"))
               {$(this).removeClass("else_active") }
           else{$(this).addClass("else_active")}
@@ -719,6 +744,19 @@
             else{$(this).text(textvalue2_1+"√");}
      });
      
+      $(".city_theme_all").click(
+  function(){
+    if($("#city_remain").css("display")=="none")
+    {   
+    $("#city_remain").show();
+    $(this).text("收起");
+  }
+    else
+      {
+        $("#city_remain").hide();
+        $(this).text("全部");
+      }
+});
 </script>
 <script type="text/javascript" src="/static/js/defined_c.js"></script>
   </body>

@@ -45,20 +45,21 @@
                 <div id="collapseOne" class="collapse in">
                   <div class="panel-body panel-body_defined">                  
                     <div class="row">
-                      <div class="col-xs-4 col-sm-6 col-md-6 in_center">
-                        <a href="javascript:;" val="1"><p>门头沟区</p></a>
-                        <a href="javascript:;" val="1"><p>平谷区</p></a>
-                        <a href="javascript:;" val="1"><p>通州区</p></a>
-                        <a href="javascript:;" val="1"><p>大兴区</p></a>
-                        <a href="javascript:;" val="1"><p>中心区</p></a>
+                      <div class="col-xs-4 col-sm-6 col-md-6 place_days in_center">
+                        <a href="javascript:;" val="1" class="place_days_active">门头沟区√</a>
+
+                        <a href="javascript:;" val="1">平谷区</a>
+                        <a href="javascript:;" val="1">通州区</a>
+                        <a href="javascript:;" val="1">大兴区</a>
+                        <a href="javascript:;" val="1">中心区</a>
                       </div>
 
-                      <div class="col-xs-4 col-sm-6 col-md-6 in_center">
-                         <a href="javascript:;" val="1"><p>顺义区</p></a>
-                         <a href="javascript:;" val="1"><p>房山区</p></a>
-                         <a href="javascript:;" val="1"><p>怀柔县</p></a>
-                         <a href="javascript:;" val="1"><p>延庆县</p></a>
-                         <a href="javascript:;" val="1"><p>密云县</p></a>
+                      <div class="col-xs-4 col-sm-6 col-md-6 place_days in_center">
+                         <a href="javascript:;" val="1">顺义区</a>
+                         <a href="javascript:;" val="1">房山区</a>
+                         <a href="javascript:;" val="1">怀柔县</a>
+                         <a href="javascript:;" val="1">延庆县</a>
+                         <a href="javascript:;" val="1">密云县</a>
                       </div>
                     </div>
                   </div>
@@ -74,7 +75,7 @@
                   <div class="panel-body panel-body_defined">                  
                     <div class="row row_space">
                        <div class="col-xs-4 col-sm-6 col-md-6 choosetheme in_center">
-                         <a href="javascript:;" val="1">露营</a>
+                         <a href="javascript:;" val="1" class="else_active">露营√</a>
                          <a href="javascript:;" val="1">骑行</a>
                          <a href="javascript:;" val="1">烧烤</a>
                          <a href="javascript:;" val="1">滑雪</a>
@@ -90,8 +91,27 @@
                        </div>
                     </div>
                     <div class="row">
-                      <div class="col-xs-8 col-sm-12 col-md-12 all in_center">
-                        <a href="#" style="">全部</a>
+                      <div class="col-xs-8 col-sm-12 col-md-12  in_center">
+                        <div id="remain" style="display:none;">
+                          <div class="row row_space">
+                           <div class="col-xs-4 col-sm-6 col-md-6 choosetheme in_center">
+                            <a href="javascript:;" val="1">露营</a>
+                            <a href="javascript:;" val="1">骑行</a>
+                            <a href="javascript:;" val="1">烧烤</a>
+                            <a href="javascript:;" val="1">滑雪</a>
+                            <a href="javascript:;" val="1">露营</a>
+                           </div>
+
+                            <div class="col-xs-4 col-sm-6 col-md-6 choosetheme in_center">
+                            <a href="javascript:;" val="1">骑行</a>
+                            <a href="javascript:;" val="1">滑雪</a>
+                            <a href="javascript:;" val="1">烧烤</a>
+                            <a href="javascript:;" val="1">露营</a>
+                            <a href="javascript:;" val="1">骑行</a>
+                            </div>
+                          </div>
+                        </div>
+                        <a class="all" id="all">全部</a>
                       </div>
                     </div>
                   </div>
@@ -104,13 +124,13 @@
                </div>
                <div id="collapseThree" class="collapse in">
                  <div class="panel-body panel-body_defined">
-                   <div class="col-xs-4 col-sm-6 col-md-6 in_center">
-                     <a href="javascript:;" val="1"><p>一天</p></a>                 
-                     <a href="javascript:;" val="1"><p>两天</p></a>
+                   <div class="col-xs-4 col-sm-6 col-md-6 place_days in_center">
+                     <a href="javascript:;" val="1" class="place_days_active">一天√</a>
+                     <a href="javascript:;" val="1">两天</a>
                    </div>
-                   <div class="col-xs-4 col-sm-6 col-md-6 in_center">
-                     <a href="javascript:;" val="1"><p>三天</p></a>
-                     <a href="javascript:;" val="1"><p>三天以上</p></a>
+                   <div class="col-xs-4 col-sm-6 col-md-6 place_days in_center">
+                     <a href="javascript:;" val="1">三天</a>
+                     <a href="javascript:;" val="1">三天以上</a>
                    </div>
                  </div>
                </div>
@@ -124,7 +144,7 @@
                  <div id="collapseFour" class="collapse in">
                    <div class="panel-body">             
                      <div class="col-xs-4 col-sm-6 col-md-6 choosetheme in_center">
-                        <a href="javascript:;" val="1">当季</a>
+                        <a href="javascript:;" val="1" class="else_active">当季√</a>
                         <a href="javascript:;" val="1">春</a>
                      </div>
                      <div class="col-xs-4 col-sm-6 col-md-6 choosetheme in_center">
@@ -143,10 +163,10 @@
         <!-- 选项卡组件（菜单项nav-tabs）-->
           <!--  <ul id="myTab" class="nav nav-tabs" role="tablist"> -->
           <div class="row" id="navpills">
-            <div class="col-xs-9 col-sm-6 col-md-8">
-               <ul class="nav nav-pills">
-                <li class=""><a href="#" class="defined_active">综合</a></li>
-                  <li><a href="#" class="nav-pills_defined">好评率</a></li>
+            <div class="col-xs-9 col-sm-6 col-md-8" id="good_bad_comment">
+               <ul class="nav nav-pills nav-pills_defined">
+                <li class=""><a href="javascript:;" class="defined_active">综合</a></li>
+                  <li><a href="javascript:;" class="">好评率</a></li>
                   <li class="dropdown"><a class="dropdown-toggle nav-pills_defined" data-toggle="dropdown">价格<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                       <li><a href="#price_up">价格由低到高</a></li>
@@ -478,6 +498,8 @@
  $(function(){
   $('[data-toggle="popover"]').popover({ html: "true",
   });
+
+ 
 });
 
   $(function () {
@@ -499,6 +521,53 @@
             }
 });
 
+//好评中评价格
+$("#good_bad_comment ul li a").click(function(){if($(this).has(".defined_active")){ 
+$(this).addClass("defined_active").parent("li").siblings("li").find("a").removeClass("defined_active");}}) 
+
+//选中状态
+$(".choosetheme  a").click( 
+         function(){
+         var len2_2=$(this).text().length;
+         var textvalue2_1=$(this).text();
+         var textvalue2_2=$(this).text().substring(0,len2_2-1);
+       //  console.log(textvalue2_1);
+       //  console.log(textvalue2_2);
+         if($(this).hasClass("else_active"))
+              {$(this).removeClass("else_active") }
+          else{$(this).addClass("else_active")}
+            
+          if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
+            else{$(this).text(textvalue2_1+"√");}
+     });
+
+$(".place_days  a").click( 
+         function(){
+         var len2_2=$(this).text().length;
+         var textvalue2_1=$(this).text();
+         var textvalue2_2=$(this).text().substring(0,len2_2-1);
+         if($(this).hasClass("place_days_active"))
+              {$(this).removeClass("place_days_active") }
+          else{$(this).addClass("place_days_active")}
+        if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
+           else{$(this).text(textvalue2_1+"√");}
+     });
+
+ //全部
+ $("#all").click(
+  function(){
+    if($("#remain").css("display")=="none")
+    {   
+    $("#remain").show();
+    $(this).text("收起");
+  }
+    else
+      {
+        $("#remain").hide();
+        $(this).text("全部");
+      }
+});
+  
 </script>
 <script type="text/javascript" src="/static/js/defined_c.js"></script>
 
