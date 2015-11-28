@@ -1,0 +1,16 @@
+﻿{
+	"status":"success",
+	"tipCode":"",
+	"tipMsg":"",
+	"data":[
+		{
+			"imageURL":"图片地址1"	
+		},
+		{
+			"imageURL":"图片地址2"	
+		}, 
+		{
+			"imageURL":"图片地址3"	
+		}
+	]
+}
