@@ -21,6 +21,12 @@
 			"thumbnail":"缩略图的url",
 			"name":"景点名称",
 			"feature":"景点特色"
+		}, 
+		{
+			"spotId":"spotId",	
+			"thumbnail":"缩略图的url",
+			"name":"景点名称",
+			"feature":"景点特色"
 		}
 	]
 }
