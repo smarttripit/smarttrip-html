@@ -16,9 +16,18 @@
     <link href="/static/css/defined.css" rel="stylesheet">
     <link href="/static/css/style.css" rel="stylesheet">
     <!-- Custom Fonts -->
+
     <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet"> 
+
+    
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    
+      
   </head>
-  <body>
+  <body>  
 
     <!-- START THE COVER -->
     <div id="home" class="carousel">
@@ -41,19 +50,32 @@
                       <div class="col-md-4"><h4><strong>苏苏的家</strong></h4></div>
                       <div class="col-md-5"><h4><i class="fa fa-phone"></i>联系客服</h4></div>
                     </div>
-                    <div class="row spot_back">
-                      <div class="col-md-4">
-                        <input class="my_input" type="text" placeholder="入住日期">
-                      </div>
-                      <div class="col-md-4">
-                        <input class="my_input" type="text" placeholder="退房日期">
-                      </div>
-                      <div class="col-md-4">
-                        <input class="my_input" type="text"  placeholder="类型">
-                      </div>
-                      
+                    
+                    <div class="row spot_back">                    
+                      <div class="col-md-12">
+                         <div class="input-group">
+                            <div class="input-group-btn">
+                               <button type="button" class="btn btn-default" 
+                                  tabindex="-1">客房类型
+                               </button>
+                               <button type="button" class="btn btn-default 
+                                  dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">切换下拉菜单</span>
+                               </button>
+                               <ul class="dropdown-menu">
+                                  <li><a href="#">标准间</a></li>
+                                  <li><a href="#">大床房</a></li>
+                                  <li><a href="#">三人间</a></li>
+                               </ul>
+                            </div><!-- /btn-group -->
+                            
+                            <input type="text" id="date_in" class="my_input" placeholder="入住">
+                            <input type="text" id="date_out" class="my_input" placeholder="退房">
+                         </div><!-- /input-group -->
+                      </div><!-- /.col-lg-6 --><br>     
                     </div>
-
+                    
                     <div class="row spot_back">
                       <div class="col-md-6">
                         <p class="susu_text">房间数量</p>
@@ -68,10 +90,10 @@
                       
                     </div>
 
-                    <div class="row spot_back">
-                      <div class="col-md-2"></div>
-                      <div class="col-md-6"><strong>价格：￥199/￥123</strong></div>
-                      <div class="col-md-4"><i class="fa fa-phone"></i>收藏</div>
+                    <div class="row spot_back">       
+                      <div class="col-md-4" style="text-align:center">价格</div>
+                      <div class="col-md-4" style="text-align:center"><strong>￥199/￥123</strong></div>
+                      <div class="col-md-4" style="text-align:center"><i class="fa fa-phone"></i>收藏</div>
                     </div>
 
                     <div class="row spot_back">
@@ -632,7 +654,7 @@
         </div>  <!-- END zhouzhou_comment -->
 
       </div>
-      
+
     <!-- END CONTENT -->
     <!--# include file="/common/footer.html"  -->
 
@@ -640,11 +662,17 @@
     <!-- Bootstrap & Plugins core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="/static/js/jquery-1.8.2.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+    $(function(){ 
+        $("#date_in").datepicker(); 
+        $("#date_out").datepicker();
+    });
+    </script>
       <!-- Add jQuery library -->
   
-
+      <script src="/static/js/jquery.validate.js"></script>
+      <script src="/static/js/my_validate.js"></script>
   <!-- Add mousewheel plugin (this is optional) -->
   <script type="text/javascript" src="/static/js/jquery.mousewheel-3.0.6.pack.js"></script>
 
@@ -809,5 +837,14 @@ bottom: 15px;
       });
     </script>
     <!-- ######################################## -->
+
+    
   </body>
+
+  <script type="text/javascript">
+  $(function(){ 
+      $("#date_in").datepicker(); 
+      $("#date_out").datepicker();
+  });
+  </script>
 </html>

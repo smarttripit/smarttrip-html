@@ -141,7 +141,8 @@
 }
 
 .my_input{
-  width: 100%;
+  width: 50%;
+  height: 34px;
 }
 .my_border{
   padding: 20px;
