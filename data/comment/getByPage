@@ -6,10 +6,13 @@
 		"total":"3",
 		"rows":[
 			{
+				"commentId":"123",
 				"content":"这里显示评论的内容",
 				"score":"4",
 				"commentTime":"2015-09-12 11:11:11",
 				"visitorName":"游客名称",
+				"visitorId":"游客id",
+				"canDelete":true,
 				"images": [
                     {
                         "imageURL": "评论图片的地址"
@@ -26,10 +29,13 @@
                 ]
 			},
 			{
+				"commentId":"123",
 				"content":"这里显示评论的内容",
-				"score":"5",
+				"score":"4",
 				"commentTime":"2015-09-12 11:11:11",
 				"visitorName":"游客名称",
+				"visitorId":"游客id",
+				"canDelete":false,
 				"images": [
                     {
                         "imageURL": "评论图片的地址"
@@ -46,10 +52,13 @@
                 ]
 			},
 			{
+				"commentId":"123",
 				"content":"这里显示评论的内容",
 				"score":"4",
 				"commentTime":"2015-09-12 11:11:11",
 				"visitorName":"游客名称",
+				"visitorId":"游客id",
+				"canDelete":true,
 				"images": [
                     {
                         "imageURL": "评论图片的地址"
