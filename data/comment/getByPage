@@ -1,0 +1,70 @@
+{
+	"status":"success",
+	"tipCode":"",
+	"tipMsg":"",
+	"data":{
+		"total":"3",
+		"rows":[
+			{
+				"content":"这里显示评论的内容",
+				"score":"4",
+				"commentTime":"2015-09-12 11:11:11",
+				"visitorName":"游客名称",
+				"images": [
+                    {
+                        "imageURL": "评论图片的地址"
+                    },
+                    {
+                        "imageURL": "评论图片的地址"
+                    },
+                    {
+                        "imageURL": "评论图片的地址"
+                    },
+                    {
+                        "imageURL": "评论图片的地址"
+                    }
+                ]
+			},
+			{
+				"content":"这里显示评论的内容",
+				"score":"5",
+				"commentTime":"2015-09-12 11:11:11",
+				"visitorName":"游客名称",
+				"images": [
+                    {
+                        "imageURL": "评论图片的地址"
+                    },
+                    {
+                        "imageURL": "评论图片的地址"
+                    },
+                    {
+                        "imageURL": "评论图片的地址"
+                    },
+                    {
+                        "imageURL": "评论图片的地址"
+                    }
+                ]
+			},
+			{
+				"content":"这里显示评论的内容",
+				"score":"4",
+				"commentTime":"2015-09-12 11:11:11",
+				"visitorName":"游客名称",
+				"images": [
+                    {
+                        "imageURL": "评论图片的地址"
+                    },
+                    {
+                        "imageURL": "评论图片的地址"
+                    },
+                    {
+                        "imageURL": "评论图片的地址"
+                    },
+                    {
+                        "imageURL": "评论图片的地址"
+                    }
+                ]
+			}
+		]
+	}
+}
