@@ -466,7 +466,7 @@
                 </a>
               
                 <div class="col-xs-12 col-sm-12 col-md-12 all in_center">
-                   <ul class="pagination">
+                   <!-- <ul id="pager" class="pagination">
                      <li><a href="#">&laquo;</a></li>
                      <li class="active"><a href="#">1</a></li>
                      <li><a href="#">2</a></li>
@@ -474,7 +474,8 @@
                      <li><a href="#">4</a></li>
                      <li><a href="#">5</a></li>
                      <li><a href="#">&raquo;</a></li>
-                   </ul>
+                   </ul> -->
+                   <ul id="pager2"></ul>
                 </div>
               </div>
               <div class="tab-pane fade" id="goodreputation">好评率排序</div>
@@ -494,7 +495,44 @@
   <script src="/static/js/bootstrap.min.js"></script>
   <script src="/static/js/jquery.validate.js"></script>
   <script src="/static/js/my_validate.js"></script>
+  <!-- 以下两个js文件用于实现无刷新分页 -->
+  <script src="/static/js/pagination/bootstrap-paginator.min.js"></script>
+  <script src="/static/js/pagination/st-paginator.js"></script>
    <script>
+   $(document).ready(function() {
+		// 加载经典线路列表
+		var paginationOptions = {
+			domId : "pager2",
+			url : "/route/getByPage",
+			page : 1,
+			rows : 8,
+			queryParams : {regionIds:"1,2,3",themeIds:"4,5,6",orderType:"priceDesc"},
+			dealData : function(dataList){
+				var len = dataList.length;
+				if(len > 0){
+					for(var i=0; i<len; i++){
+						var row = dataList[i];
+						console.log("routeId：" + row.routeId);
+						console.log("thumbnail：" + row.thumbnail);
+						console.log("detailRecommendation：" + row.detailRecommendation);
+						console.log("commentRatio：" + row.commentRatio);
+						console.log("purchaseCount：" + row.purchaseCount);
+						console.log("bottomPrice：" + row.bottomPrice);
+						var themes = row.themes;
+						if(themes.length > 0){
+							for(var j=0; j<themes.length; j++){
+								var theme = themes[j];
+								console.log("theme名称：" + theme.themeName);
+							}
+						}
+					}
+				}
+			}
+		}
+		pagination(paginationOptions);
+	});
+   
+   
  $(function(){
   $('[data-toggle="popover"]').popover({ html: "true",
   });
