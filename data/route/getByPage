@@ -1,9 +1,10 @@
+
 {
 	"status":"success",
 	"tipCode":"",
 	"tipMsg":"",
 	"data":{
-		"total":"总共多少条记录",
+		"total":20,
 		"rows":[
 			{
 				"routeId":"routeId",
