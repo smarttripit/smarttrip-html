@@ -203,7 +203,7 @@
                   <div class="col-xs-12 col-sm-12 col-md-12 panel-group_defined route_back">
                    <div class="row">
                      <div class="col-xs-12 col-sm-12 col-md-4">
-                       <img src="/static/images/one_route1.jpg" class="img-responsive">
+                       <img id="route_thumbnail_0" src="" class="img-responsive">
                      </div>
                      <div class="col-xs-12 col-sm-12 col-md-8">
                        <div class="row">
@@ -211,25 +211,25 @@
                            <h4 class="route_left_title"><strong>爨底下黄岭西</strong></h4>
                          </div>
                          <div class="col-xs-12 col-sm-8 col-md-8">                         
-                           <span class="label" id="label">二日游</span> 
-                           <span class="label" id="label">亲情</span> 
-                           <span class="label" id="label">亲情</span> 
+                           <span class="label" id="route_themes_0_0">二日游</span> 
+                           <span class="label" id="route_themes_0_1">亲情</span> 
+                           <span class="label" id="route_themes_0_2">亲情</span> 
                          </div>
                        </div>
                        <div class="row">
                            <div class="col-xs-12 col-sm-12 col-md-12">
-                              <p class="text1"><strong>推荐理由：</strong>黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西</p> 
+                              <p class="text1" id=""><strong>推荐理由：</strong><span id="route_detailRecommendation_0">黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西黄岭西</span></p> 
                            </div>
                        </div>
                        <div class="row" style="">
                          <div class="col-xs-6 col-sm-4 col-md-3">
-                            <p class="text2"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></p>
+                            <p class="text2"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>&nbsp;好评率：<span style="font-size:15px;" id="route_commentRatio_0">98.9%</span></p>
                           </div>
                           <div class="col-xs-6 col-sm-4 col-md-3">
-                             <p class="text2"><i class="fa fa-github-alt"></i>&nbsp;购买人数：<span style="font-size:15px;">98</span></p>
+                             <p class="text2"><i class="fa fa-github-alt"></i>&nbsp;购买人数：<span style="font-size:15px;" id="route_purchaseCount_0">98</span></p>
                           </div>
                           <div class="col-xs-12 col-sm-4 col-md-6">
-                             <p class="price_right" id="price_right"><strong style="font-size:25px;color: #EC8348;">￥918</strong>起</p>
+                             <p class="price_right" id="price_right"><strong style="font-size:25px;color: #EC8348;">￥<span id="route_bottomPrice_0">918</span></strong>起</p>
                           </div>
                        </div>
                      </div>
@@ -500,7 +500,60 @@
   <script src="/static/js/pagination/st-paginator.js"></script>
    <script>
    $(document).ready(function() {
+
+  
+
+  // 加载经典线路二级页面
+  initRoutes();
+});
+
+// 加载经典线路二级页面
+function initRoutes(){
+  jQuery.ajax({
+    type : "GET",
+        async: false,
+        cache: false,
+        datatype : "json",
+        url : "/route/getByPage",
+        success : function(result){
+          if(result.status == "success"){
+            var data = result.data.rows; 
+           // console.log(data.length);
+            for(var i=0;i<data.length;i++) 
+            {
+                var route=data[i];
+               //alert("Route.total");
+              // console.log(route.thumbnail);
+              $("#route_thumbnail_"+i).attr("src", route.thumbnail);            
+              $("#route_detailRecommendation_"+i).text(route.detailRecommendation);
+              $("#route_commentRatio_"+i).text(route.commentRatio);
+              $("#route_purchaseCount_"+i).text(route.purchaseCount);
+              $("#route_bottomPrice"+i).text(route.bottomPrice);
+              var s=$("#route_themes_"+i);
+              for(var j=0;j<route.themes;j++)
+              {
+               $("s_"+j).text(route.themes[j]); 
+              }
+            }          
+
+
+          }else{
+            alert(result.tipMsg);
+          }
+        },
+        error : function(data) {
+          alert("系统异常");
+        }
+  });
+}
+
+//$(function(){
+ //   $('[data-toggle="popover"]').popover({ html: "true",
+ // });
+//});
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<//////////////
 		// 加载经典线路列表
+     $(document).ready(function() {
 		var paginationOptions = {
 			domId : "pager2",
 			url : "/route/getByPage",
@@ -607,6 +660,7 @@ $(".place_days  a").click(
 });
   
 </script>
+
 <script type="text/javascript" src="/static/js/defined_c.js"></script>
 
   </body>
