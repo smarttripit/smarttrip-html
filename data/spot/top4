@@ -5,26 +5,26 @@
 	"data":[
 		{
 			
-			"spotId":"spotId",	
-			"thumbnail":"缩略图的url",
+			"spotId":"1",	
+			"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_thumbnail.png",
 			"name":"景点名称",
 			"feature":"景点特色"
 		},
 		{
-			"spotId":"spotId",	
-			"thumbnail":"缩略图的url",
+			"spotId":"2",	
+			"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_thumbnail.png",
 			"name":"景点名称",
 			"feature":"景点特色"
 		}, 
 		{
-			"spotId":"spotId",	
-			"thumbnail":"缩略图的url",
+			"spotId":"3",	
+			"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_thumbnail.png",
 			"name":"景点名称",
 			"feature":"景点特色"
 		}, 
 		{
-			"spotId":"spotId",	
-			"thumbnail":"缩略图的url",
+			"spotId":"4",	
+			"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_thumbnail.png",
 			"name":"景点名称",
 			"feature":"景点特色"
 		}

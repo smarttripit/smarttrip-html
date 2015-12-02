@@ -3,23 +3,23 @@
 	"tipCode":"",
 	"tipMsg":"",
 	"data":{
-		"total":"总共多少条记录",
+		"total":"123",
 		"rows":[
 			{
 				
-				"spotId":"spotId",
-				"thumbnail":"缩略图地址",
-				"name":"景点的名称",
-				"commentRatio":"好评率，后台要转换成98.92%这种形式",
-				"recommendation":"推荐理由"
+				"spotId":"1",
+				"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_thumbnail.png",
+				"name":"这里显示景点的名称",
+				"commentRatio":"88.88%",
+				"recommendation":"这里显示推荐理由"
 			},
 			{
 				
-				"spotId":"spotId",
-				"thumbnail":"缩略图地址",
-				"name":"景点的名称",
-				"commentRatio":"好评率，后台要转换成98.92%这种形式",
-				"recommendation":"推荐理由"
+				"spotId":"2",
+				"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_thumbnail.png",
+				"name":"这里显示景点的名称",
+				"commentRatio":"98.92%",
+				"recommendation":"这里显示推荐理由"
 			}
 		]
 	}

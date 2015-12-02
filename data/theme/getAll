@@ -4,27 +4,27 @@
 	"tipMsg":"",
 	"data":[
 		{
-			"themeId":"themeId",
+			"themeId":"1",
 			"name":"烧烤"
 		},
 		{
-			"themeId":"themeId",
+			"themeId":"2",
 			"name":"骑行"
 		},
 		{
-			"themeId":"themeId",
+			"themeId":"3",
 			"name":"滑雪"
 		},
 		{
-			"themeId":"themeId",
+			"themeId":"4",
 			"name":"徒步"
 		},
 		{
-			"themeId":"themeId",
+			"themeId":"5",
 			"name":"爬山"
 		},
 		{
-			"themeId":"themeId",
+			"themeId":"6",
 			"name":"垂钓"
 		}
 	]

@@ -4,13 +4,31 @@
 	"tipMsg":"",
 	"data":[
 		{
-			"imageURL":"图片地址1"	
+			"imageURL":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_image_1.jpg"	
 		},
 		{
-			"imageURL":"图片地址2"	
+			"imageURL":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_image_2.jpg"	
 		}, 
 		{
-			"imageURL":"图片地址3"	
+			"imageURL":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_image_3.jpg"	
+		},
+		{
+			"imageURL":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_image_4.jpg"	
+		},
+		{
+			"imageURL":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_image_5.jpg"	
+		}, 
+		{
+			"imageURL":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_image_6.jpg"	
+		},
+		{
+			"imageURL":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_image_7.jpg"	
+		},
+		{
+			"imageURL":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_image_8.jpg"	
+		}, 
+		{
+			"imageURL":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_image_9.jpg"	
 		}
 	]
 }
