@@ -7,12 +7,12 @@
 		"total":20,
 		"rows":[
 			{
-				"routeId":"routeId",
-				"thumbnail":"缩略图地址",
-				"detailRecommendation":"详细的推荐理由",
-				"commentRatio":"好评率，后台要转换成98.92%这种形式",
-				"purchaseCount":"购买数",
-				"bottomPrice":"最低价",
+				"routeId":"1",
+				"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_thumbnail_2.jpg",
+				"detailRecommendation":"这里显示详细的推荐理由",
+				"commentRatio":"87.43%",
+				"purchaseCount":"12324",
+				"bottomPrice":"66666",
 				"themes":[
 					{
 						"themeName":"烧烤"
@@ -23,12 +23,12 @@
 				]
 			},
 			{
-				"routeId":"routeId",
-				"thumbnail":"缩略图地址",
-				"detailRecommendation":"详细的推荐理由",
-				"commentRatio":"好评率，后台要转换成98.92%这种形式",
-				"purchaseCount":"购买数",
-				"bottomPrice":"最低价",
+				"routeId":"2",
+				"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_thumbnail_2.jpg",
+				"detailRecommendation":"这里显示详细的推荐理由",
+				"commentRatio":"99.99%",
+				"purchaseCount":"324653",
+				"bottomPrice":"888",
 				"themes":[
 					{
 						"themeName":"烧烤"
