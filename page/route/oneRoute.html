@@ -50,15 +50,15 @@
             </div>
            
             <div class="col-md-4 col-sm-6 col-xs-10 description">
-                <h2>门头沟</h2>
-                <span>爨柏、黄草梁|<i>自然与人情的融合</i></span>
+                <h2 id="oneRoute_name">门头沟</h2>
+                <span id="oneRoute_feature">爨柏、黄草梁|<i>自然与人情的融合</i></span>
                 <div class="h_10"></div>
-                <p>推荐理由：清式古村中体验历史的厚重、感受乡村生活的质朴</p>
+                <p id="oneRoute_detailRecommendation">推荐理由：清式古村中体验历史的厚重、感受乡村生活的质朴</p>
                 <div class="h_10"></div>
                 <div class="row" style="">
                   <div class="col-xs-12 col-sm-12 col-md-12">
-                     <p class="oneRoute_txt"><span></span>&nbsp;好评率：<span style="font-size:15px;">98.9%</span></p>
-                     <p class="oneRoute_txt">&nbsp;游玩天数：<span style="font-size:15px;">2</span></p>
+                     <p class="oneRoute_txt"><span></span>&nbsp;好评率：<span id="oneRoute_commentRatio" style="font-size:15px;">98.9%</span></p>
+                     <p class="oneRoute_txt">&nbsp;游玩天数：<span id="oneRoute_period" style="font-size:15px;">2</span></p>
                    </div>
                    
                    
@@ -87,7 +87,7 @@
                 </div> 
                <div class="navbar-collapse collapse">
                  <ul class="nav navbar-nav">
-                   <li class="menuItem"><a href="#product_detail">产品详情</a></li>
+                   <li class="menuItem"><a href="#product_detail">线路详情</a></li>
                    <li class="menuItem"><a href="#introduce">行程介绍</a></li>
                    <li class="menuItem"><a href="#transport-map">交通地图</a></li>
                    <li class="menuItem"><a href="#cost">费用说明</a></li>
@@ -111,9 +111,9 @@
       <div id="product_detail" class="anchor_place"></div>   
       <div id="product_detail1" class="row featurette  panel panel-default"> 
            <div class="panel-heading">
-            <h4 class="featurette-heading"><i class="fa fa-tag fa-fw"></i>产品详情</h4>
+            <h4 class="featurette-heading"><i class="fa fa-tag fa-fw"></i>线路详情</h4>
            </div>
-           <div class="col-xs-12 col-sm-12 col-md-12 panel-body .product_detail">
+           <div id="oneRoute_detail" class="col-xs-12 col-sm-12 col-md-12 panel-body .product_detail">
              <p>推荐理由：黄草梁自然风景区的花三季不断，是北京野生动物的王国，禽翔集草甸，走兽出没丛林。爨底下、柏峪、黄岭西，每一个村子都有着它独特的历史与文化，迄今为止仍然保留着当年的那一份古韵。
               <p><b>适宜季节：</b>春秋</p>
             </p>
@@ -238,7 +238,7 @@
         <div class="panel-body col-xs-12 col-sm-12 col-md-12">
           <div class="col-xs-12 col-sm-2 col-md-1">
           </div>
-          <div class="col-xs-12 col-sm-8 col-md-10">
+          <div id="oneRoute_map" class="col-xs-12 col-sm-8 col-md-10">
             <img src="/static/images/spot_map.png" class="img-responsive" />
           </div>
           <div class="col-xs-12 col-sm-2 col-md-1">
@@ -253,7 +253,7 @@
           <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>费用说明</h4>
         </div>
         <div class="panel-body col-xs-12 col-sm-12 col-md-12">
-          <div class="col-xs-12 col-sm-12 col-md-12 panel-body traffic_and_tickets">
+          <div id="oneRoute_feeDescription" class="col-xs-12 col-sm-12 col-md-12 panel-body traffic_and_tickets">
               费用包含<br/>
                        1.套餐内容：<br/>
                        房型以购买时所选为准 <br/>
@@ -282,7 +282,7 @@
         </div>
 
         <div class="panel-body col-xs-12 col-sm-12 col-md-12">
-          <div class="col-xs-12 col-sm-12 col-md-12 panel-body traffic_and_tickets">           
+          <div id="oneRoute_bookingNotice" class="col-xs-12 col-sm-12 col-md-12 panel-body traffic_and_tickets">           
               本产品由上海驴妈妈兴旅国际旅行社有限公司及具有合法资质的地接社提供相关服务。<br/>
                        行前须知<br/>
                        1.御林汤泉地址：北京市昌平区小汤山现代农业科技示范园西区，电话：010-61784288<br/>
@@ -719,14 +719,22 @@
       function initRouteInfo(){
     	  jQuery.ajax({
     			type : "GET",
-    	        async: false,
+    	        async: true,
     	        cache: false,
     	        datatype : "json",
     	        url : "/route/detail?routeId="+routeId,
     	        success : function(result){
     	        	if(result.status == "success"){
-    	        		var data = result.data;
-    	        		console.log(data);
+                  var oneRoute = result.data;
+                  $("#oneRoute_name").text(oneRoute.name);
+                  $("#oneRoute_feature").text(oneRoute.feature);
+                  $("#oneRoute_detailRecommendation").text(oneRoute.detailRecommendation);
+                  $("#oneRoute_commentRatio").text(oneRoute.commentRatio);
+                  $("#oneRoute_period").text(oneRoute.period);
+                  $("#oneRoute_detail").text(oneRoute.detail);
+                  $("#oneRoute_map").text(oneRoute.map);
+                  $("#oneRoute_feeDescription").text(oneRoute.feeDescription);
+                  $("#oneRoute_bookingNotice").text(oneRoute.bookingNotice);
     	        	}else{
     	        		alert(result.tipMsg);
     	        	}
@@ -736,16 +744,13 @@
     	        }
     		});
       }
+
+     
     </script>
     <script src="/static/js/jquery.validate.js"></script>
     <script src="/static/js/my_validate.js"></script>
     <script type="text/javascript" src="/static/js/defined_c.js"></script>
     <!-- ######################################## --> 
 
-    <script type="text/javascript">
-      if (!($('#navId').hasClass('isStuck'))) {
-        console.log('yupan');
-      };
-    </script>
   </body>
 </html>
