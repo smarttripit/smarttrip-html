@@ -2,7 +2,7 @@
 	"status":"success",
 	"tipCode":"",
 	"tipMsg":"",
-	"data":[
+	"data":{
 		"type1":[
 			{
 				"name":"这里显示名称",
@@ -14,7 +14,7 @@
 				"name":"这里显示名称",
 				"description":"这里显示描述",
 				"imageURL":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_location_1.jpg",
-				"link":""http://www.baidu.com"
+				"link":"http://www.baidu.com"
 			}			
 		],
 		"type2":[
@@ -28,21 +28,22 @@
 				"name":"这里显示名称",
 				"description":"这里显示描述",
 				"imageURL":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_location_1.jpg",
-				"link":""http://www.baidu.com"
+				"link":"http://www.baidu.com"
 			}			
-		],"type3":[
+		],
+		"type3":[
 			{
 				"name":"这里显示名称",
 				"description":"这里显示描述",
 				"imageURL":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_location_1.jpg",
-				"link":""http://www.baidu.com"
+				"link":"http://www.baidu.com"
 			},
 			{
 				"name":"这里显示名称",
 				"description":"这里显示描述",
 				"imageURL":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/spot_location_1.jpg",
-				"link":""http://www.baidu.com"
+				"link":"http://www.baidu.com"
 			}			
 		]
-	]
+	}
 }
