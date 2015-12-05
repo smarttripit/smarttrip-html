@@ -118,7 +118,7 @@ margin-bottom: 8px;
 .route1_title{height:60px;zoom: 1;margin-top: -60px;background: #000;}
 .title_text1{font-size:20px;color:#FFF;margin-top:2px;margin-bottom:0px;}
 .title_text2{font-size:15px;color:#FFF;margin-top:4px;}
-.route1_discription{ padding-bottom: 10px;}
+.route1_discription{ padding-bottom: 10px;background: #fff;}
 .route1_discription p{margin-bottom:5px;font-size:13px;}
 .discription_left1{padding-top: 15px;color: #443E3E;}
 .discription_left2{padding-top: 5px;color:#09C;}
@@ -191,7 +191,7 @@ right: 1%;
   }
 .header_image{height: 150px;width: 100%;margin-bottom: 20px;}
 /*左侧导航*/
-.panel-group_defined{border: 2px #ececec solid;width:100%;background: #fff;font-size: 16px;}
+.panel-group_defined{border: 2px #ececec solid;width:100%;background: #fff;font-size: 14px;}
 #collapseTwo .choosetheme a:visited{border: 1px #4ea1f5 solid;}
 #collapseFour .panel-body a:visited{border: 1px #4ea1f5 solid;}
 #collapseTwo .choosetheme a:hover{border: 1px #4ea1f5 solid;}
@@ -241,6 +241,7 @@ margin-top: 18px;
 font-size: 14px;
 margin-right: 23px;
 }
+.place_days{font-size: 15px;}
 .place_days_active{color:#4ea1f5;}
 /*横向胶囊导航*/
 .nav-pills .defined_active{background-color: #94DEEC;}
@@ -363,8 +364,10 @@ border: 1px rgba(170, 170, 170, 0.47) solid;
 
 .city_theme_all{display: inline-block;
 border: 0px;
-padding: 15px 10px 0px 25px;
+padding: 5px 0px 5px 25px;
 color: #78A8DA;
+float: right;
+margin-right: -10px;
 }
 /*某一景点*/
 .scenery_spot1{/*background-image: url(http://st-alpha.oss-cn-beijing.aliyuncs.com/59c6b649feb3429492c0def9add3f395);*/width:100%;background-repeat: no-repeat;height:375px;background-size:cover;}
@@ -393,6 +396,7 @@ font-weight: 700;}
 
 .row_top_space{margin-top: 10px;}
 .row_bottom_space{margin-bottom: 10px;}
+.row_bottom_space1{margin-bottom: 20px;}
 #basic_information1 .panel-body {
 padding: 15px 25px;
 }
@@ -466,10 +470,11 @@ background-color: #45A4C9;
 .traffic_and_tickets p b{color:rgba(228, 130, 23, 1);}
 .hotel_entrance{background: #F0F3EB;}
 .hotel_name{margin-bottom: 10px;}
-/*
+.Reroute_name{font-size: 16px;}
+
 .hotel_price_old{color: #5B6468;font-size: 15px;margin-top: 2px;}
 .hotel_price_now{color: #DF893A;font-size: 18px;}
-.hotel_price_save{border: 1px solid #ffa338;
+/*.hotel_price_save{border: 1px solid #ffa338;
 -webkit-border-radius: 2px;
 -moz-border-radius: 2px;
 -ms-border-radius: 2px;
@@ -478,7 +483,7 @@ color: #ffa338;
 padding: 2px;
 display: inline-block;}
 .look_more{margin-top: 2px;}*/
-.look_more a {color: #3777B3;padding: 5px 10px;}
+.look_more a {color:#fff ;padding: 5px 10px;background: #3777B3;}
 
 /*周周点评*/
 #zhouzhou_comment1 .panel-body {
