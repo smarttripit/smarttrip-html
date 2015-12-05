@@ -711,9 +711,10 @@
           adjustNavHide('#myModalCT');
           
           //timeline每一个列表项的鼠标移入移出事件  
-         
+
           // 加载经典线路数据
           initRouteInfo();
+          initRoute1Info();
         });
       });
       function initRouteInfo(){
@@ -745,16 +746,19 @@
     	        }
     		});
       }
-
-      function initRouteInfo(){
+  function initRoute1Info(){
         jQuery.ajax({
           type : "GET",
               async: true,
               cache: false,
               datatype : "json",
               url : "/route/schedules?routeId="+routeId,
+
               success : function(result){
                 if(result.status == "success"){
+                  var count=0;
+                  var Content="";
+                  var myDir = " ";
                   var data = result.data;
                   for(var i=0; i<data.length; i++){
                     var oneLocal = data[i];
@@ -767,7 +771,31 @@
                     var direction = oneLocal.direction;
                     var link = oneLocal.link;
                     
+                    if(direction==1)
+                    {
+                      myDir = "";
+                    }else if(direction==0){
+                      myDir = "class = \"timeline-inverted\"";
+                    };
+
+                    switch(parseInt(scheduleType)){
+                      case 0:
+                      Content += "<li"+" "+myDir+"><div class=\"timeline-badge\"><i class=\"fa fa-bus\"></i></div><div class=\"timeline-panel\"><div class=\"timeline-heading\"><h4 class=\"timeline-title\">"+"驾车"+"</h4><a><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+"约20分钟"+"</small></a></div></div></li>";
+                      break;
+                      case 1:
+                      Content +="<li"+" "+myDir+"><div class=\"timeline-badge warning\"><i class=\"fa fa-money\"></i></div><div class=\"timeline-panel\"><div class=\"timeline-heading\"><h4 class=\"timeline-title\">"+"爨柏景区入口购票"+"</h4><p><small class=\"text-muted\">"+"经过购票窗口向前200米左右有岔路口，左拐即可"+"</small></p></div></div></li>";
+                      break;
+                      case 2:
+                      "<li"+ " "+myDir+"data-toggle=\"modal\" data-target=\"#myModalHLX\"><div class=\"timeline-badge danger\"><i class=\"fa fa-map-marker\"></i></div><div class=\"timeline-panel\"><div class=\"timeline-body img_des\"><img src=\"/static/images/2.jpg\" class=\"img-responsive\"></div><div class=\"panel-footer\"><p>"+"**餐厅"+"</p>"+"走进华纳电影世界，纵情狂欢体验影视娱乐惊险刺激"+"<br/><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+"约30分钟"+"</small></div></div></li>";
+                    }
+  
                   }
+                  
+                  console.log(Content); 
+                  
+
+
+                 
                 }else{
                   alert(result.tipMsg);
                 }
@@ -777,8 +805,6 @@
               }
         });
       }
-
-     
     </script>
     <script src="/static/js/jquery.validate.js"></script>
     <script src="/static/js/my_validate.js"></script>
