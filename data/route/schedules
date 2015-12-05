@@ -5,43 +5,47 @@
 	"data":[
 		{
 			"scheduleId":"123",
+			"period":"约30分钟",
 			"scheduleType":"5",
 			"name":"第一天",
 			"summary":"这里显示行程的简介",
 			"description":"这里显示行程的详情",
 			"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_schedule_thumbnail.jpg",
 			"direction":"0",
-			"link":"链接"
+			"link":"http://wwww.baidu.com"
 		},
 		{
 			"scheduleId":"1",
+			"period":"约20分钟",
 			"scheduleType":"1",
 			"name":"这里显示行程的名字",
 			"summary":"这里显示行程的简介",
 			"description":"这里显示行程的详情",
 			"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_schedule_thumbnail.jpg",
 			"direction":"0",
-			"link":"链接"
+			"link":"http://wwww.baidu.com"
 		},
 		{
 			"scheduleId":"2",
+			"period":"约33分钟",
 			"scheduleType":"3",
 			"name":"这里显示行程的名字",
 			"summary":"这里显示行程的简介",
 			"description":"这里显示行程的详情",
 			"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_schedule_thumbnail_2.jpg",
 			"direction":"1",
-			"link":"链接"
+			"link":"http://wwww.baidu.com"
 		},
 		{
 			"scheduleId":"3",
+			"period":"约70分钟",
 			"scheduleType":"4",
 			"name":"这里显示行程的名字",
 			"summary":"这里显示行程的简介",
 			"description":"这里显示行程的详情",
 			"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_schedule_thumbnail_2.jpg",
 			"direction":"1",
-			"link":"链接"
+			"link":"http://wwww.baidu.com"
 		}
 	]
 }
