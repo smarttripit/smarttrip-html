@@ -461,7 +461,7 @@
                      </div>
                     
                      <div class="modal-body"> 
-                        <iframe class="oneLocal" width="100%" frameborder="0" src="oneLocal.html"></iframe>
+                        <iframe id="localDes" class="oneLocal" width="100%" frameborder="0" src="oneLocal.html"></iframe>
                      </div>
                      
                   </div><!-- /.modal-content -->
@@ -617,7 +617,7 @@
                     var scheduleType = oneLocal.scheduleType;
                     var name = oneLocal.name;
                     var summary = oneLocal.summary;
-                    var description = oneLocal.description;
+                    description += oneLocal.description;
                     var thumbnail = oneLocal.thumbnail;
                     var direction = oneLocal.direction;
                     var link = oneLocal.link;
@@ -638,21 +638,21 @@
                       break;
                       case 3:
                       Content +="<li"+ " "+myDir+"data-toggle=\"modal\" data-target=\"#myModal\"><div class=\"timeline-badge danger\"><i class=\"fa fa-map-marker\"></i></div><div class=\"timeline-panel\"><div class=\"timeline-body img_des\"><img src="+thumbnail+" class=\"img-responsive\"></div><div class=\"panel-footer\"><p>"+name+"</p>"+summary+"<br/><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+period+"</small></div></div></li>";
-                        $(".oneLocal").attr('src',link);
+      
                       break;
                       case 4:
                       Content +="<li"+ " "+myDir+"data-toggle=\"modal\" data-target=\"#myModal\"><div class=\"timeline-badge danger\"><i class=\"fa fa-coffee\"></i></div><div class=\"timeline-panel\"><div class=\"timeline-body img_des\"><img src="+thumbnail+" class=\"img-responsive\"></div><div class=\"panel-footer\"><p>"+name+"</p>"+summary+"<br/><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+period+"</small></div></div></li>";
-                        $(".oneLocal").attr('src',link);
+                        
                       break;
                       case 5:
                       Content +="<li><div id=\"day1\" class=\"tldate\">"+name+"</div></li>";
                       break;
                     }
-  console.log(thumbnail);
+  
                   }
                  
-console.log(Content);
-$('.timeline').append(Content);
+
+                $('.timeline').append(Content);
 
                 }else{
                   alert(result.tipMsg);
@@ -663,6 +663,21 @@ $('.timeline').append(Content);
               }
         });
       }
+    </script>
+
+
+    <script type="text/javascript">
+     window.onload = (function () {
+      var iObj = document.getElementById('localDes').contentWindow;
+      iObj.document.designMode = 'On';
+      iObj.document.contentEditable = true;
+      iObj.document.open();
+      iObj.document.writeln('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content=""><meta name="author" content=""><title>oneRoute</title><link href="/static/css/bootstrap.min.css" rel="stylesheet"><link href="/static/css/metisMenu.min.css" rel="stylesheet"><link href="/static/css/timeline.css" rel="stylesheet"><link href="/static/css/sb-admin-2.css" rel="stylesheet"><link href="/static/css/stickup.css" rel="stylesheet"><link href="/static/css/defined.css" rel="stylesheet"><link href="/static/css/style.css" rel="stylesheet"><link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet"></head><body>');
+  
+        iObj.document.writeln(description);
+        iObj.document.writeln('</body></html>');
+        iObj.document.close();
+     });
     </script>
     <script src="/static/js/jquery.validate.js"></script>
     <script src="/static/js/my_validate.js"></script>
