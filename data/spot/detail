@@ -15,6 +15,32 @@
 		"ticketInfo":"这里显示门票信息",
 		"transportInfo":"这里显示交通指南",
 		"notice":"这里显示周周贴士",
-		"spotLocationInfo":"这里显示旅游详情文字部分"
+		"spotLocationInfo":"这里显示旅游详情文字部分",
+		"themes":[
+			{
+				"themeId":"1",
+				"name":"烧烤"
+			},
+			{
+				"themeId":"2",
+				"name":"骑行"
+			},
+			{
+				"themeId":"3",
+				"name":"滑雪"
+			},
+			{
+				"themeId":"4",
+				"name":"徒步"
+			},
+			{
+				"themeId":"5",
+				"name":"爬山"
+			},
+			{
+				"themeId":"6",
+				"name":"垂钓"
+			}		
+		]
 	}
 }
