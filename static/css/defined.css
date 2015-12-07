@@ -252,7 +252,9 @@ padding: 6px 15px;
 margin-left: 4px;
 color: #fff;
 }
-
+/*下拉框*/
+.dropdown-menu{border:0px;box-shadow:0px;background:#C6D5D8;margin: 2px 0px 0px 4px;}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{background-color:#94DEEC;}
 .nav>li>a:hover {
 text-decoration: none;
 background-color: #94DEEC;
