@@ -540,7 +540,7 @@
           function adjustNavShow(myId){
             $(myId).on('show.bs.modal',function(){
               if($('#navId').hasClass('isStuck')){
-                $('.stuckMenu').css('width','1349px');
+                $('.stuckMenu').css('width',$(window).width());
               }
             });
           }
