@@ -38,9 +38,8 @@
     border-radius: 0px;
   }
 .navbar-header img {width: 55px;height: 40px;}
-.navbar-right li a{padding-right:0px;font-family: 宋体;font-size: 12px;}
+.navbar-right li a{padding-right:0px;font-size: 12px;}
 .mobilephone_tdc{margin-left: 8px;
-font-family: 宋体;
 font-size: 12px;
 color: #fff;
 background-color: transparent;
@@ -95,7 +94,7 @@ margin-bottom: 8px;
 #summary-container .row{margin-left:0px;margin-right: 0px;}
 .headline{font-size:30px;}
 .subline{font-size:16px;margin-top: -10px;margin-bottom: 15px;}
-.more {font-size: 20px;font-family: 宋体;line-height: 50px;margin-top: -10px;}
+.more {font-size: 20px;line-height: 50px;margin-top: -10px;}
 .more a:hover {color:#F96;text-decoration: none;}  
                              
 
@@ -133,7 +132,7 @@ margin-top: -60px;
 color: #fff;
 padding-top: 4px;
 }
-.find_discription_title{font-size:22px;font-family:宋体;}
+.find_discription_title{font-size:22px;}
 
 /*度假民宿样式*/
 .house_price {

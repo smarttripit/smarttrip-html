@@ -1,0 +1,11 @@
+.navbar_defined_homepage {
+  	margin-top: -375px;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: rgba(34, 34, 34, 0.52);
+    border: 0px;
+    border-radius: 0px;
+}
+#navbar-collapse-1 li a{
+	color : white;
+}
