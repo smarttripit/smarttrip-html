@@ -45,6 +45,13 @@ color: #fff;
 background-color: transparent;
 border: 0px;
 margin-top: 16px;}
+.popover-content {
+padding: 9px 14px;
+text-align: center;}
+.popover.bottom {
+margin-top: 10px;
+width: 130px;}
+.Depopover{}
 /* 下拉框*/
 /*.dropdown_narrow{min-width: 84px;
 padding: 0px 0;
@@ -193,8 +200,8 @@ right: 1%;
 .panel-group_defined{border: 2px #ececec solid;width:100%;background: #fff;font-size: 14px;}
 #collapseTwo .choosetheme a:visited{border: 1px #4ea1f5 solid;}
 #collapseFour .panel-body a:visited{border: 1px #4ea1f5 solid;}
-#collapseTwo .choosetheme a:hover{border: 1px #4ea1f5 solid;}
-#collapseFour .panel-body a:hover{border: 1px #4ea1f5 solid;}
+/*#collapseTwo .choosetheme a:hover{border: 1px #4ea1f5 solid;}
+#collapseFour .panel-body a:hover{border: 1px #4ea1f5 solid;}*/
 #collapseOne a{display: block;margin-bottom: 8px;}
 #collapseThree a{display: block;margin-bottom: 8px;}
 /*.panel-body a:visited{color:#4ea1f5;}*/
@@ -209,7 +216,7 @@ font-size: 18px;
 color: #333;}
 .choosetheme a {
 display: inline-block;
-width: 80%;
+width: 85%;
 margin-bottom: 10px;
 border: 1px rgba(170, 170, 170, 0.47) solid;
 border-radius: 4px;
@@ -258,7 +265,7 @@ color: #fff;
 text-decoration: none;
 background-color: #94DEEC;
 }
-
+.mar_0{margin-left: 0px!important;margin-top: 0px!important;}
 /*分页效果样式*/
 .quotes {
     padding-right: 3px; padding-left: 3px; padding-bottom: 3px; margin: 3px; padding-top: 3px; text-align: center; font-family:Verdana; font-size:12px;
@@ -305,7 +312,7 @@ background-color: #94DEEC;
 .else_active{background: #78A8DA;border-color:#fff;color:#fff;}
 .btn_defined{background: #78A8DA;width: 100%;color:#fff;}
 .beijingmap{padding-left: 0px;}
-.else_one ul div li a:hover{color:#fff;background: }
+/*.else_one ul div li a:hover{color:#fff;background: }*/
 /*面包屑导航*/
 .breadcrumb{background-color: #fff;margin-bottom: 0px;padding: 8px 8px;}
 .breadcrumb a{color:#588DC2;}
