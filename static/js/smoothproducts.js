@@ -15,7 +15,7 @@ $(document.body).on('click', '.sp-thumbs' ,function(event){
     $(document.body).on('click', '.sp-tb-active a' ,function(event){
     $('.sp-current').removeClass();
     $('.sp-thumbs').removeClass('sp-tb-active');
-    $('.sp-zoom').remove();
+    //$('.sp-zoom').remove();
 
     var currentHeight = $('.sp-large').height();
     $('.sp-large').css({
@@ -74,7 +74,7 @@ $(document.body).on('click', '.sp-thumbs' ,function(event){
 });*/
 
 // Panning on mobile devices using Gyroscope. Aw Yeah.
-window.ondeviceorientation = function(event) {
+/*window.ondeviceorientation = function(event) {
         var viewWidth = $('.sp-large').width();
         var viewHeight = $('.sp-large').height();
         var largeWidth = $('.sp-zoom').width();
@@ -106,7 +106,7 @@ window.ondeviceorientation = function(event) {
             }); 
         }
     }
-
+*/
 
 // Zoom out
 /*$(document.body).on('click', '.sp-zoom' ,function(event){
