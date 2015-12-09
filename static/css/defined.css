@@ -302,6 +302,7 @@ background-color: #94DEEC;
 .spot_search_text{color:#797777;}
 .spot_search_text p a strong{font-size: 15px;color:#78A8DA;}
 .city_active{background: #78A8DA;border-color:#fff;color:#fff;}
+.city_inactive{color:#999;}
 .hot_spot {margin-right:10px;}
 .display_in{display: run-in;}
 .display_none{display: none;}
@@ -405,9 +406,10 @@ font-weight: 700;}
 .row_top_space{margin-top: 10px;}
 .row_bottom_space{margin-bottom: 10px;}
 .row_bottom_space1{margin-bottom: 20px;}
-#basic_information1 .panel-body {
-padding: 15px 25px;
-}
+
+@media screen and (max-width:992px){#basic_information1 .panel-body {padding: 15px 5px;}
+                                    } 
+@media screen and (min-width:992px){#basic_information1 .panel-body {padding: 15px 25px;}}
  /*某一景点的固定顶部导航栏*/
 
 
@@ -447,11 +449,10 @@ background-color: #45A4C9;
     width:100%;
     text-align:left;
 }
-.sp-thumbs img {
-    width:60px;
-    height:60px;
-    
-}
+
+.sp-thumbs img { width:60px;height:60px;}
+             
+                                     
 .sp-thumbs a:link, .sp-thumbs a:visited {
     border:5px solid #eee;
     display:inline-block;
@@ -477,6 +478,7 @@ background-color: #45A4C9;
 .traffic_and_tickets h5{color:rgba(228, 130, 23, 1);}
 .traffic_and_tickets p b{color:rgba(228, 130, 23, 1);}
 .hotel_entrance{background: #F0F3EB;}
+.hotel_entrance p{font-size: 12px;}
 .hotel_name{margin-bottom: 10px;}
 .Reroute_name{font-size: 16px;}
 
@@ -491,11 +493,22 @@ color: #ffa338;
 padding: 2px;
 display: inline-block;}
 .look_more{margin-top: 2px;}*/
-.look_more a {color:#fff ;padding: 5px 10px;background: #3777B3;}
+.look_more a {
+padding: 5px 10px;
+color: #DF893A;
+}
 
 /*周周点评*/
-#zhouzhou_comment1 .panel-body {
-padding: 15px 100px;
-}
+@media screen and (max-width:992px){#zhouzhou_comment1 .panel-body {
+                                     padding: 15px 5%;}
+                                     .comment_picturesNum{margin-top:5px;color:#337ab7;display:block;}
+                                     .tourist_pictures{width:100%;height:50px;}
+                                    } 
+@media screen and (min-width:992px){#zhouzhou_comment1 .panel-body {
+                                     padding: 15px 10%;}
+                                     .comment_picturesNum{margin-top: 55%;color:#337ab7;display:block;}
+                                     .tourist_pictures{width:80px;height:80px;}
+                                    }
+
 #tourist_comment .col-md-3{margin-right: -15px;}
 .comment_time{margin-top: 8px;color: #8F8E8E;}
