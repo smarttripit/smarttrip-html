@@ -4,43 +4,43 @@
 	"tipMsg":"",
 	"data":[
 		{
-			"regionId":"regionId",
+			"regionId":"1",
 			"secondRegion":"延庆县"
 		},
 		{
-			"regionId":"regionId",
+			"regionId":"2",
 			"secondRegion":"大兴区"
 		},
 		{
-			"regionId":"regionId",
+			"regionId":"3",
 			"secondRegion":"门头沟区"
 		},
 		{
-			"regionId":"regionId",
+			"regionId":"4",
 			"secondRegion":"怀柔区"
 		},
 		{
-			"regionId":"regionId",
+			"regionId":"5",
 			"secondRegion":"顺义区"
 		},
 		{
-			"regionId":"regionId",
+			"regionId":"6",
 			"secondRegion":"通州区"
 		},
 		{
-			"regionId":"regionId",
+			"regionId":"7",
 			"secondRegion":"密云县"
 		},
 		{
-			"regionId":"regionId",
+			"regionId":"8",
 			"secondRegion":"房山区"
 		},
 		{
-			"regionId":"regionId",
+			"regionId":"9",
 			"secondRegion":"平谷区"
 		},
 		{
-			"regionId":"regionId",
+			"regionId":"10",
 			"secondRegion":"中心区"
 		}
 	]
