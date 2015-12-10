@@ -374,7 +374,7 @@ border: 1px rgba(170, 170, 170, 0.47) solid;
 .ad_image{height: 100px;width: 100%;margin-bottom: 20px;}
 .images_list .col-md-3{padding-left:5px;padding-right:5px;}
 .images_list {margin-left: 0px;margin-right: 0px; }
-.spot_discription{margin-top:-130px;width: 100%;height: 130px;padding: 20px;
+.spot_discription{margin-top:-130px;width: 100%;height: 130px;padding: 20px 0px 10px 0px;
   background: url(https://gtms03.alicdn.com/tps/i3/TB19JS3HVXXXXafXpXXxIHh6FXX-230-130.png) repeat;}
 .find_title{color: #fff;font-size: 16px;}
 .find_text{color: #fff;font-size: 12px;}  
