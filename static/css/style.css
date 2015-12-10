@@ -128,12 +128,7 @@
 .hotel_des .fa-quote-left,.fa-quote-right{
   color: #D2CFCF;
 }
-/**三级联动**/
-.top{ margin:5px auto; color:#990000; text-align:center;}
-.info select{ border:1px  solid; background:#FFFFFF;}
-.info{ margin:5px; text-align:center;}
-.info #show{ color:#3399FF; }
-.bottom{ text-align:right; font-size:12px; color:#CCCCCC; width:1000px;}
+
 
 /**oneHotel页面**/
 .portrait{
@@ -166,4 +161,6 @@
 
 .img_back{
   background-color: #F0F3EB;
+  padding: 8px;
+  box-shadow: 4px 4px 5px #888888;
 }

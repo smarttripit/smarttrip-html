@@ -20,20 +20,159 @@
     <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
     <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    
- <style type="text/css">
-     /* Custom Styles */
-    .affix {
-        top: 20px;
-        
+    <style type="text/css">
+      /* Default tab style */
+      .tabs .fa{
+        color:#5D96C3;
+      }
+      .tabs-style-iconbox nav ul li.tab-current .fa{
+        color:#bdc2c9;
+      }
+
+      .tabs {
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        width: 100%;
+        font-weight: 300;
+        font-size: 1.25em;
+        background-color: #F0F3F1;
+      }
+
+      /* Nav */
+      .tabs nav {
+        text-align: center;
+      }
+
+      .tabs nav ul {
+        position: relative;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: flex;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 1200px;
+        list-style: none;
+        -ms-box-orient: horizontal;
+        -ms-box-pack: center;
+        -webkit-flex-flow: row wrap;
+        -moz-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+      }
+
+      .tabs nav ul li {
+        position: relative;
+        z-index: 1;
+        display: block;
+        margin: 0;
+        text-align: center;
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+      }
+
+      .tabs nav a {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 2.5;
+      }
+
+      .tabs nav a span {
+        display: block;
+        vertical-align: middle;
+        font-size: 0.75em;
+      }
+
+      .tabs nav li.tab-current a {
+        color: #bdc2c9;
+      }
+
+      .tabs nav a:focus {
+        outline: none;
+      }
+
+      .tabs-style-iconbox nav {
+        background: rgba(255,255,255,0.4);
+      }
+
+      .tabs-style-iconbox nav ul li a {
+        overflow: visible;
+        padding: 2em 0;
+        line-height: 1;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+      }
+
+      .tabs-style-iconbox nav ul li a span {
+        font-weight: 700;
+        font-size: 0.7em; 
+      }
+
+      .tabs-style-iconbox nav ul li.tab-current {
+        z-index: 100;
+      }
+
+      .tabs-style-iconbox nav ul li.tab-current a {
+        background: #fff;
+        box-shadow: -1px 0 0 #fff;
+    }
+    .tabs-style-iconbox nav ul li.tab-current a::after {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -10px;
+      width: 0;
+      height: 0;
+      border: solid transparent;
+      border-width: 10px;
+      border-top-color: #fff;
+      content: '';
+      pointer-events: none;
     }
 
-    .affix-bottom {
-        position: absolute;
-        
+    .tabs-style-iconbox nav ul li:first-child::before,
+    .tabs-style-iconbox nav ul li::after {
+      position: absolute;
+      top: 20%;
+      right: 0;
+      z-index: -1;
+      width: 1px;
+      height: 60%;
+      background: rgba(0,0,0,0.07);
+      content: '';
     }
-   
- </style>
+
+    .tabs-style-iconbox nav ul li:first-child::before {
+      right: auto;
+      left: 0;
+    }
+
+    .tabs-style-iconbox i::before {
+      display: block;
+      margin: 0 0 0.25em 0;
+    }
+
+  </style>
+   <style type="text/css">
+       /* Custom Styles */
+      .affix {
+          top: 20px; 
+      }
+      .affix-bottom {
+          position: absolute;  
+      }
+   </style>
     <!--[if lt IE 9]>
      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -42,300 +181,311 @@
 
   <body data-spy="scroll" data-target="#myScrollspy">
     <!--# include file="/common/login.html"  -->
-    <!--# include file="/common/top.html"  -->
-    
-
+    <!--# include file="/common/top.html"  -->  
     <div>
       <img src="/static/images/themeimage4.jpg" class="header_image">
     </div>
   
-    
     <div class="container">
       <div class="row">  
-        <div class="panel panel-default">
-          
+        <div class="panel panel-default">  
           <div class="panel-heading">
-            <ul id="hotelList_nav" class="nav nav-pills">
-               <li class="active itemClass"><a href="#">描述相符<i class="fa fa-arrow-down"></i></a></li>
-               <li class="itemClass"><a href="#">舒适程度<i class="fa fa-arrow-down"></i></a></li>
-               <li class="itemClass"><a href="#">整洁卫生<i class="fa fa-arrow-down"></i></a></li>
-               <li class="itemClass"><a href="#">特色<i class="fa fa-arrow-down"></i></a></li>
-               <li class="itemClass"><a href="#">安全程度<i class="fa fa-arrow-down"></i></a></li>
-               <li class="itemClass"><a href="#">性价比<i class="fa fa-arrow-down"></i></a></li>
-            </ul> 
+            <div class="tabs tabs-style-iconbox">
+              <nav>
+                <ul>
+                  <li class="tab-current"><a><i class="fa fa-list fa-3x"></i><span>All</span></a></li>
+                  <li><a><i class="fa fa-home fa-3x"></i><span>Hotel</span></a></li>
+                  <li><a><i class="fa fa-coffee fa-3x"></i><span>Restaurant</span></a></li>
+                  <li><a><i class="fa fa-money fa-3x"></i><span>Ticket</span></a></li>
+                </ul>
+              </nav>
+            </div><!-- /tabs -->          
           </div>
-
+                
           <div class="panel-body"> 
-            <div class="container">
+            <div class="container"> 
               
-                <div class="row  col-md-8">
-                   <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+<!--
+              <div class="row">
+                <ul id="hotelList_nav" class="nav nav-pills">
+                    <li class="active itemClass"><a href="#">描述相符<i class="fa fa-arrow-down"></i></a></li>
+                    <li class="itemClass"><a href="#">舒适程度<i class="fa fa-arrow-down"></i></a></li>
+                    <li class="itemClass"><a href="#">整洁卫生<i class="fa fa-arrow-down"></i></a></li>
+                    <li class="itemClass"><a href="#">特色<i class="fa fa-arrow-down"></i></a></li>
+                    <li class="itemClass"><a href="#">安全程度<i class="fa fa-arrow-down"></i></a></li>
+                    <li class="itemClass"><a href="#">性价比<i class="fa fa-arrow-down"></i></a></li>
+                </ul>  
+              </div>  
+
+-->
+              <div class="row  col-md-8">
+                 <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某农家乐</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
-                   <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                      </div>
+                   </a>
+                 </div>
+                 <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某酒店</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                      </div>
+                   </a>
+                 </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某采摘门票</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                      </div>
+                   </a>
+                 </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某农家乐</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                      </div>
+                   </a>
+                 </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某农家乐</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                      </div>
+                   </a>
+                 </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某农家乐</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                      </div>
+                   </a>
+                 </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某农家乐</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                      </div>
+                   </a>
+                 </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某农家乐</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                      </div>
+                   </a>
+                 </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某农家乐</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
+                      </div>
+                   </a>
+                 </div>
 
 
-                   <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                 <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某农家乐</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
+                      </div>
+                   </a>
+                 </div>
 
-                   <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                 <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某农家乐</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
+                      </div>
+                   </a>
+                 </div>
 
-                   <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                 <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某农家乐</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
+                      </div>
+                   </a>
+                 </div>
 
-                   <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                 <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某农家乐</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
+                      </div>
+                   </a>
+                 </div>
 
-                   <div class="col-xs-12 col-sm-6 col-md-6">
-                     <a href="/hotel/oneHotel.html">
-                        <div class="inner">
-                          <div class="img_back">
-                            <img src="/static/images/2003.jpg" class="img-responsive">
-                            <div class="row">
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="hotel_name">某某农家乐</p>
-                              </div>
-                              <div class="col-xs-6 col-sm-4 col-md-6">
-                                <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                              </div>
-                              <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                 <div class="col-xs-12 col-sm-6 col-md-6">
+                   <a href="/hotel/oneHotel.html">
+                      <div class="inner">
+                        <div class="img_back">
+                          <img src="/static/images/2003.jpg" class="img-responsive">
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="hotel_name">某某农家乐</p>
                             </div>
+                            <div class="col-xs-6 col-sm-4 col-md-6">
+                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                            </div>
+                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
                           </div>
                         </div>
-                     </a>
-                   </div>
-   
-                </div>
+                      </div>
+                   </a>
+                 </div>
+ 
+              </div>
 
-                <div class="col-md-4" id="myScrollspy">
-                   <ul id="nav" class="nav hidden-xs hidden-sm" data-spy="affix">
-                    <li><div id="allmap"></div></li>
-                    
-                   </ul>
-                </div>
+              <div class="col-md-4" id="myScrollspy">
+                 <ul id="nav" class="nav hidden-xs hidden-sm" data-spy="affix">
+                  <li><div id="allmap"></div></li>
+                  
+                 </ul>
+              </div>
              
             </div>
           </div>
@@ -363,7 +513,7 @@
     $(function(){ 
         $("#date_1").datepicker(); 
         $("#date_2").datepicker();
-        $('#allmap').height($(window).height()*0.96);
+        $('#allmap').height($(window).height());
         $('#allmap').width($('.panel-body').width()*0.3);
     });
     </script>
@@ -371,6 +521,17 @@
 
     <!--导航栏active切换-->
     <script>
+    var tabs_lis = $('.tabs li');
+    $.each(tabs_lis,function(key,val){
+      $(this).click(function(){
+        var this_index = key;
+          $('.tabs li').removeClass('tab-current');
+          $(this).addClass('tab-current');
+         
+      })
+    })
+    </script>
+   <!-- <script>
       var hotelList_nav_lis = $("#hotelList_nav li");
       $.each(hotelList_nav_lis,function(key,val){
         $(this).click(function(){
@@ -388,7 +549,7 @@
           }
          })
       }) 
-    </script>
+    </script>-->
 
 
    <script type="text/javascript">
