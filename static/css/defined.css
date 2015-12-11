@@ -188,15 +188,27 @@ right: 1%;
                                     }     
 
 /* //经典路线二级页面// */
+.all_top{height:250px;z-index:1;position: relative;margin-bottom:20px;}
+
 .navbar_defined_route {
     border-color: transparent;
     font-size: 16px;
-    background-color: rgba(93, 150, 195, 1);
+    background-color: rgba(34, 34, 34, 0.52);
     border:0px;
     border-radius: 0px;
-    margin-bottom: 0px;
+    margin-top: -270px;
+    position:relative;
   }
-.header_image{height: 150px;width: 100%;margin-bottom: 20px;}
+
+ .navbar_defined {
+    border-color: transparent;
+    font-size: 16px;
+    background-color: rgba(34, 34, 34, 0.52);
+    border:0px;
+    border-radius: 0px;
+  
+  } 
+.header_image{height: 250px;width: 100%;margin-bottom: 20px;}
 /*左侧导航*/
 .panel-group_defined{border: 2px #ececec solid;width:100%;background: #fff;font-size: 14px;}
 #collapseTwo .choosetheme a:visited{border: 1px #4ea1f5 solid;}
@@ -318,14 +330,14 @@ background-color: #94DEEC;
 .beijingmap{padding-left: 0px;}
 /*.else_one ul div li a:hover{color:#fff;background: }*/
 /*面包屑导航*/
-.breadcrumb{background-color: #fff;margin-bottom: 0px;padding: 8px 8px;}
+.breadcrumb{background-color: #fff;margin-bottom: 0px;padding: 10px 8px;}
 .breadcrumb a{color:#588DC2;}
 .breadcrumb > li + li:before {
     color: #CCCCCC;
     content: "> ";
     padding: 0 5px;
 }
-.search_back{background-color: #fff;}
+.search_back{background-color: #fff;padding: 5px;}
 /*.filter {border: 2px #ececec solid;width:100%;background: #fff;font-size: 16px;
           height: 250px;padding:10px;margin-bottom: 15px;} */
 /*.filter_height{height: 250px;}*/
@@ -390,7 +402,7 @@ margin-right: -10px;
 .scenery_spot1{/*background-image: url(http://st-alpha.oss-cn-beijing.aliyuncs.com/59c6b649feb3429492c0def9add3f395);*/width:100%;background-repeat: no-repeat;height:375px;background-size:cover;}
 .spot_back_title{background: rgba(87, 85, 85, 0.58);
 padding: 2px;
-margin-top: -340px;
+margin-top: -290px;
 color: #fff;}
 .spot_back{background: rgba(214, 213, 213, 0.58);padding: 15px;}
 .spot_back {padding-left: 20px;padding-right: 20px;}
