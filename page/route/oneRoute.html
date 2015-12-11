@@ -25,24 +25,18 @@
     <link href="/static/css/style.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
-    <style type="text/css">
-        /* Custom Styles */
-       .affix {
-           bottom:20px;
-           
-       }
 
-       .affix-bottom {
-           position: absolute;
-           
-       }
-      
-    </style>
+
+
 
   </head>
   <body data-spy="scroll" data-target="#myScrollspy">
-    
-
+    <nav class="navbar navbar-default navbar-fixed-bottom">  
+        <div class="container-fluid margin_bottom_5 margin_top_5 clear_padding text-center" style="background:rgba(0,0,0,0.07); height:60px; padding-top:20px">  
+            <button class="btn btn-danger" type="button" style="padding: 6px 30px;">立即预订</button>  
+        </div>  
+    </nav>
+ 
     <!-- START THE COVER -->
     <div id="home" class="carousel">
       <div class="carousel-inner">
@@ -52,6 +46,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                <div class="bgimg"></div> 
             </div>
+           
         </div>
 
         <div class="row"> 
@@ -80,6 +75,7 @@
     <!-- START THE NAVBAR -->
       <div id="navId" class="navbar-wrapper">
         <div class="container">
+
           <div class="navwrapper">
             <div class="navbar navbar-inverse navbar-static-top">
                <div class="navbar-header">
@@ -112,13 +108,12 @@
 
     <!-- START THE CONTENT -->
       <div id='contents' class="container">
-         
-        <div style="float:right;position:relative;z-index:99999" id="myScrollspy">
-           <ul id="nav" class="nav" data-spy="affix">
-            <li><button type="button" class="btn btn-danger">立即预定</button></li>
-           </ul>
-        </div>
+   
         <!-- START THE product_detail -->
+
+        <div class="col-md-12 col-sm-12 col-xs-12 footer">
+           <button>立即预订</button>
+        </div>
         <div id="product_detail" class="anchor_place"></div>   
         <div id="product_detail1" class="row featurette  panel panel-default"> 
              <div class="panel-heading">
@@ -643,10 +638,8 @@
     </script>
 
     <script>
-     $('#nav').affix({
-         offset: {
-             top:1 ,bottom:$('#bottom').height()+100
-         }
+     $("#myScrollspy").scroll(function() {
+       $("span").text(x+=1);
      });
     </script>
    
