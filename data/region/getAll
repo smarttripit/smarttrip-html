@@ -5,27 +5,27 @@
 	"data":[
 		{
 			"regionId":"1",
-			"secondRegion":"延庆县"
+			"secondRegion":"延庆"
 		},
 		{
 			"regionId":"2",
-			"secondRegion":"大兴区"
+			"secondRegion":"大兴"
 		},
 		{
 			"regionId":"3",
-			"secondRegion":"门头沟区"
+			"secondRegion":"门头沟"
 		},
 		{
 			"regionId":"4",
-			"secondRegion":"怀柔区"
+			"secondRegion":"怀柔"
 		},
 		{
 			"regionId":"5",
-			"secondRegion":"顺义区"
+			"secondRegion":"顺义"
 		},
 		{
 			"regionId":"6",
-			"secondRegion":"通州区"
+			"secondRegion":"通州"
 		},
 		{
 			"regionId":"7",
@@ -33,11 +33,11 @@
 		},
 		{
 			"regionId":"8",
-			"secondRegion":"房山区"
+			"secondRegion":"房山"
 		},
 		{
 			"regionId":"9",
-			"secondRegion":"平谷区"
+			"secondRegion":"平谷"
 		},
 		{
 			"regionId":"10",
