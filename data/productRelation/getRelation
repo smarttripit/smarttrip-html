@@ -1,0 +1,31 @@
+{
+	"status":"success",
+	"tipCode":"",
+	"tipMsg":"",
+	"data":{
+		"around":[
+			{
+				"toType":"31",
+				"toId":"1",
+				"toName":"这里显示关联的产品的名称"
+			},
+			{
+				"toType":"31",
+				"toId":"1",
+				"toName":"这里显示关联的产品的名称"
+			}	
+		],
+		"similar"[
+			{
+				"toType":"31",
+				"toId":"1",
+				"toName":"这里显示关联的产品的名称"
+			},
+			{
+				"toType":"31",
+				"toId":"1",
+				"toName":"这里显示关联的产品的名称"
+			}	
+		]
+	}
+}
