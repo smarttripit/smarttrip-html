@@ -6,9 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-      
-      <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=WGSH3pwHG4z5uyduhjOmC6nh"></script>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=WGSH3pwHG4z5uyduhjOmC6nh"></script>
     
 
     <title>hotelList</title>
@@ -17,16 +17,17 @@
     <link href="/static/css/defined.css" rel="stylesheet">
     <link href="/static/css/style.css" rel="stylesheet">
     <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/selectInf.css">
     <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
     <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <style type="text/css">
       /* Default tab style */
       .tabs .fa{
-        color:#5D96C3;
+        color:#bdc2c9;
       }
       .tabs-style-iconbox nav ul li.tab-current .fa{
-        color:#bdc2c9;
+        color:#5D96C3;
       }
 
       .tabs {
@@ -36,7 +37,7 @@
         width: 100%;
         font-weight: 300;
         font-size: 1.25em;
-        background-color: #F0F3F1;
+        
       }
 
       /* Nav */
@@ -95,7 +96,7 @@
       }
 
       .tabs nav li.tab-current a {
-        color: #bdc2c9;
+        color: #5D96C3;
       }
 
       .tabs nav a:focus {
@@ -238,31 +239,81 @@
             <div class="tabs tabs-style-iconbox">
               <nav>
                 <ul>
-                  <li class="tab-current"><a><i class="fa fa-list fa-3x"></i><span>All</span></a></li>
-                  <li><a><i class="fa fa-home fa-3x"></i><span>Hotel</span></a></li>
-                  <li><a><i class="fa fa-coffee fa-3x"></i><span>Restaurant</span></a></li>
-                  <li><a><i class="fa fa-money fa-3x"></i><span>Ticket</span></a></li>
+                  <li class="tab-current"><a><i class="fa fa-list fa-3x"></i><span>全部</span></a></li>
+                  <li><a><i class="fa fa-home fa-3x"></i><span>酒店&民宿</span></a></li>
+                  <li><a><i class="fa fa-coffee fa-3x"></i><span>特色餐厅</span></a></li>
+                  <li><a><i class="fa fa-money fa-3x"></i><span>景点门票</span></a></li>
                 </ul>
               </nav>
             </div><!-- /tabs -->          
           </div>
 
-        <section>
-          <div class="tabs tabs-style-underline">
-            <nav>
-              <ul>
-                <li><a href="#"><span>综合</span></a></li>
-                <li><a href="#"><span>好评</span></a></li>
-                <li><a href="#"><span>差评</span></a></li>
-                
-              </ul>
-            </nav>
-           
-          </div><!-- /tabs -->
-        </section>
+ 
           <div class="panel-body"> 
+            <ul class="select" style="display:none;">
+              <li class="select-list">
+                <dl id="select1">
+                  <dt><i class="fa fa-map-pin"></i>位置：</dt>
+                  <dd class="select-all selected"><a href="#">全部</a></dd>
+                  <dd><a href="#">某A村</a></dd>
+                  <dd><a href="#">某B村</a></dd>
+                  <dd><a href="#">某C村</a></dd>
+                  <dd><a href="#">某A村</a></dd>
+                  <dd><a href="#">某B村</a></dd>
+                  <dd><a href="#">某C村</a></dd>
+                  <dd><a href="#">某A村</a></dd>
+                  <dd><a href="#">某B村</a></dd>
+                  <dd><a href="#">某C村</a></dd>
+                  <dd><a href="#">某A村</a></dd>
+                  <dd><a href="#">某B村</a></dd>
+                  <dd><a href="#">某C村</a></dd>
+                  <dd><a href="#">某A村</a></dd>
+                  <dd><a href="#">某B村</a></dd>
+                  <dd><a href="#">某C村</a></dd>
+                </dl>
+              </li>
+              <li class="select-list">
+                <dl id="select2">
+                  <dt><i class="fa fa-wifi"></i>wifi:</dt>
+                  <dd class="select-all selected"><a href="#">全部</a></dd>
+                  <dd><a href="#">1M</a></dd>
+                  <dd><a href="#">1M~2M</a></dd>
+                  <dd><a href="#">2M+</a></dd>
+                  <dd><a href="#">1M</a></dd>
+                  <dd><a href="#">1M~2M</a></dd>
+                  <dd><a href="#">2M+</a></dd>
+                  <dd><a href="#">1M</a></dd>
+                  <dd><a href="#">1M~2M</a></dd>
+                  <dd><a href="#">1M</a></dd>
+                  <dd><a href="#">1M~2M</a></dd>
+                  <dd><a href="#">2M+</a></dd>
+                  <dd><a href="#">2M+</a></dd>   
+                </dl>
+              </li>
+              <li class="select-list">
+                <dl id="select3">
+                  <dt>淋浴：</dt>
+                  <dd class="select-all selected"><a href="#">全部</a></dd>
+                  <dd><a href="#">全天</a></dd>
+                  <dd><a href="#">上午</a></dd>
+                  <dd><a href="#">下午</a></dd>
+                  <dd><a href="#">晚上</a></dd>
+                </dl>
+              </li>
+              <li class="select-list">
+                <dl id="select4">
+                  <dt>淋浴：</dt>
+                  <dd class="select-all selected"><a href="#">全部</a></dd>
+                  <dd><a href="#">全天</a></dd>
+                  <dd><a href="#">上午</a></dd>
+                  <dd><a href="#">下午</a></dd>
+                  <dd><a href="#">晚上</a></dd>
+                </dl>
+              </li> 
+            </ul>
+
             <div class="container"> 
-              
+
 <!--
               <div class="row">
                 <ul id="hotelList_nav" class="nav nav-pills">
@@ -279,19 +330,19 @@
               <div class="row  col-md-8">
 
 
-               <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="col-xs-12 col-sm-6 col-md-6">
                 <a href="/hotel/oneHotel.html">
                    <div class="inner">
                      <div class="img_back">
-                       <img src="/static/images/nongjiale2.jpg" class="img-responsive">
+                       <img src="/static/images/nongjiale.jpg" class="img-responsive">
                        <div class="row">
-                         <div class="col-xs-6 col-sm-4 col-md-6">
+                         <div class="col-xs-6 col-sm-4 col-md-8">
                            <p class="hotel_name">某某农家乐</p>
                          </div>
-                         <div class="col-xs-6 col-sm-4 col-md-6">
+                         <div class="col-xs-6 col-sm-4 col-md-4">
                            <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
                          </div>
-                         <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                         <p class="hotel_des">酒店里到处可见的亭台楼阁，让人心旷神怡<small style="float:right"><i style="color:#4EA1D5;" class="fa fa-map-pin"></i>门头沟</small></p>
                        </div>
                      </div>
                    </div>
@@ -302,7 +353,7 @@
                 <a href="/hotel/oneHotel.html">
                    <div class="inner">
                      <div class="img_back">
-                       <img src="/static/images/nongjiale2.jpg" class="img-responsive">
+                       <img src="/static/images/nongjiale.jpg" class="img-responsive">
                        <div class="row">
                          <div class="col-xs-6 col-sm-4 col-md-6">
                            <p class="hotel_name">某某农家乐</p>
@@ -310,163 +361,164 @@
                          <div class="col-xs-6 col-sm-4 col-md-6">
                            <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
                          </div>
-                         <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+                         <p class="hotel_des">酒店里到处可见的亭台楼阁，让人心旷神怡<small style="float:right"><i style="color:#4EA1D5;" class="fa fa-map-pin"></i>门头沟</small></p>
                        </div>
                      </div>
                    </div>
                 </a>
               </div>
-               
                  
-                  <div class="col-xs-12 col-sm-6 col-md-6">
-                   <a href="/hotel/oneHotel.html">
-                      <div class="inner">
-                        <div class="img_back">
-                          <img src="/static/images/2003.jpg" class="img-responsive">
-                          <div class="row">
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="hotel_name">某某农家乐</p>
-                            </div>
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                            </div>
-                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
-                          </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+               <a href="/hotel/oneHotel.html">
+                  <div class="inner">
+                    <div class="img_back">
+                      <img src="/static/images/2003.jpg" class="img-responsive">
+                      <div class="row">
+                        <div class="col-xs-6 col-sm-4 col-md-6">
+                          <p class="hotel_name">某某农家乐</p>
                         </div>
-                      </div>
-                   </a>
-                 </div>
-                  <div class="col-xs-12 col-sm-6 col-md-6">
-                   <a href="/hotel/oneHotel.html">
-                      <div class="inner">
-                        <div class="img_back">
-                          <img src="/static/images/2003.jpg" class="img-responsive">
-                          <div class="row">
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="hotel_name">某某农家乐</p>
-                            </div>
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                            </div>
-                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
-                          </div>
+                        <div class="col-xs-6 col-sm-4 col-md-6">
+                          <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
                         </div>
+                        <p class="hotel_des">酒店里到处可见的亭台楼阁，让人心旷神怡<small style="float:right"><i style="color:#4EA1D5;" class="fa fa-map-pin"></i>门头沟</small></p>
                       </div>
-                   </a>
-                 </div>
-                 <div class="col-xs-12 col-sm-6 col-md-6">
-                    <a href="/hotel/oneHotel.html">
-                       <div class="inner">
-                         <div class="img_back">
-                           <img src="/static/images/caizhai.jpg" class="img-responsive">
-                           <div class="row">
-                             <div class="col-xs-6 col-sm-4 col-md-6">
-                               <p class="hotel_name">某某采摘门票</p>
-                             </div>
-                             <div class="col-xs-6 col-sm-4 col-md-6">
-                               <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                             </div>
-                             <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
-                           </div>
-                         </div>
-                       </div>
-                    </a>
+                    </div>
                   </div>
+               </a>
+              </div>
+              
+              <div class="col-xs-12 col-sm-6 col-md-6">
+               <a href="/hotel/oneHotel.html">
+                  <div class="inner">
+                    <div class="img_back">
+                      <img src="/static/images/2003.jpg" class="img-responsive">
+                      <div class="row">
+                        <div class="col-xs-6 col-sm-4 col-md-6">
+                          <p class="hotel_name">某某农家乐</p>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-6">
+                          <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                        </div>
+                        <p class="hotel_des">酒店里到处可见的亭台楼阁，让人心旷神怡<small style="float:right"><i style="color:#4EA1D5;" class="fa fa-map-pin"></i>门头沟</small></p>
+                      </div>
+                    </div>
+                  </div>
+               </a>
+              </div>
 
-                <div class="col-xs-12 col-sm-6 col-md-6">
-                   <a href="/hotel/oneHotel.html">
-                      <div class="inner">
-                        <div class="img_back">
-                          <img src="/static/images/caizhai.jpg" class="img-responsive">
-                          <div class="row">
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="hotel_name">某某采摘门票</p>
-                            </div>
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                            </div>
-                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <a href="/hotel/oneHotel.html">
+                   <div class="inner">
+                     <div class="img_back">
+                       <img src="/static/images/caizhai.jpg" class="img-responsive">
+                       <div class="row">
+                         <div class="col-xs-6 col-sm-4 col-md-6">
+                           <p class="hotel_name">某某采摘门票</p>
+                         </div>
+                         <div class="col-xs-6 col-sm-4 col-md-6">
+                           <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                         </div>
+                         <p class="hotel_des">酒店里到处可见的亭台楼阁，让人心旷神怡<small style="float:right"><i style="color:#4EA1D5;" class="fa fa-map-pin"></i>门头沟</small></p>
+                       </div>
+                     </div>
+                   </div>
+                </a>
+              </div>
+
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                 <a href="/hotel/oneHotel.html">
+                    <div class="inner">
+                      <div class="img_back">
+                        <img src="/static/images/caizhai.jpg" class="img-responsive">
+                        <div class="row">
+                          <div class="col-xs-6 col-sm-4 col-md-6">
+                            <p class="hotel_name">某某采摘门票</p>
                           </div>
+                          <div class="col-xs-6 col-sm-4 col-md-6">
+                            <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                          </div>
+                          <p class="hotel_des">酒店里到处可见的亭台楼阁，让人心旷神怡<small style="float:right"><i style="color:#4EA1D5;" class="fa fa-map-pin"></i>门头沟</small></p>
                         </div>
                       </div>
-                   </a>
-                 </div>
+                    </div>
+                 </a>
+              </div>
 
-                 <div class="col-xs-12 col-sm-6 col-md-6">
-                   <a href="/hotel/oneHotel.html">
-                      <div class="inner">
-                        <div class="img_back">
-                          <img src="/static/images/nongjiale.jpg" class="img-responsive">
-                          <div class="row">
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="hotel_name">某某农家乐</p>
-                            </div>
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                            </div>
-                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
-                          </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+               <a href="/hotel/oneHotel.html">
+                  <div class="inner">
+                    <div class="img_back">
+                      <img src="/static/images/nongjiale.jpg" class="img-responsive">
+                      <div class="row">
+                        <div class="col-xs-6 col-sm-4 col-md-6">
+                          <p class="hotel_name">某某农家乐</p>
                         </div>
+                        <div class="col-xs-6 col-sm-4 col-md-6">
+                          <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                        </div>
+                        <p class="hotel_des">酒店里到处可见的亭台楼阁，让人心旷神怡<small style="float:right"><i style="color:#4EA1D5;" class="fa fa-map-pin"></i>门头沟</small></p>
                       </div>
-                   </a>
-                 </div>
+                    </div>
+                  </div>
+               </a>
+              </div>
 
-                 <div class="col-xs-12 col-sm-6 col-md-6">
-                   <a href="/hotel/oneHotel.html">
-                      <div class="inner">
-                        <div class="img_back">
-                          <img src="/static/images/nongjiale.jpg" class="img-responsive">
-                          <div class="row">
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="hotel_name">某某农家乐</p>
-                            </div>
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                            </div>
-                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
-                          </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+               <a href="/hotel/oneHotel.html">
+                  <div class="inner">
+                    <div class="img_back">
+                      <img src="/static/images/nongjiale.jpg" class="img-responsive">
+                      <div class="row">
+                        <div class="col-xs-6 col-sm-4 col-md-6">
+                          <p class="hotel_name">某某农家乐</p>
                         </div>
+                        <div class="col-xs-6 col-sm-4 col-md-6">
+                          <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                        </div>
+                        <p class="hotel_des">酒店里到处可见的亭台楼阁，让人心旷神怡<small style="float:right"><i style="color:#4EA1D5;" class="fa fa-map-pin"></i>门头沟</small></p>
                       </div>
-                   </a>
-                 </div>
+                    </div>
+                  </div>
+               </a>
+              </div>
 
-                  <div class="col-xs-12 col-sm-6 col-md-6">
-                   <a href="/hotel/oneHotel.html">
-                      <div class="inner">
-                        <div class="img_back">
-                          <img src="/static/images/nongjiale2.jpg" class="img-responsive">
-                          <div class="row">
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="hotel_name">某某农家乐</p>
-                            </div>
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                            </div>
-                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
-                          </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+               <a href="/hotel/oneHotel.html">
+                  <div class="inner">
+                    <div class="img_back">
+                      <img src="/static/images/nongjiale.jpg" class="img-responsive">
+                      <div class="row">
+                        <div class="col-xs-6 col-sm-4 col-md-6">
+                          <p class="hotel_name">某某农家乐</p>
                         </div>
+                        <div class="col-xs-6 col-sm-4 col-md-6">
+                          <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                        </div>
+                        <p class="hotel_des">酒店里到处可见的亭台楼阁，让人心旷神怡<small style="float:right"><i style="color:#4EA1D5;" class="fa fa-map-pin"></i>门头沟</small></p>
                       </div>
-                   </a>
-                 </div>
+                    </div>
+                  </div>
+               </a>
+              </div>
 
-                 <div class="col-xs-12 col-sm-6 col-md-6">
-                   <a href="/hotel/oneHotel.html">
-                      <div class="inner">
-                        <div class="img_back">
-                          <img src="/static/images/nongjiale2.jpg" class="img-responsive">
-                          <div class="row">
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="hotel_name">某某农家乐</p>
-                            </div>
-                            <div class="col-xs-6 col-sm-4 col-md-6">
-                              <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
-                            </div>
-                            <p class="hotel_des"><i class="fa fa-quote-left"></i>酒店里到处可见的亭台楼阁，让人心旷神怡<i class="fa fa-quote-right"></i></p>
-                          </div>
+             <div class="col-xs-12 col-sm-6 col-md-6">
+               <a href="/hotel/oneHotel.html">
+                  <div class="inner">
+                    <div class="img_back">
+                      <img src="/static/images/nongjiale.jpg" class="img-responsive">
+                      <div class="row">
+                        <div class="col-xs-6 col-sm-4 col-md-6">
+                          <p class="hotel_name">某某农家乐</p>
                         </div>
+                        <div class="col-xs-6 col-sm-4 col-md-6">
+                          <p class="price_right" id="price_right"><strong class="strong_price">￥918</strong>起</p>
+                        </div>
+                        <p class="hotel_des">酒店里到处可见的亭台楼阁，让人心旷神怡<small style="float:right"><i style="color:#4EA1D5;" class="fa fa-map-pin"></i>门头沟</small></p>
                       </div>
-                   </a>
-                 </div>
+                    </div>
+                  </div>
+               </a>
+             </div>
  
               </div>
 
@@ -516,12 +568,21 @@
     $.each(tabs_lis,function(key,val){
       $(this).click(function(){
         var this_index = key;
-          $('.tabs li').removeClass('tab-current');
-          $(this).addClass('tab-current');
+        $('.tabs li').removeClass('tab-current');
+        $(this).addClass('tab-current');
+        if(key==0){
+          $('ul.select').hide();
+        }else{
+          $('ul.select').show();
+        }
+      
          
       })
     })
     </script>
+
+    
+
    <!-- <script>
       var hotelList_nav_lis = $("#hotelList_nav li");
       $.each(hotelList_nav_lis,function(key,val){
@@ -567,14 +628,22 @@
    <script src="/static/js/jquery.validate.js"></script>
    <script src="/static/js/my_validate.js"></script>
 
-   <script>
-    $('#nav').affix({
-        offset: {
-            top: $('#nav').offset().top,bottom:430
-        }
-    });
 
- 
+
+   <script>
+  
+     $('#nav').affix({
+         offset: {
+             top: $('#nav').offset().top,bottom:428
+         }
+     });
+   
+   
+
+
+    
+   
+    
    </script>
 
 </html>
