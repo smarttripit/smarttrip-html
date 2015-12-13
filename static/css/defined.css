@@ -532,3 +532,13 @@ color: #DF893A;
 
 #tourist_comment .col-md-3{margin-right: -15px;}
 .comment_time{margin-top: 8px;color: #8F8E8E;}
+.iwantcomment{float: right;
+background: #DF893A;
+color: #fff;
+padding: 5px 10px;
+margin-right: 10px;
+margin-top: 2px;}
+
+.iwantcomment:hover{color: #fff;}
+.left_words{margin-top:165px;}
+.left_pic_num{font-size: 10px;color:#999;}
