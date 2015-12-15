@@ -1,12 +1,11 @@
 /*底部样式*/
 #bottom {background: #525050;padding-top: 40px;padding-bottom: 40px;color: #B4B2B2;font-size: 10px;}
-#bottom .widget {margin-top: 20px;}
-#bottom ul {list-style: none;padding: 0;margin-left: 2px;}
-#bottom ul li {display: block;padding: 5px 0;}
+#bottom ul {list-style:none;padding:0px;margin-left:2px;}
+#bottom ul li {display:block;padding:5px 0px;}
 .weibo_image{width:99px;height:99px;}
 .line {height: 210px;width: 0;border-left: 1px #3c3c3c solid;border-right: 1px #696969 solid;}
-.line1 {margin-top: -136px;margin-left: 76%;}
-.line2 {margin-top: -192px;margin-left: 76%;}
+.line1 {margin-top:-136px;margin-left:76%;}
+.line2 {margin-top:-192px;margin-left:76%;}
 .up{margin-top: -190px;}
 
 #backtotop {

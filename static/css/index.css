@@ -1,24 +1,26 @@
-/* 主页 */
-.theme_image1{background-image: url(../images/themeimage1.jpg);width:100%;background-repeat: no-repeat;height:375px;background-size:cover;}
-.theme_image2{background-image: url(../images/themeimage2.png);width:100%;background-repeat: no-repeat;height:375px;background-size:cover;}
-.theme_image3{background-image: url(../images/themeimage3.jpg);width:100%;background-repeat: no-repeat;height:375px;background-size:cover;}
-.theme_image4{background-image: url(../images/themeimage4.jpg);width:100%;background-repeat: no-repeat;height:375px;background-size:cover;}
+/*/// 主页/// */
+/*轮播部分*/
+.theme_image1{background-image: url(../images/themeimage1.jpg);}
+.theme_image2{background-image: url(../images/themeimage2.png);}
+.theme_image3{background-image: url(../images/themeimage3.jpg);}
+.theme_image4{background-image: url(../images/themeimage4.jpg);}
 .carousel {height: 375px;margin-bottom: 40px;}
-.carousel .item {height: 375px;}
+.carousel .item {height: 375px;width:100%;background-repeat: no-repeat;height:375px;background-size:cover;}
 .carousel-caption p {font-size: 45px;margin-top: -170px;font-family: 黑体;}
-@media screen and (max-width:750px){.carousel-caption p{font-size: 30px;margin-top: -168px;}
-                                   }    
-#summary-container .col-md-4 {padding-left: 10px;padding-right: 10px;}  
+@media screen and (max-width:750px){.carousel-caption p{font-size: 30px;margin-top: -168px;}} 
+
+/*三个部分的共同样式*/
+#summary-container{margin-bottom: 40px;}
+#summary-container .row{margin-left:0px;margin-right: 0px;}   
+#summary-container .col-md-4 {padding-left: 10px;padding-right: 10px;} 
+#summary-container .col-md-8 {padding-left: 12px;padding-right: 12px;}
+#summary-container .col-md-3 {padding-left: 1px;padding-right: 1px;} 
 #route1_title .col-md-12{padding-left: 10px;padding-right: 10px;}
 .route1_discription .col-md-12{padding-left: 10px;padding-right: 10px;}
 .route1_discription .col-md-6{padding-left: 10px;padding-right: 10px;}
-#summary-container .col-md-8 {padding-left: 12px;padding-right: 12px;}
-#summary-container .col-md-3 {padding-left: 1px;padding-right: 1px;}
-.find_discription{margin-left: -15px;margin-right: -15px;}
 .house_discription{margin-left: -15px;margin-right: -15px;}
 .house_price{margin-left: -15px;margin-right: -15px;}
-#summary-container{margin-bottom: 40px;}
-#summary-container .row{margin-left:0px;margin-right: 0px;}
+.find_discription{margin-left: -15px;margin-right: -15px;}
 .headline{font-size:30px;}
 .subline{font-size:16px;margin-top: -10px;margin-bottom: 15px;}
 .more {font-size: 20px;line-height: 50px;margin-top: -10px;}
@@ -27,17 +29,7 @@
 /*经典线路样式*/
 .homepage_route_back{background: #fff;}
 .inner{margin-bottom: 20px;}
-.bg {
-  display: block;
-  height: 80px;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: url(http://static.qyer.com/static/plan/old/models/project/plan/web/images/index/plan_list_bg.png) repeat-x;
-  opacity: .7;
-  margin-top: -80px;
-  }
+.bg{display: block;height: 80px;position: relative;bottom: 0;left: 0;right: 0;background: url(http://static.qyer.com/static/plan/old/models/project/plan/web/images/index/plan_list_bg.png) repeat-x;opacity: .7;margin-top: -80px;}
 .route1_title{height:60px;zoom: 1;margin-top: -60px;background: #000;}
 .title_text1{font-size:20px;color:#FFF;margin-top:2px;margin-bottom:0px;}
 .title_text2{font-size:15px;color:#FFF;margin-top:4px;}
@@ -48,34 +40,12 @@
 .discription_right1{padding-top: 5px;font-size:12px;color: #868080;}
 
 /*发现北京样式*/
-.find_discription {
-background: rgba(0,0,0,.6);
-padding-bottom: 10px;
-height: 60px;
-margin-top: -60px;
-color: #fff;
-padding-top: 4px;
-}
+.find_discription {background: rgba(0,0,0,.6);padding-bottom: 10px;height: 60px;margin-top: -60px;color: #fff;padding-top: 4px;}
 .find_discription_title{font-size:22px;}
 
 /*度假民宿样式*/
-.house_price {
-font-size: 20px;
-color: #FFF;
-background-color: rgba(228, 130, 23, 1);
-width: 100px;
-height: 40px;
-padding-top: 5px;
-margin-top: -50%;
-}
-.house_discription {
-background: rgba(0,0,0,.6);
-padding-bottom: 10px;
-height: 30px;
-margin-top: -30px;
-color: #fff;
-padding-top: 4px;
-}
+.house_price {font-size: 20px;color: #FFF;background-color: rgba(228, 130, 23, 1);width: 100px;height: 40px;padding-top: 5px;margin-top: -50%;}
+.house_discription {background: rgba(0,0,0,.6);padding-bottom: 10px;height: 30px;margin-top: -30px;color: #fff;padding-top: 4px;}
 .left{float: left;padding-left: 20px;}
 .right1{float: right;padding-right: 20px;}
 .right2{float: right;padding-right: 8px;color:#4ea1f5;}

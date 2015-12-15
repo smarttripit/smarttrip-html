@@ -24,8 +24,10 @@
 /*颜色*/
 .bgc_white{background-color:#fff;}
 .cor_white{color:#fff;}
+.cor1{color: #EBEBEB;}
 .bgc1{background-color: rgba(34, 34, 34, 0.52);}
 
 /*页面边距*/
 .marTop1{margin-top:-10px;}
+.marTop2{margin-top:20px;}
 .padRig1{padding-right:10px;}
