@@ -1,0 +1,5 @@
+/*首页导航栏样式*/
+.navbar_defined_homepage {margin-top: -375px;border-color: transparent;font-size: 16px;border: 0px;border-radius: 0px;}
+#navbar-collapse-1 li a{color:white;}
+.navbar-header img {width: 55px;height: 40px;}
+.navbar-right li a{padding-right:0px;font-size: 12px;}

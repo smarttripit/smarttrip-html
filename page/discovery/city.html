@@ -48,7 +48,7 @@
      </div>
 
      <div  class="col-xs-12 col-sm-12 col-md-12 filter_2"> 
-       <div class="col-xs-12 col-sm-12 col-md-6 beijingmap" id="beijingmap" >
+       <div class="col-xs-12 col-sm-12 col-md-12  col-lg-6 beijingmap" id="beijingmap" >
          <style type="text/css">
             .miyun{left: 63%;top: 26.5%;position: absolute;}
             .huairou{left: 47.5%;top: 14%;position: absolute;}
@@ -63,7 +63,7 @@
             .daxing{left: 44%;top: 70%;position: absolute;}
           </style>
 
-          <img src="/static/images/beijingmap.jpg"  width="600" height="600" usemap="#Map" border="0"  style="display: block;margin-left:0px;" id="map_bg"  />
+          <img src="/static/images/beijingmap.jpg"  width="600" height="600" usemap="#Map" border="0"  style="display: block;margin-left:0px;" id="map_bg" class="" />
 
          <map name="Map" id="Map">
   <area shape="poly" coords="411,237,426,189,452,186,476,195,497,200,531,197,510,219,475,233,464,240,472,270,447,275,430,283,415,299,407,313,394,302,383,292,370,291,363,260,356,241,356,224,358,206,369,190,377,184,377,173,388,165,401,160,422,187,425,191" href="javascript:;" onclick="show_map('miyun')" id="miyun" style="border:none;outline:none;"/>
@@ -134,11 +134,11 @@
           </a>
        </div>
 
-       <div class="col-xs-12 col-sm-12 col-md-6 right_back">
-         <div class="col-xs-12 col-sm-3 col-md-4 filter_title_2">
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 right_back">
+         <div class="col-xs-12 col-sm-3 col-md-2 col-lg-4 filter_title_2">
            <h4 class="filter1_title"><i class="fa fa-coffee"></i>&nbsp;游玩地区：</h4>
          </div>
-         <div class="col-xs-12 col-sm-9 col-md-8 mar_left1 filter_body_2" >
+         <div class="col-xs-12 col-sm-9 col-md-10 col-lg-8 mar_left1 filter_body_2" >
             <ul class="city row" style="">
                        <div class="col-xs-3 col-sm-3 col-md-3">                       
                          <li name="yanqin" class="RegionID"> <a href="javascript:;" target="_blank" id="Complace_secondRegion_0" class=" "  _hover-ignore="1" style="display:none;">延庆</a></li>                       
@@ -179,10 +179,10 @@
             </ul>   
          </div>
         
-         <div class="col-xs-12 col-sm-3 col-md-4 filter_title_2">
+         <div class="col-xs-12 col-sm-3 col-md-2 col-lg-4 filter_title_2">
            <h4 class="filter2_title"><i class="fa fa-coffee"></i>&nbsp;游玩主题：</h4>
          </div>
-         <div class="col-xs-12 col-sm-9 col-md-8 filter_body_2 mar_left1 else_one" >
+         <div class="col-xs-12 col-sm-9 col-md-10 col-lg-8 filter_body_2 mar_left1 else_one" >
             <ul class="row" style="">
                   <div class="col-xs-3 col-sm-3 col-md-3">                       
                          <li class="ThemeID"><a href="javascript:;" style="display:none;" id="Comtheme_name_0" class="">烧烤</a></li>
@@ -279,10 +279,10 @@
             <a class="city_theme_all" href="javascript:;">全部>></a>
          </div>
 
-         <div class="col-xs-12 col-sm-3 col-md-4 filter_title_2">
+         <div class="col-xs-12 col-sm-3 col-md-2 col-lg-4 filter_title_2">
            <h4 class="filter3_title"><i class="fa fa-group"></i>&nbsp;游玩同伴：</h4>
          </div>
-         <div class="col-xs-12 col-sm-9 col-md-8 filter_body_2 mar_left1 else_one">
+         <div class="col-xs-12 col-sm-9 col-md-10 col-lg-8 filter_body_2 mar_left1 else_one">
             <ul class="row" style="">
                        <div class="col-xs-6 col-sm-3 col-md-3">                       
                          <li class="CompanionId"> <a href="javascript:;" id="Compartner_name_0" class="" style="display:none;">老人</a></li>             
@@ -312,10 +312,10 @@
             </ul> 
          </div>
 
-         <div class="col-xs-12 col-sm-3 col-md-4 filter_title_2">
+         <div class="col-xs-12 col-sm-3 col-md-2 col-lg-4 filter_title_2">
            <h4 class="filter4_title"><i class="fa fa-suitcase"></i>&nbsp;游玩季节：</h4>
          </div>
-         <div class="col-xs-12 col-sm-9 col-md-8 filter_body_2 mar_left1 else_one">
+         <div class="col-xs-12 col-sm-9 col-md-10 col-lg-8 filter_body_2 mar_left1 else_one">
            <ul class="row" style="">
                        <div class="col-xs-6 col-sm-3 col-md-3">                       
                          <li class="SeasonsID"> <a href="javascript:;" val="1" class="">当季</a></li>                       
@@ -1115,20 +1115,20 @@
     findDimensions();
     window.onresize=findDimensions; 
     $(window).resize(function(){  
-        if (winWidth <= 1200) {//768及以下分辨率
-                $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_none");               
+        if (winWidth <= 1170) {//768及以下分辨率
+                $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-12 col-lg-6 beijingmap display_none");               
             } else
-            { $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_in");}
+            { $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-12 col-lg-6 beijingmap display_in");}
    });
 
              //判断是否宽屏
             var winWide =$(window).width() ;
             
             var wideScreen = false;
-            if (winWide <= 1200) {//768及以下分辨率
-                $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_none");
+            if (winWide <= 1170) {//768及以下分辨率
+                $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-12 col-lg-6 beijingmap display_none");
             } else {
-                  $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-6 beijingmap display_in");
+                  $("#beijingmap").attr("class", "col-xs-12 col-sm-12 col-md-12 col-lg-6 beijingmap display_in");
                 wideScreen = true; //是宽屏
             }
   });
