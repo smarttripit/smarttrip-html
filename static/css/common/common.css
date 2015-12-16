@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .navbar_defined_homepage {
   	margin-top: -375px;
     border-color: transparent;
@@ -11,6 +12,8 @@
 }
 
 
+=======
+>>>>>>> origin/master
 @charset "utf-8";
  body{padding-bottom:0px;background-color:rgba(51,153,204,0.08);font-family: 微软雅黑, 'Microsoft YaHei';}
  a {
@@ -44,4 +47,18 @@
 .mt_10{margin-top:-10px;}
 .mt20{margin-top:20px;}
 .padRig1{padding-right:10px;}
+
+
+
+.navbar_defined_homepage {
+  	margin-top: -375px;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: rgba(34, 34, 34, 0.52);
+    border: 0px;
+    border-radius: 0px;
+}
+#navbar-collapse-1 li a{
+	color : white;
+}
 
