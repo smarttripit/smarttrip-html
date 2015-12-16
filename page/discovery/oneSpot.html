@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+      <!-- 要紧接着head标签 -->
+   <!--# include file="/common/head.html" -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -33,11 +35,11 @@
              <!--# include file="/common/index_top.html"  -->
            </div>
 
-            <div class="row ">
+           <div class=" spot_back_position">
                 <div class="col-xs-1 col-sm-5 col-md-7 ">
                 </div>
                 <div class="col-xs-10 col-sm-6 col-md-4">
-                    <div class="spot_back_title in_center"><h4><strong id="spot_name">沿河城村</strong></h4></div>
+                    <div class="spot_back_title in_center"><h4><strong id="spot_name"></strong></h4></div>
                     <div class="spot_back">
                       
                       <div class="row">
@@ -45,16 +47,16 @@
                         <span class="spot_back_theme">古村</span><span class="spot_back_theme">民宿</span><span class="spot_back_theme">采摘</span> 
                       </div>
                      <div class="col-xs-10 col-sm-6 col-md-5">
-                       <p class="spot_introduction2">好评率：&nbsp;&nbsp;<span class="text_color_light"><b id="spot_commentRatio">98.8%</b></span></p> 
+                       <p class="spot_introduction2">好评率：&nbsp;&nbsp;<span class="text_color_light"><b id="spot_commentRatio"></b></span></p> 
                      </div>
                       </div>
-                      <p class="spot_introduction1" id="spot_recommendation">沿河城村的花三季不断，是北京野生动物的王国，禽翔集草甸，走兽出没丛林。爨底下、柏峪、黄岭西，每一个村子都有着它独特的历史与文化，迄今为止仍然保留着当年的那一份古韵。每一个村子都有着它独特的历史与文化，迄今为止仍然保留着当年的那一份古韵。</p>
+                      <p class="spot_introduction1" id="spot_recommendation"></p>
                       <div class="row">
                       <div class="col-xs-12 col-sm-12 col-md-12">
-                        <p class="spot_introduction2">建议游玩时间：<span class="text_color_light"><b id="spot_duration">5~6</b></span></p>
+                        <p class="spot_introduction2">建议游玩时间：<span class="text_color_light"><b id="spot_duration"></b></span></p>
                       </div>
                      <div class="col-xs-12 col-sm-12 col-md-12">
-                       <p class="spot_introduction2">适宜季节：<span class="text_color_light"><b id="spot_travelTime">春季</b></span></p>
+                       <p class="spot_introduction2">适宜季节：<span class="text_color_light"><b id="spot_travelTime"></b></span></p>
                      </div>
                       </div>
                       
@@ -63,9 +65,9 @@
                 </div> 
                 <div class="col-xs-1 col-sm-1  col-md-1">
                 </div>              
-            </div>
+           </div>
        
-        <div class="container row_top_space row_bottom_space" >
+          <div class="container row_top_space row_bottom_space " >
             <div class="row in_center">
                 <div class="col-md-12 col-sm-12 col-xs-12 row_space">
                    <a href="suoluetu.html"> <h4 style="color:#DB6464;"><strong>游览导图</strong></h4></a>
@@ -76,7 +78,7 @@
                     <img id="spot_map" src="/static/images/spot_map.png" class="img-responsive" />
                 </div>
             </div>
-        </div>
+          </div>
       </div><!-- END COVER -->
 
     <!-- START THE NAVBAR -->
@@ -135,9 +137,7 @@
                <a id="fancybox-manual-c" href="javascript:;" class="more_images">查看更多</a>
              </div>
              <div class="col-xs-12 col-sm-4 col-md-4 basic_information">
-              <p id="spot_basicInfo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>沿河城村</b>位于门头沟区斋堂镇，毗邻永定河南岸，修建于明朝万历年间，依山傍水的地理优势使得它被烙上了军事重镇的历史符号，作为永定河流入北京地区的第一个村庄，厚重的历史文化沉积进了这片土地。因城靠近永定河，故名沿河城。沿河城村，呈“口”形，坐北朝南，因地处几条山沟流水汇入永定河入口处，曾名“三岔村”。沿河城依山傍水，风光秀丽，历史悠久、文化底蕴深厚，文物古迹众多，如城墙、城门、敌台、戏台等。小型古城风貌，城内有百余人家，城外建有部分农舍，多为四合院。这里可东去珍珠湖，西去黄草梁。
-              <br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位于门头沟区斋堂镇，毗邻永定河南岸，修建于明朝万历年间，依山傍水的地理优势使得它被烙上了军事重镇的历史符号，作为永定河流入北京地区的第一个村庄，厚重的历史文化沉积进了这片土地。因城靠近永定河，故名沿河城。沿河城村，呈“口”形，坐北朝南，因地处几条山沟流水汇入永定河入口处，曾名“三岔村”。
+              <p id="spot_basicInfo">
               </p>
              </div>
            </div>
@@ -152,9 +152,9 @@
 
          <div class="panel-body col-xs-12 col-sm-12 col-md-12">
           <div class="col-xs-12 col-sm-12 col-md-12 panel-body traffic_and_tickets" id="spot_ticketInfo">           
-             <p> <b>票面价：</b>￥20/人</p>
+             <!--<p> <b>票面价：</b>￥20/人</p>
              <p> <b >套餐价：</b>￥15/人</p>
-             <p>景区统一售票，暂无其他优惠。以上信息仅供参考，具体信息请以北京爱上水索道滑水当天披露为准。</p>
+             <p>景区统一售票，暂无其他优惠。以上信息仅供参考，具体信息请以北京爱上水索道滑水当天披露为准。</p> -->
           </div>
          </div>  
         </div> <!-- END spot_tickets -->
@@ -167,12 +167,12 @@
          </div>
          <div class="panel-body col-xs-12 col-sm-12 col-md-12">
           <div class="col-xs-12 col-sm-12 col-md-12 panel-body traffic_and_tickets" id="spot_transportInfo">
-             <h5><b>自驾</b></h5>
+            <!-- <h5><b>自驾</b></h5>
              <p>沿河城村位于109国道80公里处路口转高沿路（高铺～沿河城）14公里处。从国道路口途经白虎头、牛战、石河、林字台、王龙口等村。</p>
              <h5><b>公交</b></h5>
              <p>到达地铁苹果园站后乘坐892在向阳城站下车（每辆892到达的地方不一样上车前问清楚师傅是否到沿河城村）</p>
              <h5><b>其他</b></h5>
-             <p>如果您不想自行坐车前往，可选择我们为您提供的专车服务。</p>
+             <p>如果您不想自行坐车前往，可选择我们为您提供的专车服务。</p>-->
           </div>
          </div>       
         </div>  <!-- END traffic_guidance -->
@@ -185,12 +185,12 @@
           </div>
           <div class="panel-body col-xs-12 col-sm-12 col-md-12">
             <div class="col-xs-12 col-sm-12 col-md-12 panel-body traffic_and_tickets" id="spot_notice">
-             <h5><b>开放时间</b></h5>
+             <!--<h5><b>开放时间</b></h5>
              <p>沿河城村位于109国道80公里处路口转高沿路（高铺～沿河城）14公里处。从国道路口途经白虎头、牛战、石河、林字台、王龙口等村。</p>
              <h5><b>浏览时长</b></h5>
              <p>到达地铁苹果园站后乘坐892在向阳城站下车（每辆892到达的地方不一样上车前问清楚师傅是否到沿河城村）</p>
              <h5><b>适宜季节</b></h5>
-             <p>如果您不想自行坐车前往，可选择我们为您提供的专车服务。</p>
+             <p>如果您不想自行坐车前往，可选择我们为您提供的专车服务。</p>-->
             </div>
           </div> 
         </div> <!-- END zhouzhou_tips -->
@@ -205,7 +205,7 @@
 
 
           <div class="panel-body col-xs-12 col-sm-12 col-md-12  basic_information">
-            <p id="spot_spotLocationInfo" class="traffic_and_tickets"><b>沿河城村</b>位于门头沟区斋堂镇，毗邻永定河南岸，修建于明朝万历年间，依山傍水的地理优势使得它被烙上了军事重镇的历史符号，作为永定河流入北京地区的第一个村庄，厚重的历史文化沉积进了这片土地。因城靠近永定河，故名沿河城。沿河城村，呈“口”形，坐北朝南，因地处几条山沟流水汇入永定河入口处，曾名“三岔村”。沿河城依山傍水，风光秀丽，历史悠久、文化底蕴深厚，文物古迹众多，如城墙、城门、敌台、戏台等。小型古城风貌，城内有百余人家，城外建有部分农舍，多为四合院。这里可东去珍珠湖，西去黄草梁。</p>
+            <p id="spot_spotLocationInfo" class="traffic_and_tickets"></p>
            <div class="row row_bottom_space">
             <div class="col-xs-12 col-sm-1 col-md-1">
             </div>
