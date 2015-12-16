@@ -1,4 +1,3 @@
-
 {
 	"status":"success",
 	"tipCode":"",
@@ -8,6 +7,7 @@
 		"rows":[
 			{
 				"routeId":"1",
+				"name" : "这是现实线路的名称1",
 				"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_thumbnail_2.jpg",
 				"detailRecommendation":"这里显示详细的推荐理由",
 				"commentRatio":"87.43%",
@@ -24,6 +24,7 @@
 			},
 			{
 				"routeId":"2",
+				"name" : "这是现实线路的名称2",
 				"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_thumbnail_2.jpg",
 				"detailRecommendation":"这里显示详细的推荐理由",
 				"commentRatio":"99.99%",
@@ -32,6 +33,23 @@
 				"themes":[
 					{
 						"themeName":"烧烤"
+					},
+					{
+						"themeName":"滑雪"
+					}
+				]
+			},
+			{
+				"routeId":"3",
+				"name" : "这是现实线路的名称3",
+				"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_thumbnail_2.jpg",
+				"detailRecommendation":"这里显示详细的推荐理由",
+				"commentRatio":"99.99%",
+				"purchaseCount":"324653",
+				"bottomPrice":"888",
+				"themes":[
+					{
+						"themeName":"亲子"
 					},
 					{
 						"themeName":"滑雪"

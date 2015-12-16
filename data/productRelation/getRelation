@@ -7,11 +7,13 @@
 			{
 				"toType":"31",
 				"toId":"1",
+				"toThumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/productRelation1.jpg",
 				"toName":"这里显示关联的产品的名称"
 			},
 			{
 				"toType":"31",
 				"toId":"1",
+				"toThumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/productRelation2.jpg",
 				"toName":"这里显示关联的产品的名称"
 			}	
 		],
@@ -19,11 +21,13 @@
 			{
 				"toType":"31",
 				"toId":"1",
+				"toThumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/productRelation2.jpg",
 				"toName":"这里显示关联的产品的名称"
 			},
 			{
 				"toType":"31",
 				"toId":"1",
+				"toThumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/productRelation1.jpg",
 				"toName":"这里显示关联的产品的名称"
 			}	
 		]
