@@ -216,7 +216,7 @@
         },
         tMain1 =  
             '<div class="kv-upload-progress hide"></div>\n' +
-            '<div  style="width:600px;height:40px;left: 270px;position: absolute;top: 0px;"> \n' +
+            '<div  class="choose_position"> \n' +
           //  '   {caption}\n' +
             '   <div class="input-group-btn">\n' +
             //'       {remove}\n' +
