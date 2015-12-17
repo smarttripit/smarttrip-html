@@ -752,13 +752,11 @@
            
       </script>
 <script>
-// 加载发现北京二级页面
+/*// 加载发现北京二级页面
   $(document).ready(function() {
   // 加载发现北京二级页面
-  initSpots();
-  initComPlace();
-  initComTheme();
-  initComPartner();
+  //initSpots();
+
   });
   
   // 加载发现北京二级页面
@@ -798,7 +796,7 @@
         }
     });
   }
-
+*/
   // 加载地区
   function initComPlace(){
        jQuery.ajax({
@@ -891,8 +889,11 @@
         });
   }
 
-    // 加载经典线路列表
-  $(document).ready(function() {    
+    // 加载发现北京列表
+  $(document).ready(function() {   
+      initComPlace();
+      initComTheme();
+      initComPartner(); 
       var paginationOptions = {
           domId : "pager2",
           url : "/spot/getByPage",
@@ -901,16 +902,21 @@
           queryParams : {regionIds:"",themeIds:"",companionIds:"",seasonIds:""},
 
           dealData : function(dataList){
+
             var len = dataList.length;
             if(len > 0){
               for(var i=0; i<len; i++){
-                  var row = dataList[i];
-                 // console.log("spotId：" + row.spotId);
-                 // console.log("thumbnail：" + row.thumbnail);               
-                 // console.log("commentRatio：" + row.commentRatio);
-                 // console.log("recommendation：" + row.recommendation);
+                var row = dataList[i];
+                $("#spot_"+i).css("display","block" );
+                var href=$("#spot_"+i).attr("href");
+                $("#spot_"+i).attr("href",href+"?"+"spotId="+row.spotId); 
+                $("#spot_thumbnail_"+i).attr("src", row.thumbnail); 
+                $("#spot_name_"+i).text(row.name);
+                $("#spot_commentRatio_"+i).text(row.commentRatio);          
+                $("#spot_recommendation_"+i).text(row.recommendation);
               }
            }
+           alert("已选择");
           }
        }
         

@@ -532,11 +532,10 @@
   <script src="/static/js/pagination/bootstrap-paginator.min.js"></script>
   <script src="/static/js/pagination/st-paginator.js"></script>
   <script>
-   $(document).ready(function() {
+   /*$(document).ready(function() {
      // 加载经典线路二级页面
-       initRoutes();
-       initComPlace();
-       initComTheme();
+       //initRoutes();
+       
    });
 
       // 加载经典线路二级页面
@@ -582,7 +581,7 @@
           alert("系统异常");
         }
        });
-     }
+     }*/
 
      // 加载地区
      function initComPlace(){
@@ -645,7 +644,9 @@
      }
 
 	   // 加载经典线路列表
-  $(document).ready(function() {    
+  $(document).ready(function() { 
+      initComPlace();
+      initComTheme();   
 		  var paginationOptions = {
 			    domId : "pager2",
 			    url : "/route/getByPage",
@@ -654,23 +655,29 @@
 			    queryParams : {regionIds:"",themeIds:"",periods:"",seasonIds:"",orderType:"summary"},
 
 			    dealData : function(dataList){
+            alert("已选择");
 				    var len = dataList.length;
 				    if(len > 0){
 					    for(var i=0; i<len; i++){
 						      var row = dataList[i];
-					       	//console.log("routeId：" + row.routeId);
-						      //console.log("thumbnail：" + row.thumbnail);
-					      	//console.log("detailRecommendation：" + row.detailRecommendation);
-						      //console.log("commentRatio：" + row.commentRatio);
-						      //console.log("purchaseCount：" + row.purchaseCount);
-						      //console.log("bottomPrice：" + row.bottomPrice);
-					      	var themes = row.themes;
-						      if(themes.length > 0){
-							       for(var j=0; j<themes.length; j++){
-								         var theme = themes[j];
-							        	//console.log("theme名称：" + theme.themeName);
-							        }
-					  	    }
+                  $("#route_"+i).css("display","block" );
+                  //console.log(row.routeId);
+                  var href=$("#route_"+i).attr("href");
+                  $("#route_"+i).attr("href",href+"?"+"routeId="+row.routeId);              
+                  $("#route_name_"+i).text(row.name);
+                  $("#route_thumbnail_"+i).attr("src", row.thumbnail);            
+                  $("#route_detailRecommendation_"+i).text(row.detailRecommendation);
+                  $("#route_commentRatio_"+i).text(row.commentRatio);
+                  $("#route_purchaseCount_"+i).text(row.purchaseCount);
+                  $("#route_bottomPrice_"+i).text(row.bottomPrice);
+                   //var s=$("#route_themes_"+i);
+                  // console.log(route.themes.length);
+                   //console.log(route.themes);
+                   for(var j=0;j<row.themes.length;j++)
+                   {
+                     $("#route_themes_"+i+j).css("display","block" );
+                    $("#route_themes_"+i+j).text(row.themes[j].themeName); 
+                   }
 					    }
 			  	 }
 			    }
@@ -741,7 +748,7 @@
                 } 
               }
               paginationOptions.queryParams.regionIds=Complace; 
-              pagination(paginationOptions);   
+              pagination(paginationOptions); 
               console.log(paginationOptions.queryParams.regionIds);
           if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
           else{$(this).text(textvalue2_1+"√");}
