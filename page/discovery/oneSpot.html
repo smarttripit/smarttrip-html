@@ -140,16 +140,21 @@
            </div>
            <div class="col-xs-12 col-sm-12 col-md-12 panel-body">
              <div class="col-xs-12 col-sm-8 col-md-8 page">
-               <div class="sp-wrap">                
-                <a href="#"><img src="/static/images/wuzhen1.jpg" alt=""></a>
-                <a href="#"><img src="/static/images/wuzhen2.jpg" alt=""></a>
-                <a href="#"><img src="/static/images/wuzhen5.jpg" alt=""></a>
-                <a href="#"><img src="/static/images/wuzhen6.jpg" alt=""></a>
-                <a href="#"><img src="/static/images/wuzhen7.jpg" alt=""></a>
-                <a href="#"><img src="/static/images/wuzhen8.jpg" alt=""></a>
-                <a href="#"><img src="/static/images/wuzhen1.jpg" alt=""></a>
-                <a href="#"><img src="/static/images/wuzhen2.jpg" alt=""></a>
-                <a href="#"><img src="/static/images/wuzhen5.jpg" alt=""></a>
+               <div class="sp-wrap">
+                <div class="sp-large">
+
+                </div>
+                <div class="sp-thumbs sp-tb-active">                
+                <a href="#"><img src="/static/images/wuzhen1.jpg" style="display:none;" id="spot_images_0"></a>
+                <a href="#"><img src="/static/images/wuzhen2.jpg" style="display:none;" id="spot_images_1"></a>
+                <a href="#"><img src="/static/images/wuzhen5.jpg" style="display:none;" id="spot_images_2"></a>
+                <a href="#"><img src="/static/images/wuzhen6.jpg" style="display:none;" id="spot_images_3"></a>
+                <a href="#"><img src="/static/images/wuzhen7.jpg" style="display:none;" id="spot_images_4"></a>
+                <a href="#"><img src="/static/images/wuzhen8.jpg" style="display:none;" id="spot_images_5"></a>
+                <a href="#"><img src="/static/images/wuzhen1.jpg" style="display:none;" id="spot_images_6"></a>
+                <a href="#"><img src="/static/images/wuzhen2.jpg" style="display:none;" id="spot_images_7"></a>
+                <a href="#"><img src="/static/images/wuzhen5.jpg" style="display:none;" id="spot_images_8"></a>
+                </div>
                </div>
                <a id="fancybox-manual-c" href="javascript:;" class="more_images">查看更多</a>
              </div>
@@ -701,7 +706,7 @@
     <!-- ### IMPORTANT ### stickUp javascript file -->
     <!-- ######################################### --> 
     <script src="/static/js/stickUp.js"></script>
-    <script type="text/javascript" src="/static/js/smoothproducts.js"></script>
+    
     <script type="text/javascript" src="/static/js/star-rating1.js" ></script>
     
     <!-- ######################################### -->
@@ -726,6 +731,8 @@
 $(document).ready(function() {
   // 加载发现北京详情页
   initSpots();
+  // 加载景点详情的图片集
+  initImages();
 });
 
 // 加载发现北京详情页
@@ -766,12 +773,38 @@ function initSpots(){
   });
 }
 
-//$(function(){
- //   $('[data-toggle="popover"]').popover({ html: "true",
- // });
-//});
+function initImages(){
+  jQuery.ajax({
+    type : "GET",
+        async: false,
+        cache: false,
+        datatype : "json",
+        url : "/spot/images?spotId="+spotId,
+        success : function(result){
+          if(result.status == "success"){
+                      
+              for(var j=0;j<result.data.length;j++)
+              {
+                var image = result.data[j]; 
+                $("#spot_images_"+j).css("display","block" );
+                $("#spot_images_"+j).attr("src",image.imageURL);
+                
+              }
+          }else{
+            alert(result.tipMsg);
+          }
+        },
+        error : function(data) {
+          alert("系统异常");
+        }
+  });
+}
+$(function(){
+    $('[data-toggle="popover"]').popover({ html: "true",
+  });
+});
 </script>
-
+<script type="text/javascript" src="/static/js/smoothproducts.js"></script>
 <script>
 
 $('#username').blur(function(){
