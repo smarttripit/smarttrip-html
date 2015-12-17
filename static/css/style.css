@@ -129,37 +129,3 @@
 }
 
 
-/**oneHotel页面**/
-.portrait{
-  width: 40px;
-  border-radius: 10px;
-}
-
-.my_input{
-  width: 50%;
-  height: 34px;
-}
-.my_border{
-  padding: 20px;
-  border: 1px solid #E0E0E0;
-}
-
-.hotel_title{
-  background-color: #EBF7FC;
-}
-
-.hotel_img{
-  height:50px;float:left;
-}
-.hotel_text{
-  float:left;height:50px;line-height:50px;
-}
-.susu_text{
-  height: 34px;line-height: 34px;
-}
-
-.img_back{
-  background-color: #F0F3EB;
-  /*padding: 8px;
-  box-shadow: 4px 4px 5px #888888;*/
-}
