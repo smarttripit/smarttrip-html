@@ -421,7 +421,8 @@ padding: 5px 10px;
 text-align: center;
 border: 0px rgba(77, 154, 184, 0.47) solid;
 background: rgba(255, 255, 255, 0.47);
-color: #287C88;}
+color: #287C88;
+width:100%;}
 .spot_introduction1{color: #534D4D;margin-top: 10px;}
 .text_color_light{color: #C42E2E;
 font-size: 20px;}

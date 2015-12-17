@@ -43,18 +43,30 @@
                     <div class="spot_back">
                       
                       <div class="row">
-                      <div class="col-xs-10 col-sm-12 col-md-12">
-                        <span class="spot_back_theme" id="spot_themes_0">古村</span>
-                        <span class="spot_back_theme" id="spot_themes_1">民宿</span>
-                        <span class="spot_back_theme" id="spot_themes_2">采摘</span>
-                        <span class="spot_back_theme" id="spot_themes_3">古村</span>
-                        <span class="spot_back_theme" id="spot_themes_4">民宿</span>
-                        <span class="spot_back_theme" id="spot_themes_5">采摘</span>
+                       <div class="col-xs-4 col-sm-4 col-md-4" style="dispaly:none;">
+                         <span class="spot_back_theme" id="spot_themes_0"></span>
+                       </div>
+                       <div class="col-xs-4 col-sm-4 col-md-4" style="dispaly:none;">
+                        <span class="spot_back_theme" id="spot_themes_1"></span>
+                       </div>
+                       <div class="col-xs-4 col-sm-4 col-md-4" style="dispaly:none;">
+                        <span class="spot_back_theme" id="spot_themes_2"></span>
+                       </div>
+                       <div class="col-xs-4 col-sm-4 col-md-4" style="dispaly:none;">
+                        <span class="spot_back_theme" id="spot_themes_3"></span>
+                       </div>
+                       <div class="col-xs-4 col-sm-4 col-md-4" style="dispaly:none;">
+                        <span class="spot_back_theme" id="spot_themes_4"></span>
+                       </div>
+                       <div class="col-xs-4 col-sm-4 col-md-4" style="dispaly:none;">
+                        <span class="spot_back_theme" id="spot_themes_5"></span>
+                       </div>
                       </div>
-                     <div class="col-xs-10 col-sm-12 col-md-12">
-                       <p class="spot_introduction2">好评率：&nbsp;&nbsp;<span class="text_color_light"><b id="spot_commentRatio"></b></span></p> 
+                      <div class="row">
+                       <div class="col-xs-10 col-sm-12 col-md-12">
+                         <p class="spot_introduction2">好评率：&nbsp;&nbsp;<span class="text_color_light"><b id="spot_commentRatio"></b></span></p> 
+                       </div>
                      </div>
-                      </div>
                       <p class="spot_introduction1" id="spot_recommendation"></p>
                       <div class="row">
                       <div class="col-xs-12 col-sm-12 col-md-12">
@@ -739,10 +751,10 @@ function initSpots(){
               $("#spot_transportInfo").html(spot.transportInfo);
               $("#spot_notice").html(spot.notice);
               $("#spot_spotLocationInfo").html(spot.spotLocationInfo);
-              for(var j=0;j<row.themes.length;j++)
+              for(var j=0;j<spot.themes.length;j++)
               {
-                $("#spot_themes_"+i+j).css("display","block" );
-               $("#spot_themes_"+i+j).text(row.themes[j].name); 
+                $("#spot_themes_"+j).css("display","block" );
+                $("#spot_themes_"+j).text(spot.themes[j].name);
               }
           }else{
             alert(result.tipMsg);
