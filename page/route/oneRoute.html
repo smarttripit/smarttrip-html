@@ -11,23 +11,20 @@
     <link href="/static/css/defined.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="/static/css/metisMenu.min.css" rel="stylesheet">
+    <link href="/static/css/route/metisMenu.min.css" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="/static/css/timeline.css" rel="stylesheet">
+    <link href="/static/css/route/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/static/css/sb-admin-2.css" rel="stylesheet">
+    <link href="/static/css/route/sb-admin-2.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/static/css/stickup.css" rel="stylesheet">   
-    <link href="/static/css/defined.css" rel="stylesheet">
-    <link href="/static/css/style.css" rel="stylesheet">
+    
+    <link href="/static/css/route/oneRoute.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
-
-
-
 
   </head>
   <body data-spy="scroll" data-target="#myScrollspy">
@@ -38,7 +35,7 @@
       <div class="carousel-inner">
         <!--# include file="/common/login.html"  -->
 
-        <div style="height:375px;">
+        <div class="h_375">
           <div class="bgimg"></div> 
           <!--# include file="/common/index_top.html"  -->    
         </div>  
@@ -49,17 +46,17 @@
           </div>
          
           <div class="col-md-4 col-sm-6 col-xs-10 description">
-              <h2 id="oneRoute_name"></h2>
-              <span id="oneRoute_feature"></i></span>
-              <div class="h_10"></div>
-              <p id="oneRoute_detailRecommendation"></p>
-              <div class="h_10"></div>
-              <div class="row" style="">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                   <p class="oneRoute_txt"><span></span>&nbsp;好评率：<span id="oneRoute_commentRatio" style="font-size:15px;"></span></p>
-                   <p class="oneRoute_txt">&nbsp;游玩天数：<span id="oneRoute_period" style="font-size:15px;"></span></p>
-                 </div>  
-              </div>
+            <h2 id="oneRoute_name"></h2>
+            <span id="oneRoute_feature"></i></span>
+            <div class="h_10"></div>
+            <p id="oneRoute_detailRecommendation"></p>
+            <div class="h_10"></div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <p class="oneRoute_txt"><span></span>&nbsp;好评率：<span id="oneRoute_commentRatio" style="font-size:15px;"></span></p>
+                <p class="oneRoute_txt">&nbsp;游玩天数：<span id="oneRoute_period" class="font_15"></span></p>
+              </div>  
+            </div>
           </div>
 
           <div class="col-xs-1">
@@ -67,54 +64,50 @@
         </div>      
       </div><!-- END COVER -->
 
-    <!-- START THE NAVBAR -->
+      <!-- START THE NAVBAR -->
       <div id="navId" class="navbar-wrapper">
         <div class="container">
 
           <div class="navwrapper">
             <div class="navbar navbar-inverse navbar-static-top">
-               <div class="navbar-header">
-                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
-                 </button>
+                </button>
                 <a class="navbar-brand" href="#"><b class="spot_title_color">黄草梁2日游</b></a>
-                </div> 
-               <div id="navbar" class="navbar-collapse collapse">
-                 <ul class="nav navbar-nav">
-                   <li class="menuItem"><a href="#product_detail">线路详情</a></li>
-                   <li class="menuItem"><a href="#introduce">行程介绍</a></li>
-                   <li class="menuItem"><a href="#transport-map">交通地图</a></li>
-                   <li class="menuItem"><a href="#cost">费用说明</a></li>
-                   <li class="menuItem"><a href="#book">预订须知</a></li>
-                   <li class="menuItem"><a href="#comment">周周点评</a></li>
-                      
-                 </ul>
-                
-               </div>
-          
+              </div> 
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                  <li class="menuItem"><a href="#product_detail">线路详情</a></li>
+                  <li class="menuItem"><a href="#introduce">行程介绍</a></li>
+                  <li class="menuItem"><a href="#transport-map">交通地图</a></li>
+                  <li class="menuItem"><a href="#cost">费用说明</a></li>
+                  <li class="menuItem"><a href="#book">预订须知</a></li>
+                  <li class="menuItem"><a href="#comment">周周点评</a></li>  
+                </ul>
+              </div>
             </div> 
           </div><!-- End Navbar -->
       
         </div>
       </div> 
-    <!-- END NAVBAR -->
+      <!-- END NAVBAR -->
 
-    <!-- START THE CONTENT -->
+      <!-- START THE CONTENT -->
       <div id='contents' class="container">
    
         <!-- START THE product_detail -->
 
         <div id="product_detail" class="anchor_place"></div>   
         <div id="product_detail1" class="row featurette  panel panel-default"> 
-             <div class="panel-heading">
-              <h4 class="featurette-heading"><i class="fa fa-tag fa-fw"></i>线路详情</h4>
-             </div>
-             <div id="oneRoute_detail" class="col-xs-12 col-sm-12 col-md-12 panel-body .product_detail">
-               
-              </p>
-             </div>
+          <div class="panel-heading">
+            <h4 class="featurette-heading"><i class="fa fa-tag fa-fw"></i>线路详情</h4>
+          </div>
+          <div id="oneRoute_detail" class="col-xs-12 col-sm-12 col-md-12 panel-body .product_detail">
+        
+          </div>
         </div> <!-- END product_detail -->
 
         <!-- START THE introduce -->
@@ -419,30 +412,29 @@
         <div class="modal modal-vcenter fade" id="myModal" tabindex="-1" role="dialog" 
            aria-labelledby="myModalLabel" aria-hidden="true">
 
-             <div class="modal-dialog">
-                <div class="modal-content">
-                   <div class="modal-header">
-                      <button type="button" class="close" 
-                         data-dismiss="modal" aria-hidden="true">
-                            &times;
-                      </button>
-                      <h4 class="modal-title" id="myModalLabel">
-                         景区详情
-                      </h4>
-                   </div>
-                  
-                   <div class="modal-body"> 
-                      <iframe id="localDes" class="oneLocal" width="100%" frameborder="0" src="oneLocal.html"></iframe>
-                   </div>
-                   
-                </div><!-- /.modal-content -->
-             </div><!-- /.modal-dialog -->   
+          <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" 
+                     data-dismiss="modal" aria-hidden="true">
+                        &times;
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">
+                     景区详情
+                  </h4>
+               </div>
+              
+               <div class="modal-body"> 
+                  <iframe id="localDes" class="oneLocal" width="100%" frameborder="0" src="oneLocal.html"></iframe>
+               </div>       
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->   
         </div>
       </div>
     <!-- END CONTENT -->
      <nav class="navbar navbar-default navbar-fixed-bottom">  
-        <div class="container-fluid margin_bottom_5 margin_top_5 clear_padding text-center" style="background:rgba(0,0,0,0.07); height:60px; padding-top:20px">  
-            <button class="btn btn-danger" type="button" style="padding: 6px 30px;">立即预订</button>  
+        <div class="container-fluid margin_bottom_5 margin_top_5 clear_padding text-center book_btn_bg">  
+            <button class="btn btn-danger book_btn" type="button">立即预订</button>  
         </div>  
      </nav>
     <!--# include file="/common/footer.html"  -->
@@ -458,186 +450,11 @@
     <!-- ######################################### --> 
     <script src="/static/js/stickUp.js"></script>
     <!-- ######################################### -->
-
+    <script src="/static/js/common/getId.js"></script>
+    <script src="/static/js/route/oneRoute.js"></script>
 
     <!-- ### IMPORTANT ### stickUp options in use -->
     <!-- ######################################## -->
-    <script type="text/javascript">
-    // 扩展jquery，增加获取url中参数值的方法
-    (function($){
-    	$.getUrlParam
-    	 = function(name)
-    	{
-    	var reg
-    	 = new RegExp("(^|&)"+
-    	 name +"=([^&]*)(&|$)");
-    	var r
-    	 = window.location.search.substr(1).match(reg);
-    	if (r!=null) return unescape(r[2]); return null;
-    	}
-    	})(jQuery);
-    	var routeId = $.getUrlParam('routeId');
-     
-      jQuery(function($) {
-        $(document).ready( function() {
-
-          //导航栏切换效果
-          $('.navbar-wrapper').stickUp({
-                        parts: {                         
-                          0:'product_detail',
-                          1: 'introduce',
-                          2: 'transport-map',
-                          3: 'cost',
-                          4: 'book',
-                          5: 'comment'
-                         
-                        },
-                        parts1: {                         
-                          0:'product_detail1',
-                          1: 'introduce1',
-                          2: 'transport-map1',
-                          3: 'cost1',
-                          4: 'book1',
-                          5: 'comment1'
-                         
-                        },
-                        itemClass: 'menuItem',
-                        itemHover: 'active',
-                        topMargin: 'auto'
-          });
-          
-          //弹出框
-          function place(klass){
-            $(klass).height($(window).height()*0.7);
-          }
-          function adjustNavShow(myId){
-            $(myId).on('show.bs.modal',function(){
-              if($('#navId').hasClass('isStuck')){
-                $('.stuckMenu').css('width',$(window).width());
-              }
-            });
-          }
-
-          function adjustNavHide(myId){
-            $(myId).on('hidden.bs.modal',function(){
-                $('.stuckMenu').css('width','100%');
-              
-            });
-          }
-          $('#myModal').on('show.bs.modal',place('.oneLocal')); 
-          adjustNavShow('#myModal');
-          adjustNavHide('#myModal');
-          
-          //timeline每一个列表项的鼠标移入移出事件  
-
-          // 加载经典线路数据
-          initRouteInfo();
-          initRoute1Info();
-        });
-      });
-      function initRouteInfo(){
-    	  jQuery.ajax({
-    			type : "GET",
-    	        async: true,
-    	        cache: false,
-    	        datatype : "json",
-    	        url : "/route/detail?routeId="+routeId,
-    	        success : function(result){
-    	        	if(result.status == "success"){
-                  var oneRoute = result.data;
-                  $("#oneRoute_name").text(oneRoute.name);
-                  $(".bgimg").css("background-image", "url("+oneRoute.backgroundImg+")");
-                  $("#oneRoute_feature").text(oneRoute.feature);
-                  $("#oneRoute_detailRecommendation").text(oneRoute.detailRecommendation);
-                  $("#oneRoute_commentRatio").text(oneRoute.commentRatio);
-                  $("#oneRoute_period").text(oneRoute.period);
-                  $("#oneRoute_detail").text(oneRoute.detail);
-                  $("#oneRoute_map").css("background-image", "url("+oneRoute.map+")");
-                  $("#oneRoute_feeDescription").text(oneRoute.feeDescription);
-                  $("#oneRoute_bookingNotice").text(oneRoute.bookingNotice);
-    	        	}else{
-    	        		alert(result.tipMsg);
-    	        	}
-    	        },
-    	        error : function(data) {
-    	        	alert("系统异常");
-    	        }
-    		});
-      }
-      function initRoute1Info(){
-        jQuery.ajax({
-          type : "GET",
-              async: true,
-              cache: false,
-              datatype : "json",
-              url : "/route/schedules?routeId="+routeId,
-
-              success : function(result){
-                if(result.status == "success"){
-                  var count=0;
-                  var Content="";
-                  var myDir = " ";
-                  var data = result.data;
-                  for(var i=0; i<data.length; i++){
-                    var oneLocal = data[i];
-                    var scheduleId = oneLocal.scheduleId;
-                    var period = oneLocal.period;
-                    var scheduleType = oneLocal.scheduleType;
-                    var name = oneLocal.name;
-                    var summary = oneLocal.summary;
-                    var description = oneLocal.description;
-                    var thumbnail = oneLocal.thumbnail;
-                    var direction = oneLocal.direction;
-                    var link = oneLocal.link;
-                    
-                    if(direction==1)
-                    {
-                      myDir = "";
-                    }else if(direction==0){
-                      myDir = "class = \"timeline-inverted\"";
-                    };
-
-                    switch(parseInt(scheduleType)){
-                      case 1:
-                      Content += "<li"+" "+myDir+"><div class=\"timeline-badge\"><i class=\"fa fa-bus\"></i></div><div class=\"timeline-panel\"><div class=\"timeline-heading\"><h4 class=\"timeline-title\">"+name+"</h4><a><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+period+"</small></a></div></div></li>";
-                      break;
-                      case 2:
-                      Content +="<li"+" "+myDir+"><div class=\"timeline-badge warning\"><i class=\"fa fa-money\"></i></div><div class=\"timeline-panel\"><div class=\"timeline-heading\"><h4 class=\"timeline-title\">"+summary+"</h4><p><small class=\"text-muted\">"+description+"</small></p></div></div></li>";
-                      break;
-                      case 3:
-                      Content +="<li"+ " "+myDir+"data-toggle=\"modal\" data-target=\"#myModal\"><div class=\"timeline-badge danger\"><i class=\"fa fa-map-marker\"></i></div><div class=\"timeline-panel\"><div class=\"timeline-body img_des\"><img src="+thumbnail+" class=\"img-responsive\"></div><div class=\"panel-footer\"><p>"+name+"</p>"+summary+"<br/><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+period+"</small></div></div></li>";
-      
-                      break;
-                      case 4:
-                      Content +="<li"+ " "+myDir+"data-toggle=\"modal\" data-target=\"#myModal\"><div class=\"timeline-badge danger\"><i class=\"fa fa-coffee\"></i></div><div class=\"timeline-panel\"><div class=\"timeline-body img_des\"><img src="+thumbnail+" class=\"img-responsive\"></div><div class=\"panel-footer\"><p>"+name+"</p>"+summary+"<br/><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+period+"</small></div></div></li>";
-                        
-                      break;
-                      case 5:
-                      Content +="<li><div id=\"day1\" class=\"tldate\">"+name+"</div></li>";
-                      break;
-                    }
-  
-                  }
-                 
-
-                $('.timeline').append(Content);
-
-                }else{
-                  alert(result.tipMsg);
-                }
-              },
-              error : function(data) {
-                alert("系统异常");
-              }
-        });
-      }
-    </script>
-
-    <script>
-     $("#myScrollspy").scroll(function() {
-       $("span").text(x+=1);
-     });
-    </script>
    
     <script src="/static/js/jquery.validate.js"></script>
     <script src="/static/js/my_validate.js"></script>

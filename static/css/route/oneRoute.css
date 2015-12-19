@@ -1,0 +1,50 @@
+.book_btn{
+    padding: 6px 30px;
+}
+
+.h_375{
+    height: 375px;
+}
+.font_15{
+    font-size: 15px;
+}
+
+.book_btn_bg{
+    background:rgba(0,0,0,0.07); height:60px; padding-top:20px;
+}
+/*“第一天”样式*/
+.tldate {
+  display: block;
+  width: 150px;
+  background: #AAAAAA;
+  
+  color: #ededed;
+  margin: 0 auto;
+  padding: 3px 0;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 15%;
+  font-size: 40px;
+}
+
+.description{
+  
+  background:rgba(0,0,0,0.2); 
+  margin-top: -300px;
+  height: 240px;
+  overflow: hidden;
+  padding: 20px;
+  color: #fff;
+}
+
+
+.bgimg{
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 375px;
+}
+
+.h_10{
+  height: 10px;
+}

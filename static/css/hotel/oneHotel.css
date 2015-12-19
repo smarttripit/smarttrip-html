@@ -42,3 +42,10 @@ vertical-align:middle;
 .p_cen{
 height:40px; line-height:40px;
 }
+
+.clearpadding{
+  padding:0px;
+}
+.Bright{
+  border-right:1px solid #DDDDDD; 
+}
