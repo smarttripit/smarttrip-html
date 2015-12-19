@@ -1,5 +1,5 @@
 // Add some markup & set some CSS
-$('.sp-wrap').append('<div class="sp-large"></div><div class="sp-thumbs sp-tb-active"></div>');//在.sp-wrap这个div后面加2个div
+//$('.sp-wrap').append('<div class="sp-large"></div><div class="sp-thumbs sp-tb-active"></div>');//在.sp-wrap这个div后面加2个div
 $('.sp-wrap a').appendTo('.sp-thumbs');
 $('.sp-thumbs a:first').addClass('sp-current').clone().removeClass('sp-current').appendTo('.sp-large');
 

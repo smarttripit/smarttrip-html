@@ -400,7 +400,7 @@
        </div>
 
        <div class="row">
-        <a id="spot_link_1" href="/discovery/oneSpot.html">
+        <a id="spot_link_0" href="">
          <div class="col-xs-12 col-sm-6 col-md-3">
            <div class="inner">
              <div>
@@ -420,7 +420,7 @@
          </div>
         </a>
        
-        <a id="spot_link_2" href="/discovery/oneSpot.html">
+        <a id="spot_link_1" href="">
          <div class="col-xs-12 col-sm-6 col-md-3">
            <div class="inner">
              <div>
@@ -440,7 +440,7 @@
          </div>
         </a>
 
-        <a id="spot_link_3" href="/discovery/oneSpot.html">
+        <a id="spot_link_2" href="">
          <div class="col-xs-12 col-sm-6 col-md-3">
            <div class="inner">
              <div>
@@ -460,7 +460,7 @@
          </div>
         </a>
 
-        <a id="spot_link_4" href="/discovery/oneSpot.html">
+        <a id="spot_link_3" href="">
          <div class="col-xs-12 col-sm-6 col-md-3">
            <div class="inner">
              <div>
@@ -704,6 +704,7 @@ function initSpots(){
               $("#spot_thumbnail_"+i).attr("src",spot.thumbnail);
               $("#spot_name_"+i).text(spot.name);
               $("#spot_feature_"+i).text(spot.feature);
+              $("#spot_link_"+i).attr("href", "/discovery/oneSpot.html?spotId="+spot.spotId);
             }
           }else{
             alert(result.tipMsg);
