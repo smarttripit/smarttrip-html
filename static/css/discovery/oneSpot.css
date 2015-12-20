@@ -1,0 +1,162 @@
+/*某一景点*/
+.scenery_spot1{/*background-image: url(http://st-alpha.oss-cn-beijing.aliyuncs.com/59c6b649feb3429492c0def9add3f395);*/width:100%;background-repeat: no-repeat;height:375px;background-size:cover;}
+.spot_back_position{
+width: 100%;
+margin-top: -290px;}
+.spot_back_title{background: rgba(87, 85, 85, 0.58);
+padding: 2px;
+color: #fff;}
+
+.spot_back{background: rgba(214, 213, 213, 0.58);padding: 15px;}
+.spot_back {padding-left: 20px;padding-right: 20px;}
+.spot_back_theme{display: inline-block;
+margin: 5px 10px 0px 0px;
+border-radius: 10px;
+padding: 5px 10px;
+text-align: center;
+border: 0px rgba(77, 154, 184, 0.47) solid;
+background: rgba(255, 255, 255, 0.47);
+color: #287C88;
+width:100%;}
+.spot_introduction1{color: #534D4D;margin-top: 10px;}
+.text_color_light{color: #C42E2E;
+font-size: 20px;}
+.spot_introduction2{color: rgba(60, 55, 55, 0.8);
+padding-left: 0px;
+margin-top: 5px;
+margin-bottom:0px;
+font-size: 15px;
+font-weight: 700;}
+
+.row_top_space{padding-top: 300px;}
+.row_bottom_space{margin-bottom: 10px;}
+.row_bottom_space1{margin-bottom: 20px;}
+
+@media screen and (max-width:992px){#basic_information1 .panel-body {padding: 15px 5px;}
+                                    } 
+@media screen and (min-width:992px){#basic_information1 .panel-body {padding: 15px 25px;}}
+ /*某一景点的固定顶部导航栏*/
+
+.panel-default>.panel-heading{background: #fff;}
+.spot_title_color{color:#45A4C9;}
+.navbar-inverse .navbar-toggle {
+border-color: transparent;
+background-color: #45A4C9;
+}
+.basic_information{padding: 20px;}
+.anchor_place{position:relative;height:0px;top:-70px;}
+
+/*基本信息*/
+/*左侧图片集*/
+ .sp-wrap {
+    display:none;
+    line-height:0;
+    font-size:0;
+    background:#eee;
+    position:relative;
+    border: 1px solid #E4E4E4;
+}
+.sp-large {
+    position:relative;
+    overflow:hidden;
+}
+.sp-large a img {
+    max-width:100%;
+    height:auto;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+}
+
+.sp-large a {
+    display:inline-block;
+}
+.sp-thumbs {
+    width:100%;
+    text-align:left;
+}
+
+.sp-thumbs img { width:60px;height:60px;}
+             
+                                     
+.sp-thumbs a:link, .sp-thumbs a:visited {
+    border:5px solid #eee;
+    display:inline-block;
+}
+.sp-thumbs a:hover, .sp-thumbs a:active, .sp-current {
+    border:5px solid rgba(228, 130, 23, 0.61)!important;
+}
+.sp-zoom {
+    position:absolute;
+    left:0;
+    top:0;
+    cursor:zoom;
+    cursor: -webkit-zoom-out;
+    cursor: -moz-zoom-out;
+    display:none;
+}
+.more_images{color: rgba(228, 130, 23, 1);padding: 20px 7px;float: right;margin-top: -67px;position: relative;}
+
+/*旅游详情*/
+.travel_details{background: rgba(14, 14, 14, 0.32);margin-top: -220px;color: #fff;height: 180px;padding: 20px;}
+@media screen and (max-width:992px){.travel_details{margin-top:0px;background: #fff;color: #000;padding: 20px;}                    
+                                    } 
+.traffic_and_tickets{padding-left: 20px;padding-right:20px;padding-top:0px;}
+.traffic_and_tickets h5{color:rgba(228, 130, 23, 1);}
+.traffic_and_tickets p b{color:rgba(228, 130, 23, 1);}
+.hotel_entrance{background: #F0F3EB;}
+.hotel_entrance p{font-size: 12px;}
+.hotel_name{margin-bottom: 10px;}
+.Reroute_name{font-size: 16px;}
+
+.hotel_price_old{color: #5B6468;font-size: 15px;margin-top: 2px;}
+.hotel_price_now{color: #DF893A;font-size: 18px;}
+/*.hotel_price_save{border: 1px solid #ffa338;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+-ms-border-radius: 2px;
+border-radius: 2px;
+color: #ffa338;
+padding: 2px;
+display: inline-block;}
+.look_more{margin-top: 2px;}*/
+.look_more a {
+padding: 5px 10px;
+color: #DF893A;
+}
+
+/*周周点评*/
+/*横向胶囊导航*/
+.nav-pills .defined_active{background-color: #94DEEC;}
+.nav-pills_defined li a {background-color: #C6D5D8;border-radius: 0px;padding: 6px 15px;margin-left: 4px;color: #fff;}
+/*下拉框*/
+.dropdown-menu{border:0px;box-shadow:0px;background:#C6D5D8;margin: 2px 0px 0px 4px;}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{background-color:#94DEEC;}
+.nav>li>a:hover {text-decoration: none;background-color: #94DEEC;}
+.mar_0{margin-left: 0px!important;margin-top: 0px!important;}
+  .tourist_pictures{width:80px;}
+@media screen and (max-width:992px){#zhouzhou_comment1 .panel-body {
+                                     padding: 15px 5%;}
+                                     .comment_picturesNum{margin-top:5px;color:#337ab7;display:block;}
+                                    
+                                    } 
+@media screen and (min-width:992px){#zhouzhou_comment1 .panel-body {
+                                     padding: 15px 10%;}
+                                     .comment_picturesNum{margin-top: 55%;color:#337ab7;display:block;}
+                                   
+                                    }
+
+#tourist_comment .col-md-3{margin-right: -15px;}
+.comment_time{margin-top: 8px;color: #8F8E8E;}
+.iwantcomment{float: right;
+background: #DF893A;
+color: #fff;
+padding: 5px 10px;
+margin-right: 10px;
+margin-top: 2px;}
+
+.iwantcomment:hover{color: #fff;}
+.left_words{margin-top:165px;color:#999;}
+.left_pic_num{font-size: 10px;color:#999;}
+.iwantcomment_text{font-size: 15px;color: #337ab7;}
+@media screen and (max-width:992px){.choose_position{width:600px;height:40px;}} 
+@media screen and (min-width:992px){.choose_position{width:600px;height:40px;left: 270px;position: absolute;top: 0px;}}

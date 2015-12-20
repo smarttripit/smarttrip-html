@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-.navbar_defined_homepage {
-  	margin-top: -375px;
-    border-color: transparent;
-    font-size: 16px;
-    background-color: rgba(34, 34, 34, 0.52);
-    border: 0px;
-    border-radius: 0px;
-}
-#navbar-collapse-1 li a{
-	color : white;
-}
-
-
-
 @charset "utf-8";
  body{padding-bottom:0px;background-color:rgba(51,153,204,0.08);font-family: 微软雅黑, 'Microsoft YaHei';}
  a {
@@ -45,19 +30,12 @@
 /*页面边距*/
 .mt_10{margin-top:-10px;}
 .mt20{margin-top:20px;}
+.mt_215{margin-top:215px;}
 .padRig1{padding-right:10px;}
+.row_space{margin-bottom: 5px;}
+.row_top_space{margin-top: 10px;}
+.row_bottom_space{margin-bottom: 10px;}
+.row_bottom_space1{margin-bottom: 20px;}
 
-
-
-.navbar_defined_homepage {
-  	margin-top: -375px;
-    border-color: transparent;
-    font-size: 16px;
-    background-color: rgba(34, 34, 34, 0.52);
-    border: 0px;
-    border-radius: 0px;
-}
-#navbar-collapse-1 li a{
-	color : white;
-}
+.header_image{height: 250px;width: 100%;margin-bottom: 20px;}
 

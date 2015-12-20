@@ -2,16 +2,14 @@
   <html lang="en">
    <head>
      <!-- 要紧接着head标签 -->
-	 <!--# include file="/common/head.html" -->
+	   <!--# include file="/common/head.html" -->
      <link rel="stylesheet" type="text/css" href="/static/css/index.css"> 
-     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-     <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="/static/css/common/index_top.css">
      <title>主页</title>
    </head>
-   <body>
-    
+   <body>    
      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="z-index:999;"> 
-      <!-- Wrapper for slides -->
+       <!-- Wrapper for slides -->
        <div class="carousel-inner" role="listbox">
           <div class="item active theme_image1" >
             <div class="carousel-caption">
@@ -38,22 +36,17 @@
           </div>
        </div>
      
-     <!-- Controls  --> 
+       <!-- Controls  --> 
        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> 
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>     
           <span class="sr-only">Previous</span> 
        </a> 
      
        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> 
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>     
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span> 
-       </a>
-    
-       
-     <!--# include file="/common/index_top.html"  -->
-       
-       
-       
+       </a>           
+      <!--# include file="/common/top.html"  -->                   
      </div>
 
      <div class="container in_center" id="summary-container">
@@ -197,7 +190,6 @@
            <div class="more"><a href="route/route.html" style=""> 更多>> </a> </div>
          </div>
        </div>
-
      </div>
  
      <div class="container in_center" id="summary-container">
@@ -486,250 +478,20 @@
            <div class="more"><a href="discovery/city.html" style="">更多>></a> </div>
          </div>
        </div>
-     </div>
-
-     
-
-   <!--# include file="/common/footer.html"  -->
-
-
-
-
-  
-   <!--<div id="backtotop"><a href="#top"><image data-spy="affix" data-offset-bottom="5" src="/static/images/uptop.png"/></a></div>-->
-
-       <!--     <div class="modal" id="choosecity">
-                 <div class="modal-dialog">
-                    <div class="modal-content">
-                       <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                          <p class="modal-title text-primary"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;请选择您所在的城市</p>
-                      </div>
-                      <div class="modal-body">
-                        <div class="citylist_box">
-                          <div class="city_list">
-                                <strong>热门城市：</strong>
-                                <a href="#" title="">上海</a>
-                                <a href="#" title="">北京</a>
-                                <a href="#" title="">广州</a>
-                                <a href="#" title="">深圳</a>
-                                <a href="#" title="">武汉</a>
-                                <a href="#" title="">天津</a>
-                                <a href="#" title="">西安</a>
-                                <a href="#" title="">南京</a>
-                                <a href="#" title="">杭州</a>
-                                <a href="#" title="">成都</a>
-                          </div>
-                          
-                          <div class="city_list">
-                             <strong>华北东北：</strong>
-                             <div class="city_1">                            
-                              <a href="#" title="">上海</a>                           
-                              <a href="#" title="">北京</a>
-                              <a href="#" title="">广州</a>
-                              <a href="#" title="">深圳</a>
-                              <a href="#" title="">武汉</a>
-                              <a href="#" title="">天津</a>
-                              <a href="#" title="">西安</a>
-                              <a href="#" title="">南京</a>
-                              <a href="#" title="">杭州</a>
-                              <a href="#" title="">成都</a>
-                             </div>
-                             
-                             <div class="city_2">                            
-                              <a href="#" title="">上海</a>                           
-                              <a href="#" title="">北京</a>
-                              <a href="#" title="">广州</a>
-                              <a href="#" title="">深圳</a>
-                              <a href="#" title="">武汉</a>
-                             </div>
-                          </div>
-                            
-                          <div class="city_list">
-                             <strong>华东地区：</strong>
-                             <div class="city_1">                            
-                              <a href="#" title="">上海</a>                           
-                              <a href="#" title="">北京</a>
-                              <a href="#" title="">广州</a>
-                              <a href="#" title="">深圳</a>
-                              <a href="#" title="">武汉</a>
-                              <a href="#" title="">天津</a>
-                              <a href="#" title="">西安</a>
-                              <a href="#" title="">南京</a>
-                              <a href="#" title="">杭州</a>
-                              <a href="#" title="">成都</a>
-                             </div>
-
-                              <div class="city_2">                            
-                              <a href="#" title="">上海</a>                           
-                              <a href="#" title="">北京</a>
-                              <a href="#" title="">广州</a>
-                              <a href="#" title="">深圳</a>
-                              <a href="#" title="">武汉</a>
-                              <a href="#" title="">天津</a>
-                              <a href="#" title="">西安</a>
-                              <a href="#" title="">南京</a>
-                             </div>
-                          </div>
-
-                          <div class="city_list">
-                             <strong>中部西部：</strong>
-                             <div class="city_1">                            
-                              <a href="#" title="">上海</a>                           
-                              <a href="#" title="">北京</a>
-                              <a href="#" title="">广州</a>
-                              <a href="#" title="">深圳</a>
-                              <a href="#" title="">武汉</a>
-                              <a href="#" title="">天津</a>
-                              <a href="#" title="">西安</a>
-                              <a href="#" title="">南京</a>
-                              <a href="#" title="">杭州</a>
-                              <a href="#" title="">成都</a>
-                             </div>
-
-                              <div class="city_2">                            
-                              <a href="#" title="">上海</a>                           
-                              <a href="#" title="">北京</a>
-                              <a href="#" title="">广州</a>
-                              <a href="#" title="">深圳</a>
-                              <a href="#" title="">武汉</a>
-                             </div>
-                          </div>
-
-                          <div class="city_list">
-                             <strong>华南地区：</strong>
-                             <div class="city_1">                            
-                              <a href="#" title="">上海</a>                           
-                              <a href="#" title="">北京</a>
-                              <a href="#" title="">广州</a>
-                              <a href="#" title="">深圳</a>
-                              <a href="#" title="">武汉</a>
-                              <a href="#" title="">天津</a>
-                              <a href="#" title="">西安</a>
-                              <a href="#" title="">南京</a>
-                              <a href="#" title="">杭州</a>
-                              <a href="#" title="">成都</a>
-                             </div>
-
-                             <div class="city_2">                            
-
-                              <a href="#" title="">上海</a>                           
-                              <a href="#" title="">北京</a>
-                              <a href="#" title="">广州</a>
-                              <a href="#" title="">深圳</a>
-                              <a href="#" title="">武汉</a>
-                              <a href="#" title="">天津</a>
-                              <a href="#" title="">西安</a>
-                             </div>
-                          </div>
-
-                          <div class="city_list">
-                             <strong>港澳台：</strong>
-                             <div class="city_1">                            
-                              <a href="#" title="">上海</a>                           
-                              <a href="#" title="">北京</a>
-                              <a href="#" title="">广州</a>
-                             </div>
-                          </div>
-
-                        </div>
-                      </div> 
-                    </div>
-                  </div>
-           </div>  -->
+     </div>    
+     <!--# include file="/common/footer.html"  -->
    
-
-  <!-- 核心js文件 -->
-	<!--# include file="/common/corejs.html" -->
-  <script src="/static/js/jquery.validate.js"></script>
-  <!--# include file="/common/login.html"  -->
-  <script src="/static/js/my_validate.js"></script>
-   
+     <!-- 核心js文件 -->
+	   <!--# include file="/common/corejs.html" -->
+     <script src="/static/js/index.js"></script> 
+     <script src="/static/js/jquery.validate.js"></script>
+     <!--# include file="/common/login.html"  -->
+     <script src="/static/js/my_validate.js"></script>     
+     <script type="text/javascript" src="/static/js/defined_c.js"></script>
  
-  
-<script>
-$(document).ready(function() {
-	// 加载经典线路
-	initRoutes();
-  initSpots();
-});
-
-// 加载经典线路
-function initRoutes(){
-	jQuery.ajax({
-		type : "GET",
-        async: false,
-        cache: false,
-        datatype : "json",
-        url : "/route/top3",
-        success : function(result){
-        	if(result.status == "success"){
-        		var data = result.data;
-        		for(var i=0; i<data.length; i++){
-        			var route = data[i];
-        			$("#route_thumbnail_"+i).attr("src", route.thumbnail);
-        			$("#route_name_"+i).text(route.name);
-        			$("#route_themes_"+i).text(route.themes);
-        			$("#route_briefRecommendation_"+i).text(route.briefRecommendation);
-        			$("#route_commentRatio_"+i).text(route.commentRatio);
-        			$("#route_purchaseCount_"+i).text(route.purchaseCount);
-        			$("#route_link_"+i).attr("href", "/route/oneRoute.html?routeId="+route.routeId);
-        		}
-        	}else{
-        		alert(result.tipMsg);
-        	}
-        },
-        error : function(data) {
-        	alert("系统异常");
-        }
-	});
-}
-
-function initSpots(){
-  jQuery.ajax({
-    type : "GET",
-        async: false,
-        cache: false,
-        datatype : "json",
-        url : "/spot/top4",
-        success : function(result){
-          if(result.status == "success"){
-            var data = result.data;
-            for(var i=0; i<data.length; i++){
-              //
-              
-              var spot = data[i];
-              //console.log(spot.name);
-              //console.log(spot.thumbnail);
-              $("#spot_thumbnail_"+i).attr("src",spot.thumbnail);
-              $("#spot_name_"+i).text(spot.name);
-              $("#spot_feature_"+i).text(spot.feature);
-              $("#spot_link_"+i).attr("href", "/discovery/oneSpot.html?spotId="+spot.spotId);
-            }
-          }else{
-            alert(result.tipMsg);
-          }
-        },
-        error : function(data) {
-          alert("系统异常");
-        }
-  });
-}
-
-$(function(){
-    $('[data-toggle="popover"]').popover({ html: "true",
-  });
-});
-</script>
-<script type="text/javascript" src="/static/js/defined_c.js"></script>
- 
-
-
-
-<!--ajax测试-->
-<script>
-
-$('#username').blur(function(){
+     <!--ajax测试-->
+     <script>
+        $('#username').blur(function(){
     $.ajax({
         type: "GET",
         cache:false,
@@ -745,7 +507,7 @@ $('#username').blur(function(){
                    	}
                  }
     });
-});
-</script>
-  </body>
+         });
+     </script>
+   </body>
   </html>

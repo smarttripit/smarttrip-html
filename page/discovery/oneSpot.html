@@ -1,38 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <!-- 要紧接着head标签 -->
-   <!--# include file="/common/head.html" -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>oneSpot</title>
-
-    <!-- Bootstrap & Snippet plugin core CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="/static/css/stickup.css" rel="stylesheet">   
-    <link href="/static/css/defined.css" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/pagination.css">
-    <!-- Custom Fonts -->
-    <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
-    <link href="/static/css/star-rating1.css" media="all" rel="stylesheet" type="text/css"/> 
-    <link href="/static/css/fileinput.css" media="all" rel="stylesheet" type="text/css" /> 
-    <link href="/static/css/default.css" media="all" rel="stylesheet" type="text/css" /> 
+    <!-- 要紧接着head标签 -->
+    <!--# include file="/common/head.html" -->          
+    <link rel="stylesheet" type="text/css" href="/static/css/discovery/oneSpot.css" >
+    <link rel="stylesheet" type="text/css" href="/static/css/common/index_top.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/pagination.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/stickup.css" > 
+    <link rel="stylesheet" type="text/css" href="/static/css/star-rating1.css" /> 
+    <link rel="stylesheet" type="text/css" href="/static/css/jquery.fancybox.css?v=2.1.2" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/static/css/fileinput.css"  />
+    <link rel="stylesheet" type="text/css" href="/static/css/jquery.fancybox-buttons.css?v=1.0.5" /> 
+    <link rel="stylesheet" type="text/css" href="/static/css/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <title>oneSpot</title> 
   </head>
   <body>
 
     <!-- START THE COVER -->
     <div id="home" class="carousel">
       <div class="carousel-inner">
-        <!--# include file="/common/login.html"  -->
-        
+           <!--# include file="/common/login.html"  -->        
            <div style="height:375px;">
              <div class="scenery_spot1" id="spot_backgroundImg"></div> 
-             <!--# include file="/common/index_top.html"  -->
+             <!--# include file="/common/top.html"  -->
            </div>
 
            <div class=" spot_back_position">
@@ -84,7 +74,7 @@
                 </div>              
            </div>
        
-          <div class="container row_top_space row_bottom_space " >
+           <div class="container row_top_space row_bottom_space " >
             <div class="row in_center">
                 <div class="col-md-12 col-sm-12 col-xs-12 row_space">
                    <a href="suoluetu.html"> <h4 style="color:#DB6464;"><strong>游览导图</strong></h4></a>
@@ -95,10 +85,10 @@
                     <img id="spot_map" src="/static/images/spot_map.png" class="img-responsive" />
                 </div>
             </div>
-          </div>
+           </div>
       </div><!-- END COVER -->
 
-    <!-- START THE NAVBAR -->
+      <!-- START THE NAVBAR -->
       <div class="navbar-wrapper">
         <div class="container">
           <div class="navwrapper">
@@ -129,9 +119,8 @@
         </div>
       </div> <!-- END NAVBAR -->
 
-    <!-- START THE CONTENT -->
+      <!-- START THE CONTENT -->
       <div id='contents'class="container">  
-
         <!-- START THE basic_information -->
         <div id="basic_information" class="anchor_place"></div>   
         <div id="basic_information1" class="row featurette  panel panel-default"> 
@@ -142,7 +131,6 @@
              <div class="col-xs-12 col-sm-8 col-md-8 page">
                <div class="sp-wrap">
                 <div class="sp-large">
-
                 </div>
                 <div class="sp-thumbs sp-tb-active">                
                 <a href="#"><img src="" style="display:none;" class="spot_images_0"></a>
@@ -174,9 +162,6 @@
 
          <div class="panel-body col-xs-12 col-sm-12 col-md-12">
           <div class="col-xs-12 col-sm-12 col-md-12 panel-body traffic_and_tickets" id="spot_ticketInfo">           
-             <!--<p> <b>票面价：</b>￥20/人</p>
-             <p> <b >套餐价：</b>￥15/人</p>
-             <p>景区统一售票，暂无其他优惠。以上信息仅供参考，具体信息请以北京爱上水索道滑水当天披露为准。</p> -->
           </div>
          </div>  
         </div> <!-- END spot_tickets -->
@@ -189,12 +174,6 @@
          </div>
          <div class="panel-body col-xs-12 col-sm-12 col-md-12">
           <div class="col-xs-12 col-sm-12 col-md-12 panel-body traffic_and_tickets" id="spot_transportInfo">
-            <!-- <h5><b>自驾</b></h5>
-             <p>沿河城村位于109国道80公里处路口转高沿路（高铺～沿河城）14公里处。从国道路口途经白虎头、牛战、石河、林字台、王龙口等村。</p>
-             <h5><b>公交</b></h5>
-             <p>到达地铁苹果园站后乘坐892在向阳城站下车（每辆892到达的地方不一样上车前问清楚师傅是否到沿河城村）</p>
-             <h5><b>其他</b></h5>
-             <p>如果您不想自行坐车前往，可选择我们为您提供的专车服务。</p>-->
           </div>
          </div>       
         </div>  <!-- END traffic_guidance -->
@@ -207,12 +186,6 @@
           </div>
           <div class="panel-body col-xs-12 col-sm-12 col-md-12">
             <div class="col-xs-12 col-sm-12 col-md-12 panel-body traffic_and_tickets" id="spot_notice">
-             <!--<h5><b>开放时间</b></h5>
-             <p>沿河城村位于109国道80公里处路口转高沿路（高铺～沿河城）14公里处。从国道路口途经白虎头、牛战、石河、林字台、王龙口等村。</p>
-             <h5><b>浏览时长</b></h5>
-             <p>到达地铁苹果园站后乘坐892在向阳城站下车（每辆892到达的地方不一样上车前问清楚师傅是否到沿河城村）</p>
-             <h5><b>适宜季节</b></h5>
-             <p>如果您不想自行坐车前往，可选择我们为您提供的专车服务。</p>-->
             </div>
           </div> 
         </div> <!-- END zhouzhou_tips -->
@@ -396,7 +369,7 @@
                </div>
             </div>
 
-            <div class="row" id="comment_0" style="display:none;">
+            <div class="row row_bottom_space1" id="comment_0" style="display:none;">
              <div class="col-xs-12 col-sm-12 col-md-12">
                <div class="row">
                  <div class="col-xs-3 col-sm-2 col-md-2 in_center">
@@ -429,7 +402,7 @@
              </div>
             </div>
             
-            <div class="row" id="comment_1" style="display:none;">
+            <div class="row row_bottom_space1" id="comment_1" style="display:none;">
              <div class="col-xs-12 col-sm-12 col-md-12">
                <div class="row">
                  <div class="col-xs-3 col-sm-2 col-md-2 in_center">
@@ -462,7 +435,7 @@
              </div>
             </div>
 
-            <div class="row" id="comment_2" style="display:none;">
+            <div class="row row_bottom_space1" id="comment_2" style="display:none;">
              <div class="col-xs-12 col-sm-12 col-md-12">
                <div class="row">
                  <div class="col-xs-3 col-sm-2 col-md-2 in_center">
@@ -495,7 +468,7 @@
              </div>
             </div>
 
-            <div class="row" id="comment_3" style="display:none;">
+            <div class="row row_bottom_space1" id="comment_3" style="display:none;">
              <div class="col-xs-12 col-sm-12 col-md-12">
                <div class="row">
                  <div class="col-xs-3 col-sm-2 col-md-2 in_center">
@@ -528,7 +501,7 @@
              </div>
             </div>
 
-            <div class="row" id="comment_4" style="display:none;">
+            <div class="row row_bottom_space1" id="comment_4" style="display:none;">
              <div class="col-xs-12 col-sm-12 col-md-12">
                <div class="row">
                  <div class="col-xs-3 col-sm-2 col-md-2 in_center">
@@ -561,7 +534,7 @@
              </div>
             </div>
 
-            <div class="row" id="comment_5" style="display:none;">
+            <div class="row row_bottom_space1" id="comment_5" style="display:none;">
              <div class="col-xs-12 col-sm-12 col-md-12">
                <div class="row">
                  <div class="col-xs-3 col-sm-2 col-md-2 in_center">
@@ -608,9 +581,6 @@
                   <textarea class="form-control row_bottom_space" rows="6" placeholder="最多可输入150字"></textarea>
                 </div>    
               </div>
-              <!--<div  class="col-xs-12 col-sm-4 col-md-4 left_words"> 
-                   <span>还可以输入<span>0</span>/150字</span>
-              </div> -->
               <div class="col-xs-12 col-sm-8 col-md-8 iwantcomment_text">
               <p style="font-size:14px;"><i class="fa fa-camera"></i>&nbsp;分享你的旅行图片<span class="left_pic_num">（已上传<span>0</span>/10张）</span></p>
               <div class="htmleaf-container">
@@ -637,182 +607,28 @@
     <!-- Bootstrap & Plugins core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="/static/js/jquery.min.js"></script>
-    <!--解决jquery版本过高删掉的一些东西 -->
-<script src="/static/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-   
-      <!-- Add jQuery library -->
-  
-
-  <!-- Add mousewheel plugin (this is optional) -->
-  <script type="text/javascript" src="/static/js/jquery.mousewheel-3.0.6.pack.js"></script>
-
-  <!-- Add fancyBox main JS and CSS files -->
-  <script type="text/javascript" src="/static/js/jquery.fancybox.js?v=2.1.3"></script>
-  <link rel="stylesheet" type="text/css" href="/static/css/jquery.fancybox.css?v=2.1.2" media="screen" />
-
-  <!-- Add Button helper (this is optional) -->
-  <link rel="stylesheet" type="text/css" href="/static/css/jquery.fancybox-buttons.css?v=1.0.5" />
-  <script type="text/javascript" src="/static/js/jquery.fancybox-buttons.js?v=1.0.5"></script>
-
-  <!-- Add Thumbnail helper (this is optional) -->
-  <link rel="stylesheet" type="text/css" href="/static/css/jquery.fancybox-thumbs.css?v=1.0.7" />
-  <script type="text/javascript" src="/static/js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-
-    <!-- ### IMPORTANT ### stickUp javascript file -->
-    <!-- ######################################### --> 
-  <script src="/static/js/stickUp.js"></script>
-    
-  <script type="text/javascript" src="/static/js/star-rating1.js" ></script>
-    
-    <!-- ######################################### -->
+    <!--# include file="/common/corejs.html"  -->
+    <script src="/static/js/discovery/oneSpot.js" type="text/javascript"></script>
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="/static/js/jquery.mousewheel-3.0.6.pack.js"></script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="/static/js/jquery.fancybox.js?v=2.1.3"></script>
+    <!-- Add Button helper (this is optional) -->  
+    <script type="text/javascript" src="/static/js/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <!-- Add Thumbnail helper (this is optional) --> 
+    <script type="text/javascript" src="/static/js/jquery.fancybox-thumbs.js?v=1.0.7"></script> 
+    <script type="text/javascript" src="/static/js/smoothproducts.js"></script>
+    <script src="/static/js/stickUp.js"></script>    
+    <!-- 以下两个js文件用于实现无刷新分页 -->
+    <script src="/static/js/pagination/bootstrap-paginator.min.js"></script>
+    <script src="/static/js/pagination/st-paginator.js"></script>    
     <!-- 上传照片-->
-  <script src="/static/js/fileinput.js" type="text/javascript"></script>
-  <script src="/static/js/fileinput_locale_zh.js" type="text/javascript"></script>
-  <script>
-    (function($){
-          $.getUrlParam
-            = function(name)
-                     {
-                      var reg = new RegExp("(^|&)"+name +"=([^&]*)(&|$)");
-                      var r = window.location.search.substr(1).match(reg);
-                      if (r!=null) 
-                        return unescape(r[2]); 
-                      return null;
-                     }
-    })(jQuery);
-    var spotId = $.getUrlParam('spotId');
-    var productId = $.getUrlParam('productId');
-
-    $(document).ready(function() { 
-       initSpots();// 加载发现北京详情页
-       initImages();// 加载景点详情的图片集
-       initLocations();// 加载景点详情的图片集
-    });
-
-    // 加载发现北京详情页
-    function initSpots(){
-      jQuery.ajax({
-        type : "GET",
-        async: false,
-        cache: false,
-        datatype : "json",
-        url : "/spot/detail?spotId="+spotId,
-        success : function(result){
-          if(result.status == "success"){
-            var spot = result.data;            
-              $(".scenery_spot1").css("background-image", "url("+spot.backgroundImg+")");
-              $("#spot_name").text(spot.name);
-              $("#spot_recommendation").text(spot.recommendation);
-              $("#spot_commentRatio").text(spot.commentRatio);
-              $("#spot_duration").text(spot.duration);
-              $("#spot_travelTime").text(spot.travelTime);
-              $("#spot_map").attr("src", spot.map);
-              $("#spot_basicInfo").html(spot.basicInfo);
-              $("#spot_ticketInfo").html(spot.ticketInfo);
-              $("#spot_transportInfo").html(spot.transportInfo);
-              $("#spot_notice").html(spot.notice);
-              $("#spot_spotLocationInfo").html(spot.spotLocationInfo);
-              for(var j=0;j<spot.themes.length;j++)
-              {
-                $("#spot_themes_"+j).css("display","block" );
-                $("#spot_themes_"+j).text(spot.themes[j].name);
-              }
-          }else{
-            alert(result.tipMsg);
-          }
-        },
-        error : function(data) {
-          alert("系统异常");
-        }
-      });
-    }
-
-    function initImages(){
-      jQuery.ajax({
-        type : "GET",
-        async: false,
-        cache: false,
-        datatype : "json",
-        url : "/spot/images?spotId="+spotId,
-        success : function(result){
-          if(result.status == "success"){
-              var imagesHref=[];
-              for(var j=0;j<result.data.length;j++)
-              {
-                var image = result.data[j];
-                var obj=new Object();
-                $(".spot_images_"+j).css("display","block" );
-                $(".spot_images_"+j).attr("src",image.imageURL);
-                obj.href= image.imageURL;
-                imagesHref.push(obj);//按顺序依次push进去
-              }
-              //console.log(imagesHref);
-             $('.fancybox').fancybox();
-             $("#fancybox-manual-c").click(function() {
-                    $.fancybox.open(imagesHref,
-                      {
-                        helpers : {thumbs : {width: 75,height: 50}}
-                      });
-                   });   
-         }else{
-            alert(result.tipMsg);
-          }
-        },
-        error : function(data) {
-          alert("系统异常");
-        }
-     });
-    }
-
-    function initLocations(){
-      jQuery.ajax({
-        type : "GET",
-        async: false,
-        cache: false,
-        datatype : "json",
-        url : "/spot/locations?spotId="+spotId,
-        success : function(result){
-          if(result.status == "success"){ 
-              var locations=Array();
-              locations.push(result.data.type1);
-              locations.push(result.data.type2);
-              locations.push(result.data.type3);
-              //console.log(locations);
-              //console.log(locations.length);
-              for(var i=0;i<locations.length;i++)
-              {
-                for(var j=0;j<locations[i].length;j++)
-                { 
-                  //console.log(locations[i].length);
-                  //console.log(locations[i]);
-                  $("#locations_"+i+j).css("display","block" );                                  
-                  $("#locations_name_"+i+j).text(locations[i][j].name);
-                  $("#locations_description_"+i+j).text(locations[i][j].description);
-                  $("#locations_imageURL_"+i+j).attr("src",locations[i][j].imageURL);
-                  $("#locations_link_"+i+j).attr("href",locations[i][j].link);
-                }
-              }              
-         }else{
-            alert(result.tipMsg);
-          }
-        },
-        error : function(data) {
-          alert("系统异常");
-        }
-     });
-    }
-
-    $(function(){
-        $('[data-toggle="popover"]').popover({ html: "true",
-      });
-    });
-  </script>
-  <script type="text/javascript" src="/static/js/smoothproducts.js"></script>
-
-  <script>
-    $('#username').blur(function(){
+    <script type="text/javascript" src="/static/js/star-rating1.js" ></script>
+    <script src="/static/js/fileinput.js" type="text/javascript"></script>
+    <script src="/static/js/fileinput_locale_zh.js" type="text/javascript"></script>
+    <script src="/static/js/filein.js" type="text/javascript"></script>
+    <script>
+      $('#username').blur(function(){
        $.ajax({
         type: "GET",
         cache:false,
@@ -828,139 +644,7 @@
                     }
                  }
         });
-    });
-  </script>
-
-   <!-- ######################################### -->
-   <script type="text/javascript">
-    $(document).ready(function() {
-
-       
-
-
-    });
-  </script>
-  <style type="text/css">
-    .fancybox-custom .fancybox-skin {box-shadow: 0 0 50px #222;}
-    #fancybox-thumbs.bottom {bottom: 15px;}
-    .fancybox-overlay{background: rgba(0, 0, 0, 0.82)}
-  </style>
-
-    <!-- ### IMPORTANT ### stickUp options in use -->
-    <!-- ######################################## -->
-  <script type="text/javascript">
-      jQuery(function($) {
-        $(document).ready( function() {
-          $('.navbar-wrapper').stickUp({
-                        parts: {                         
-                          0:'basic_information',
-                          1: 'spot_tickets',
-                          2: 'traffic_guidance',
-                          3: 'zhouzhou_tips',
-                          4: 'travel_details',
-                          5: 'zhouzhou_comment'
-                          
-                        },
-                        parts1: {                         
-                          0:'basic_information1',
-                          1: 'spot_tickets1',
-                          2: 'traffic_guidance1',
-                          3: 'zhouzhou_tips1',
-                          4: 'travel_details1',
-                          5: 'zhouzhou_comment1'
-                        },
-                        itemClass: 'menuItem',
-                        itemHover: 'active',
-                        topMargin: 'auto'
-                      });
-        });
       });
-
-      //好评差评中评
-      $("#good_bad_comment ul li a").click(function(){if($(this).has(".defined_active")){ 
-      $(this).addClass("defined_active").parent("li").siblings("li").find("a").removeClass("defined_active");}})    
-  </script>
-    <!-- ######################################## -->
-    <!-- 分页的js-->
-  <!-- 以下两个js文件用于实现无刷新分页 -->
-  <script src="/static/js/pagination/bootstrap-paginator.min.js"></script>
-  <script src="/static/js/pagination/st-paginator.js"></script>
-  <script>
-   $(document).ready(function() {
-    // 加载发现北京评论列表
-    var paginationOptions = {
-      domId : "pager2",
-      productType:"03",
-      url : "/comment/getByPage?productId="+productId,
-      page : 1,
-      rows : 6,
-      queryParams : {score:""},
-      dealData : function(dataList){
-        var len = dataList.length;
-        if(len > 0){
-          for(var i=0; i<len; i++){
-            var row = dataList[i];
-            $("#comment_"+i).css("display","block" );
-            //console.log(row.routeId);            
-            $("#comment_id_"+i).text(row.commentId);//
-            $("#comment_content_"+i).text(row.content);            
-            $("#comment_score_"+i).text(row.score);//
-            $("#comment_commentTime_"+i).text(row.commentTime);
-            $("#comment_visitorName_"+i).text(row.visitorName);
-            $("#comment_visitorId_"+i).text(row.visitorId);//
-            var images = row.images;
-            var len1=images.length;
-            $("#comment_imgNum_"+i).text(len1);
-            var imagesHref2=[];
-
-            if(images.length > 0){
-              for(var j=0; j<images.length; j++){
-                var img = images[j];
-                var obj=new Object();
-                $("#comment_images_"+i+j).css("display","block" );
-                $("#comment_images_"+i+j).attr("src",img.imageURL);
-                obj.href= img.imageURL;
-                imagesHref2.push(obj);//按顺序依次push进去 
-              }
-            }
-            console.log(imagesHref2);
-            $('.fancybox').fancybox();
-            $(".fancybox-manual-a").click(function() {
-               $.fancybox.open(imagesHref2,
-                 {
-                   helpers : { thumbs : {width: 75,height: 50}
-                 }
-               });
-            });
-          }
-        }
-      }
-    }
-    pagination(paginationOptions);
-   });
-
-  </script>
-
-  <script>
-    $("#file-1").fileinput({
-          uploadUrl: '#', // you must set a valid URL here else you will get an error
-          allowedFileExtensions : ['jpg', 'png','gif'],
-          overwriteInitial: false,
-          maxFileSize: 1000,
-          maxFilesNum: 10,
-          //allowedFileTypes: ['image', 'video', 'flash'],
-          slugCallback: function(filename) {
-              return filename.replace('(', '_').replace(']', '_');
-          }
-    });
-
-    $(document).ready(function() {
-          $("#test-upload").fileinput({
-              'showPreview' : false,
-              'allowedFileExtensions' : ['jpg', 'png','gif'],
-              'elErrorContainer': '#errorBlock'
-          });
-    });
-  </script>
+    </script> 
   </body>
 </html>

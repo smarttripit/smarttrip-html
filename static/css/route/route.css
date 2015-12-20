@@ -1,0 +1,37 @@
+/* //经典路线二级页面// */
+.all_top{height:250px;z-index:1;position: relative;margin-bottom:20px;}
+
+/*左侧导航*/
+.panel-group_defined{border: 2px #ececec solid;width:100%;background: #fff;font-size: 14px;}
+.panel_defined{background: transparent;border:0px;background-color: #fff;}
+.panel-heading_defined{padding-bottom: 0px;}
+.panel-title_defined{line-height: 43px;border-bottom: 1px #d1d1d1 solid;font-size: 18px;color: #333;}
+.panel-body_defined{padding-bottom: 0px;border-top:0px;}
+.panel-group .panel+.panel {margin-top: 0px; }
+#collapseOne a{margin-bottom: 8px;}
+#collapseThree a{margin-bottom: 8px;}
+.click_down {color: #999;float: right;margin-top: 18px;font-size: 14px;margin-right: 23px;}
+.place_days{font-size: 15px;}
+.place_days_active{color:#4ea1f5;}
+.choosetheme a {display: inline-block;width: 100%;margin-bottom: 10px;border: 1px rgba(170, 170, 170, 0.47) solid;border-radius: 4px;padding: 5px;text-align: center;}
+.all {font-size:15px;color: #4ea1f5;}
+
+/*横向胶囊导航*/
+.nav-pills .defined_active{background-color: #94DEEC;}
+.nav-pills_defined li a {background-color: #C6D5D8;border-radius: 0px;padding: 6px 15px;margin-left: 4px;color: #fff;}
+/*下拉框*/
+.dropdown-menu{border:0px;box-shadow:0px;background:#C6D5D8;margin: 2px 0px 0px 4px;}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{background-color:#94DEEC;}
+.nav>li>a:hover {text-decoration: none;background-color: #94DEEC;}
+.mar_0{margin-left: 0px!important;margin-top: 0px!important;}
+
+/*右边列表*/
+.route_back{margin-top: 10px;padding:15px;}
+.route_left_title{color:#332D2D;}
+.label {display: inline-block;width: 15%;border: 1px #4ea1f5 solid;border-radius: 20px;padding: 3px;text-align: center;float: right;font-size: 12px;margin-top: 10px;margin-bottom: 10px;margin-left: 3px;margin-right: 3px;color: #4ea1f5;}
+.text1{font-size: 14px;color:#666;}
+.text2{font-size: 12px;color:#4ea1f5;margin-top: 10px;}
+.price_right {float: right;color: #ACA8A5;font-size: 15px;font-family: 黑体;}
+.pager {margin: 0px 0;text-align: right;}
+@media screen and (max-width:768px){ .label{float:left;} }     
+@media screen and (max-width:750px){ .price_right {float: left;color: #ACA8A5;font-size: 15px;font-family: 黑体;}                                     } 

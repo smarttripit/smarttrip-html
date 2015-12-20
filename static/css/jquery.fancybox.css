@@ -247,3 +247,7 @@
 	background: #000;
 	background: rgba(0, 0, 0, .8);
 }
+
+    .fancybox-custom .fancybox-skin {box-shadow: 0 0 50px #222;}
+    #fancybox-thumbs.bottom {bottom: 15px;}
+    .fancybox-overlay{background: rgba(0, 0, 0, 0.82)}

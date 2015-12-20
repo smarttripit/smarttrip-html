@@ -1,0 +1,98 @@
+/*发现北京地图页*/
+/*小地图*/
+.miyun{left: 63%;top: 26.5%;position: absolute;}
+.huairou{left: 47.5%;top: 14%;position: absolute;}
+.yanqin{left: 26%;top: 26.5%;position: absolute;}
+.changping{left: 30.3%;top: 44.3%;position: absolute;}
+.shunyi{left: 55%;top: 48.5%;position: absolute;}
+.pinggu{left: 73.5%;top: 45.5%;position: absolute;}
+.tongzhou{left: 57%;top: 61%;position: absolute;}
+.zhongxin{left: 38%;top: 54.5%;position: absolute;}
+.mentougou{left: 12.5%;top: 53.5%;position: absolute;}
+.fangshan{left: 12.8%;top: 65%;position: absolute;}
+.daxing{left: 44%;top: 70%;position: absolute;}
+
+.spot_search_text{color:#797777;}
+.spot_search_text p a strong{font-size: 15px;color:#78A8DA;}
+.city_active{background: #78A8DA;border-color:#fff;color:#fff;}
+.city_inactive{color:#999;}
+.hot_spot {margin-right:10px;}
+.display_in{display: run-in;}
+.display_none{display: none;}
+.right_back{padding:90px 10px 20px 0px;}
+.right_back ul{list-style:none;-webkit-padding-start: 0px;margin-bottom:5px;}
+.right_back ul li{}
+.right_back ul li a{width:100%;}
+.else_active{background: #78A8DA;border-color:#fff;color:#fff;}
+.btn_defined{background: #78A8DA;width: 100%;color:#fff;}
+.beijingmap{padding-left: 0px;}
+
+/*面包屑导航*/
+.breadcrumb{background-color: #fff;margin-bottom: 0px;padding: 10px 8px;}
+.breadcrumb a{color:#588DC2;}
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: "> ";
+    padding: 0 5px;
+}
+.search_back{background-color: #fff;padding: 5px;}
+
+.filter1_title{color: #75B9CE;} 
+.filter2_title{color: #7D8ABB;} 
+.filter3_title{color: #EB9D55;} 
+.filter4_title{color: #4AA825;} 
+.filter_body a{display: inline-block;
+width: 100%;
+margin-bottom: 4px;
+border-radius: 4px;
+padding: 5px;
+text-align: center;
+border: 1px rgba(170, 170, 170, 0.47) solid;
+}
+
+.filter_2{background:#fff;margin-bottom:15px;margin-top:15px;}
+.filter_title_2{padding-right:0px;}
+.filter_body_2 ul li a{display: inline-block;
+margin: 5px 10px;
+border-radius: 4px;
+padding: 5px 10px;
+text-align: center;
+border: 1px rgba(170, 170, 170, 0.47) solid;
+}
+@media screen and (min-width:750px){
+                                      .mar_left1{margin-left: -20px;}
+                                    } 
+@media screen and (max-width:750px){
+                                      .mar_left1{margin-left: 15px;}
+                                    }   
+.filter_body_2{
+    padding-left: 0px;   
+}
+.filter_body_2 .col-md-3{padding-left: 0px;}
+.filter_body_2 .col-md-4{padding-left:5px;padding-right:5px;}
+.filter_body_2 .col-md-6{padding-left:5px;padding-right:5px;}
+
+.season_pad{padding: 5px 17px;}
+.padRight{padding-right:0px;}
+.padfour{padding-top: 15px;padding-bottom: 15px;padding-left: 10px;padding-right:25px;}
+.filter_body .col-md-3{padding-right: 0px;}
+.filter_body .col-md-4{padding-left:5px;padding-right:5px;}
+.filter_body .col-md-6{padding-left:5px;padding-right:5px;}
+
+.ad_image{height: 100px;width: 100%;margin-bottom: 20px;}
+.images_list .col-md-3{padding-left:5px;padding-right:5px;}
+.images_list {margin-left: 0px;margin-right: 0px; }
+.spot_discription{margin-top:-130px;width: 100%;height: 130px;padding: 20px 0px 10px 0px;
+  background: url(https://gtms03.alicdn.com/tps/i3/TB19JS3HVXXXXafXpXXxIHh6FXX-230-130.png) repeat;}
+.find_title{color: #fff;font-size: 16px;}
+.find_text{color: #fff;font-size: 12px;}  
+
+.city_theme_all{display: inline-block;
+border: 0px;
+padding: 5px 0px 5px 25px;
+color: #78A8DA;
+float: right;
+margin-right: -10px;
+}
+
+.cut_line{border: none;border-top: 2px dashed rgba(0, 102, 204, 0.16);margin: 0px;margin-bottom: 20px;}

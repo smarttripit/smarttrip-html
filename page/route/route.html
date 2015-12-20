@@ -1,40 +1,24 @@
  <!DOCTYPE html>
   <html lang="en">
    <head>
-     <meta charset="utf-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>经典路线</title>
-
-     <!-- Bootstrap -->
-     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-     <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
-
-     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-     <![endif]-->
-  
-     <link href="/static/css/defined.css" rel="stylesheet">
-     <link rel="stylesheet" type="text/css" href="/static/css/style.css"> 
+     <!-- 要紧接着head标签 -->
+     <!--# include file="/common/head.html" -->
+     <!-- Bootstrap -->          
+     <link rel="stylesheet" type="text/css" href="/static/css/route/route.css" >
+     <link rel="stylesheet" type="text/css" href="/static/css/common/top.css">
+     <title>经典路线</title> 
    </head>
 
    <body>
-    <!--# include file="/common/login.html"  -->
-    <div class="all_top">
-      <img src="/static/images/themeimage4.jpg" class="header_image"> 
-      <!--# include file="/common/top.html"  -->    
-    </div>  
+      <!--# include file="/common/login.html"  -->
+      <div class="all_top">
+        <img src="/static/images/themeimage4.jpg" class="header_image"> 
+        <!--# include file="/common/top.html"  -->    
+      </div>  
 
-    <div class="container">
-   
-      <!--  <ol class="breadcrumb">
-        <li><a href="/index.html">首页</a></li>
-        <li class="active">经典路线</li>
-      </ol> -->
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-3">
             <div class="panel-group panel-group_defined" id="accordion">
               <div class="panel_defined">
                 <div class="panel-heading panel-heading_defined">
@@ -224,49 +208,29 @@
                      </div>            
                    </div>
                  </div>
-              </div>
-    
+              </div>    
             </div>
-        </div>
+          </div>
 
-        <div class="col-xs-12 col-sm-8 col-md-9">
+          <div class="col-xs-12 col-sm-8 col-md-9">
           <!-- 选项卡组件（菜单项nav-tabs）-->
-          <!--  <ul id="myTab" class="nav nav-tabs" role="tablist"> -->
           <div class="row" id="navpills">
             <div class="col-xs-9 col-sm-6 col-md-8" id="good_bad_comment">
                <ul class="nav nav-pills nav-pills_defined">
-                <li class=""><a href="javascript:;" id="SynthesisComment" class="defined_active">综合</a></li>
+                  <li class=""><a href="javascript:;" id="SynthesisComment" class="defined_active">综合</a></li>
                   <li><a href="javascript:;"  id="GoodComment">好评率</a></li>
                   <li class="dropdown"><a href="javascript:;" class="dropdown-toggle nav-pills_defined" data-toggle="dropdown" >价格<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#price_up" class="mar_0" id="Price_lowTohigh_Comment">价格由低到高</a></li>
-                      <li><a href="#price_down" class="mar_0" id="Price_highTolow_Comment">价格由高到低</a></li>
-                    </ul>
+                     <ul class="dropdown-menu">
+                        <li><a href="#price_up" class="mar_0" id="Price_lowTohigh_Comment">价格由低到高</a></li>
+                        <li><a href="#price_down" class="mar_0" id="Price_highTolow_Comment">价格由高到低</a></li>
+                     </ul>
                   </li>
-
-              </ul>
-            </div>
-            <!--<div class="col-xs-3 col-sm-6 col-md-4">
-               <ul class="pager" id="pager">
-                 <li><a href="#"><</a></li>
-                 <li><a href="#">></a></li>
                </ul>
-            </div>-->
-            
+            </div>            
           </div>
-              
-              <!--
-              <li class="active"><a href="#comprehensive" role="tab" data-toggle="tab">综合</a></li>
-              <li><a href="#goodreputation" role="tab" data-toggle="tab">好评率</a></li>
-              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">价格<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#price_up">价格由低到高</a></li>
-                  <li><a href="#price_down">价格由高到低</a></li>
-                </ul>
-              </li> -->
-          <!--     </ul> -->
+
           <!-- 选项卡面板 -->
-          <div id="myTabContent" class="tab-content inner_img">
+          <div id="myTabContent" class="tab-content">
             <div class="tab-pane fade in active" id="comprehensive">
               <a  id="route_0" href="/route/oneRoute.html" style="display:none;">
                 <div class="col-xs-12 col-sm-12 col-md-12 panel-group_defined route_back">
@@ -497,435 +461,25 @@
               </a>
             
               <div class="col-xs-12 col-sm-12 col-md-12 all in_center">
-                 <!-- <ul id="pager" class="pagination">
-                   <li><a href="#">&laquo;</a></li>
-                   <li class="active"><a href="#">1</a></li>
-                   <li><a href="#">2</a></li>
-                   <li><a href="#">3</a></li>
-                   <li><a href="#">4</a></li>
-                   <li><a href="#">5</a></li>
-                   <li><a href="#">&raquo;</a></li>
-                 </ul> -->
                  <ul id="pager2"></ul>
               </div>
             </div>
-            <div class="tab-pane fade" id="goodreputation">好评率排序</div>
-            <div class="tab-pane fade" id="price_up">价格由低到高</div>
-            <div class="tab-pane fade" id="price_down">价格由高到低</div>
+          </div>
           </div>
         </div>
       </div>
-    </div>
-     <!--# include file="/common/footer.html"  -->
+      <!--# include file="/common/footer.html"  -->
 
-
-  <script src="/static/js/jquery.min.js"></script> 
-  <script src="/static/js/bootstrap.min.js"></script>
-  <script src="/static/js/jquery.validate.js"></script>
-  <script src="/static/js/my_validate.js"></script>
-  <!-- 以下两个js文件用于实现无刷新分页 -->
-  <script src="/static/js/pagination/bootstrap-paginator.min.js"></script>
-  <script src="/static/js/pagination/st-paginator.js"></script>
-  <script>
-   /*$(document).ready(function() {
-     // 加载经典线路二级页面
-       //initRoutes();
-       
-   });
-
-      // 加载经典线路二级页面
-     function initRoutes(){
-       jQuery.ajax({
-        type : "GET",
-        async: false,
-        cache: false,
-        datatype : "json",
-        url : "/route/getByPage",
-        success : function(result){
-          if(result.status == "success"){
-            var data = result.data.rows; 
-           // console.log(data.length);
-            for(var i=0;i<data.length;i++) 
-            {
-                var route=data[i];
-                $("#route_"+i).css("display","block" );
-               //alert("Route.total");
-              // console.log(route.thumbnail);
-              $("#route_name_"+i).text(route.name);
-              $("#route_thumbnail_"+i).attr("src", route.thumbnail);            
-              $("#route_detailRecommendation_"+i).text(route.detailRecommendation);
-              $("#route_commentRatio_"+i).text(route.commentRatio);
-              $("#route_purchaseCount_"+i).text(route.purchaseCount);
-              $("#route_bottomPrice_"+i).text(route.bottomPrice);
-              //var s=$("#route_themes_"+i);
-             // console.log(route.themes.length);
-              //console.log(route.themes);
-              for(var j=0;j<route.themes.length;j++)
-              {
-                $("#route_themes_"+i+j).css("display","block" );
-               $("#route_themes_"+i+j).text(route.themes[j].themeName); 
-              }
-            }          
-
-
-          }else{
-            alert(result.tipMsg);
-          }
-        },
-        error : function(data) {
-          alert("系统异常");
-        }
-       });
-     }*/
-
-     // 加载地区
-     function initComPlace(){
-       jQuery.ajax({
-        type : "GET",
-        async: false,
-        cache: false,
-        datatype : "json",
-        url : "/region/getAll",
-        success : function(result){
-          if(result.status == "success"){
-            var Complace = result.data; 
-          // console.log(Complace[2].secondRegion);
-              for(var j=0;j<Complace.length;j++)
-              {
-                $("#Complace_secondRegion_"+j).css("display","block");
-                
-                $("#Complace_secondRegion_"+j).text(Complace[j].secondRegion);
-                   
-                $("#Complace_secondRegion_"+j).attr("val",Complace[j].regionId);
-              }
-
-          }else{
-            alert(result.tipMsg);
-          }
-        },
-        error : function(data) {
-          alert("系统异常");
-        }
-       });
-     }
-
-     // 加载主题
-     function initComTheme(){
-        jQuery.ajax({
-        type : "GET",
-        async: false,
-        cache: false,
-        datatype : "json",
-        url : "/theme/getAll",
-        success : function(result){
-          if(result.status == "success"){
-            var Comtheme = result.data; 
-         // console.log(Comtheme.length);
-              for(var j=0;j<Comtheme.length;j++)
-              {
-                $("#Comtheme_name_"+j).css("display","block");
-                $("#Comtheme_name_"+j).text(Comtheme[j].name);
-                $("#Comtheme_name_"+j).attr("val",Comtheme[j].themeId);
-              }
-
-          }else{
-            alert(result.tipMsg);
-          }
-        },
-        error : function(data) {
-          alert("系统异常");
-        }
-        });
-     }
-
-	   // 加载经典线路列表
-  $(document).ready(function() { 
-      initComPlace();
-      initComTheme();   
-		  var paginationOptions = {
-			    domId : "pager2",
-			    url : "/route/getByPage",
-			    page : 1,
-			    rows : 8,
-			    queryParams : {regionIds:"",themeIds:"",periods:"",seasonIds:"",orderType:"summary"},
-
-			    dealData : function(dataList){
-            alert("已选择");
-				    var len = dataList.length;
-				    if(len > 0){
-					    for(var i=0; i<len; i++){
-						      var row = dataList[i];
-                  $("#route_"+i).css("display","block" );
-                  //console.log(row.routeId);
-                  var href=$("#route_"+i).attr("href");
-                  $("#route_"+i).attr("href",href+"?"+"routeId="+row.routeId);              
-                  $("#route_name_"+i).text(row.name);
-                  $("#route_thumbnail_"+i).attr("src", row.thumbnail);            
-                  $("#route_detailRecommendation_"+i).text(row.detailRecommendation);
-                  $("#route_commentRatio_"+i).text(row.commentRatio);
-                  $("#route_purchaseCount_"+i).text(row.purchaseCount);
-                  $("#route_bottomPrice_"+i).text(row.bottomPrice);
-                   //var s=$("#route_themes_"+i);
-                  // console.log(route.themes.length);
-                   //console.log(route.themes);
-                   for(var j=0;j<row.themes.length;j++)
-                   {
-                     $("#route_themes_"+i+j).css("display","block" );
-                    $("#route_themes_"+i+j).text(row.themes[j].themeName); 
-                   }
-					    }
-			  	 }
-			    }
-	     }
-     		
-    //综合排序
-     $("#SynthesisComment").click(function()
-      { paginationOptions.queryParams.orderType= "summary";
-        pagination(paginationOptions); 
-        console.log(paginationOptions.queryParams.orderType);
-     });
-
-     //好评率排序
-     $("#GoodComment").click(function()
-      { paginationOptions.queryParams.orderType= "commentRatio";
-        pagination(paginationOptions); 
-        console.log(paginationOptions.queryParams.orderType);
-     });
-
-     //价格升序排列
-     $("#Price_lowTohigh_Comment").click(function()
-      { paginationOptions.queryParams.orderType= "priceAsc";
-        pagination(paginationOptions); 
-        console.log(paginationOptions.queryParams.orderType);
-      });
-
-     //价格降序排列
-     $("#Price_highTolow_Comment").click(function()
-      { paginationOptions.queryParams.orderType= "priceDesc";
-        pagination(paginationOptions); 
-        console.log(paginationOptions.queryParams.orderType);
-      });  
-
-     //选择地区
-     $(".RegionID  a").click( 
-         function(){
-         var len2_2=$(this).text().length;
-         var textvalue2_1=$(this).text();
-         var textvalue2_2=$(this).text().substring(0,len2_2-1);
-         var Complace = paginationOptions.queryParams.regionIds;
-         var ComplaceNumber = Complace;
-         var  s  = $(this).attr("val");
-         var len=s.length;
-         if($(this).hasClass("place_days_active"))
-              {$(this).removeClass("place_days_active");
-
-                ipos=Complace.indexOf(s);
-
-                if (ComplaceNumber.length>len )
-                {
-                	str1=Complace.substr(ipos-1,len+1);
-                    Complace=Complace.replace(str1,"");             
-                }
-                else 
-                {
-                    str2=Complace.substr(ipos,len);
-                    Complace=Complace.replace(str2,"");           
-                }       
-               }
-          else{$(this).addClass("place_days_active");
-                if (ComplaceNumber.length>len||ComplaceNumber.length==len )
-                {
-                  Complace=Complace+","+s;                             
-                }
-                else
-                {
-                   Complace=Complace+s;                               
-                } 
-              }
-              paginationOptions.queryParams.regionIds=Complace; 
-              pagination(paginationOptions); 
-              console.log(paginationOptions.queryParams.regionIds);
-          if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
-          else{$(this).text(textvalue2_1+"√");}
-     });
-
-     //选中主题
-     $(".ThemeID  a").click( 
-         function(){
-            var len2_2=$(this).text().length;
-            var textvalue2_1=$(this).text();
-            var textvalue2_2=$(this).text().substring(0,len2_2-1);
-            var Comtheme = paginationOptions.queryParams.themeIds;
-            var ComthemeNumber = Comtheme;
-            var  s  = $(this).attr("val");
-            var len=s.length;
-            ipos=Comtheme.indexOf(s);
-            if($(this).hasClass("else_active"))
-              {$(this).removeClass("else_active");
-               
-                if (ComthemeNumber.length>len )
-                {
-                	str1=Comtheme.substr(ipos-1,len+1);
-                    Comtheme=Comtheme.replace(str1,"");             
-                }
-                else 
-                {
-                    str2=Comtheme.substr(ipos,len);
-                    Comtheme=Comtheme.replace(str2,"");           
-                }               
-               }
-            else{$(this).addClass("else_active");
-               if (ComthemeNumber.length>len||ComthemeNumber.length==len )
-                {
-                   Comtheme=Comtheme+","+s;                             
-                }
-                else
-                {
-                   Comtheme=Comtheme+s;
-                } 
-          }
-         paginationOptions.queryParams.themeIds=Comtheme; 
-         pagination(paginationOptions);   
-         console.log(paginationOptions.queryParams.themeIds);
-         if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
-         else{$(this).text(textvalue2_1+"√");}
-     });
-
-     //选择天数
-     $(".PeriodsID  a").click( 
-         function(){
-            var len2_2=$(this).text().length;
-            var textvalue2_1=$(this).text();
-            var textvalue2_2=$(this).text().substring(0,len2_2-1);
-            var Comday = paginationOptions.queryParams.periods;
-            var ComdayNumber = Comday;
-            var  s  = $(this).attr("val");
-            var len=s.length;
-            //console.log(len);
-            ipos=Comday.indexOf(s);
-            if($(this).hasClass("place_days_active"))
-              { $(this).removeClass("place_days_active");
-                if (ComdayNumber.length>len )
-                {
-                	str1=Comday.substr(ipos-1,len+1);
-                  Comday=Comday.replace(str1,"");             
-                }
-                else 
-                {
-                  str2=Comday.substr(ipos,len);
-                  Comday=Comday.replace(str2,"");           
-                }       
-               }
-            else{$(this).addClass("place_days_active");
-                  if (ComdayNumber.length>len||ComdayNumber.length==len )
-                   {
-                      Comday=Comday+","+s;               
-                   }
-                  else
-                   {
-                      Comday=Comday+s;                   
-                   } 
-                 }
-            paginationOptions.queryParams.periods=Comday;  
-            pagination(paginationOptions);  
-            console.log(paginationOptions.queryParams.periods);
-            if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
-            else{$(this).text(textvalue2_1+"√");}
-     });
-
-     //选中季节
-     $(".SeasonsID  a").click( 
-         function(){
-             var len2_2=$(this).text().length;
-             var textvalue2_1=$(this).text();
-             var textvalue2_2=$(this).text().substring(0,len2_2-1);
-             var Comtheme = paginationOptions.queryParams.seasonIds;
-             var ComthemeNumber = Comtheme;
-             var  s  = $(this).attr("val");
-             var len=s.length;
-             ipos=Comtheme.indexOf(s);
-             if($(this).hasClass("else_active"))
-              { $(this).removeClass("else_active");               
-                if (ComthemeNumber.length>len )
-                {
-                	str1=Comtheme.substr(ipos-1,len+1);
-                  Comtheme=Comtheme.replace(str1,"");             
-                }
-                else 
-                {
-                  str2=Comtheme.substr(ipos,len);
-                  Comtheme=Comtheme.replace(str2,"");           
-                }               
-               }
-             else{ $(this).addClass("else_active");
-                   if(ComthemeNumber.length>len||ComthemeNumber.length==len )
-                    {
-                      Comtheme=Comtheme+","+s;             
-                    }
-                   else
-                    {
-                      Comtheme=Comtheme+s;               
-                    } 
-                 }
-              paginationOptions.queryParams.seasonIds=Comtheme;
-              pagination(paginationOptions);     
-              console.log(paginationOptions.queryParams.seasonIds);
-              if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
-              else{$(this).text(textvalue2_1+"√");}
-     });
-
-     pagination(paginationOptions);
-	});
-      
-  $(function(){$('[data-toggle="popover"]').popover({ html: "true",});
-  });
-
-  $(function () {
-            //判断是否宽屏
-            var winWide =$(window).width() ;           
-            var wideScreen = false;
-            if (winWide <= 768) {//768及以下分辨率
-                $("#collapseOne").attr("class", "collapse");
-                $("#collapseTwo").attr("class", "collapse");
-                $("#collapseThree").attr("class", "collapse");
-                $("#collapseFour").attr("class", "collapse");
-            } else {
-                $("#collapseOne").attr("class", "collapse in");
-                $("#collapseTwo").attr("class", "collapse in");
-                $("#collapseThree").attr("class", "collapse in");
-                $("#collapseFour").attr("class", "collapse in");
-                wideScreen = true; //是宽屏
-            }
-  });
-
-  //好评中评价格
-  $("#good_bad_comment ul li a").click(function()
-	{if($(this).has(".defined_active"))
-	    { $(this).addClass("defined_active").parent("li").siblings("li").find("a").removeClass("defined_active");}}) 
-
-
-
-
-
- //全部
- $("#all").click(
-  function(){
-    if($("#remain").css("display")=="none")
-    {   
-    $("#remain").show();
-    $(this).text("收起");
-  }
-    else
-      {
-        $("#remain").hide();
-        $(this).text("全部");
-      }
-  });
-  
-</script>
-
-<script type="text/javascript" src="/static/js/defined_c.js"></script>
-
-  </body>
+      <!-- 核心js文件 -->
+      <!--# include file="/common/corejs.html" -->
+      <!-- route.js实现ajax前后台对接 -->
+      <script src="/static/js/route/route.js"></script>  
+      <script src="/static/js/jquery.validate.js"></script>
+      <script src="/static/js/my_validate.js"></script>
+      <!-- 以下两个js文件用于实现无刷新分页 -->
+      <script src="/static/js/pagination/bootstrap-paginator.min.js"></script>
+      <script src="/static/js/pagination/st-paginator.js"></script>
+      <script type="text/javascript" src="/static/js/defined_c.js"></script>
+   </body>
 
 </html>
