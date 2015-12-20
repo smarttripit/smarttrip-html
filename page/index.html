@@ -480,34 +480,10 @@
        </div>
      </div>    
      <!--# include file="/common/footer.html"  -->
-   
+     <!--# include file="/common/login.html"  -->
+     
      <!-- 核心js文件 -->
 	   <!--# include file="/common/corejs.html" -->
-     <script src="/static/js/index.js"></script> 
-     <script src="/static/js/jquery.validate.js"></script>
-     <!--# include file="/common/login.html"  -->
-     <script src="/static/js/my_validate.js"></script>     
-     <script type="text/javascript" src="/static/js/defined_c.js"></script>
- 
-     <!--ajax测试-->
-     <script>
-        $('#username').blur(function(){
-    $.ajax({
-        type: "GET",
-        cache:false,
-        url: "/visitor/isNameRegister",
-        data: {name:$("#username").val()},
-        dataType: "json",
-        success: function(result){
-       	 		 if(result.status == 'success'){
-       	 			alert(result.status);
-       	 		 }
-       	 		 else {
-						alert(result.tipMsg);
-                   	}
-                 }
-    });
-         });
-     </script>
+     <script src="/static/js/index.js"></script>    
    </body>
   </html>
