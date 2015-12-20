@@ -1,0 +1,36 @@
+/*周周点评*/
+/*横向胶囊导航*/
+.nav-pills .defined_active{background-color: #94DEEC;}
+.nav-pills_defined li a {background-color: #C6D5D8;border-radius: 0px;padding: 6px 15px;margin-left: 4px;color: #fff;}
+/*下拉框*/
+.dropdown-menu{border:0px;box-shadow:0px;background:#C6D5D8;margin: 2px 0px 0px 4px;}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{background-color:#94DEEC;}
+.nav>li>a:hover {text-decoration: none;background-color: #94DEEC;}
+.mar_0{margin-left: 0px!important;margin-top: 0px!important;}
+  .tourist_pictures{width:80px;}
+@media screen and (max-width:992px){#zhouzhou_comment1 .panel-body {
+                                     padding: 15px 5%;}
+                                     .comment_picturesNum{margin-top:5px;color:#337ab7;display:block;}
+                                    
+                                    } 
+@media screen and (min-width:992px){#zhouzhou_comment1 .panel-body {
+                                     padding: 15px 10%;}
+                                     .comment_picturesNum{margin-top: 55%;color:#337ab7;display:block;}
+                                   
+                                    }
+
+#tourist_comment .col-md-3{margin-right: -15px;}
+.comment_time{margin-top: 8px;color: #8F8E8E;}
+.iwantcomment{float: right;
+background: #DF893A;
+color: #fff;
+padding: 5px 10px;
+margin-right: 10px;
+margin-top: 2px;}
+
+.iwantcomment:hover{color: #fff;}
+.left_words{margin-top:165px;color:#999;}
+.left_pic_num{font-size: 10px;color:#999;}
+.iwantcomment_text{font-size: 15px;color: #337ab7;}
+@media screen and (max-width:992px){.choose_position{width:600px;height:40px;}} 
+@media screen and (min-width:992px){.choose_position{width:600px;height:40px;left: 270px;position: absolute;top: 0px;}}
