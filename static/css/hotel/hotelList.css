@@ -1,4 +1,5 @@
  /* Default tab style */
+ .panel-default>.panel-heading{background:#fff;}
       .tabs .fa{
         color:#bdc2c9;
       }
