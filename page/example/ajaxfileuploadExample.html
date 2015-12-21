@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+  <html lang="en">
+   <head>
+     <!-- 要紧接着head标签 -->
+     <!--# include file="/common/head.html" -->
+     <link rel="stylesheet" type="text/css" href="/static/css/common/top.css">
+     <link rel="stylesheet" type="text/css" href="/static/css/common/ajaxfileupload.css">
+     <!-- 这些css样式代码应该放在具体的css文件中 -->
+     <style>
+     	.img_preview{
+     		height:100px;
+     		padding:5px;
+     	}
+     </style>
+     <title>模板</title>
+   </head>
+
+  <body>
+    <!--# include file="/common/login.html"  --> 
+    <div class="all_top">
+      <img src="/static/images/themeimage4.jpg" class="header_image"> 
+      <!--# include file="/common/top.html"  -->    
+    </div>  
+    <div class="container mt_215" >
+    	<!-- 这里开始写真正的业务代码 -->
+    	<div class="fileUpload btn btn-primary">
+	    	<span>添加图片</span>
+	    	<input type="file" name="upload" id="commentFileUpload" class="upload" onchange="uploadFile('commentFileUpload')" />
+		</div>
+		<div id="img_preview">
+		</div>
+	</div>
+    	
+    </div>
+
+    <!--# include file="/common/footer.html"  -->
+    <!-- 核心js文件 -->
+    <!--# include file="/common/corejs.html" -->
+    <script src="/static/js/common/ajaxfileupload.js"></script>
+    <!-- 下面的这些js代码应该放到具体的js文件中 -->
+    <script type="text/javascript">
+		function uploadFile(uploadId){
+			ajaxFileUpload(uploadId, function(imgURL){
+				$('#img_preview').append('<img class="img_preview" src="'+imgURL+'" />');
+			});
+		}
+	</script>
+  </body>
+
+</html>
