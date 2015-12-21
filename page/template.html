@@ -1,30 +1,29 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<!-- 要紧接着head标签 -->
-<!--# include file="/common/head.html" -->
-<!-- 该页面特有的样式文件 -->
-<link href="/static/css/test/thisPage.css" rel="stylesheet">
+ <!DOCTYPE html>
+  <html lang="en">
+   <head>
+     <!-- 要紧接着head标签 -->
+     <!--# include file="/common/head.html" -->
+     <link rel="stylesheet" type="text/css" href="/static/css/common/top.css">
+     <!-- 这里引入本页面特有的css文件 -->
+     <title>模板</title>
+   </head>
 
-<link rel="stylesheet" href="/static/css/defined.css" > 
-<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <body>
+    <!--# include file="/common/login.html"  --> 
+    <div class="all_top">
+      <img src="/static/images/themeimage4.jpg" class="header_image"> 
+      <!--# include file="/common/top.html"  -->    
+    </div>  
+    <div class="container mt_215" >
+    	
+    	<!-- 这里开始写真正的业务代码 -->
+    	
+    </div>
 
-<title>页面模板</title>
-</head>
-<body>
-	<!-- 登录/注册页面 -->
-	<!--# include file="/common/login.html"  -->
-	<!-- 顶部导航 -->
-    <!--# include file="/common/top.html"  -->
-	
-	<div class="container">内容显示在这里</div>
-	
-	<!-- 页脚 -->
-	<!--# include file="/common/footer.html"  -->
-	
-	<!-- 核心js文件 -->
-	<!--# include file="/common/corejs.html" -->
-	<!-- 该页面特有的js文件 -->
-	<script src="/static/js/test/thisPage.js"></script>
-</body>
+    <!--# include file="/common/footer.html"  -->
+    <!-- 核心js文件 -->
+    <!--# include file="/common/corejs.html" -->
+    <!-- 这里引入本页面特有的js文件 -->
+  </body>
+
 </html>
