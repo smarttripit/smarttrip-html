@@ -68,8 +68,7 @@
 			       page : 1,
 			       rows : 8,
 			       queryParams : {regionIds:"",themeIds:"",periods:"",seasonIds:"",orderType:"summary"},
-			       dealData : function(dataList){
-                        alert("已选择");
+			       dealData : function(dataList){                       
 				                var len = dataList.length;
 				                if(len > 0){
 					                 for(var i=0; i<len; i++){

@@ -117,8 +117,7 @@
                 $("#spot_commentRatio_"+i).text(row.commentRatio);          
                 $("#spot_recommendation_"+i).text(row.recommendation);
               }
-           }
-           alert("已选择");
+           }           
           }
       }
         
