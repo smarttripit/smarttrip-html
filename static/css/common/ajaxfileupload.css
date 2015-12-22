@@ -4,7 +4,8 @@
 	margin: 10px;
 }
 
-.fileUpload input.upload {	position: absolute;
+.fileUpload input.upload {	
+	position: absolute;
 	top: 0;
 	right: 0;
 	margin: 0;
