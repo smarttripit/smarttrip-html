@@ -1,6 +1,6 @@
 
     var spotId = $.getUrlParam('spotId');
-    var productId = $.getUrlParam('productId');
+    var productId = $.getUrlParam('productType');
 
     $(document).ready(function() { 
        initSpots();// 加载发现北京详情页
@@ -186,4 +186,28 @@
      pagination(paginationOptions);
     });
 
-
+/*发表评论*/
+     $("#commentpublish").click( 
+      function() {
+        jQuery.ajax({
+          type : "POST",
+          async: true,
+          cache: false,
+          productType:"03",
+          datatype : "json",
+          url : "/comment/newComment?productId="+productId,
+          success : function(result){
+            if(result.status == "success"){ 
+                data.rows.content=$("#commentcontent").val();
+                //console.log(data.rows.content);
+                data.rows.score=$("#input-21e").val();
+                //data.rows.images
+           }else{
+              alert(result.tipMsg);
+            }
+          },
+          error : function(data) {
+            alert("系统异常");
+          }
+       });                        
+     });
