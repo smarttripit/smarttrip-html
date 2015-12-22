@@ -3,7 +3,7 @@
   function initComPlace(){
        jQuery.ajax({
         type : "GET",
-        async: false,
+        async: true,
         cache: false,
         datatype : "json",
         url : "/region/getAll",
@@ -34,7 +34,7 @@
   function initComTheme(){
         jQuery.ajax({
         type : "GET",
-        async: false,
+        async: true,
         cache: false,
         datatype : "json",
         url : "/theme/getAll",
@@ -65,7 +65,7 @@
   function initComPartner(){
         jQuery.ajax({
         type : "GET",
-        async: false,
+        async: true,
         cache: false,
         datatype : "json",
         url : "/companion/getAll",
@@ -101,7 +101,7 @@
           url : "/spot/getByPage",
           page : 1,
           rows : 8,
-          queryParams : {regionIds:"",themeIds:"",companionIds:"",seasonIds:""},
+          queryParams : {name:"",regionIds:"",themeIds:"",companionIds:"",seasonIds:""},
 
           dealData : function(dataList){
 
@@ -275,8 +275,17 @@
               else{$(this).text(textvalue2_1+"√");}
      });
 
-     pagination(paginationOptions);
+    
 
+     $("#Search").click( 
+         function(){
+          var Searchname = $("#Searchname").val();
+          paginationOptions.queryParams.name=Searchname; 
+          console.log(paginationOptions.queryParams.name);
+          pagination(paginationOptions);
+     });
+     pagination(paginationOptions);
+     
       var imgs=$('.beijingmap').find('a');
       var citys=$('.city li'); 
       var city_len=citys.length;           

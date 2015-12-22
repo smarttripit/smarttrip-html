@@ -12,7 +12,7 @@
     function initSpots(){
       jQuery.ajax({
         type : "GET",
-        async: false,
+        async: true,
         cache: false,
         datatype : "json",
         url : "/spot/detail?spotId="+spotId,
@@ -49,7 +49,7 @@
     function initImages(){
       jQuery.ajax({
         type : "GET",
-        async: false,
+        async: true,
         cache: false,
         datatype : "json",
         url : "/spot/images?spotId="+spotId,
@@ -86,7 +86,7 @@
     function initLocations(){
       jQuery.ajax({
         type : "GET",
-        async: false,
+        async: true,
         cache: false,
         datatype : "json",
         url : "/spot/locations?spotId="+spotId,
@@ -131,7 +131,7 @@
        $("#good_bad_comment ul li a").click(function(){if($(this).has(".defined_active")){ 
        $(this).addClass("defined_active").parent("li").siblings("li").find("a").removeClass("defined_active");}}) 
 
-          $(document).ready(function() {
+    $(document).ready(function() {
      // 加载发现北京评论列表
      var paginationOptions = {
        domId : "pager2",
@@ -143,6 +143,7 @@
        dealData : function(dataList){
          var len = dataList.length;
          if(len > 0){
+             $("#navpills").css("display","block");
            for(var i=0; i<len; i++){
              var row = dataList[i];
              $("#comment_"+i).css("display","block" );
@@ -150,7 +151,8 @@
              $("#comment_id_"+i).text(row.commentId);//
              $("#comment_content_"+i).text(row.content);            
              $("#comment_score_"+i).text(row.score);//
-             $("#comment_commentTime_"+i).text(row.commentTime);
+             $("#comment_commentTime_"+i).text(row.commentTime);             
+             $("#comment_visitorThumbnail_"+i).attr("src",row.visitorThumbnail);
              $("#comment_visitorName_"+i).text(row.visitorName);
              $("#comment_visitorId_"+i).text(row.visitorId);//
              var images = row.images;

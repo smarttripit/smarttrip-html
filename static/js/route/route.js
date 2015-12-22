@@ -2,7 +2,7 @@
      function initComPlace(){
        jQuery.ajax({
         type : "GET",
-        async: false,
+        async: true,
         cache: false,
         datatype : "json",
         url : "/region/getAll",
@@ -33,7 +33,7 @@
      function initComTheme(){
         jQuery.ajax({
         type : "GET",
-        async: false,
+        async: true,
         cache: false,
         datatype : "json",
         url : "/theme/getAll",

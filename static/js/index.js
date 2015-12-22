@@ -8,7 +8,7 @@ $(document).ready(function() {
 function initRoutes(){
 	jQuery.ajax({
 		type : "GET",
-        async: false,
+        async: true,
         cache: false,
         datatype : "json",
         url : "/route/top3",
@@ -38,7 +38,7 @@ function initRoutes(){
 function initSpots(){
   jQuery.ajax({
     type : "GET",
-        async: false,
+        async: true,
         cache: false,
         datatype : "json",
         url : "/spot/top4",
