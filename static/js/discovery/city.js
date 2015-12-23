@@ -276,15 +276,17 @@
      });
 
     
-
+      /*搜索功能*/
      $("#Search").click( 
          function(){
           var Searchname = $("#Searchname").val();
           paginationOptions.queryParams.name=Searchname; 
-          console.log(paginationOptions.queryParams.name);
           pagination(paginationOptions);
+          console.log(paginationOptions.queryParams.name); 
+          console.log(paginationOptions.queryParams);          
      });
      pagination(paginationOptions);
+
      
       var imgs=$('.beijingmap').find('a');
       var citys=$('.city li'); 

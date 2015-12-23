@@ -11,7 +11,7 @@
 (function ($) {
     var DEFAULT_MIN = 0;
     var DEFAULT_MAX = 5;
-    var DEFAULT_STEP = 0.5;
+    var DEFAULT_STEP = 1;
 
     var isEmpty = function (value, trim) {
         return typeof value === 'undefined' || value === null || value === undefined || value == []
@@ -348,15 +348,15 @@
         defaultCaption: '{rating} Stars',
         starCaptions: {
            // 0.5: 'Half Star',
-            1: 'One Star',
+            1: '1分',
            // 1.5: 'One & Half Star',
-            2: 'Two Stars',
+            2: '2分',
           //  2.5: 'Two & Half Stars',
-            3: 'Three Stars',
+            3: '3分',
           //  3.5: 'Three & Half Stars',
-            4: 'Four Stars',
+            4: '4分',
          //   4.5: 'Four & Half Stars',
-            5: 'Five Stars'
+            5: '5分'
         },
         starCaptionClasses: {
           //  0.5: 'label label-danger',
