@@ -1,7 +1,6 @@
 
     var spotId = $.getUrlParam('spotId');
-    var productId = $.getUrlParam('productType');
-
+    //console.log(spotId);
     $(document).ready(function() { 
        initSpots();// 加载发现北京详情页
        initImages();// 加载景点详情的图片集
@@ -136,7 +135,7 @@
      var paginationOptions = {
        domId : "pager2",
        productType:"03",
-       url : "/comment/getByPage?productId="+productId,
+       url : "/comment/getByPage?productId="+spotId,
        page : 1,
        rows : 6,
        queryParams : {score:""},
@@ -170,7 +169,7 @@
                  imagesHref2.push(obj);//按顺序依次push进去 
                }
              }
-             console.log(imagesHref2);
+             //console.log(imagesHref2);
              $('.fancybox').fancybox();
              $(".fancybox-manual-a").click(function() {
                 $.fancybox.open(imagesHref2,
@@ -190,18 +189,19 @@
      $("#commentpublish").click( 
       function() {
         jQuery.ajax({
-          type : "POST",
+          type : "GET",
           async: true,
+          data : $("#commentform").serialize(),
           cache: false,
           productType:"03",
           datatype : "json",
-          url : "/comment/newComment?productId="+productId,
+          url : "/comment/newComment?productId="+spotId,
           success : function(result){
             if(result.status == "success"){ 
-                data.rows.content=$("#commentcontent").val();
-                //console.log(data.rows.content);
-                data.rows.score=$("#input-21e").val();
-                //data.rows.images
+
+              //data.content=$("#commentcontent").val();
+                console.log(data);
+                //data.score=$("#input-21e").val();
            }else{
               alert(result.tipMsg);
             }

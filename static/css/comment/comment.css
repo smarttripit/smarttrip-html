@@ -32,5 +32,5 @@ margin-top: 2px;}
 .left_words{margin-top:165px;color:#999;}
 .left_pic_num{font-size: 10px;color:#999;}
 .iwantcomment_text{font-size: 15px;color: #337ab7;}
-@media screen and (max-width:992px){.choose_position{width:600px;height:40px;}} 
-@media screen and (min-width:992px){.choose_position{width:600px;height:40px;left: 270px;position: absolute;top: 0px;}}
+@media screen and (max-width:992px){.choose_position{height:40px;}} 
+@media screen and (min-width:992px){.choose_position{height:40px;left: 270px;position: absolute;top: 0px;}}

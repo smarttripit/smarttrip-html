@@ -1,3 +1,4 @@
+var routeId = $.getUrlParam('routeId');
 function initRouteInfo(){
       jQuery.ajax({
         type : "GET",
