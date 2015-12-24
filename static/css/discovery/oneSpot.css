@@ -62,7 +62,6 @@ background-color: #45A4C9;
 }
 .sp-large a img {
     max-width:100%;
-    height:auto;
     cursor: -webkit-zoom-in;
     cursor: -moz-zoom-in;
 }

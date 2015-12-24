@@ -188,10 +188,31 @@
 /*发表评论*/
      $("#commentpublish").click( 
       function() {
+        var comment_content=$("#commentcontent").val();
+        var comment_score=$("#input-21e").val();
+        var image_urls=[];
+        var comment_img="";
+        var img_num=$(".file-preview").find("img").size();
+       // console.log(img_num);
+        for(var i=0;i<img_num;i++)
+        {
+          image_urls[i]=$(".file-preview").find("img").eq(i).attr("src");
+          if (comment_img.length>1||comment_img.length==1 )
+          {
+            comment_img=comment_img+","+image_urls[i];                             
+          }
+          else
+          {
+            comment_img=comment_img+image_urls[i];
+          } 
+        }        
+        console.log(comment_content);
+        console.log(comment_score);
+        console.log(comment_img);
         jQuery.ajax({
           type : "GET",
           async: true,
-          data : $("#commentform").serialize(),
+          data : {content:comment_content,score:comment_score,imageURL:comment_img},
           cache: false,
           productType:"03",
           datatype : "json",
@@ -200,7 +221,7 @@
             if(result.status == "success"){ 
 
               //data.content=$("#commentcontent").val();
-                console.log(data);
+                //console.log(data);
                 //data.score=$("#input-21e").val();
            }else{
               alert(result.tipMsg);
@@ -211,3 +232,5 @@
           }
        });                        
      });
+
+
