@@ -41,7 +41,7 @@ function initRouteInfo(){
                  var count=0;
                  var Content="";
                  var myDir = " ";
-                 description = [];
+                 var description = [];
                  var data = result.data;
                  for(var i=0; i<data.length; i++){
                    var oneLocal = data[i];
