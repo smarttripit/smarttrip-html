@@ -16,7 +16,7 @@ function initRouteInfo(){
                  $("#oneRoute_commentRatio").html(oneRoute.commentRatio);
                  $("#oneRoute_period").html(oneRoute.period);
                  $("#oneRoute_detail").html(oneRoute.detail);
-                 $("#oneRoute_map").css("background-image", "url("+oneRoute.map+")");
+                 $("#oneRoute_map").attr("src",oneRoute.map);
                  $("#oneRoute_feeDescription").html(oneRoute.feeDescription);
                  $("#oneRoute_bookingNotice").html(oneRoute.bookingNotice);
               }else{
