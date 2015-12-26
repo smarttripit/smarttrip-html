@@ -152,7 +152,9 @@
              $("#comment_commentTime_"+i).text(row.commentTime);             
              $("#comment_visitorThumbnail_"+i).attr("src",row.visitorThumbnail);
              $("#comment_visitorName_"+i).text(row.visitorName);
-             $("#comment_visitorId_"+i).text(row.visitorId);//
+             $("#comment_visitorId_"+i).text(row.visitorId);
+             if(row.canDelete==true)
+             {$("#comment_canDelete_"+i).css("display","block" );}
              var images = row.images;
              var len1=images.length;
              $("#comment_imgNum_"+i).text(len1);
@@ -235,7 +237,9 @@
           url : "/comment/newComment?productId="+spotId,
           success : function(result){
             if(result.status == "success"){ 
+              
 
+              pagination(paginationOptions); 
               //data.content=$("#commentcontent").val();
                 //console.log(data);
                 //data.score=$("#input-21e").val();
@@ -246,7 +250,28 @@
           error : function(data) {
             alert("系统异常");
           }
-       });                        
+        });                        
      });
 
+/*删除评论*/
+     $(".delete_button").click( 
+      function() {
+        jQuery.ajax({
+          type : "GET",
+          async: true,
+          cache: false,
+          datatype : "json",
+          url : "/comment/delete?commentId="+commentId,
+          success : function(result){
+            if(result.status == "success"){ 
+              pagination(paginationOptions); 
+            }else{
+              alert(result.tipMsg);
+            }
+          },
+          error : function(data) {
+            alert("系统异常");
+          }
+        });                        
+     });
 
