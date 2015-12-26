@@ -50,7 +50,7 @@
                   sends.checked = 0;
                 }
                 //timeCountDown();
-                //var timer = setInterval(timeCountDown,1000);
+                var timer = setInterval(timeCountDown,1000);
               }
             }
           };

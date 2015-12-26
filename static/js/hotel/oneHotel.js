@@ -1,6 +1,26 @@
  var productId = $.getUrlParam('productId');
+ 
+/*获取当前时间后的DaysToAdd天的日期*/
+ function AddDays(DaysToAdd) {
+    
+   var newdate=new Date();
+   var newtimems=newdate.getTime()+(DaysToAdd*24*60*60*1000);
+
+   newdate.setTime(newtimems);
+   var myYear = newdate.getFullYear().toString();
+   var myMon = (newdate.getMonth()+1).toString();
+   var myDate = newdate.getDate().toString();
+   var riqi = myYear+'-'+myMon+'-'+myDate;
+   return riqi;
+ } 
+ /*设置订房和退房日期的默认值*/
+ $('#currentDay').val(AddDays(0));
+
+ $('#nextDay').val(AddDays(1));
+
  jQuery(function($) {
       $(document).ready( function() {
+
         $('.navbar-wrapper').stickUp({
 
           parts: {                         
@@ -31,10 +51,15 @@
           topMargin: 'auto'
         });
       });
+ 
+
   //时间选择器
-  $("#date_in").datepicker(); 
-  $("#date_out").datepicker();
+  $(".date_in").datepicker(); 
+  $(".date_out").datepicker();
+
     });
+
+
 
  /*ajax获取评论数据*/
   //好评差评中评

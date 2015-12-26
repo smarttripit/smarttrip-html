@@ -22,13 +22,14 @@
     <div id="home" class="carousel">
       <div class="carousel-inner">
         <!--# include file="/common/login.html"  -->
-        <div style="height:375px;">
+        <div>
           <div class="scenery_spot1">
+            <img src="/static/images/2001.jpg" style="width:100%;">
           </div> 
           <!--# include file="/common/top.html"  -->
         </div>      
 
-        <div class=" spot_back_position">
+        <div>
           <div class="col-xs-1 col-sm-5 col-md-7 ">
           </div>
           <!--客栈名片-->
@@ -41,50 +42,8 @@
             
             <div class="row spot_back">                    
               <div class="col-md-12">
-                <div class="input-group">
-                  <div class="input-group-btn">
-                    <button type="button" class="btn btn-default" 
-                          tabindex="-1">客房类型
-                    </button>
-                    <button type="button" class="btn btn-default 
-                          dropdown-toggle" data-toggle="dropdown" tabindex="-1">
-                      <span class="caret"></span>
-                      <span class="sr-only">切换下拉菜单</span>
-                    </button>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">标准间</a></li>
-                        <li><a href="#">大床房</a></li>
-                        <li><a href="#">三人间</a></li>
-                      </ul>
-                    </div><!-- /btn-group --> 
-                    <input type="text" id="date_in" class="my_input" placeholder="入住">
-                    <input type="text" id="date_out" class="my_input" placeholder="退房">
-                  </div><!-- /input-group -->
-                </div><!-- /.col-lg-6 --><br>     
-              </div>
-            
-            <div class="row spot_back">
-              <div class="col-md-6">
-                <p class="susu_text">房间数量</p>
-              </div>
-              <div class="col-md-6">
-                <div class="input-group">
-                  <span class="input-group-addon">-</span>
-                  <input type="text" class="form-control">
-                  <span class="input-group-addon">+</span>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="row spot_back">       
-              <div class="col-md-4" style="text-align:center">价格</div>
-              <div class="col-md-4" style="text-align:center"><strong>￥199/￥123</strong></div>
-              <div class="col-md-4" style="text-align:center"><i class="fa fa-phone"></i>收藏</div>
-            </div>
-
-            <div class="row spot_back">
-              <button type="button" class="btn btn-danger" style="display:inline;float:right;">立即预定</button>
+                <p>这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好</p>
+              </div><!-- /.col-lg-6 --><br>     
             </div>
           </div> 
           <div class="col-xs-1 col-sm-1  col-md-1">
@@ -109,7 +68,7 @@
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                   <li class="menuItem"><a href="#hotel_style">房型与价格</a></li>
-                  <li class="menuItem"><a href="#hotel_address">位置</a></li>
+                  <li class="menuItem"><a href="#hotel_address">客栈位置</a></li>
                   <li class="menuItem"><a href="#hotel_information">客栈信息</a></li>
                   <li class="menuItem"><a href="#hotel_photos">图片</a></li>
                   <li class="menuItem"><a href="#hotel_policy">客栈政策</a></li>
@@ -134,8 +93,16 @@
             <!-- START THE hotel_style -->
             <div id="hotel_style" class="anchor_place"></div> 
             <div id="hotel_style1" class="row featurette panel panel-default">
+
               <div class="panel-heading">
                 <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>房型与价格</h4>
+              </div>
+
+              <div class="well">
+                入住<input id="currentDay" class="date_in" value=" ">
+
+                退房<input id="nextDay" class="date_out">
+                <button>确定</button>
               </div>
 
               <div class="panel-body col-xs-12 col-sm-12 col-md-12">
@@ -163,10 +130,10 @@
                     <div class="col-xs-2 col-sm-2 col-md-2"><p class="p_cen">标准价</p></div>
                     <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen">大床</p></div>
                     <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen">无早</p></div>
-                    <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen">无线免费</p></div>
+                    <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen free_wifi">无线免费</p></div>
                     <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen">免费取消</p></div>
-                    <div class="col-xs-2 col-sm-2 col-md-2"><p class="p_cen">￥379</p></div>
-                    <div class="col-xs-2 col-sm-2 col-md-2"><a class="p_cen">预定</a></div> 
+                    <div class="col-xs-2 col-sm-2 col-md-2"><p class="p_cen">￥<strong class="strong_price">379</strong></p></div>
+                    <div class="col-xs-2 col-sm-2 col-md-2"><button class="btn btn-primary">预定</button></div> 
                   </div>
 
                   <div class="row panel-body bottom_B my_cen">
@@ -180,10 +147,10 @@
                     <div class="col-xs-2 col-sm-2 col-md-2"><p class="p_cen">标准价</p></div>
                     <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen">大床</p></div>
                     <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen">无早</p></div>
-                    <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen">无线免费</p></div>
+                    <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen free_wifi">无线免费</p></div>
                     <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen">免费取消</p></div>
-                    <div class="col-xs-2 col-sm-2 col-md-2"><p class="p_cen">￥379</p></div>
-                    <div class="col-xs-2 col-sm-2 col-md-2"><a class="p_cen">预定</a></div> 
+                    <div class="col-xs-2 col-sm-2 col-md-2"><p class="p_cen">￥<strong class="strong_price">379</strong></p></div>
+                    <div class="col-xs-2 col-sm-2 col-md-2"><button class="btn btn-primary">预定</button></div>
                   </div>
 
 
@@ -198,10 +165,10 @@
                     <div class="col-xs-2 col-sm-2 col-md-2"><p class="p_cen">标准价</p></div>
                     <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen">大床</p></div>
                     <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen">无早</p></div>
-                    <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen">无线免费</p></div>
+                    <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen free_wifi">无线免费</p></div>
                     <div class="col-xs-1 col-sm-1 col-md-1"><p class="p_cen">免费取消</p></div>
-                    <div class="col-xs-2 col-sm-2 col-md-2"><p class="p_cen">￥379</p></div>
-                    <div class="col-xs-2 col-sm-2 col-md-2"><a class="p_cen">预定</a></div> 
+                    <div class="col-xs-2 col-sm-2 col-md-2"><p class="p_cen">￥<strong class="strong_price">379</strong></p></div>
+                    <div class="col-xs-2 col-sm-2 col-md-2"><button class="btn btn-primary">预定</button></div> 
                   </div>
                   
                   <!--END房型与房价-->
@@ -230,7 +197,9 @@
               </div>
 
               <div class="panel-body col-xs-12 col-sm-12 col-md-12">
-                见佛拉德就是佛ijasdoi林凤娇阿拉斯加菲拉斯的减肥啦涉及到法律； 啊的佛教啊上升到了附近的风景啊大家发垃圾的佛罗
+                2003年开业  2009年装修  226间房   联系方式<br>　
+                　　上海宝安大酒店位居浦东新区陆家嘴金融中心的宝安大厦内，地处世纪大道与东方路交汇处，毗邻延安路、大连路、复兴路、人民路、新建路五条隧道，距离2、4、6、9号线世纪大道地铁站仅5分钟行程。周围有众多商务大厦和商业设施，地段繁华。<br>
+                　　上海宝安大酒店由中国宝安集团股份有限公司投资兴建，按四星级酒店标准配置。酒店内设特色餐厅，倡导生态美食；还拥有各种规格的商务、康乐设施，为您的商务旅程提供尽善尽美的服务。<br>
               </div>  
             </div> <!-- END hotel_information -->
 
@@ -262,7 +231,7 @@
                      <a href="#"><img src="/static/images/nongjiale.jpg" class="spot_images_8"></a>
                      </div>
                     </div>
-                    <a id="fancybox-manual-c" href="javascript:;" class="more_images">查看更多</a>
+                    
                   </div>
                   <div class="col-xs-12 col-sm-4 col-md-4 basic_information">
                    <p id="spot_basicInfo">
@@ -279,7 +248,32 @@
                 <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>客栈政策</h4>
               </div>
               <div class="panel-body col-xs-12 col-sm-12 col-md-12">
-                分解啊但是可怜见法乐山大佛激发iodsjfolkjlj哦据了解哦了
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                  <strong>入住和离店</strong>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2"></div>
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                入住时间：14：00以后&nbsp;&nbsp;&nbsp;&nbsp;离店时间:12:00以前
+                </div>
+                <hr class="dash_line">
+
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                  <strong>膳食安排</strong>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2"></div>
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                自助早餐：RMB 118.00
+                </div>
+                <hr class="dash_line">
+
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                  <strong>宠物</strong>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2"></div>
+                <div class="col-xs-8 col-sm-8 col-md-8">
+                不可携带宠物
+                </div>
+                <hr class="dash_line">
               </div>       
             </div>  <!-- END hotel_policy -->
 
@@ -290,9 +284,32 @@
                  <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>客栈设施</h4>
                </div>
                <div class="panel-body col-xs-12 col-sm-12 col-md-12">
-                 <div class="col-xs-12 col-sm-12 col-md-12 panel-body traffic_and_tickets" id="spot_notice">
-                  活动方案科技大会上开发速度好快凉风急啊受到了放假阿斯蒂芬减肥lads减肥
+                 <div class="col-xs-2 col-sm-2 col-md-2">
+                   <strong>网络设施</strong>
                  </div>
+                 <div class="col-xs-2 col-sm-2 col-md-2"></div>
+                 <div class="col-xs-8 col-sm-8 col-md-8">
+                 有可无线上网的公共区域&nbsp;&nbsp;<span class="free_wifi">免费</span>
+                 </div>
+                 <hr class="dash_line">
+
+                 <div class="col-xs-2 col-sm-2 col-md-2">
+                   <strong>停车场</strong>
+                 </div>
+                 <div class="col-xs-2 col-sm-2 col-md-2"></div>
+                 <div class="col-xs-8 col-sm-8 col-md-8">
+                 收费停车场
+                 </div>
+                 <hr class="dash_line">
+
+                 <div class="col-xs-2 col-sm-2 col-md-2">
+                   <strong>客栈设施</strong>
+                 </div>
+                 <div class="col-xs-2 col-sm-2 col-md-2"></div>
+                 <div class="col-xs-8 col-sm-8 col-md-8">
+                 中餐厅 &nbsp; &nbsp; &nbsp; 收费停车场 &nbsp; &nbsp; &nbsp; 电梯
+                 </div>
+                 <hr class="dash_line">
                </div> 
              </div> <!-- END hotel_infrastructure -->
 
@@ -303,9 +320,43 @@
                  <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>周边设施</h4>
                </div>
 
-               <div class="panel-body col-xs-12 col-sm-12 col-md-12  basic_information">
-                放假阿离上地附近老师的金佛啊圣诞节佛山
-               </div>
+               <div class="panel-body col-xs-12 col-sm-12 col-md-12">
+                  <div class="col-xs-2 col-sm-2 col-md-2">
+                    <strong>餐饮</strong>
+                  </div>
+                  <div class="col-xs-2 col-sm-2 col-md-2"></div>
+                  <div class="col-xs-8 col-sm-8 col-md-8">
+                  上海福记好世界餐饮发展有限公司&nbsp;福记明宴&nbsp;卓记餐厅&nbsp;饭盒子(宝安大厦店)&nbsp;欧拉西班牙自助餐厅
+                  </div>
+                  <hr class="dash_line">
+
+                  <div class="col-xs-2 col-sm-2 col-md-2">
+                    <strong>购物</strong>
+                  </div>
+                  <div class="col-xs-2 col-sm-2 col-md-2"></div>
+                  <div class="col-xs-8 col-sm-8 col-md-8">
+                  罗森宝安大厦店&nbsp;亮视点96广场店&nbsp;浦东名盛烟酒商店&nbsp;九六广场5号&nbsp;门九六广场(5号门)
+                  </div>
+                  <hr class="dash_line">
+
+                  <div class="col-xs-2 col-sm-2 col-md-2">
+                    <strong>娱乐</strong>
+                  </div>
+                  <div class="col-xs-2 col-sm-2 col-md-2"></div>
+                  <div class="col-xs-8 col-sm-8 col-md-8">
+                  夜明珠娱乐总汇&nbsp;宝安大酒店茶室&nbsp;真锅(东方店)&nbsp;东方情健身足浴中心&nbsp;百蝶居酒屋
+                  </div>
+                  <hr class="dash_line">
+
+                  <div class="col-xs-2 col-sm-2 col-md-2">
+                    <strong>地铁站</strong>
+                  </div>
+                  <div class="col-xs-2 col-sm-2 col-md-2"></div>
+                  <div class="col-xs-8 col-sm-8 col-md-8">
+                  商城路站&nbsp;世纪大道站&nbsp;东昌路站&nbsp;浦电路站&nbsp;s浦东大道站
+                  </div>
+                  <hr class="dash_line">
+                </div>
              </div> <!-- END neighbor_infrastructure -->
 
              <!-- START THE neighbor_commend -->
@@ -314,9 +365,112 @@
                <div class="panel-heading">
                  <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>周边推荐</h4>
                </div>
-               <div class="panel-body col-xs-12 col-sm-12 col-md-12">
-                jdslfjalsdfjlasd发
-               </div>   
+              <div class="panel-body col-xs-12 col-sm-12 col-md-12">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                  <div class="col-xs-8 col-sm-6 col-md-6">
+                    <img src="/static/images/2001.jpg" class="img-responsive coverageB">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                      <div class=" coverageT"><p>相聚0.1公里</p></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-6 col-md-6">
+                    <strong>上海明城大酒店</strong>
+                    <div class="my_star">
+                      <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p>4.3分</p>
+                    <p>￥<strong class="strong_price">379</strong></p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                  <div class="col-xs-8 col-sm-6 col-md-6">
+                    <img src="/static/images/2001.jpg" class="img-responsive coverageB">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                      <div class=" coverageT"><p>相聚0.1公里</p></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-6 col-md-6">
+                    <strong>上海明城大酒店</strong>
+                    <div class="my_star">
+                      <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p>4.3分</p>
+                    <p>￥<strong class="strong_price">379</strong></p>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                  <div class="col-xs-8 col-sm-6 col-md-6">
+                    <img src="/static/images/2001.jpg" class="img-responsive coverageB">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                      <div class=" coverageT"><p>相聚0.1公里</p></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-6 col-md-6">
+                    <strong>上海明城大酒店</strong>
+                    <div class="my_star">
+                      <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p>4.3分</p>
+                    <p>￥<strong class="strong_price">379</strong></p>
+                  </div>
+                </div>
+              </div>   
+
+              <div class="panel-body col-xs-12 col-sm-12 col-md-12">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                  <div class="col-xs-8 col-sm-6 col-md-6">
+                    <img src="/static/images/2001.jpg" class="img-responsive coverageB">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                      <div class=" coverageT"><p>相聚0.1公里</p></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-6 col-md-6">
+                    <strong>上海明城大酒店</strong>
+                    <div class="my_star">
+                      <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p>4.3分</p>
+                    <p>￥<strong class="strong_price">379</strong></p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                  <div class="col-xs-8 col-sm-6 col-md-6">
+                    <img src="/static/images/2001.jpg" class="img-responsive coverageB">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                      <div class=" coverageT"><p>相聚0.1公里</p></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-6 col-md-6">
+                    <strong>上海明城大酒店</strong>
+                    <div class="my_star">
+                      <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p>4.3分</p>
+                    <p>￥<strong class="strong_price">379</strong></p>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                  <div class="col-xs-8 col-sm-6 col-md-6">
+                    <img src="/static/images/2001.jpg" class="img-responsive coverageB">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                      <div class=" coverageT"><p>相聚0.1公里</p></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-4 col-sm-6 col-md-6">
+                    <strong>上海明城大酒店</strong>
+                    <div class="my_star">
+                      <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p>4.3分</p>
+                    <p>￥<strong class="strong_price">379</strong></p>
+                  </div>
+                </div>
+              </div> 
+
+
+
              </div><!-- END neighbor_commend -->
 
              <!-- START THE zhouzhou_comment -->
@@ -350,7 +504,9 @@
   <script type="text/javascript" src="/static/js/comment/fileinput.js"></script>
   <script type="text/javascript" src="/static/js/comment/fileinput_locale_zh.js"></script>
   <script type="text/javascript" src="/static/js/comment/filein.js"></script>
-  <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>  
+  <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script> 
+  <script src="/static/js/datepicker/jquery-ui-datepicker.js"></script> 
+
 </body>
 
 </html>
