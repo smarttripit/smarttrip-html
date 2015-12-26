@@ -184,6 +184,25 @@
      pagination(paginationOptions);
     });
 
+    function uploadFile(uploadId){
+      ajaxFileUpload(uploadId, function(imgURL){
+        $('#img_preview').append('<img class="img_preview" src="'+imgURL+'" />'+
+                                 '<a   class="remove_icon">'+ 
+                                      '<span class="glyphicon glyphicon-remove " aria-hidden="true">'+
+                                      '</span>'+
+                                    '</a>');
+      });
+
+
+    }
+
+
+    $(".remove_icon").live("click",function(){
+       $(this).prev("img").remove();
+       $(this).remove();          
+    });
+
+
 /*发表评论*/
      $("#commentpublish").click( 
       function() {
@@ -191,11 +210,10 @@
         var comment_score=$("#input-21e").val();
         var image_urls=[];
         var comment_img="";
-        var img_num=$(".file-preview").find("img").size();
-       // console.log(img_num);
+        var img_num=$("#img_preview").find("img").size();
         for(var i=0;i<img_num;i++)
         {
-          image_urls[i]=$(".file-preview").find("img").eq(i).attr("src");
+          image_urls[i]=$("#img_preview").find("img").eq(i).attr("src");
           if (comment_img.length>1||comment_img.length==1 )
           {
             comment_img=comment_img+","+image_urls[i];                             

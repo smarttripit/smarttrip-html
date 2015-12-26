@@ -44,10 +44,8 @@
          // console.log(Comtheme.length);
               for(var j=0;j<Comtheme.length;j++)
               {
-                $("#Comtheme_name_"+j).css("display","block");
-                
-                
-                  $("#Comtheme_name_"+j).text(Comtheme[j].name); 
+                $("#Comtheme_name_"+j).css("display","block");                
+                $("#Comtheme_name_"+j).text(Comtheme[j].name); 
                 $("#Comtheme_name_"+j).attr("val",Comtheme[j].themeId);
               }
 
@@ -75,9 +73,8 @@
          // console.log(Comtheme.length);
               for(var j=0;j<Compartner.length;j++)
               {
-                $("#Compartner_name_"+j).css("display","block");
-                
-                  $("#Compartner_name_"+j).text(Compartner[j].companionName); 
+                $("#Compartner_name_"+j).css("display","block");                
+                $("#Compartner_name_"+j).text(Compartner[j].companionName); 
                 $("#Compartner_name_"+j).attr("val",Compartner[j].companionId);
               }
 
@@ -127,7 +124,9 @@
             var Complace = paginationOptions.queryParams.regionIds;            
             var  s  = $(this).attr("val");            
             Complace=s;
-            paginationOptions.queryParams.regionIds=Complace;   
+            paginationOptions.queryParams.regionIds=Complace;
+            for(var i=0; i<8; i++)
+            {$("#spot_"+i).css("display","none" );}
             pagination(paginationOptions); 
             console.log(paginationOptions.queryParams.regionIds);         
      });
@@ -145,7 +144,9 @@
                  var Complace = paginationOptions.queryParams.regionIds;            
                  var s=citys.eq(i).find('a').attr("val");            
                  Complace=s;
-                 paginationOptions.queryParams.regionIds=Complace;   
+                 paginationOptions.queryParams.regionIds=Complace;
+                 for(var i=0; i<8; i++)
+                 {$("#spot_"+i).css("display","none" );}   
                  pagination(paginationOptions); 
                  console.log(paginationOptions.queryParams.regionIds);
                 };
@@ -186,7 +187,9 @@
                    Comtheme=Comtheme+s;
                 } 
           }
-         paginationOptions.queryParams.themeIds=Comtheme; 
+         paginationOptions.queryParams.themeIds=Comtheme;
+         for(var i=0; i<8; i++)
+         {$("#spot_"+i).css("display","none" );} 
          pagination(paginationOptions);   
          console.log(paginationOptions.queryParams.themeIds);
          if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
@@ -227,7 +230,9 @@
                       Comcompanion=Comcompanion+s;               
                     } 
                  }
-              paginationOptions.queryParams.companionIds=Comcompanion; 
+              paginationOptions.queryParams.companionIds=Comcompanion;
+              for(var i=0; i<8; i++)
+              {$("#spot_"+i).css("display","none" );} 
               pagination(paginationOptions);   
               console.log(paginationOptions.queryParams.companionIds);
               if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
@@ -268,7 +273,9 @@
                       Comtheme=Comtheme+s;               
                     } 
                  }
-              paginationOptions.queryParams.seasonIds=Comtheme; 
+              paginationOptions.queryParams.seasonIds=Comtheme;
+              for(var i=0; i<8; i++)
+              {$("#spot_"+i).css("display","none" );} 
               pagination(paginationOptions);   
               console.log(paginationOptions.queryParams.seasonIds);
               if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
@@ -280,7 +287,9 @@
      $("#Search").click( 
          function(){
           var Searchname = $("#Searchname").val();
-          paginationOptions.queryParams.name=Searchname; 
+          paginationOptions.queryParams.name=Searchname;
+          for(var i=0; i<8; i++)
+          {$("#spot_"+i).css("display","none" );} 
           pagination(paginationOptions);
           console.log(paginationOptions.queryParams.name); 
           console.log(paginationOptions.queryParams);          

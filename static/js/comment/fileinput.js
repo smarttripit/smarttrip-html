@@ -199,20 +199,20 @@
             '       {previewFileIcon}\n' +
             '   </div>',
         defaultFileActionSettings = {
-            removeIcon: '<i class="glyphicon glyphicon-trash text-danger"></i>',
-            removeClass: 'btn btn-xs btn-default',
-            removeTitle: 'Remove file',
-            uploadIcon: '<i class="glyphicon glyphicon-upload text-info"></i>',
-            uploadClass: 'btn btn-xs btn-default',
-            uploadTitle: 'Upload file',
-            indicatorNew: '<i class="glyphicon glyphicon-hand-down text-warning"></i>',
-            indicatorSuccess: '<i class="glyphicon glyphicon-ok-sign file-icon-large text-success"></i>',
-            indicatorError: '<i class="glyphicon glyphicon-exclamation-sign text-danger"></i>',
-            indicatorLoading: '<i class="glyphicon glyphicon-hand-up text-muted"></i>',
-            indicatorNewTitle: 'Not uploaded yet',
-            indicatorSuccessTitle: 'Uploaded',
-            indicatorErrorTitle: 'Upload Error',
-            indicatorLoadingTitle: 'Uploading ...'
+            //removeIcon: '<i class="glyphicon glyphicon-trash text-danger"></i>',
+            //removeClass: 'btn btn-xs btn-default',
+            //removeTitle: 'Remove file',
+            //uploadIcon: '<i class="glyphicon glyphicon-upload text-info"></i>',
+            //uploadClass: 'btn btn-xs btn-default',
+            //uploadTitle: 'Upload file',
+            //indicatorNew: '<i class="glyphicon glyphicon-hand-down text-warning"></i>',
+            //indicatorSuccess: '<i class="glyphicon glyphicon-ok-sign file-icon-large text-success"></i>',
+            //indicatorError: '<i class="glyphicon glyphicon-exclamation-sign text-danger"></i>',
+            //indicatorLoading: '<i class="glyphicon glyphicon-hand-up text-muted"></i>',
+            //indicatorNewTitle: 'Not uploaded yet',
+            //indicatorSuccessTitle: 'Uploaded',
+            //indicatorErrorTitle: 'Upload Error',
+            //indicatorLoadingTitle: 'Uploading ...'
         },
         tMain1 =  
             '<div class="kv-upload-progress hide"></div>\n' +
@@ -264,11 +264,7 @@
            // '    <div class="file-caption-name">{caption}</div>\n' +
             '    {actions}\n' +
             '</div>',
-        tActions = '<div class="file-actions">\n' +
-            '    <div class="file-footer-buttons">\n' +
-            '        {upload}{delete}{other}' +
-            '    </div>\n' +
-            '    <div class="file-upload-indicator" tabindex="-1" title="{indicatorTitle}">{indicator}</div>\n' +
+        tActions =             
             '    <div class="clearfix"></div>\n' +
             '</div>',
         tActionDelete = '<button type="button" class="kv-file-remove {removeClass}" ' +
