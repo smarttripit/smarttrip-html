@@ -134,11 +134,10 @@
      // 加载发现北京评论列表
      var paginationOptions = {
        domId : "pager2",
-       productType:"03",
        url : "/comment/getByPage?productId="+spotId,
        page : 1,
        rows : 6,
-       queryParams : {score:""},
+       queryParams : {productType:"03"，score:""},
        dealData : function(dataList){
          var len = dataList.length;
          if(len > 0){
@@ -212,9 +211,8 @@
         jQuery.ajax({
           type : "GET",
           async: true,
-          data : {content:comment_content,score:comment_score,imageURL:comment_img},
+          data : {productType:"03"，content:comment_content,score:comment_score,imageURL:comment_img},
           cache: false,
-          productType:"03",
           datatype : "json",
           url : "/comment/newComment?productId="+spotId,
           success : function(result){
