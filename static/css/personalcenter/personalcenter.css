@@ -1,0 +1,21 @@
+/*左侧导航*/
+.panel-group_defined{border: 2px #ececec solid;width:100%;background: #fff;font-size: 14px;padding-bottom: 15px;}
+.panel_defined{background: transparent;border:0px;background-color: #fff;}
+.panel-heading_defined{padding-bottom: 0px;}
+.panel-title_defined{line-height: 43px;border-bottom: 1px #d1d1d1 solid;font-size: 18px;color: #09C;}
+.panel-body_defined{padding-bottom: 0px;border-top:0px;padding-top: 5px;}
+.panel-group .panel+.panel {margin-top: 0px; }
+.mysetting{color:#999;padding:5px;font-size: 15px;}
+.myorderlist{width: 55px;
+height: 55px;
+font-size: 35px;
+background: rgba(153, 153, 153, 0.25);
+border-radius: 30px;
+color: #EB9D55;}
+.paylist{font-size: 15px;
+color: #999;
+margin-top: 10px;}
+.tourist_img{width:120px;height:120px;display: inline;}
+.view_more_orderlist{line-height: 36px;
+display: block;}
+.products_img{width:90px;height:90px;display: inline;}
