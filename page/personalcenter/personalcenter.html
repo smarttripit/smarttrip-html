@@ -3,8 +3,8 @@
    <head>
      <!-- 要紧接着head标签 -->
      <!--# include file="/common/head.html" -->
-     <link rel="stylesheet" type="text/css" href="/static/css/personalcenter/style.css" >
-     <link rel="stylesheet" type="text/css" href="/static/css/personalcenter/reset.css" >
+     <link rel="stylesheet" type="text/css" href="/static/css/personalcenter/personalcenter.css" >
+     <link rel="stylesheet" type="text/css" href="/static/css/personalcenter/offcanvas.css" >
      <link rel="stylesheet" type="text/css" href="/static/css/common/top.css">
      <!-- 这里引入本页面特有的css文件 -->
      <title>个人中心</title>
@@ -16,82 +16,213 @@
       <img src="/static/images/themeimage4.jpg" class="header_image"> 
       <!--# include file="/common/top.html"  -->    
     </div>  
-    <div class="container mt_215" >    	
-    	<!-- 这里开始写真正的业务代码 -->
-      <header>
-        <a id="cd-menu-trigger" href="#0">
-          <span class="cd-menu-text">Menu</span>
-          <span class="cd-menu-icon"></span>
-        </a>
-      </header>
-      <nav id="cd-lateral-nav">
-          <ul class="cd-navigation">
-            <li class="item-has-children">
-              <a href="#0">Services</a>
-              <ul class="sub-menu">
-                <li><a href="#0">Brand</a></li>
-                <li><a href="#0">Web Apps</a></li>
-                <li><a href="#0">Mobile Apps</a></li>
-              </ul>
-            </li> <!-- item-has-children -->
+    <div class="container mt_215" >     
+      <!-- 这里开始写真正的业务代码 -->
+      <div class="container">
+          <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 sidebar-offcanvas in_center" id="sidebar">
+            <div class="panel-group panel-group_defined" id="accordion">
+              <div class="panel_defined">
+                <div class="panel-heading panel-heading_defined cor_blue font_size16">
+                    <p class="panel-title panel-title_defined">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; 个人中心</a>
+                    </p>           
+                </div>
+              </div>
 
-            <li class="item-has-children">
-              <a href="#0">Products</a>
-              <ul class="sub-menu">
-                <li><a href="#0">Product 1</a></li>
-                <li><a href="#0">Product 2</a></li>
-                <li><a href="#0">Product 3</a></li>
-                <li><a href="#0">Product 4</a></li>
-                <li><a href="#0">Product 5</a></li>
-              </ul>
-            </li> <!-- item-has-children -->
-
-            <li class="item-has-children">
-              <a href="#0">Stockists</a>
-              <ul class="sub-menu">
-                <li><a href="#0">London</a></li>
-                <li><a href="#0">New York</a></li>
-                <li><a href="#0">Milan</a></li>
-                <li><a href="#0">Paris</a></li>
-              </ul>
-            </li> <!-- item-has-children -->
-          </ul> <!-- cd-navigation -->
-
-          <ul class="cd-navigation cd-single-item-wrapper">
-            <li><a href="#0">Tour</a></li>
-            <li><a href="#0">Login</a></li>
-            <li><a href="#0">Register</a></li>
-            <li><a href="#0">Pricing</a></li>
-            <li><a href="#0">Support</a></li>
-          </ul> <!-- cd-single-item-wrapper -->
-
-          <ul class="cd-navigation cd-single-item-wrapper">
-            <li><a class="current" href="#0">Journal</a></li>
-            <li><a href="#0">FAQ</a></li>
-            <li><a href="#0">Terms &amp; Conditions</a></li>
-            <li><a href="#0">Careers</a></li>
-            <li><a href="#0">Students</a></li>
-          </ul> <!-- cd-single-item-wrapper -->
-
-          <div class="cd-navigation socials">
-
-          </div> <!-- socials -->
-        </nav>
-      <main class="cd-main-content">
-
-        <!-- put your content here -->
-        
-      </main> <!-- cd-main-content -->
+              <div class="panel_defined">
+                <div class="panel-heading panel-heading_defined">
+                    <p class="panel-title panel-title_defined cor_blue font_size16">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> &nbsp;消息通知</a>
+                    </p>           
+                </div>
+              </div>
 
 
-    	
+              <div class="panel_defined">
+                <div class="panel-heading panel-heading_defined">
+                  <p class="panel-title panel-title_defined cor_blue font_size16"><a data-toggle="collapse"data-parent="#accordion"href="#collapseThree"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;我的订单</a>
+                  </p>
+                </div>
+              </div> 
+
+              <div class="panel_defined">
+                <div class="panel-heading panel-heading_defined">
+                  <p class="panel-title panel-title_defined cor_blue font_size16"><a data-toggle="collapse"data-parent="#accordion"href="#collapseFour"><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>&nbsp;&nbsp;我的设置</a>
+                  </p>
+                </div>
+                <div id="collapseFour" class="collapse in">
+                  <div class="panel-body panel-body_defined">
+                    <div class="row mysetting font_size13 cor_gray">
+                      <div class="col-xs-12 col-sm-12 col-md-12 row_space">
+                        <a href="javascript:;" onclick="return false;" class="">个人资料</a>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-12 ">
+                        <a href="javascript:;" onclick="return false;" class="">密码设置</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            </div><!--/.sidebar-offcanvas-->
+            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 row_bottom_space1">
+                <p class=" visible-xs">
+                  <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">我的周游趣</button>
+                </p>
+
+                <div class="col-xs-12 col-sm-12 col-md-12 panel-group_defined  pt15">
+                 <div class="row">
+                   <div class="col-xs-12 col-sm-12 col-md-3 in_center">
+                     <img id="" src="\static\images\girl.jpg" class="img-responsive img-circle tourist_img ">
+                   </div>
+                   <div class="col-xs-12 col-sm-12 col-md-8">
+                     <div class="row">
+                       <div class="col-xs-12 col-sm-5 col-md-5">
+                         <p class="user_name" id="">用户名</p>
+                       </div>
+                       <div class="col-xs-12 col-sm-7 col-md-7">
+                       </div>
+                     </div>
+                     <div class="row row_bottom_space1">
+                         <div class="col-xs-12 col-sm-6 col-md-6">
+                            <p><b>手机号码：</b>1234567890</p>
+                         </div>
+                         <div class="col-xs-12 col-sm-6 col-md-6">
+                            <p><b>泡泡数：</b>123456</p>
+                         </div>
+                     </div>
+                     <div class="row row_bottom_space1" style="">
+                       <div class="col-xs-4 col-sm-2 col-md-2">
+                          <div class="orderlist_style in_center">
+                            <i class="fa fa-calendar-check-o"></i>
+                            <p class="paylist cor_gray font_size13">已付款</p>
+                          </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 col-md-2">
+                          <div class="orderlist_style in_center">
+                            <i class="fa fa-calendar-times-o"></i>
+                            <p class="paylist cor_gray font_size13">未付款</p>
+                          </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 col-md-2">
+                          <div class="orderlist_style in_center">
+                            <i class="fa fa-calendar-minus-o"></i>
+                            <p class="paylist cor_gray font_size13">待评价</p>
+                          </div>
+                        </div>
+                     </div>
+                   </div>
+                 </div>
+                </div>
+            </div><!--/.col-xs-12.col-sm-9-->
+            
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 row_bottom_space1">
+                <div class="col-xs-12 col-sm-12 col-md-12 panel-group_defined  pt15">
+                  <div class="row row_bottom_space">
+                   <div class="col-xs-6 col-sm-3 col-md-3 in_center">
+                    <span class="myorderlist font_size16">我的订单</span>
+                   </div>
+                   <div class=" col-sm-6 col-md-6">
+                   </div>
+                   <div class="col-xs-6 col-sm-3 col-md-3">
+                    <a class="view_more_orderlist in_center font_size13" href="javascript:;" onclick="return false;">查看全部订单</a>
+                   </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12">
+                    <hr style="border: none;border-top:2px dashed rgba(204, 122, 0, 0.16);margin: 0px;margin-bottom: 20px;"> 
+                  </div>
+
+                  <div class="col-xs-12 col-sm-12 col-md-12 in_center row_bottom_space1">
+                    <div class="col-xs-6 col-sm-3 col-md-3 ">
+                      <img id="" src="\static\images\2001.jpg" class="img-responsive  products_img ">
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2">
+                      <p class="line_height80">小高高</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3 ">
+                      <p class="mt20">2015-12-28<br>
+                      19:00</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2">
+                      <p class="line_height80">等待付款</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2">
+                      <p class="line_height80">查看</p>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-12 col-md-12 in_center row_bottom_space1">
+                    <div class="col-xs-6 col-sm-3 col-md-3 ">
+                      <img id="" src="\static\images\2001.jpg" class="img-responsive  products_img ">
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2">
+                      <p class="line_height80">小高高</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3 ">
+                      <p class="mt20">2015-12-28<br>
+                      19:00</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2">
+                      <p class="line_height80">等待付款</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2">
+                      <p class="line_height80">查看</p>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-12 col-md-12 in_center row_bottom_space1">
+                    <div class="col-xs-6 col-sm-3 col-md-3 ">
+                      <img id="" src="\static\images\2001.jpg" class="img-responsive  products_img ">
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2">
+                      <p class="line_height80">小高高</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3 ">
+                      <p class="mt20">2015-12-28<br>
+                      19:00</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2">
+                      <p class="line_height80">等待付款</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2">
+                      <p class="line_height80">查看</p>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-12 col-md-12 in_center row_bottom_space1">
+                    <div class="col-xs-6 col-sm-3 col-md-3 ">
+                      <img id="" src="\static\images\2001.jpg" class="img-responsive  products_img ">
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2">
+                      <p class="line_height80">小高高</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3 ">
+                      <p class="mt20">2015-12-28<br>
+                      19:00</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2">
+                      <p class="line_height80">等待付款</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2">
+                      <p class="line_height80">查看</p>
+                    </div>
+                  </div>
+
+                </div>
+
+
+            </div><!--/.col-xs-12.col-sm-9-->
+
+          </div><!--/row-->
+      </div>
+
     </div>
 
     <!--# include file="/common/footer.html"  -->
     <!-- 核心js文件 -->
     <!--# include file="/common/corejs.html" -->
     <!-- 这里引入本页面特有的js文件 -->
-    <script src="/static/js/personalcenter/main.js"></script> 
-  </body>
-
+    <script src="/static/js/personalcenter/offcanvas.js"></script> 
+    <script src="/static/js/personalcenter/ie10-viewport-bug-workaround.js"></script> 
 </html>
