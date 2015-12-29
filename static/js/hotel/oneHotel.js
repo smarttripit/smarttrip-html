@@ -55,7 +55,10 @@
 
       //时间选择器
       
-      $(".date_in").datepicker({minDate: 0});
+      $(".date_in").datepicker({
+        minDate: 0
+
+      });
       $(".date_out").datepicker({minDate: 0});
 
   });
