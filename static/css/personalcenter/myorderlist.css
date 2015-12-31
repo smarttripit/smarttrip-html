@@ -6,23 +6,24 @@
 .panel-body_defined{padding-bottom: 0px;border-top:0px;padding-top: 5px;}
 .panel-group .panel+.panel {margin-top: 0px; }
 .mysetting{padding:5px;}
-/*右侧上部分基本信息*/
-.user_name{font-size: 20px;
-font-weight: 600;
-color: #4A4545;}
-.orderlist_style{width: 55px;
-height: 55px;
-font-size: 35px;
-background: rgba(153, 153, 153, 0.25);
-border-radius: 30px;
-color: #EB9D55;}
-.paylist{
-margin-top: 10px;}
-.tourist_img{width:120px;height:120px;display: inline;}
+/*横向胶囊导航*/
+.nav-pills .defined_active{background-color: #94DEEC;}
+.nav-pills_defined li a {background-color: #C6D5D8;border-radius: 0px;padding: 6px 15px;margin-left: 4px;color: #fff;}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{background-color:#94DEEC;}
+.nav>li>a:hover {text-decoration: none;background-color: #94DEEC;}
+.orderliststyle{width: 120px;
+display: inline-block;
+border-radius: 0px;
+/* height: 30px; */
+padding: 4px 8px;}
+.table_head{/* height: 40px; */
+padding: 10px 12px 0px 12px;
+font-size: 13px;
+}
+
 /*右侧下部分我的订单*/
 .myorderlist{
 font-weight: 600;margin-left: 40px;}
 .view_more_orderlist{line-height: 22px;
 display: block;}
 .products_img{width:70px;height:70px;display: inline;}
-
