@@ -22,6 +22,8 @@
 .inner img{width:100%;}
 .inner_img img{width:100%;}
 .mar_left{margin-left: -15px;}
+.nodi{display:none!important;}
+.db{display:block!important;}
 /*颜色*/
 .bgc_white{background-color:#fff;}
 .bgc_blue{background-color:#94DEEC;}

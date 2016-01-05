@@ -1,4 +1,26 @@
-          var sends = {
+$(document).ready(function() {
+	judgeHasLogin();// 判断是否已经登录
+});
+
+// 判断是否已经登录
+function judgeHasLogin(){
+	$.ajax({
+	    type: "GET",
+	    cache: false,
+	    url: "/visitor/hasLogin",
+	    dataType: "json",
+	    success: function(result){
+	               if(result.status == 'success'){
+	            	   $("#li_login").replaceWith("<a href='/personalcenter/personalcenter.html'>" + result.data.userName + "</a>");
+	            	   $("#li_register").replaceWith("<a href='/visitor/logout'>退出</a>");
+	               }
+	               $("#li_login").removeClass("nodi").addClass("db");
+	        	   $("#li_register").removeClass("nodi").addClass("db");
+	             }
+  });
+}
+
+var sends = {
             checked:1,
             send:function(){
               /**当手机号码输入正确时才能发送验证码，并且30秒后才能重发**/
@@ -111,9 +133,10 @@ $('#password').keyup(function () {
                   },
                   success: function(data) {
                     if(data.status == 'success'){
-                      alert('success');
+                    	judgeHasLogin();// 判断是否已经登录
+                    	$('#loginModal').modal('hide')
                     } else {
-                      alert(data.tipMsg);
+                    	alert(data.tipMsg);
                     }
                   }
               });
