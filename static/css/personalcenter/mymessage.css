@@ -7,7 +7,9 @@
 .panel-group .panel+.panel {margin-top: 0px; }
 .mysetting{padding:5px;}
 /*横向胶囊导航*/
-.nav-pills .defined_active{background-color: #94DEEC;}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+color: #fff;
+background-color: #94DEEC;}
 .nav-pills_defined li a {background-color: #C6D5D8;border-radius: 0px;padding: 6px 15px;margin-left: 4px;color: #fff;}
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover{background-color:#94DEEC;}
 .nav>li>a:hover {text-decoration: none;background-color: #94DEEC;}
@@ -15,15 +17,18 @@
 display: inline-block;
 border-radius: 0px;
 padding: 4px 8px;}
-.table_head{
-padding: 15px 12px 0px 12px;
+.message_list{
+padding: 0px 12px 5px 12px;
 font-size: 13px;
 }
 .border_gray{border: 2px #ececec solid;}
-
-/*右侧下部分我的订单*/
-.myorderlist{
-font-weight: 600;margin-left: 40px;}
-.view_more_orderlist{line-height: 22px;
-display: block;}
+/*面包屑导航*/
+.breadcrumb_defined{background-color: #fff;margin-bottom: 0px;}
+.breadcrumb>li+li:before {
+padding: 0 5px;
+color: #ccc;
+content: "|";
+margin-right:2px;
+}
+/*订单消息*/
 .products_img{width:70px;height:70px;display: inline;}
