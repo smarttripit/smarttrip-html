@@ -24,21 +24,21 @@
       height: 500px;
     }
 
-    @media only screen and (max-width: 500px) {
-    #modify_box {
-        display: none;
-    }
-    #pc_box{
-      display: block;
-    }
-  }
-
-  @media only screen and (max-width: 1000px){
-    #modify_box {
+    @media only screen and (max-width: 768px) {
+    #mobile_box {
         display: block;
     }
     #pc_box{
       display: none;
+    }
+  }
+
+  @media only screen and (min-width: 768px){
+    #mobile_box {
+        display: none;
+    }
+    #pc_box{
+      display: block;
     }
   }
     </style>
@@ -69,7 +69,7 @@
             
             <div class="row spot_back">                    
               <div class="col-md-12">
-                <p>推荐理由：这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好</p>
+                <p>推荐理由：独好这里风景独好这里风景独好这里风景独好这里风景独好这里风景独好好</p>
                 <p><span>好评率：90%</span>&nbsp;&nbsp;&nbsp;<span>地点：门头沟</span></p>
 
               </div><!-- /.col-lg-6 --><br>     
@@ -218,28 +218,22 @@
 
 
               <!--手机版-->
-              <div class="panel-body col-xs-12 col-sm-12 col-md-12" id="modify_box">
-                <div class="well" style="text-align:center;background-color:#fff;" id="modify" >
-                  <div class="col-xs-4 col-sm-4 col-md-4">
+              <div class="panel-body col-xs-12 col-sm-12 col-md-12" id="mobile_box">
+                <div class="well" style="background-color:#fff;" id="modify_bar" >
+                  <div class="col-xs-6 col-sm-6 col-md-6">
                     <p>今天</p>
                   </div>
                   <div class="col-xs-4 col-sm-4 col-md-4">
                     <p>入住1天</p>
                   </div>
-                  <div class="col-xs-4 col-sm-4 col-md-4">
-                    <p>修改</p>
+
+                  <div class="col-xs-2 col-sm-2 col-md-2">
+                    <p style="color:blue">改</p>
                   </div>
+                 
                 </div>
 
-            
-                <div  id="modifyModal" style="position:fixed;bottom:0;display:none;z-index:999;background-color:#fff;width:100%">
-
-                  <div>
-                    <button  type="button" class="btn modify_btn">
-                            &times;
-                    </button>   
-                  </div>
-                      
+                <div  id="modifyModal" style="position:fixed;bottom:0;left:0;display:none;z-index:999;background-color:#fff;text-align:center;border:1px solid lightblue">              
                   <div> 
                     <div class="col-xs-4 col-sm-4 col-md-4">
                       <p>1月3日</p>
@@ -249,70 +243,96 @@
                         <p>入住</p>
                       </div>
                       <div class="col-xs-8 col-sm-8 col-md-8">
-                        <span>前一天</span>&nbsp;&nbsp;<span>后一天</span>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                          <button><</button>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                          <button>></button>
+                        </div>
                       </div>
                     </div>
 
                     <div class="col-xs-4 col-sm-4 col-md-4">
-                      <p>1月3日</p>
+                      <p>住1晚</p>
                     </div>  
                     <div class="col-xs-8 col-sm-8 col-md-8">
                       <div class="col-xs-4 col-sm-4 col-md-4">
-                        <p>入住</p>
+                        <p>离店</p>
                       </div>
                       <div class="col-xs-8 col-sm-8 col-md-8">
-                        <span>前一天</span>&nbsp;&nbsp;<span>后一天</span>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                          <button>-</button>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                          <button>+</button>
+                        </div>
                       </div>
                     </div>
 
-                    <button class="btn btn-primary">确定</button>
+                    <button id="modify_btn1" class="btn btn-primary" style="width:100%">确定</button>
                   </div> 
                 </div>      
                    
                 <div class="panel-body col-xs-12 col-sm-12 col-md-12" data-toggle="modal" data-target="#myModal">
-                  <div class="col-xs-8 col-sm-8 col-md-8">
+                  <div class="col-xs-10 col-sm-10 col-md-10">
                     <div class="col-xs-6 col-sm-6 col-md-6">
                       <img src="/static/images/2001.jpg" class="img-responsive">
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">
-                      <p>大床房》</p>
+                      <p>大床房</p>
                       <p>15m^2</p>
                     </div>
                   </div>
                   
-                  <div class="col-xs-4 col-sm-4 col-md-4">
+                  <div class="col-xs-2 col-sm-2 col-md-2">
                     <p>￥188</p>
                   </div>
                 </div>
 
                 <div class="panel-body col-xs-12 col-sm-12 col-md-12" data-toggle="modal" data-target="#myModal">
-                  <div class="col-xs-8 col-sm-8 col-md-8">
+                  <div class="col-xs-10 col-sm-10 col-md-10">
                     <div class="col-xs-6 col-sm-6 col-md-6">
                       <img src="/static/images/2001.jpg" class="img-responsive">
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">
-                      <p>大床房》</p>
+                      <p>大床房</p>
                       <p>15m^2</p>
                     </div>
                   </div>
                   
-                  <div class="col-xs-4 col-sm-4 col-md-4">
+                  <div class="col-xs-2 col-sm-2 col-md-2">
                     <p>￥188</p>
                   </div>
                 </div>
 
                 <div class="panel-body col-xs-12 col-sm-12 col-md-12" data-toggle="modal" data-target="#myModal">
-                  <div class="col-xs-8 col-sm-8 col-md-8">
+                  <div class="col-xs-10 col-sm-10 col-md-10">
                     <div class="col-xs-6 col-sm-6 col-md-6">
                       <img src="/static/images/2001.jpg" class="img-responsive">
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">
-                      <p>大床房》</p>
+                      <p>大床房</p>
                       <p>15m^2</p>
                     </div>
                   </div>
                   
-                  <div class="col-xs-4 col-sm-4 col-md-4">
+                  <div class="col-xs-2 col-sm-2 col-md-2">
+                    <p>￥188</p>
+                  </div>
+                </div>
+
+                <div class="panel-body col-xs-12 col-sm-12 col-md-12" data-toggle="modal" data-target="#myModal">
+                  <div class="col-xs-10 col-sm-10 col-md-10">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <img src="/static/images/2001.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <p>大床房</p>
+                      <p>15m^2</p>
+                    </div>
+                  </div>
+                  
+                  <div class="col-xs-2 col-sm-2 col-md-2">
                     <p>￥188</p>
                   </div>
                 </div>
@@ -549,11 +569,15 @@
   </script>
 
   <script>
-    $('#modify').click(function(){
+    $('#modify_bar').click(function(){
       $('#modifyModal').toggle();
     })
 
     $('.modify_btn').click(function(){
+      $('#modifyModal').hide();
+    })
+
+    $('#modify_btn1').click(function(){
       $('#modifyModal').hide();
     })
 

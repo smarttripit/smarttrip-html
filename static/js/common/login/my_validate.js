@@ -25,7 +25,7 @@ var sends = {
             send:function(){
               /**当手机号码输入正确时才能发送验证码，并且30秒后才能重发**/
               if (($("#register-form").validate().element($("#phone")))&&(!($('#phone').val()==""))&&($('.div-phone span').html()=="发送验证码")) {
-                var time = 30;
+                var time = 60;
                 //验证手机号是否已经被注册
              $.ajax({
                  type: "GET",
@@ -117,6 +117,12 @@ $('#password').keyup(function () {
       return this.optional(element) || (mobile1.test(value)||(email1.test(value)||(user.test(value))));
     }, "请输入正确的用户名/手机号/邮箱");
 
+    /**注册名验证（只能为数字字母下划线）**/
+    jQuery.validator.addMethod("username_test", function (value, element) {
+        var user =  /^[a-zA-Z0-9_]+$/;
+        
+      return this.optional(element) || (user.test(value));
+    }, "用户名只能为数字字母下划线");
      $("#login-form").validate({
           debug:true,      //调试模式（并不会提交）
           errorPlacement: function(error, element) {  
@@ -195,7 +201,8 @@ $('#password').keyup(function () {
 
       username:{                
         required:true,        //开启必填项
-        rangelength:[2,12]    //请输入的数值在2至12位之间
+        rangelength:[2,20],    //请输入的数值在2至20位之间
+        username_test:true
       },
       number:{
         required:true
@@ -230,7 +237,7 @@ $('#password').keyup(function () {
     messages:{
       username:{
         required:"用户名不能留空",      //用户名的必填项提示
-        rangelength:"请检查您输入的数值的长度是否在2至10之间"    //用户名的长度提示
+        rangelength:"请检查您输入的数值的长度是否在2至20之间"    //用户名的长度提示
       },
       password:{
         required:"密码不能为空",
