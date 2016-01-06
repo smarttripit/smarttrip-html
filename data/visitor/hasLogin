@@ -2,5 +2,8 @@
     "status": "success",
     "tipCode": "",
     "tipMsg": "",
-    "data": null
+    "data": {
+    	"userName": "songjie",
+    	"visitorId": "888"
+    }
 }
