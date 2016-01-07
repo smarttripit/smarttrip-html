@@ -51,6 +51,6 @@
 
 .semi-transparent{
   background-color:#000;
-  opacity:0.3;  
-  filter:alpha(opacity=30);
+  background:rgba(0,0,0,0.5); 
+  filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
 }
