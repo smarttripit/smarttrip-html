@@ -21,8 +21,20 @@ margin-top: 10px;}
 .tourist_img{width:120px;height:120px;display: inline;}
 /*右侧下部分我的订单*/
 .myorderlist{
-font-weight: 600;margin-left: 40px;}
+font-weight: 600;margin-left: 30px;}
 .view_more_orderlist{line-height: 22px;
 display: block;}
-.products_img{width:70px;height:70px;display: inline;}
+.products_img{width:100px;height:100px;display: inline;}
+.operate_order{background-color: transparent;
+border: 1px solid #999;
+padding: 2px 5px;}
+
+@media screen and (min-width:750px){
+                                      
+                                    } 
+@media screen and (max-width:750px){
+                                      .order_number{margin-left:-15px;}
+                                      .order_state{margin-right:-15px;}
+                                    } 
+
 

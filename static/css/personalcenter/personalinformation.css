@@ -8,3 +8,11 @@
 .mysetting{padding:5px;}
 /*右侧表单*/
 .form_head{padding:5px 10px;}
+.travel_love div li a{display: inline-block;
+margin: 5px 10px;
+border-radius: 4px;
+padding: 5px 10px;
+text-align: center;
+border: 1px rgba(170, 170, 170, 0.47) solid;
+}
+.travel_love div li{list-style-type: none;}

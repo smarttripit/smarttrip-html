@@ -26,4 +26,16 @@ font-size: 13px;
 font-weight: 600;margin-left: 40px;}
 .view_more_orderlist{line-height: 22px;
 display: block;}
-.products_img{width:70px;height:70px;display: inline;}
+
+.products_img{width:100px;height:100px;display: inline;}
+.operate_order{background-color: transparent;
+border: 1px solid #999;
+padding: 2px 5px;}
+
+@media screen and (min-width:750px){
+                                      
+                                    } 
+@media screen and (max-width:750px){
+                                      .order_number{margin-left:-15px;}
+                                      .order_state{margin-right:-15px;}
+                                    } 
