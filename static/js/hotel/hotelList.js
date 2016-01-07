@@ -7,11 +7,11 @@ $(function(){
 });
 
 //导航栏active切换
-var tabs_lis = $('.tabs li');
+var tabs_lis = $('#tabs div');
 $.each(tabs_lis,function(key,val){
   $(this).click(function(){
     var this_index = key;
-    $('.tabs li').removeClass('tab-current');
+    $('#tabs div').removeClass('tab-current');
     $(this).addClass('tab-current');
     if(key==0){
       $('ul.select').hide();
