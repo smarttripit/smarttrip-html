@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+  <html lang="en">
+   <head>
+     <!-- 要紧接着head标签 -->
+     <!--# include file="/common/head.html" -->
+     <link rel="stylesheet" type="text/css" href="/static/css/personalcenter/personalinfo-main.css" >
+     <link rel="stylesheet" type="text/css" href="/static/css/personalcenter/offcanvas.css" >
+     <link rel="stylesheet" type="text/css" href="/static/css/common/top.css">
+     <!-- 这里引入本页面特有的css文件 -->
+     <title>个人资料</title>
+   </head>
+
+  <body>
+    <!--# include file="/common/login.html"  --> 
+    <div class="all_top">
+      <img src="/static/images/themeimage4.jpg" class="header_image"> 
+      <!--# include file="/common/top.html"  -->    
+    </div>  
+    <div class="container mt_215" >     
+      <!-- 这里开始写真正的业务代码 --> 
+          <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 sidebar-offcanvas in_center" id="sidebar">
+              <div class="panel-group panel-group_defined" id="accordion">
+              <div class="panel_defined">
+                <div class="panel-heading panel-heading_defined cor_blue font_size16">
+                    <p class="panel-title panel-title_defined">
+                      <a href="/personalcenter/personalcenter.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; 个人中心</a>
+                    </p>           
+                </div>
+              </div>
+
+              <div class="panel_defined">
+                <div class="panel-heading panel-heading_defined">
+                    <p class="panel-title panel-title_defined cor_blue font_size16">
+                      <a href="/personalcenter/mymessage.html">
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> 
+                        &nbsp;消息通知
+                      </a>
+                    </p>           
+                </div>
+              </div>
+
+
+              <div class="panel_defined">
+                <div class="panel-heading panel-heading_defined">
+                  <p class="panel-title panel-title_defined cor_blue font_size16">
+                    <a href="/personalcenter/myorderlist.html" >
+                      <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                      &nbsp;我的订单
+                    </a>
+                  </p>
+                </div>
+              </div> 
+
+              <div class="panel_defined">
+                <div class="panel-heading panel-heading_defined">
+                  <p class="panel-title panel-title_defined cor_blue font_size16">
+                    <a data-toggle="collapse"data-parent="#accordion"href="#collapseFour">
+                      <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+                      &nbsp;我的设置
+                    </a>
+                  </p>
+                </div>
+                <div id="collapseFour" class="collapse in">
+                  <div class="panel-body panel-body_defined">
+                    <div class="row mysetting font_size13 cor_gray">
+                      <div class="col-xs-12 col-sm-12 col-md-12 row_space">
+                        <a href="/personalcenter/personalinfo-main.html" class="">个人资料</a>
+                      </div>
+                      <div class="col-xs-12 col-sm-12 col-md-12 ">
+                        <a href="javascript:;" onclick="return false;" class="">密码设置</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+              </div>
+            </div><!--/.sidebar-offcanvas-->
+            
+            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10 row_bottom_space">
+                <p class=" visible-xs">
+                  <button type="button" class="btn btn-primary cor_white" data-toggle="offcanvas">我的周游趣&nbsp<i class="fa fa-hand-o-up"></i></button>
+                </p>
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bgc_white border_gray">
+                  <div class="col-xs-12 col-sm-12 col-md-12 mt20">
+                    <span class="font_size16 bgc_blue cor_white form_head">账户信息</span>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-8 mt20 ml10">
+                    <p><b>用户名：</b><span>小高高</span></p>
+                    <p><b>手机号：</b><span>1234556778</span></p>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12 mt20">
+                    <span class="font_size16 bgc_blue cor_white form_head">个人信息</span>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-8 mt20 ml10">
+                    <p><b>真实姓名：</b><span>未填</span></p>
+                    <p><b>性别：</b><span>未填</span></p>
+                    <p><b>出生日期：</b><span>未填</span></p>
+                    <p><b>所在城市：</b><span>未填</span></p>
+                    <p><b>工作：</b><span>未填</span></p>
+                    <p><b>教育：</b><span>未填</span></p>
+                    <p><b>个人简介：</b><span>未填</span></p>
+                    <p><b>旅行爱好：</b><span>未填</span></p>
+                  </div>
+
+                  <div class="form-group ">
+                     <div class="col-xs-12 col-sm-12 col-md-12 in_center mt10 row_bottom_space1">
+                        <a href="/personalcenter/personalinfo-sub.html" class="btn font_size16 bgc_blue cor_white">完善或修改个人资料</a>
+                     </div>
+                  </div>
+                </div>
+            </div><!--/.col-xs-12.col-sm-9-->
+
+          </div>
+    </div><!--/row-->
+   
+
+
+
+    <!--# include file="/common/footer.html"  -->
+    <!-- 核心js文件 -->
+    <!--# include file="/common/corejs.html" -->
+    <!-- 这里引入本页面特有的js文件 -->
+    <script src="/static/js/personalcenter/offcanvas.js"></script> 
+    <script src="/static/js/personalcenter/ie10-viewport-bug-workaround.js"></script> 
+    <script src="/static/js/personalcenter/personalinformation.js"></script> 
+</html>

@@ -66,7 +66,7 @@
                   <div class="panel-body panel-body_defined">
                     <div class="row mysetting font_size13 cor_gray">
                       <div class="col-xs-12 col-sm-12 col-md-12 row_space">
-                        <a href="/personalcenter/personalinformation.html" class="">个人资料</a>
+                        <a href="/personalcenter/personalinfo-main.html" class="">个人资料</a>
                       </div>
                       <div class="col-xs-12 col-sm-12 col-md-12 ">
                         <a href="javascript:;" onclick="return false;" class="">密码设置</a>
@@ -79,11 +79,11 @@
             </div><!--/.sidebar-offcanvas-->
             <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10 row_bottom_space">
                 <p class=" visible-xs">
-                  <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">我的周游趣</button>
+                  <button type="button" class="btn btn-primary cor_white" data-toggle="offcanvas">我的周游趣&nbsp<i class="fa fa-hand-o-up"></i></button>
                 </p>
 
                 <!-- 选项卡组件（菜单项nav-tabs）-->
-                <div class="row mt5">
+                <div class="row mt5 row_bottom_space">
                   <div class="col-xs-9 col-sm-6 col-md-8" >
                      <ul id="message_tab" class="nav nav-pills nav-pills_defined">
                         <li class="">
@@ -95,170 +95,173 @@
                      </ul>
                   </div>            
                 </div>
+                
+                <div class=" row tab-content" id="message_tab_content">
+
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row_bottom_space1 tab-pane" id="order_message">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bgc_white border_gray">
+                      <div class="row mt5 ">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                          <ol class="breadcrumb breadcrumb_defined">
+                            <li class="active"><a href="#">全部（<span>5</span>）</a></li>
+                            <li><a href="#">未读（<span>5</span>）</a></li>
+                            <li><a href="#">已读（<span>0</span>）</a></li>
+                          </ol>
+                        </div>            
+                      </div>
+
+                      <div class="col-xs-12 col-sm-12 col-md-12">
+                        <hr style="border: none;border-top:2px dashed rgba(204, 122, 0, 0.16);margin: 0px;margin-bottom:20px;"> 
+                      </div> 
+
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 message_list mb15">
+                          <div class="col-xs-5 col-sm-2 col-md-2 col-lg-2 row_bottom_space">
+                            <img id="" src="\static\images\2001.jpg" class="img-responsive  products_img">
+                          </div>
+                          <div class="col-xs-7 col-sm-5 col-md-5 col-lg-6">
+                            <p class="message_text ">订单号为<span class="cor_blue">E10209736252</span>的客栈已付款成功！
+                            </p>
+                          </div>
+                          <div class="col-xs-8 col-sm-3 col-md-3 col-lg-3">
+                            <p class="message_time cor_gray ">
+                              2015-12-28&nbsp;19:20
+                            </p>
+                          </div>
+                          <div class="col-xs-4 col-sm-2 col-md-2 col-lg-1">
+                            <p class="message_operate cor_gray">
+                              删除
+                            </p>
+                          </div>                  
+                      </div>
+
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 message_list mb15">
+                          <div class="col-xs-5 col-sm-2 col-md-2 col-lg-2 row_bottom_space">
+                            <img id="" src="\static\images\2001.jpg" class="img-responsive  products_img">
+                          </div>
+                          <div class="col-xs-7 col-sm-5 col-md-5 col-lg-6">
+                            <p class="message_text ">订单号为<span class="cor_blue">E10209736252</span>的客栈已付款成功！
+                            </p>
+                          </div>
+                          <div class="col-xs-8 col-sm-3 col-md-3 col-lg-3">
+                            <p class="message_time cor_gray ">
+                              2015-12-28&nbsp;19:20
+                            </p>
+                          </div>
+                          <div class="col-xs-4 col-sm-2 col-md-2 col-lg-1">
+                            <p class="message_operate cor_gray">
+                              删除
+                            </p>
+                          </div>                  
+                      </div>
+
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 message_list mb15">
+                          <div class="col-xs-5 col-sm-2 col-md-2 col-lg-2 row_bottom_space">
+                            <img id="" src="\static\images\2001.jpg" class="img-responsive  products_img">
+                          </div>
+                          <div class="col-xs-7 col-sm-5 col-md-5 col-lg-6">
+                            <p class="message_text ">订单号为<span class="cor_blue">E10209736252</span>的客栈已付款成功！
+                            </p>
+                          </div>
+                          <div class="col-xs-8 col-sm-3 col-md-3 col-lg-3">
+                            <p class="message_time cor_gray ">
+                              2015-12-28&nbsp;19:20
+                            </p>
+                          </div>
+                          <div class="col-xs-4 col-sm-2 col-md-2 col-lg-1">
+                            <p class="message_operate cor_gray">
+                              删除
+                            </p>
+                          </div>                  
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row_bottom_space1 tab-pane" id="system_notification">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bgc_white border_gray">
+                      <div class="row mt5 ">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                          <ol class="breadcrumb breadcrumb_defined">
+                            <li class="active"><a href="#">全部（<span>5</span>）</a></li>
+                            <li><a href="#">未读（<span>5</span>）</a></li>
+                            <li><a href="#">已读（<span>0</span>）</a></li>
+                          </ol>
+                        </div>            
+                      </div>
+
+                      <div class="col-xs-12 col-sm-12 col-md-12">
+                        <hr style="border: none;border-top:2px dashed rgba(204, 122, 0, 0.16);margin: 0px;margin-bottom:20px;"> 
+                      </div> 
+
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 message_list mb15">
+                          <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 ">
+                            <p class="mt15">
+                              <i class="fa fa-home font_size16"></i>
+                              小周周推出特色豪华午睡空间免费抢订活动 ! 
+                              <br>详情请猛击<a class="cor_blue">https://www.baidu.com/</a>,更有千元豪礼等你来拿~~
+                            </p>
+                          </div>
+                          <div class="col-xs-8 col-sm-8 col-md-2 col-lg-3">
+                            <p class="message_time cor_gray">
+                              2015-12-28&nbsp;19:20
+                            </p>
+                          </div>
+                          <div class="col-xs-4 col-sm-8 col-md-2 col-lg-1">
+                            <p class="message_operate cor_gray">
+                              删除
+                            </p>
+                          </div>                  
+                      </div>
+
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 message_list mb15">
+                          <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 ">
+                            <p class="mt15">
+                              <i class="fa fa-home font_size16"></i>
+                              小周周推出特色豪华午睡空间免费抢订活动 ! 
+                              <br>详情请猛击<a class="cor_blue">https://www.baidu.com/</a>,更有千元豪礼等你来拿~~
+                            </p>
+                          </div>
+                          <div class="col-xs-8 col-sm-8 col-md-2 col-lg-3">
+                            <p class="message_time cor_gray">
+                              2015-12-28&nbsp;19:20
+                            </p>
+                          </div>
+                          <div class="col-xs-4 col-sm-8 col-md-2 col-lg-1">
+                            <p class="message_operate cor_gray">
+                              删除
+                            </p>
+                          </div>                  
+                      </div>
+
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 message_list mb15">
+                          <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 ">
+                            <p class="mt15">
+                              <i class="fa fa-home font_size16"></i>
+                              小周周推出特色豪华午睡空间免费抢订活动 ! 
+                              <br>详情请猛击<a class="cor_blue">https://www.baidu.com/</a>,更有千元豪礼等你来拿~~
+                            </p>
+                          </div>
+                          <div class="col-xs-8 col-sm-8 col-md-2 col-lg-3">
+                            <p class="message_time cor_gray">
+                              2015-12-28&nbsp;19:20
+                            </p>
+                          </div>
+                          <div class="col-xs-4 col-sm-8 col-md-2 col-lg-1">
+                            <p class="message_operate cor_gray">
+                              删除
+                            </p>
+                          </div>                  
+                      </div>
 
 
-            </div><!--/.col-xs-12.col-sm-9-->
-            <div class="tab-content" id="message_tab_content">
-              <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 row_bottom_space1 tab-pane" id="order_message">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bgc_white border_gray">
-                <div class="row mt5 ">
-                  <div class="col-xs-12 col-sm-12 col-md-12">
-                    <ol class="breadcrumb breadcrumb_defined">
-                      <li class="active"><a href="#">全部（<span>5</span>）</a></li>
-                      <li><a href="#">未读（<span>5</span>）</a></li>
-                      <li><a href="#">已读（<span>0</span>）</a></li>
-                    </ol>
-                  </div>            
+
+                  </div>
+
+
+                  </div><!--/.col-xs-12.col-sm-9-->            
                 </div>
 
-               <div class="col-xs-12 col-sm-12 col-md-12">
-                 <hr style="border: none;border-top:2px dashed rgba(204, 122, 0, 0.16);margin: 0px;margin-bottom:20px;"> 
-               </div> 
-
-               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 message_list mb15">
-                      <div class="col-xs-6 col-sm-2 col-md-2 ">
-                        <img id="" src="\static\images\2001.jpg" class="img-responsive  products_img">                  
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-6 ">
-                        <p class="line_height70">订单号为&nbsp;E10209736252&nbsp;的客栈已付款成功！
-                        </p>
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-2 col-lg-3">
-                        <p class="mt50 cor_gray text_right">
-                          2015-12-28&nbsp;19:20
-                        </p>
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-2 col-lg-1">
-                        <p class="mt50 cor_gray">
-                          删除
-                        </p>
-                      </div>                  
-               </div>
-
-               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 message_list mb15">
-                      <div class="col-xs-6 col-sm-2 col-md-2 ">
-                        <img id="" src="\static\images\2001.jpg" class="img-responsive  products_img">                  
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-6 ">
-                        <p class="line_height70">订单号为&nbsp;E10209736252&nbsp;的客栈已付款成功！
-                        </p>
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-2 col-lg-3">
-                        <p class="mt50 cor_gray text_right">
-                          2015-12-28&nbsp;19:20
-                        </p>
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-2 col-lg-1">
-                        <p class="mt50 cor_gray">
-                          删除
-                        </p>
-                      </div>                  
-               </div>
-
-               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 message_list mb15">
-                      <div class="col-xs-6 col-sm-2 col-md-2 ">
-                        <img id="" src="\static\images\2001.jpg" class="img-responsive  products_img">                  
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-6 ">
-                        <p class="line_height70">订单号为&nbsp;E10209736252&nbsp;的客栈已付款成功！
-                        </p>
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-2 col-lg-3">
-                        <p class="mt50 cor_gray text_right">
-                          2015-12-28&nbsp;19:20
-                        </p>
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-2 col-lg-1">
-                        <p class="mt50 cor_gray">
-                          删除
-                        </p>
-                      </div>                  
-               </div>
-
-              </div>
-
-              </div><!--/.col-xs-12.col-sm-9-->
-
-              <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 row_bottom_space1 tab-pane" id="system_notification">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bgc_white border_gray">
-                  <div class="row mt5 ">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                      <ol class="breadcrumb breadcrumb_defined">
-                        <li class="active"><a href="#">全部（<span>5</span>）</a></li>
-                        <li><a href="#">未读（<span>5</span>）</a></li>
-                        <li><a href="#">已读（<span>0</span>）</a></li>
-                      </ol>
-                    </div>            
-                  </div>
-
-                  <div class="col-xs-12 col-sm-12 col-md-12">
-                    <hr style="border: none;border-top:2px dashed rgba(204, 122, 0, 0.16);margin: 0px;margin-bottom:20px;"> 
-                  </div> 
-
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 message_list mb15">
-                      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 ">
-                        <p class="mt15">
-                          <i class="fa fa-home font_size16"></i>
-                          小周周推出特色豪华午睡空间免费抢订活动 ! 
-                          <br>详情请猛击<a class="cor_blue">https://www.baidu.com/</a>,更有千元豪礼等你来拿~~
-                        </p>
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-2 col-lg-3">
-                        <p class="mt50 cor_gray text_right">
-                          2015-12-28&nbsp;19:20
-                        </p>
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-2 col-lg-1">
-                        <p class="mt50 cor_gray">
-                          删除
-                        </p>
-                      </div>                  
-                  </div>
-
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 message_list mb15">
-                      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 ">
-                        <p class="mt15">
-                          <i class="fa fa-home font_size16"></i>
-                          小周周推出特色豪华午睡空间免费抢订活动 ! 
-                          <br>详情请猛击<a class="cor_blue">https://www.baidu.com/</a>,更有千元豪礼等你来拿~~
-                        </p>
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-2 col-lg-3">
-                        <p class="mt50 cor_gray text_right">
-                          2015-12-28&nbsp;19:20
-                        </p>
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-2 col-lg-1">
-                        <p class="mt50 cor_gray">
-                          删除
-                        </p>
-                      </div>                  
-                  </div>
-
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 message_list mb15">
-                      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 ">
-                        <p class="mt15">
-                          <i class="fa fa-home font_size16"></i>
-                          小周周推出特色豪华午睡空间免费抢订活动 ! 
-                          <br>详情请猛击<a class="cor_blue">https://www.baidu.com/</a>,更有千元豪礼等你来拿~~
-                        </p>
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-2 col-lg-3">
-                        <p class="mt50 cor_gray text_right">
-                          2015-12-28&nbsp;19:20
-                        </p>
-                      </div>
-                      <div class="col-xs-8 col-sm-8 col-md-2 col-lg-1">
-                        <p class="mt50 cor_gray">
-                          删除
-                        </p>
-                      </div>                  
-                  </div>
-
-              </div>
-
-              </div><!--/.col-xs-12.col-sm-9-->            
-            </div>
+            </div><!--/.col-xs-12.col-sm-9-->
+            
           </div><!--/row-->
    
 

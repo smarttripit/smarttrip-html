@@ -32,3 +32,13 @@ margin-right:2px;
 }
 /*订单消息*/
 .products_img{width:70px;height:70px;display: inline;}
+@media screen and (min-width:750px){
+                                      .message_time{margin-top:50px;text-align:right;}
+                                      .message_operate{margin-top:50px;}
+                                      .message_text{margin-top:20px;}
+                                    } 
+@media screen and (max-width:750px){
+                                      .message_text{margin-left:-15px;margin-top:;}
+                                      .message_operate{text-align:right;}
+                                      .message_text{margin-top:10px;}
+                                    } 

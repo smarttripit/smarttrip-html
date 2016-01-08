@@ -28,6 +28,7 @@
 .bgc_white{background-color:#fff;}
 .bgc_blue{background-color:#94DEEC;}
 .bgc_gray{background-color:#999;}
+.bgc_orange{background-color:#EB9D55;}
 .cor_white{color:#fff;}
 .cor1{color: #EBEBEB;}
 .cor_blue{color:#09C;}/*蓝色*/
@@ -43,6 +44,7 @@
 .mt50{margin-top:50px;}
 .mt_215{margin-top:215px;}
 .mb15{margin-bottom:15px;}
+.mb_10{margin-bottom:-10px;}
 .mr15{margin-right:15px;}
 .ml10{margin-left:10px;}
 .padRig1{padding-right:10px;}
