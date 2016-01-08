@@ -1,7 +1,10 @@
 .book_btn{
     padding: 6px 30px;
 }
-
+.strong_price{
+  font-size:25px;
+  color: #EC8348;
+}
 .h_375{
     height: 375px;
 }
