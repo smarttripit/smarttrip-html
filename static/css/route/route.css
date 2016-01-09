@@ -13,9 +13,10 @@
 .click_down {color: #999;float: right;margin-top: 18px;font-size: 14px;margin-right: 23px;}
 .place_days{font-size: 15px;}
 .place_days_active{color:#4ea1f5;}
-.choosetheme a {display: inline-block;width: 100%;margin-bottom: 10px;border: 1px rgba(170, 170, 170, 0.47) solid;border-radius: 4px;padding: 5px;text-align: center;}
+.choosetheme a {display: inline-block;width: 100%;margin-bottom:10px;border: 1px rgba(170, 170, 170, 0.47) solid;border-radius: 4px;padding: 5px;text-align: center;}
 .all {font-size:15px;color: #4ea1f5;}
-
+.transport_means a {display: inline-block;width: 100%;border: 1px rgba(170, 170, 170, 0.47) solid;border-radius: 4px;padding: 5px;text-align: center;}
+.else_active{background: #78A8DA;border-color:#fff;color:#fff;}
 /*横向胶囊导航*/
 .nav-pills .defined_active{background-color: #94DEEC;}
 .nav-pills_defined li a {background-color: #C6D5D8;border-radius: 0px;padding: 6px 15px;margin-left: 4px;color: #fff;}
