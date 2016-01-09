@@ -140,7 +140,7 @@ $('#password').keyup(function () {
                   success: function(data) {
                     if(data.status == 'success'){
                     	judgeHasLogin();// 判断是否已经登录
-                    	$('#loginModal').modal('hide')
+                    	$('#loginModal').modal('hide');
                     } else {
                     	alert(data.tipMsg);
                     }
