@@ -1,0 +1,16 @@
+{
+	"status":"success",
+	"tipCode":"",
+	"tipMsg":"",
+	"data":{
+		"orderNo":"1",
+		"orderThumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_thumbnail_2.jpg",
+		"orderTitle":"<自驾游>静之湖夜场滑雪",
+		"price":"98",
+		"startTime":"2016-01-22",
+		"maleCount":"1",
+		"femaleCount":"2",
+		"orderStatus":"01",
+		"weixinGroupPic":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_thumbnail_2.jpg"
+	}
+}
