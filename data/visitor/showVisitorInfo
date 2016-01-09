@@ -4,6 +4,14 @@
     "tipMsg": "",
     "data": {
     	"userName": "songjie",
-    	"mobileNo": "15200000000"
+    	"mobileNo": "15200000000",
+    	"realName":"xiaowang",
+    	"gender":"1",
+    	"birthday":"1988-12-12",
+    	"city":"北京",
+    	"profession":"学生",
+    	"education":"硕士"
+    	"introduction":"个人简介",
+    	"themes":"滑雪 徒步"
     }
 }
