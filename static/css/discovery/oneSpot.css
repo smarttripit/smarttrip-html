@@ -1,8 +1,8 @@
 /*某一景点*/
 .scenery_spot1{/*background-image: url(http://st-alpha.oss-cn-beijing.aliyuncs.com/59c6b649feb3429492c0def9add3f395);*/width:100%;background-repeat: no-repeat;height:375px;background-size:cover;}
-.spot_back_position{
+.spot_back_position{position:absolute;top:70px;z-index: 2;
 width: 100%;
-margin-top: -290px;}
+}
 .spot_back_title{background: rgba(87, 85, 85, 0.58);
 padding: 2px;
 color: #fff;}
@@ -27,10 +27,6 @@ margin-top: 5px;
 margin-bottom:0px;
 font-size: 15px;
 font-weight: 700;}
-
-.row_top_space{padding-top: 300px;}
-.row_bottom_space{margin-bottom: 10px;}
-.row_bottom_space1{margin-bottom: 20px;}
 
 @media screen and (max-width:992px){#basic_information1 .panel-body {padding: 15px 5px;}
                                     } 
