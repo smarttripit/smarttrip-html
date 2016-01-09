@@ -6,20 +6,11 @@
 .panel-body_defined{padding-bottom: 0px;border-top:0px;padding-top: 5px;}
 .panel-group .panel+.panel {margin-top: 0px; }
 .mysetting{padding:5px;}
-/*右侧表单*/
-.form_head{padding:5px 10px;}
-.travel_love a{display: inline-block;
-margin: 5px 3px;
-border-radius: 4px;
-padding: 5px 10px;
-text-align: center;
-border: 1px rgba(170, 170, 170, 0.47) solid;
-width:75px;
-}
-.form-horizontal .checkbox-inline, .form-horizontal .radio, .form-horizontal .radio-inline {
-padding-top: 5px;
-margin-top: 0;
-margin-bottom: 0;
-}
 
-.else_active{background: #78A8DA;border-color:#fff;color:#fff;}
+/*右侧下部分我的订单*/
+.form_head{padding:5px 10px;}
+.products_img{display: inline;max-width: 80px;max-height: 80px;}                                  
+@media screen and (max-width:750px){
+                                      .order_number{margin-left:-15px;}
+                                      .order_state{margin-right:-15px;}
+                                   }
