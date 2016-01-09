@@ -30,7 +30,7 @@
      }
 
      // 加载主题
-     function initComTheme(){
+    /* function initComTheme(){
         jQuery.ajax({
         type : "GET",
         async: true,
@@ -56,18 +56,18 @@
           alert("系统异常");
         }
         });
-     }
+     }*/
 
 	   // 加载经典线路列表
      $(document).ready(function() { 
           initComPlace();
-          initComTheme();   
+          //initComTheme();   
 		      var paginationOptions = {
 			       domId : "pager2",
 			       url : "/route/getByPage",
 			       page : 1,
 			       rows : 8,
-			       queryParams : {regionIds:"",themeIds:"",periods:"",seasonIds:"",orderType:"summary"},
+			       queryParams : {regionIds:"",themeIds:"",periods:"",seasonIds:"",orderType:"summary",routeType:"",},
 			       dealData : function(dataList){                       
 				                var len = dataList.length;
 				                if(len > 0){
@@ -175,7 +175,7 @@
           });
 
           //选中主题
-          $(".ThemeID  a").click( 
+         /* $(".ThemeID  a").click( 
             function(){
             var len2_2=$(this).text().length;
             var textvalue2_1=$(this).text();
@@ -216,7 +216,7 @@
             //console.log(paginationOptions.queryParams.themeIds);
             if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
             else{$(this).text(textvalue2_1+"√");}
-          });
+          });*/
 
           //选择天数
           $(".PeriodsID  a").click( 
@@ -262,8 +262,54 @@
             else{$(this).text(textvalue2_1+"√");}
           });
 
+          //选择交通方式
+          $(".transport_means  a").click( 
+            function(){
+            var len2_2=$(this).text().length;
+            var textvalue2_1=$(this).text();
+            var textvalue2_2=$(this).text().substring(0,len2_2-1);
+            var Comtransport = paginationOptions.queryParams.routeType;
+            var ComtransportNumber = Comtransport;
+            var  s  = $(this).attr("val");
+            var len=s.length;
+            //console.log(len);
+            ipos=Comtransport.indexOf(s);
+            if($(this).hasClass("else_active"))
+              { $(this).removeClass("else_active");
+                if (ComtransportNumber.length>len )
+                {
+                  str1=Comtransport.substr(ipos-1,len+1);
+                  Comtransport=Comtransport.replace(str1,"");             
+                }
+                else 
+                {
+                  str2=Comtransport.substr(ipos,len);
+                  Comtransport=Comtransport.replace(str2,"");           
+                }       
+               }
+            else{$(this).addClass("else_active");
+                  if (ComtransportNumber.length>len||ComtransportNumber.length==len )
+                   {
+                      Comtransport=Comtransport+","+s;               
+                   }
+                  else
+                   {
+                      Comtransport=Comtransport+s;                   
+                   } 
+                 }
+            paginationOptions.queryParams.routeType=Comtransport;
+            for(var i=0; i<6; i++)
+            {$("#route_"+i).css("display","none" );}  
+            pagination(paginationOptions);  
+            //console.log(paginationOptions.queryParams.routeType);
+            if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
+            else{$(this).text(textvalue2_1+"√");}
+          });
+
+
+
           //选中季节
-          $(".SeasonsID  a").click( 
+         /* $(".SeasonsID  a").click( 
             function(){
              var len2_2=$(this).text().length;
              var textvalue2_1=$(this).text();
@@ -303,7 +349,7 @@
               //console.log(paginationOptions.queryParams.seasonIds);
               if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
               else{$(this).text(textvalue2_1+"√");}
-          });
+          });*/
 
           pagination(paginationOptions);
 	   });
