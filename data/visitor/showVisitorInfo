@@ -4,6 +4,7 @@
     "tipMsg": "",
     "data": {
     	"userName": "songjie",
+    	"headerSmall":"",
     	"mobileNo": "15200000000",
     	"realName":"xiaowang",
     	"gender":"1",
