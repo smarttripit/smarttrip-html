@@ -20,7 +20,7 @@
               }
 
           }else{
-            alert(result.tipMsg);
+        	  dealFailedResponse(result);// 统一处理失败的响应
           }
         },
         error : function(data) {

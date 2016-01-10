@@ -139,7 +139,7 @@ $('#password').keyup(function () {
                   },
                   success: function(data) {
                     if(data.status == 'success'){
-                    	judgeHasLogin();// 判断是否已经登录
+                    	window.location.reload();// 登录成功之后刷新当前页面。
                     	$('#loginModal').modal('hide');
                     } else {
                     	alert(data.tipMsg);
