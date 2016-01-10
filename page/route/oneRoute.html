@@ -13,22 +13,68 @@
     <link rel="stylesheet" type="text/css" href="/static/css/route/oneRoute/oneRoute.css">
     <link rel="stylesheet" type="text/css" href="/static/css/stickup/stickup.css"> 
     <link rel="stylesheet" type="text/css" href="/static/css/datepicker/jquery-ui.css">
-    <title>oneRoute</title>      
+    <title>oneRoute</title> 
+    <style type="text/css">
+    .male_btn_box{
+      
+      border-radius: 0.25rem;
+      overflow: hidden;
+    }
+
+    .male_btn_box a,.male_btn_box em{
+      display: inline-block;
+      height: 1.6rem;
+      
+      text-align: center;
+      color: #606060;
+      font-size: 0.7rem;  
+      
+      line-height: 1.6rem;
+    }
+    .male_btn_box a{
+      width: 1.6rem;
+      background: #eee;
+      border: 1px solid #e5e5e5;
+    }
+   
+    .rili_btn a{
+      color:#fff;
+    }
+
+    .rili_btn .rili_ok{
+      background-color: #e05d69;
+    }
+    .rili_btn .rili_cancel{
+      background-color: #f3b46b;
+    }
+    .team_rule{
+      line-height: .8rem;
+      height: .8rem;
+      color: #FE9595;
+      font-size: .5rem;
+      padding: 0 1.4rem;
+     
+    }
+    .book_btn a{
+      color: #fff;
+    }
+
+    </style>     
   </head>
   <body data-spy="scroll" data-target="#myScrollspy">
     
  
     <!-- START THE COVER -->
     <div id="home" class="carousel">
+
       <div class="carousel-inner">
         <!--# include file="/common/login.html"  -->
-
         <div class="h_375">
           <div class="bgimg">
-             <div class="all_top1">
-              <!--# include file="/common/top.html"  --> 
-             </div>
-             <div class="oneroute_back"> 
+            <div class="all_top1">
+            <!--# include file="/common/top.html"  --> 
+            </div>
+            <div class="oneroute_back"> 
                <div class="col-xs-1 col-sm-2 col-md-1 ">
                 </div>
               
@@ -48,18 +94,66 @@
                </div>
 
                <div class="col-xs-1 col-sm-4 col-md-7 ">
+
                </div>
-             </div> 
-          </div>  
-        </div>  
-        
+            </div>
+          </div> 
+        </div>    
+        <!-- START THE riqi -->
+        <div class="container">
+          <div class="panel panel-default">
+             <div class="panel-body"> 
+              <div class="col-xs-12 col-sm-9 col-md-4">
+                <i class="fa fa-calendar-plus-o"></i> 
+                <select>
+                  <option value="volvo">2016-01-9</option>
+                  <option value="saab">2016-01-10</option>
+                  <option value="mercedes">2016-01-10</option>
+                  <option value="audi">2016-01-10</option>
+                </select>
+                <span>价格<em>￥99</em></span>
+                <span style="color:#9A9A9A">剩余<em>30</em></span>
+               
+              </div>
              
+                  
+              <div class="col-xs-8 col-sm-3 col-md-3">
+                <i>男</i> 
+                <select>
+                  <option value="volvo">0</option>
+                  <option value="saab">1</option>
+                  <option value="mercedes">2</option>
+                  <option value="audi">3</option>
+                </select>
+                <i>女</i> 
+                <select>
+                  <option value="volvo">0</option>
+                  <option value="saab">1</option>
+                  <option value="mercedes">2</option>
+                  <option value="audi">3</option>
+                </select>
+              </div>
+              
+              <div class="rili_btn col-xs-8 col-sm-12 col-md-5">
+                <span>总价:￥<strong class="strong_price">99999</strong></span>
+                &nbsp;&nbsp;
+                <a class="btn rili_cancel">取消</a>
+                <a href="/order/sureOrder.html" class="btn rili_ok">确认</a>
+              </div> 
+
+             </div>
+             <a href="#"><i class="fa fa-question-circle team_rule"></i>查看报名规则及退款规则</a>
+          </div>
+
+        </div>
+
+        <!-- END THE riqi -->   
       </div><!-- END COVER -->
       
       <!-- START THE NAVBAR -->
       <div id="navId" class="navbar-wrapper">
         <div class="container">
-
+          
           <div class="navwrapper">
             <div class="navbar navbar-inverse navbar-static-top">
               <div class="navbar-header">
@@ -77,6 +171,7 @@
                   <li class="menuItem"><a href="#transport-map">交通地图</a></li>
                   <li class="menuItem"><a href="#cost">费用说明</a></li>
                   <li class="menuItem"><a href="#book">预订须知</a></li>
+                  <li class="menuItem"><a href="#recommend">相关推荐</a></li> 
                   <li class="menuItem"><a href="#comment">周周点评</a></li>  
                 </ul>
               </div>
@@ -86,17 +181,10 @@
         </div>
       </div> 
       <!-- END NAVBAR -->
-
+      
       <!-- START THE CONTENT -->
       <div id='contents' class="container">
-        <div  class="col-xs-8 col-sm-8 col-md-8">
-          <p id="cal_choose"><i class="fa fa-calendar-plus-o" style="color:#D9534F"></i>可选日期 01/01</p>
-
-        </div>
-        <div class="col-xs-offset-11 col-sm-offset-11 col-md-offset-11">
-          <p style="text-align:center">></p>
-        </div>
-        <!-- START THE product_detail -->
+          <!-- START THE product_detail -->
 
         <div id="product_detail" class="anchor_place"></div>   
         <div id="product_detail1" class="row featurette  panel panel-default"> 
@@ -165,6 +253,27 @@
           </div>  
         </div> <!-- END book -->
 
+        <!-- START THE recommend -->
+        <div id="recommend" class="anchor_place"></div> 
+        <div id="recommend1" class="row featurette panel panel-default">
+          <div class="panel-heading">
+            <h4 class="featurette-heading"><i id="product" class="fa fa-tag fa-fw"></i>相关推荐</h4>
+          </div>
+          <div class="panel-body col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-4 col-sm-4 col-md-4">
+              <img src="/static/images/2001.jpg" class="img-responsive">
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4">
+              <img src="/static/images/2001.jpg" class="img-responsive">
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4" style="background:url(/static/images/plus.png)">
+             
+            </div>
+
+
+          </div>
+        </div>  <!-- END zhouzhou_comment -->
+
         <!-- START THE zhouzhou_comment -->
         <div id="comment" class="anchor_place"></div> 
         <div id="comment1" class="row featurette panel panel-default">
@@ -199,14 +308,13 @@
           </div><!-- /.modal-dialog -->   
         </div>
       </div>
-    <!-- END CONTENT -->
-     <nav class="semi-transparent navbar-fixed-bottom">  
+      <!-- END CONTENT -->
+      <nav class="semi-transparent navbar-fixed-bottom">  
         <div class="container-fluid margin_bottom_5 margin_top_5 clear_padding text-center book_btn_bg">  
-            <button class="btn btn-danger book_btn" type="button">立即预订</button>  
+          <button class="btn btn-danger book_btn" type="button"><a href="/order/sureOrder.html">立即预订</a></button>  
         </div>  
-     </nav>
-    <!--# include file="/common/footer.html"  -->
-    
+      </nav>
+      <!--# include file="/common/footer.html"  -->
     </div>
     <!-- Bootstrap & Plugins core JavaScript
     ================================================== -->
@@ -220,7 +328,7 @@
     <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <script src="/static/js/datepicker/jquery-ui-datepicker.js"></script> 
     <script>
-      $('#cal_choose').datepicker();
+      $('#datepicker').datepicker();
     </script>
   </body>
 </html>
