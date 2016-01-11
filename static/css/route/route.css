@@ -1,4 +1,11 @@
 /* //经典路线二级页面// */
+/*顶部*/
+.all_top{background-image: url(http://st-static.oss-cn-beijing.aliyuncs.com/level2-2.gif);
+              background-size:cover;
+               /*解决background-size在ie8下的兼容性*/
+                 filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                 src='https://img.alicdn.com/tps/TB106YEJFXXXXazXFXXXXXXXXXX-1190-330.jpg',
+                 sizingMethod='scale');height:250px;z-index:1;position: relative;margin-bottom:20px;}
 
 
 /*左侧导航*/
