@@ -28,7 +28,7 @@ function send(oform,elemen){
   if (($(oform).validate().element($(elemen)))&&(!($(elemen).val()==""))&&($('.div-phone span').html()=="发送验证码")) {
     var time = 60;
     //验证手机号是否已经被注册
- $.ajax({
+     $.ajax({
      type: "GET",
      cache: false,
      url: "/visitor/isMobileNoRegister",
@@ -271,7 +271,7 @@ function send(oform,elemen){
             cache: false,
             type: "POST",
             url:"/visitor/register",
-            data:{mobileNo:$("#phone").val(), name:$("#username").val(),password:$("#password").val(),passwordAgain:$("#confirm-password").val(),verifyCode:$("#code_number").val()},
+            data:{mobileNo:$("#phone").val(), name:$("#username").val(),password:$("#password2").val(),passwordAgain:$("#confirm-password2").val(),verifyCode:$("#code_number2").val()},
             async: false,
             error: function(request) {
             },
