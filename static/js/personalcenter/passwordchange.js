@@ -5,7 +5,11 @@
         var user_oldPassword=$("#user_oldPassword").val();
         var user_password=$("#user_password").val();
         var user_passwordAgain=$("#user_passwordAgain").val();
-        console.log(user_oldPassword);
+        if(user_password!=user_passwordAgain)
+          { $("#user_waring").css("display","block");
+            $("#user_password_waring").text("两次输入的密码不一致，请重新输入！")}
+        else{$("#user_waring").css("display","none");}
+        //console.log(user_oldPassword);
 
         jQuery.ajax({
           type : "GET",
