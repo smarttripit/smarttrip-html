@@ -220,7 +220,7 @@ function send(oform,elemen){
               cache: false,
               type: "POST",
               url:"/visitor/login",
-              data:{userName:$("#login").val(),password:$("#password").val()},
+              data:{userName:$("#login").val(),password:$("#password1").val()},
               async: false,
               error: function(request) {
               },
