@@ -5,7 +5,7 @@
        initUserInfo();// 加载游客基本信息
     });
 
-    // 加载发现北京详情页
+    // 加载游客基本信息
     function initUserInfo(){
       jQuery.ajax({
         type : "GET",
