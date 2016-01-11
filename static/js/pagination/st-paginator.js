@@ -23,7 +23,7 @@ function pagination(paginationOptions) {
 				var options = {
 						bootstrapMajorVersion : 3,
 						currentPage : page, //当前页面
-						numberOfPages : 5, //一页显示几个按钮（ 在ul里面生成5个li）
+						numberOfPages : 4, //一页显示几个按钮（ 在ul里面生成4个li）
 						totalPages : pages, //总页数
 						tooltipTitles : function(type, page, current) {
 							if (type == 'first') {

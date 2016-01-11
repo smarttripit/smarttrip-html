@@ -1,0 +1,28 @@
+{
+	"status":"success",
+	"tipCode":"",
+	"tipMsg":"",
+	"data":[
+			{
+				"routeId":"1",
+				"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_thumbnail_2.jpg",
+				"name":"<自驾游>静之湖滑雪",
+				"feature":"特色",
+				"price":"98"
+			},
+			{
+				"routeId":"435",
+				"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_thumbnail_2.jpg",
+				"name":"<自驾游>静之湖滑雪",
+				"feature":"特色",
+				"price":"108"
+			},
+			{
+				"routeId":"2342",
+				"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_thumbnail_2.jpg",
+				"name":"<自驾游>静之湖滑雪",
+				"feature":"特色",
+				"price":"68"
+			}
+		]
+}
