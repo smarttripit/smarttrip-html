@@ -372,7 +372,7 @@ $("#forgetPasswd-form").validate({
         rangelength:[6,12]
       },
       "confirm-password":{
-        equalTo:"#password"     //必须密码相同
+        equalTo:"#password3"     //必须密码相同
       },
 
       phone2:{
