@@ -40,7 +40,8 @@
                                		$("#order_thumbnail_"+i).attr("src", row.orderThumbnail);
                                		$("#order_startTime_"+i).text(row.startTime);
                                		$("#order_Title_"+i).text(row.orderTitle);
-                               		switch(row.orderStatus)
+                                  var orderStatus=parseInt(row.orderStatus);
+                               		switch(orderStatus)
                                		{
                                			case 01:
                                			$("#order_Status_"+i).text("未支付");
@@ -70,7 +71,7 @@
                                			$("#order_Status_"+i).text("已删除");
                                			break;
 
-                               			case 07:
+                               			case 08:
                                			$("#order_Status_"+i).text("已退款");
                                			break;
                                		}
@@ -91,7 +92,7 @@
              { 
                 paginationOptions.queryParams.orderStatus= "";
                 for(var i=0; i<6; i++)
-                {$("#route_"+i).css("display","none" );}
+                {$("#order_"+i).css("display","none" );}
                 pagination(paginationOptions); 
                 //console.log(paginationOptions.queryParams.orderType);
           });
@@ -101,7 +102,7 @@
             { 
               paginationOptions.queryParams.orderStatus= "01";
               for(var i=0; i<6; i++)
-              {$("#route_"+i).css("display","none" );}
+              {$("#order_"+i).css("display","none" );}
               pagination(paginationOptions); 
               //console.log(paginationOptions.queryParams.orderType);
           });
@@ -111,7 +112,7 @@
             { 
               paginationOptions.queryParams.orderStatus= "03";
               for(var i=0; i<6; i++)
-              {$("#route_"+i).css("display","none" );}
+              {$("#order_"+i).css("display","none" );}
               pagination(paginationOptions); 
               //console.log(paginationOptions.queryParams.orderType);
           });
