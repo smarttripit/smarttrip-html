@@ -75,7 +75,16 @@
 						                   var row = dataList[i];
                                $("#route_"+i).css("display","block" );                  
                                var href=$("#route_"+i).attr("href");
-                               $("#route_"+i).attr("href",href+"?"+"routeId="+row.routeId);              
+                               if(href.indexOf("routeId")!=-1)
+                               {
+                                console.log(href);
+                                $("#route_"+i).attr("href",href);                               
+                               }
+                               else
+                               {
+                                $("#route_"+i).attr("href",href+"?"+"routeId="+row.routeId);
+                               }                                 
+                                            
                                $("#route_name_"+i).text(row.name);
                                $("#route_thumbnail_"+i).attr("src", row.thumbnail);
                                $("#route_detailRecommendation_"+i).text(row.detailRecommendation);
@@ -90,8 +99,8 @@
                                }
 					                 }
 			  	              }
-			       }
-	        }
+			        }
+	         }
      		
           //综合排序
           $("#SynthesisComment").click(function()

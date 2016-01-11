@@ -6,16 +6,115 @@
       }
      }); 
     
+	   // 加载经典线路列表
      $(document).ready(function() { 
-      var paginationOptions = {
+ 
+ 
+		      var paginationOptions = {
 			       domId : "pager2",
 			       url : "/routeOrder/getByPage",
 			       page : 1,
-			       rows : 8,
+			       rows : 6,
 			       queryParams : {orderStatus:""},
 			       dealData : function(dataList){                       
+				              var len = dataList.length;
+				               if(len > 0)
+				               {
+					              for(var i=0; i<len; i++)
+					              {
+						             var row = dataList[i];
+                               		 $("#order_"+i).css("display","block" );                  
+                               		 var href=$("#ordermore_"+i).attr("href");
+                               		 console.log(href);
+                               		if(href.indexOf("routeOrderId")!=-1)
+                              		 {
+                               		 	//console.log(href);
+                                		$("#ordermore_"+i).attr("href",href);                               
+                               		 }
+                               		 else
+                               		{
+                                		$("#ordermore_"+i).attr("href",href+"?"+"routeOrderId="+row.routeOrderId);
+                               		}                                 
+                                            
+                               		$("#order_number_"+i).text(row.orderNo);
+                               		$("#order_thumbnail_"+i).attr("src", row.orderThumbnail);
+                               		$("#order_startTime_"+i).text(row.startTime);
+                               		$("#order_Title_"+i).text(row.orderTitle);
+                               		switch(row.orderStatus)
+                               		{
+                               			case 01:
+                               			$("#order_Status_"+i).text("未支付");
+                               			break;
 
-			       }
-	        }
-      pagination(paginationOptions);
-	  });
+                               			case 02:
+                               			$("#order_Status_"+i).text("已支付");
+                               			break;
+
+                               			case 03:
+                               			$("#order_Status_"+i).text("待评价");
+                               			break;
+
+                               			case 04:
+                               			$("#order_Status_"+i).text("已评价");
+                               			break;
+
+                               			case 05:
+                               			$("#order_Status_"+i).text("已过期");
+                               			break;
+
+                               			case 06:
+                               			$("#order_Status_"+i).text("已取消");
+                               			break;
+
+                               			case 07:
+                               			$("#order_Status_"+i).text("已删除");
+                               			break;
+
+                               			case 07:
+                               			$("#order_Status_"+i).text("已退款");
+                               			break;
+                               		}
+                                    if(row.orderStatus!=01)
+                                    	{$("#quickly_pay_"+i).addClass("disabled")}
+                                    if(row.orderStatus!=03)
+                                    	{$("#quickly_comment_"+i).addClass("disabled")}
+                               		$("#order_totalprice_"+i).text(row.price*(row.maleCount+row.femaleCount));
+                               		$("#order_totalcount_"+i).text(row.maleCount+row.femaleCount);
+                               		$("#order_createTime_"+i).text(row.createTime);
+					               }
+			  	              }
+			        }
+	         }
+     		
+          //全部排序
+          $("#SynthesisComment").click(function()
+             { 
+                paginationOptions.queryParams.orderStatus= "";
+                for(var i=0; i<6; i++)
+                {$("#route_"+i).css("display","none" );}
+                pagination(paginationOptions); 
+                //console.log(paginationOptions.queryParams.orderType);
+          });
+
+          //待付款
+          $("#NeedToPay").click(function()
+            { 
+              paginationOptions.queryParams.orderStatus= "01";
+              for(var i=0; i<6; i++)
+              {$("#route_"+i).css("display","none" );}
+              pagination(paginationOptions); 
+              //console.log(paginationOptions.queryParams.orderType);
+          });
+
+          //待评价
+          $("#NeedToComment").click(function()
+            { 
+              paginationOptions.queryParams.orderStatus= "03";
+              for(var i=0; i<6; i++)
+              {$("#route_"+i).css("display","none" );}
+              pagination(paginationOptions); 
+              //console.log(paginationOptions.queryParams.orderType);
+          });
+
+          pagination(paginationOptions);
+	   });
