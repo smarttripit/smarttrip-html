@@ -14,36 +14,40 @@ function pagination(paginationOptions) {
 		data : queryParams,
 		dataType : "json",
 		success : function(result) {
-			var data = result.data;
-			var dataList = data.rows;
-			paginationOptions.dealData(dataList);
-			var element = $('#' + domId); //对应下面ul的ID
-			var pages = Math.ceil(data.total / rows); //这里data里面有数据总量
-			if(pages != 0){//没有数据，则不初始化分页条
-				var options = {
-						bootstrapMajorVersion : 3,
-						currentPage : page, //当前页面
-						numberOfPages : 4, //一页显示几个按钮（ 在ul里面生成4个li）
-						totalPages : pages, //总页数
-						tooltipTitles : function(type, page, current) {
-							if (type == 'first') {
-								return "首页";
-							} else if (type == 'prev') {
-								return "上一页";
-							} else if (type == 'page') {
-								return "跳转到第" + page + "页";
-							} else if (type == 'next') {
-								return "下一页";
-							} else if (type == 'last') {
-								return "尾页";
+			if(result.status == "success"){
+				var data = result.data;
+				var dataList = data.rows;
+				paginationOptions.dealData(dataList);
+				var element = $('#' + domId); //对应下面ul的ID
+				var pages = Math.ceil(data.total / rows); //这里data里面有数据总量
+				if(pages != 0){//没有数据，则不初始化分页条
+					var options = {
+							bootstrapMajorVersion : 3,
+							currentPage : page, //当前页面
+							numberOfPages : 4, //一页显示几个按钮（ 在ul里面生成4个li）
+							totalPages : pages, //总页数
+							tooltipTitles : function(type, page, current) {
+								if (type == 'first') {
+									return "首页";
+								} else if (type == 'prev') {
+									return "上一页";
+								} else if (type == 'page') {
+									return "跳转到第" + page + "页";
+								} else if (type == 'next') {
+									return "下一页";
+								} else if (type == 'last') {
+									return "尾页";
+								}
+							},
+							onPageClicked : function(event, originalEvent, type, page) {
+								paginationOptions.page = page;
+								pagination(paginationOptions);
 							}
-						},
-						onPageClicked : function(event, originalEvent, type, page) {
-							paginationOptions.page = page;
-							pagination(paginationOptions);
 						}
-					}
-					element.bootstrapPaginator(options);
+						element.bootstrapPaginator(options);
+				}
+			}else{
+				dealFailedResponse(result);// 统一处理失败的响应
 			}
 		}
 	});

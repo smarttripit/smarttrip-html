@@ -63,9 +63,9 @@
 
           <div class="form-group div-phone">
            <div class="input-group">
-              <a class="input-group-addon"><i class="fa fa-user"></i></a>
-              <input type="text" name="phone" id="phone" class="form-control input-lg" placeholder="请输入11位手机号码" />
-              <span class="input-group-addon send1" onclick="sends.send();" style="cursor:pointer">发送验证码</span>
+              <a class="input-group-addon"><i class="fa fa-phone"></i></a>
+              <input type="text" name="phone1" id="phone1" class="form-control input-lg" placeholder="请输入11位手机号码" />
+              <span class="input-group-addon send1" onclick="send('#registerModal','#phone1');" style="cursor:pointer">发送验证码</span>
 
             </div>
            <div class="h_10"></div> 
@@ -84,7 +84,7 @@
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-lock"></i></span>
               <input  type="password" name="password" id="password" class="form-control input-lg" maxlength="12" placeholder="请输入6-12位数字、字母或常用符号" />
-              <span id="level" class="input-group-addon"></span>
+              
             </div>
             <div class="h_10"></div> 
           </div>
@@ -124,13 +124,13 @@
         <h2 class="text-center text-primary">找回密码</h2>
       </div>
       <div class="modal-body">
-        <form action="" id="register-form" class="form center-block">
+        <form action="" id="forgetPasswd-form" class="form center-block">
         
           <div class="form-group div-phone">
            <div class="input-group">
               <a class="input-group-addon"><i class="fa fa-user"></i></a>
-              <input type="text" name="phone" id="phone" class="form-control input-lg" placeholder="请输入11位手机号码" />
-              <span class="input-group-addon send1" onclick="sends.send();">发送验证码</span>
+              <input type="text" name="phone2" id="phone2" class="form-control input-lg" placeholder="请输入11位手机号码" />
+              <span class="input-group-addon send1" onclick="send('forgetPasswdModal','#phone2');">发送验证码</span>
             </div>
            <div class="h_10"></div> 
           </div>
@@ -147,7 +147,7 @@
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-              <input  type="password" name="password" id="password" class="form-control input-lg" maxlength="12" placeholder="请输入6-12位数字、字母或常用符号" />
+              <input  type="password" name="password" id="password2" class="form-control input-lg" maxlength="12" placeholder="请输入6-12位数字、字母或常用符号" />
               
             </div>
             <div class="h_10"></div> 
@@ -157,7 +157,7 @@
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-              <input type="password" name="confirm-password" id="confirm-password" class="form-control input-lg" placeholder="请再次输入密码" />
+              <input type="password" name="confirm-password" id="confirm-password2" class="form-control input-lg" placeholder="请再次输入密码" />
             </div>
            
           </div>

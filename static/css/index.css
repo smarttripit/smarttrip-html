@@ -1,25 +1,25 @@
 /*/// 主页/// */
 /*轮播部分*/
-.theme_image1{background-image: url(https://img.alicdn.com/tps/TB106YEJFXXXXazXFXXXXXXXXXX-1190-330.jpg);
+.theme_image1{background-image: url(http://st-static.oss-cn-beijing.aliyuncs.com/index-5.gif);
               background-size:cover;
 	             /*解决background-size在ie8下的兼容性*/
                  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(
                  src='https://img.alicdn.com/tps/TB106YEJFXXXXazXFXXXXXXXXXX-1190-330.jpg',
                  sizingMethod='scale');}
-.theme_image2{background-image: url(https://img.alicdn.com/tps/TB1CVOKJFXXXXbWXFXXXXXXXXXX-1190-330.jpghttps://img.alicdn.com/tps/TB1CVOKJFXXXXbWXFXXXXXXXXXX-1190-330.jpg);
+.theme_image2{background-image: url(http://st-static.oss-cn-beijing.aliyuncs.com/index-2.gif);
               background-size:cover;
 	             /*解决background-size在ie8下的兼容性*/
                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
                  src='https://img.alicdn.com/tps/TB1CVOKJFXXXXbWXFXXXXXXXXXX-1190-330.jpghttps://img.alicdn.com/tps/TB1CVOKJFXXXXbWXFXXXXXXXXXX-1190-330.jpg',
                  sizingMethod='scale');}
-.theme_image3{background-image: url(http://img.alicdn.com/tps/i3/TB1ZaKCJXXXXXciXFXXSutbFXXX.jpg);
+.theme_image3{background-image: url(http://st-static.oss-cn-beijing.aliyuncs.com/index-3.gif);
               background-size:cover;
                  /*解决background-size在ie8下的兼容性*/
                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
                  src='http://img.alicdn.com/tps/i3/TB1ZaKCJXXXXXciXFXXSutbFXXX.jpg',
                  sizingMethod='scale');
              }
-.theme_image4{background-image: url(https://img.alicdn.com/tps/TB1ECojJXXXXXbnXpXXXXXXXXXX-1190-330.jpg);
+.theme_image4{background-image: url(http://st-static.oss-cn-beijing.aliyuncs.com/index-4.gif);
               background-size:cover;
                  /*解决background-size在ie8下的兼容性*/
                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(

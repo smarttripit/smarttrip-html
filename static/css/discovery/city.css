@@ -1,4 +1,12 @@
 /*发现北京地图页*/
+/*顶部*/
+.all_top{background-image: url(http://st-static.oss-cn-beijing.aliyuncs.com/level2-2.gif);
+              background-size:cover;
+               /*解决background-size在ie8下的兼容性*/
+                 filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                 src='https://img.alicdn.com/tps/TB106YEJFXXXXazXFXXXXXXXXXX-1190-330.jpg',
+                 sizingMethod='scale');height:250px;z-index:1;position: relative;margin-bottom:20px;}
+                 
 /*小地图*/
 .miyun{left: 63%;top: 26.5%;position: absolute;}
 .huairou{left: 47.5%;top: 14%;position: absolute;}

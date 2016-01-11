@@ -2,7 +2,26 @@
  * Style tweaks
  * --------------------------------------------------
  */
+/*顶部*/
+.all_top{background-image: url(http://st-static.oss-cn-beijing.aliyuncs.com/level2-2.gif);
+              background-size:cover;
+               /*解决background-size在ie8下的兼容性*/
+                 filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                 src='https://img.alicdn.com/tps/TB106YEJFXXXXazXFXXXXXXXXXX-1190-330.jpg',
+                 sizingMethod='scale');height:250px;z-index:1;position: relative;margin-bottom:20px;}
+/*左侧导航*/
+.panel-group_defined{border: 2px #ececec solid;width:100%;background: #fff;font-size: 14px;padding-bottom: 15px;}
+.panel_defined{background: transparent;border:0px;background-color: #fff;}
+.panel-heading_defined{padding-bottom: 0px;}
+.panel-title_defined{line-height: 43px;border-bottom: 1px rgba(209, 209, 209, 0.53) solid;}
+.panel-body_defined{padding-bottom: 0px;border-top:0px;padding-top: 5px;}
+.panel-group .panel+.panel {margin-top: 0px; }
+.mysetting{padding:5px;}
 
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices 解决小屏幕下出现滚动条问题*/
+}
 
 /*
  * Off Canvas
