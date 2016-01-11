@@ -33,7 +33,7 @@
                     <span class="font_size16 bgc_blue cor_white form_head">账户信息</span>
                   </div>-->
                   <div class="col-xs-12 col-sm-12 col-md-8 mt20">
-                     <form class="form-horizontal " role="form">
+                     <div class="form-horizontal " role="form">
                        <!-- <div class="form-group ml10">
                            <label class="col-xs-4 col-sm-3 col-md-3 control-label pr0 mt5">用户名：</label>
                            <div class="col-xs-8 col-sm-9 col-md-5 pl0">
@@ -56,25 +56,25 @@
                         <div class="form-group mt20">
                            <label for="" class="col-xs-4 col-sm-3 col-md-2 control-label pr0 mt5">真实姓名：</label>
                            <div class="col-xs-8 col-sm-9 col-md-5 pl0">
-                              <input type="text" class="form-control" id="" 
+                              <input id="user_truename" type="text" class="form-control" id="" 
                                  placeholder="请输入您的姓名">
                            </div>
                         </div>
 
-                        <div class="form-group "> 
+                        <div class="form-group " id="user_gender"> 
                            <label for="" class="col-xs-3 col-sm-3 col-md-2 control-label pr0 mt5">性别：</label>
                               <label class="checkbox-inline">
-                                  <input type="radio" name="optionsRadiosinline" id="optionsRadios3" 
-                                 value="option1" checked> 男
+                                  <input type="radio" name="usergender"  
+                                 value="男" checked> 男
                               </label>
                               <label class="checkbox-inline">
-                                  <input type="radio" name="optionsRadiosinline" id="optionsRadios4" 
-                                    value="option2"> 女
+                                  <input type="radio" name="usergender" 
+                                    value="女"> 女
                               </label>
-                              <label class="checkbox-inline">
+                             <!-- <label class="checkbox-inline">
                                   <input type="checkbox" name="optionsRadiosinline" id="optionsRadios4" 
                                     value="option2"> 保密
-                              </label>                               
+                              </label>  -->                             
                         </div>
 
                         <div class="form-group">
@@ -82,7 +82,7 @@
                               <label class="control-label">出生日期：</label>
                             </div>
                             <div class="col-xs-8 col-sm-9 col-md-5 pl0">
-                              <input type="text" class="form-control" id="" 
+                              <input id="user_birthday" type="text" class="form-control" id="" 
                                  placeholder="请输入您的出生日期">
                            </div>
                             <!--<div class="col-xs-3 col-sm-12 col-md-3 pl0 pr0">
@@ -128,7 +128,7 @@
                         <div class="form-group">
                            <label for="" class="col-xs-4 col-sm-3 col-md-2 control-label pr0 mt5">所在城市：</label>
                            <div class="col-xs-8 col-sm-9 col-md-5 pl0">
-                              <input type="text" class="form-control" id="" 
+                              <input id="user_city" type="text" class="form-control" id="" 
                                  placeholder="请输入您的城市">
                            </div>
                         </div>
@@ -136,7 +136,7 @@
                         <div class="form-group">
                            <label for="" class="col-xs-4 col-sm-3 col-md-2 control-label pr0 mt5">工作：</label>
                            <div class="col-xs-8 col-sm-9 col-md-5 pl0">
-                              <input type="text" class="form-control" id="" 
+                              <input id="user_profession" type="text" class="form-control" 
                                  placeholder="请输入您的工作">
                            </div>
                         </div>
@@ -147,7 +147,7 @@
                             </div>
                             <div class="col-xs-8 col-sm-12 col-md-3 pl0">
                               <label class="">
-                                <select class="form-control">
+                                <select class="form-control" id="user_education">
                                   <option>本科以下</option>
                                   <option>本科</option>
                                   <option>硕士</option>
@@ -161,11 +161,11 @@
                         <div class="form-group">
                            <label for="" class="col-xs-4 col-sm-3 col-md-2 control-label pr0 mt5">个人简介：</label>
                            <div class="col-xs-8 col-sm-9 col-md-8 pl0">
-                             <textarea class="form-control" rows="5"></textarea>
+                             <textarea id="user_introduction" class="form-control" rows="5"></textarea>
                            </div>
                         </div>
 
-                        <div class="form-group">
+                        <!--<div class="form-group">
                            <label for="" class="col-xs-12 col-sm-3 col-md-2 control-label pr0 mt5">旅行爱好：</label>
                            <div class="col-xs-12 col-sm-9 col-md-10  travel_love">
                                 <div class="row">
@@ -185,14 +185,14 @@
                                   </div>               
 
                            </div>
-                        </div>
+                        </div>-->
 
                         <div class="form-group">
                            <div class=" col-sm-12 in_center">
-                              <button type="submit" class="btn font_size16 bgc_blue cor_white">保存设置</button>
+                              <button id="userinfo_change" type="submit" class="btn font_size16 bgc_blue cor_white">保存设置</button>
                            </div>
                         </div>
-                     </form>
+                     </div>
                   </div>
                 </div>
             </div><!--/.col-xs-12.col-sm-9-->
