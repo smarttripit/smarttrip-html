@@ -50,7 +50,7 @@
     .team_rule{
       line-height: .8rem;
       height: .8rem;
-      color: #FE9595;
+      color: #0181ec;
       font-size: .5rem;
       padding: 0 1.4rem;
      
@@ -58,9 +58,10 @@
     .book_btn a{
       color: #fff;
     }
-.more{
-    color: #0181ec;
-}
+    .more{
+        color: #0181ec;
+    }
+   
     </style>     
   </head>
   <body data-spy="scroll" data-target="#myScrollspy">
@@ -108,31 +109,31 @@
               <div class="col-xs-12 col-sm-9 col-md-4">
                 <i class="fa fa-calendar-plus-o"></i> 
                 <select>
-                  <option value="volvo">2016-01-9</option>
-                  <option value="saab">2016-01-10</option>
-                  <option value="mercedes">2016-01-10</option>
-                  <option value="audi">2016-01-10</option>
+                  <option value="rq0">2016-01-9</option>
+                  <option value="rq1">2016-01-10</option>
+                  <option value="rq2">2016-01-10</option>
+                  <option value="rq3">2016-01-10</option>
                 </select>
-                <span>价格<em>￥99</em></span>
-                <span style="color:#9A9A9A">剩余<em>30</em></span>
+                <span>价格:<em>￥<strong class="strong_price">99</strong></em></span>&nbsp;&nbsp;
+                <span>剩余:<em><strong class="strong_price people_num">30</strong></em></span>
                
               </div>
              
                   
               <div class="col-xs-8 col-sm-3 col-md-3">
                 <i>男</i> 
-                <select>
-                  <option value="volvo">0</option>
-                  <option value="saab">1</option>
-                  <option value="mercedes">2</option>
-                  <option value="audi">3</option>
+                <select class="male_num">
+                  <option value="m0">0</option>
+                  <option value="m1">1</option>
+                  <option value="m2">2</option>
+                  <option value="m3">3</option>
                 </select>
                 <i>女</i> 
-                <select>
-                  <option value="volvo">0</option>
-                  <option value="saab">1</option>
-                  <option value="mercedes">2</option>
-                  <option value="audi">3</option>
+                <select class="female_num">
+                  <option value="f0">0</option>
+                  <option value="f1">1</option>
+                  <option value="f2">2</option>
+                  <option value="f3">3</option>
                 </select>
               </div>
               
@@ -318,7 +319,7 @@
       <!-- END CONTENT -->
       <nav class="semi-transparent navbar-fixed-bottom">  
         <div class="container-fluid margin_bottom_5 margin_top_5 clear_padding text-center book_btn_bg">  
-          <button class="btn btn-danger book_btn" type="button"><a href="/order/sureOrder.html">立即预订</a></button>  
+          <button class="btn btn-danger book_btn rili_btn" type="button"><a href="/order/sureOrder.html">立即预订</a></button>  
         </div>  
       </nav>
       <!--# include file="/common/footer.html"  -->
