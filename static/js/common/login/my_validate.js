@@ -23,16 +23,16 @@ function judgeHasLogin(){
 
 
             
-function send(oform,element){
-  /**当手机号码输入正确时才能发送验证码，并且30秒后才能重发**/
-  if (($(oform).validate().element($(element)))&&(!($(element).val()==""))&&($('.div-phone span').html()=="发送验证码")) {
+function send(oform,elemen){
+  /**当手机号码输入正确时才能发送验证码，并且60秒后才能重发**/
+  if (($(oform).validate().element($(elemen)))&&(!($(elemen).val()==""))&&($('.div-phone span').html()=="发送验证码")) {
     var time = 60;
     //验证手机号是否已经被注册
  $.ajax({
      type: "GET",
      cache: false,
      url: "/visitor/isMobileNoRegister",
-     data: {mobileNo:$(element).val()},
+     data: {mobileNo:$(elemen).val()},
      dataType: "json",
      success: function(data){
                 if(data.status == 'success'){
@@ -43,7 +43,7 @@ function send(oform,element){
                    type: "GET",
                    cache: false,
                    url: "/authCode/send",
-                   data: {mobileNo:$(element).val()},
+                   data: {mobileNo:$(elemen).val()},
                    dataType: "json",
                    success: function(data){
                               if(data.status == 'success'){
@@ -308,7 +308,7 @@ function send(oform,element){
 
       },
       "confirm-password":{
-        equalTo:"#password"     //必须密码相同
+        equalTo:"#password2"     //必须密码相同
       },
       phone1:{
         mobile:true
@@ -352,7 +352,7 @@ $("#forgetPasswd-form").validate({
             cache: false,
             type: "POST",
             url:"/visitor/resetPassword",
-            data:{mobileNo:$("#phone2").val(), authCode:$("#username").val(),password:$("#code_number").val(),password:$("#password2").val(),passwordAgain:$("#confirm-password2").val()},
+            data:{mobileNo:$("#phone2").val(), authCode:$("#username").val(),password:$("#code_number").val(),password:$("#password3").val(),passwordAgain:$("#confirm-password3").val()},
             async: false,
             error: function(request) {
             },
@@ -367,6 +367,13 @@ $("#forgetPasswd-form").validate({
     },
    
     rules:{
+      password:{
+        required:true,
+        rangelength:[6,12]
+      },
+      "confirm-password":{
+        equalTo:"#password"     //必须密码相同
+      },
 
       phone2:{
         required:true,
@@ -379,6 +386,17 @@ $("#forgetPasswd-form").validate({
       }
       },
        messages:{
+        password:{
+        required:"密码不能为空",
+        rangelength:"密码长度在6~12"
+      },
+        "confirm-password":{
+          equalTo:"两次密码输入不一致"     //必须密码相同
+        },
+        phone2:{
+          required:"手机号不能为空",
+
+        },
     
       code_number:{
         required:"请输入验证码",
@@ -426,7 +444,8 @@ $("#forgetPasswd-form").validate({
 
   /**点“立即注册”,关闭注册页面**/
 $('#register_btn').click(function(){
-  $('#registerModal').modal('hide');
+  $('#loginModal').modal('hide');
+  alert('hide');
 })
   
 

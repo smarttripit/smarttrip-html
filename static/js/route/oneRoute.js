@@ -1,5 +1,5 @@
 var routeId = $.getUrlParam('routeId');
-function initRouteInfo(){
+    function initRouteInfo(){
       jQuery.ajax({
         type : "GET",
             async: true,
@@ -105,7 +105,20 @@ function initRouteInfo(){
              }
        });
      }
+      
 
+      //判断订单是否成功
+      function isOrderOk(){
+        var pn = parseInt($('.people_num').text());
+        var mn = parseInt($('.male_num option:selected').text());
+        var fn = parseInt($('.female_num option:selected').text());
+        if((mn+fn<=pn)&&(mn+fn)>0){
+          return true;
+        }else
+        {
+          return false;
+        }
+      }
 
      jQuery(function($) {
        $(document).ready( function() {
@@ -165,10 +178,19 @@ function initRouteInfo(){
          initRouteInfo();
          initRoute1Info();
 
-
-         
+          $('.rili_btn').click(function(){
+            if(!isOrderOk()){
+              alert('请选择人数');
+              $('.rili_btn a').attr('href',' ');
+            }else{
+              return 0;
+            }
+          })
 
        });
+
+
      });
 
+    
 
