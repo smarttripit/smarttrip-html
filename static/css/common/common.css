@@ -32,12 +32,14 @@
 .bgc_blue{background-color:#94DEEC;}
 .bgc_gray{background-color:#999;}
 .bgc_orange{background-color:#EB9D55;}
+.bgc_red{background-color:#DB6464;}
 .cor_white{color:#fff;}
 .cor1{color: #EBEBEB;}
 .cor_blue{color:#09C;}/*蓝色*/
 .cor_orange{color:#EB9D55;}/*橙色*/
 .cor_gray{color:#999;}/*灰色*/
-.cor_red{color:#E82525;}/*红色*/
+.cor_red{color:#DB6464;}/*红色*/
+.cor_black{color:#000;}
 .border_gray{border: 2px #ececec solid;}
 /*页面边距*/
 .mt_10{margin-top:-10px;}
@@ -52,6 +54,7 @@
 .mb_10{margin-bottom:-10px;}
 .mr15{margin-right:15px;}
 .ml10{margin-left:10px;}
+.ml5{margin-left:5px;}
 .padRig1{padding-right:10px;}
 .row_space{margin-bottom: 5px;}
 .row_top_space{margin-top: 10px;}
@@ -71,3 +74,4 @@
 .font_size16{font-size:16px;}
 .font_size18{font-size:18px;}
 .font_size20{font-size:20px;}
+.font_weight500{font-weight: 500;}

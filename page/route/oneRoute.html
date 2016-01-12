@@ -72,86 +72,111 @@
 
       <div class="carousel-inner">
         <!--# include file="/common/login.html"  -->
-        <div class="h_375">
+        <div class="h_375 row_bottom_space1">
           <div class="bgimg">
             <div class="all_top1">
-            <!--# include file="/common/top.html"  --> 
+              <!--# include file="/common/top.html"  --> 
             </div>
             <div class="oneroute_back"> 
                <div class="col-xs-1 col-sm-2 col-md-1 ">
-                </div>
+               </div>
               
                <div class="col-xs-10 col-sm-6 col-md-4 description">
                  <h2 id="oneRoute_name"></h2>
+
                  <span id="oneRoute_feature"></i></span>
+
                  <div class="h_10"></div>
+
                  <p id="oneRoute_detailRecommendation"></p>
+
                  <div class="h_10"></div>
+
                  <div class="row">
-                   <div class="col-xs-12 col-sm-12 col-md-12">
-                     <p class="oneRoute_txt"><span></span>&nbsp;好评率：<span id="oneRoute_commentRatio" style="font-size:15px;"></span></p>
-                     <p class="oneRoute_txt">&nbsp;游玩天数：<span id="oneRoute_period" class="font_15"></span></p>
-                     <p>￥<strong class="strong_price">379</strong></p>
-                   </div>  
-                 </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <p class="oneRoute_txt"><span></span>&nbsp;好评率：<span id="oneRoute_commentRatio" style="font-size:15px;"></span></p>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <p class="oneRoute_txt">&nbsp;游玩天数：<span id="oneRoute_period" class="font_15"></span></p>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                      <p>￥<strong class="strong_price">379</strong></p>
+                    </div>
+
+                 </div>  
                </div>
+           
 
                <div class="col-xs-1 col-sm-4 col-md-7 ">
-
                </div>
             </div>
+
           </div> 
         </div>    
-        <!-- START THE riqi -->
-        <div class="container">
-          <div class="panel panel-default">
-             <div class="panel-body"> 
-              <div class="col-xs-12 col-sm-9 col-md-4">
-                <i class="fa fa-calendar-plus-o"></i> 
-                <select>
-                  <option value="rq0">2016-01-9</option>
-                  <option value="rq1">2016-01-10</option>
-                  <option value="rq2">2016-01-10</option>
-                  <option value="rq3">2016-01-10</option>
-                </select>
-                <span>价格:<em>￥<strong class="strong_price">99</strong></em></span>&nbsp;&nbsp;
-                <span>剩余:<em><strong class="strong_price people_num">30</strong></em></span>
-               
-              </div>
-             
-                  
-              <div class="col-xs-8 col-sm-3 col-md-3">
-                <i>男</i> 
-                <select class="male_num">
-                  <option value="m0">0</option>
-                  <option value="m1">1</option>
-                  <option value="m2">2</option>
-                  <option value="m3">3</option>
-                </select>
-                <i>女</i> 
-                <select class="female_num">
-                  <option value="f0">0</option>
-                  <option value="f1">1</option>
-                  <option value="f2">2</option>
-                  <option value="f3">3</option>
-                </select>
-              </div>
-              
-              <div class="rili_btn col-xs-8 col-sm-12 col-md-5">
-                <span>总价:￥<strong class="strong_price">99999</strong></span>
-                &nbsp;&nbsp;
-                <a class="btn rili_cancel">取消</a>
-                <a href="/order/sureOrder.html" class="btn rili_ok">确认</a>
-              </div> 
-
-             </div>
-             <a href="#"><i class="fa fa-question-circle team_rule"></i>查看报名规则及退款规则</a>
-          </div>
-
-        </div>
-
-        <!-- END THE riqi -->   
       </div><!-- END COVER -->
+
+      <div class="container">
+        <div class="row featurette  in_center  row_bottom_space">         
+            <div class="col-xs-12 col-sm-12 col-md-12 password_back border_gray">
+              <span class="featurette-heading font_size16 cor_red"><b>选择出游详情</b></span>          
+              <div class="form-group ">
+              <div class="row ">
+                <div class="col-xs-12 col-sm-12 col-md-4  mt20 in_center">
+                  <label class="control-label "><i class="fa fa-calendar"></i>
+                    可选日期：</label>
+              
+                  <label class="date_choose font_weight500">
+                  <select class="form-control " id="">
+                    <option>2016-01-12&nbsp;&nbsp;￥98</option>
+                    <option>2016-01-12&nbsp;&nbsp;￥98</option>
+                    <option>2016-01-12&nbsp;&nbsp;￥98</option>
+                    <option>2016-01-12&nbsp;&nbsp;￥98</option>
+                    <option>2016-01-12&nbsp;&nbsp;￥98</option>
+                  </select>
+                  </label>
+                </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-4   in_center">
+                  <label class="control-label "><i class="fa fa-calendar"></i>
+                    出游人数：</label>
+              
+                  <label class="control-label font_weight500">
+                    男</label>
+                  <label class="male_choose ml5">
+                    <input type="text" class="form-control " id="" 
+                   placeholder=""/>
+                  </label>
+                  <label class="control-label ml10 font_weight500">
+                    女</label>
+                  <label class="male_choose ml5">
+                    <input type="text" class="form-control " id="" 
+                      placeholder=""/>
+                  </label>
+                  </div>
+                </div>
+              </div> <!-- END product_detail -->
+              <div class="form-group  ">
+                <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4   ">
+                  <label class="control-label "><i class="fa fa-calendar"></i>
+                    总价：<span class="font_weight500">￥</span><span class="font_size20 cor_orange ">6666</span></label>
+                </div>
+                </div>
+              </div> <!-- END product_detail -->
+
+              <div class="form-group ">
+                 <div class="  in_center ">                    
+                    <button id="" type="submit" class="btn font_size16 btn-danger cor_white ">确定</button>
+                 </div>
+              </div>
+            </div>
+        </div>         
+      </div>
       
       <!-- START THE NAVBAR -->
       <div id="navId" class="navbar-wrapper">
