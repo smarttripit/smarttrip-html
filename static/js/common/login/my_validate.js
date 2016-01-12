@@ -3,6 +3,9 @@ $(document).ready(function() {
 
 });
 
+
+
+
 // 判断是否已经登录
 function judgeHasLogin(){
 	$.ajax({
@@ -22,10 +25,11 @@ function judgeHasLogin(){
 }
 
 /**发送验证码**/          
-function send(oform,elemen){
+function send(oform,elemen,otime){
+  var selector = oform+" "+".div-phone span";
   /**当手机号码输入正确时才能发送验证码，并且60秒后才能重发**/
-  if (($(oform).validate().element($(elemen)))&&(!($(elemen).val()==""))&&($('.div-phone span').html()=="发送验证码")) {
-    var time = 60;
+  if (($(oform).validate().element($(elemen)))&&(!($(elemen).val()==""))&&($(selector).html()=="发送验证码")) {
+    var time = otime;
     //验证手机号是否已经被注册
      $.ajax({
      type: "GET",
@@ -38,22 +42,23 @@ function send(oform,elemen){
                   //手机号未被注册，则发送验证码
                   timeCountDown();
                     
-               $.ajax({
-                   type: "GET",
-                   cache: false,
-                   url: "/authCode/send",
-                   data: {mobileNo:$(elemen).val()},
-                   dataType: "json",
-                   success: function(data){
-                              if(data.status == 'success'){
-                                
-                              }else{
-                    alert(data.tipMsg);
-                              };
-                            }
-               });
+                   $.ajax({
+                       type: "GET",
+                       cache: false,
+                       url: "/authCode/send",
+                       data: {mobileNo:$(elemen).val()},
+                       dataType: "json",
+                       success: function(data){
+                                  if(data.status == 'success'){
+                                    
+                                  }else{
+                        alert(data.tipMsg);
+                                  };
+                                }
+                   });
                 }else{
-      alert(data.tipMsg);
+                alert(data.tipMsg);
+                time = 0;
                 };
               }
    });
@@ -62,11 +67,11 @@ function send(oform,elemen){
     function timeCountDown(){
       if(time==0){
         clearInterval(timer);
-        $('.div-phone span').html("发送验证码");
+        $(selector).html("发送验证码");
         
         return true;
       }
-      $(".div-phone span").html(time+"S后再次发送");
+      $(selector).html(time+"S后再次发送");
       
       time--;
       return false;
@@ -75,8 +80,8 @@ function send(oform,elemen){
     //timeCountDown();
     var timer = setInterval(timeCountDown,1000);
   }
-}
 
+}
 
 /**手机号验证**/
 jQuery.validator.addMethod("mobile", function (value, element) {
@@ -179,6 +184,8 @@ function isIdCardNo(num) {
   }
   return true;
 }
+
+
     
 /**登录表单验证**/     
 $("#login-form").validate({
@@ -204,6 +211,7 @@ $("#login-form").validate({
             }
           }
       });
+      $("#loginModal").modal('hide');
   },
   rules:{
 
@@ -226,7 +234,7 @@ $("#login-form").validate({
       rangelength:"密码长度在6~12"
     },
     login:{
-      required:"不能为空"
+      required:"用户名不能为空"
     }
   }
 });
@@ -255,7 +263,10 @@ $("#register-form").validate({
             }
           }
       });
+      $("#registerModal").modal('hide');
   },
+ 
+  
   rules:{
    
     username:{                
@@ -340,6 +351,7 @@ $("#forgetPasswd-form").validate({
             }
           }
       });
+      $("#forgetPasswdModal").modal('hide');
   },
  
   rules:{
@@ -383,7 +395,11 @@ $("#forgetPasswd-form").validate({
 });
 /**注册页面（发送验证码）**/
 $('#send_code1').click(function(){
-send('#registerModal','#phone2');
+send('#registerModal','#phone2',60);
+});
+/**忘记密码页面（发送验证码）**/
+$('#send_code2').click(function(){
+send('#forgetPasswdModal','#phone3',60);
 });
 /**订单信息填写验证**/
 $("#js_form").validate({
@@ -413,21 +429,22 @@ $("#js_form").validate({
     }  
   }
 });
-/**忘记密码页面（发送验证码）**/
-$('#send_code2').click(function(){
-send('#forgetPasswdModal','#phone3');
+
+
+/**登录框里的链接**/  
+  /**1、打开忘记密码框**/
+  $('#openForgetModal').click(function(){
+    $('#loginModal').modal('hide');
+    $('#forgetPasswdModal').modal('show');
+  });
+  /**1、打开注册框**/
+  $('#openRegisterModal').click(function(){
+    $('#loginModal').modal('hide');
+    $('#registerModal').modal('show');
+  });
+/**注册框里的链接**/
+$('#openLoginModal').click(function(){
+  $('#registerModal').modal('hide');
+  $('#loginModal').modal('show');
 });
-
-
-
-$(".required").validate({  
-  onsubmit:true
-});
-
-/**点“立即注册”,关闭注册页面**/
-$('#register_btn').click(function(){
-  $('#loginModal').modal('hide');
-  alert('hide');
-});
-  
 
