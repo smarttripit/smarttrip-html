@@ -1,4 +1,5 @@
 var routeId = $.getUrlParam('routeId');
+var productType;
     function initRouteInfo(){
       jQuery.ajax({
         type : "GET",
@@ -9,6 +10,11 @@ var routeId = $.getUrlParam('routeId');
             success : function(result){
               if(result.status == "success"){
                  var oneRoute = result.data;
+                 if(oneRoute.routeType == "1"){
+                	 productType = "10";
+                 }else if(oneRoute.routeType == "2"){
+                	 productType = "11";
+                 }
                  $("#oneRoute_name").html(oneRoute.name);
                  $(".bgimg").css("background-image", "url("+oneRoute.backgroundImg+")");
                  $("#oneRoute_feature").html(oneRoute.feature);
@@ -28,7 +34,7 @@ var routeId = $.getUrlParam('routeId');
             }
       });
      }
-     function initRoute1Info(){
+     function initSchedules(){
        jQuery.ajax({
          type : "GET",
              async: true,
@@ -122,6 +128,12 @@ var routeId = $.getUrlParam('routeId');
 
      jQuery(function($) {
        $(document).ready( function() {
+    	   $('#gotoBooking').on('click', function(){
+    		   window.location.href = "/order/createOrder.html?productType="+productType+"&productId="+routeId; 
+    	   });
+    	   $('#gotoCustomization').on('click', function(){
+    		   window.location.href = "/mytrip-customize/mytrip-customize.html?productType="+productType+"&productId="+routeId; 
+    	   });
 
          //导航栏切换效果
          $('.navbar-wrapper').stickUp({
@@ -176,7 +188,7 @@ var routeId = $.getUrlParam('routeId');
 
          // 加载经典线路数据
          initRouteInfo();
-         initRoute1Info();
+         initSchedules();
 
           $('.rili_btn').click(function(){
             if(!isOrderOk()){
