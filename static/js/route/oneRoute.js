@@ -111,6 +111,46 @@ var productType;
              }
        });
      }
+     
+     function initRelatedRoutes(){
+    	 jQuery.ajax({
+             type : "GET",
+                 async: true,
+                 cache: false,
+                 datatype : "json",
+                 url : "/route/relatedRoutes?routeId="+routeId,
+                 success : function(result){
+                	 if(result.status == "success"){
+                		 var relatedContent = "";
+                		 if(result.data.total > 0){
+                			 var relatedRoutes = result.data.rows;
+                    		 for(var i=0;i<relatedRoutes.length;i++){
+                    			 var one = relatedRoutes[i];
+                    			 var template = $('#relatedRoutesTemplate').html();
+                    			 template = template.replaceAll("@href@", "/route/oneRoute.html?routeId="+one.routeId, false);
+                    			 template = template.replaceAll("@thumbnail@", one.thumbnail, false);
+                    			 template = template.replaceAll("@feature@", one.feature, false);
+                    			 template = template.replaceAll("@name@", one.name, false);
+                    			 template = template.replaceAll("@price@", one.price, false);
+                    			 relatedContent += template;
+                    		 }
+                		 }
+                		 var customizationHtml = $('#gotoCustomizationTemplate').html();
+                		 relatedContent += customizationHtml;
+                		 $('#relatedRoutes').html(relatedContent);
+                		 //跳转到团建定制页面
+                  	     $('#gotoCustomization').on('click', function(){
+                  		     window.location.href = "/mytrip-customize/mytrip-customize.html?productType="+productType+"&productId="+routeId; 
+                  	     });
+                	 }else{
+                		 dealFailedResponse(result);
+                	 }
+                 },
+                 error : function(data) {
+                   alert("系统异常");
+                 }
+           });
+     }
       
 
       //判断订单是否成功
@@ -128,11 +168,9 @@ var productType;
 
      jQuery(function($) {
        $(document).ready( function() {
+    	   // 跳转到订单填写页面
     	   $('#gotoBooking').on('click', function(){
     		   window.location.href = "/order/createOrder.html?productType="+productType+"&productId="+routeId; 
-    	   });
-    	   $('#gotoCustomization').on('click', function(){
-    		   window.location.href = "/mytrip-customize/mytrip-customize.html?productType="+productType+"&productId="+routeId; 
     	   });
 
          //导航栏切换效果
@@ -188,7 +226,10 @@ var productType;
 
          // 加载经典线路数据
          initRouteInfo();
+         // 加载线路行程
          initSchedules();
+         // 加载相关推荐
+         initRelatedRoutes();
 
           $('.rili_btn').click(function(){
             if(!isOrderOk()){

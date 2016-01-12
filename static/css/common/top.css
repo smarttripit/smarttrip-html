@@ -1,9 +1,9 @@
 /*首页导航栏样式*/
 .navbar_defined {border-color: transparent;font-size: 16px;border: 0px;border-radius: 0px;}
-.navbar-header img {width: 55px;height: 40px;}
+.navbar-header img {height: 40px;}
 .navbar-right li a{padding-right:0px;font-size: 12px;}
 .bgc1{
-  background-color: rgba(34, 34, 34, 0.52); /* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
+  background-color: rgba(34, 34, 34, 0.8); /* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
 }
 #navbar-collapse-1 li a{color:white;}
 @media \0screen\,screen\9 {/* 只支持IE6、7、8 */

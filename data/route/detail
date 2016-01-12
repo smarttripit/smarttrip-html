@@ -5,6 +5,7 @@
 	"data":{
 		"routeId":"1",
 		"routeType":"1",
+		"price":188,
 		"name":"这里显示线路名称",
 		"backgroundImg":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_background.png",
 		"feature":"特色（线路详情页上部名称后面的一句话）",

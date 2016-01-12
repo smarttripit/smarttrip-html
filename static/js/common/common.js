@@ -22,6 +22,14 @@ function dealFailedResponse(result) {
 	}
 })(jQuery);
 
+String.prototype.replaceAll = function(reallyDo, replaceWith, ignoreCase) {  
+    if (!RegExp.prototype.isPrototypeOf(reallyDo)) {  
+        return this.replace(new RegExp(reallyDo, (ignoreCase ? "gi": "g")), replaceWith);  
+    } else {  
+        return this.replace(reallyDo, replaceWith);  
+    }  
+}  
+
 /** *************************** */
 // 判断输入是否是一个由 0-9 / A-Z / a-z 组成的字符串
 function isalphanumber(str) {

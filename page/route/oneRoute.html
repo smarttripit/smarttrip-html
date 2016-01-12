@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/route/oneRoute/oneRoute.css">
     <link rel="stylesheet" type="text/css" href="/static/css/stickup/stickup.css"> 
     <link rel="stylesheet" type="text/css" href="/static/css/datepicker/jquery-ui.css">
-    <title>oneRoute</title> 
+    <title>经典线路详情</title> 
     <style type="text/css">
     .male_btn_box{
       
@@ -279,69 +279,33 @@
           </div>
           <div class="panel-body col-xs-12 col-sm-12 col-md-12">
             <div class="row row_bottom_space">
-
-              
-              <div class="col-xs-12 col-sm-12 col-md-12">
-                <a href="">
+				
+				<div class="nodi" id="relatedRoutesTemplate">
+				
+				<a href="@href@">
                  <div id="" class="col-xs-12 col-sm-6 col-md-3 inner_img row_bottom_space1"  style="display:block;">
-                    <img id="" src="/static/images/2001.jpg" class="img-responsive" />               
+                    <img id="" src="@thumbnail@" class="img-responsive" />               
                     <div class="col-xs-12 col-sm-12 col-md-12 hotel_entrance"> 
                       <div class="row ">               
                          <div class="col-xs-12 col-sm-12 col-md-12">
-                           <h4 id="" class="cor_black"><b>相关线路</b></h4>
+                           <h4 id="" class="cor_black"><b>@name@</b></h4>
                          </div>
                          <div class="col-xs-12 col-sm-12 col-md-12">
-                           <p class="cor_black" id="">啦啦啦啦啦啊啦啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦l啦啦啦啦啦啦</p> 
+                           <p class="cor_black" id="">@feature@</p> 
                         </div> 
                          <div class="col-xs-12 col-sm-12 col-md-12 look_more text_right row_bottom_space" >
-                          <span id="" class="cor_orange font_size16"><b>￥6666</b></span><span class="cor_gray font_size12">起</span>
+                          <span id="" class="cor_orange font_size16"><b>￥@price@</b></span><span class="cor_gray font_size12">起</span>
                          </div> 
                       </div>  
                 
                     </div>                                                     
                  </div>
                 </a>
-
-                <a href="">
-                 <div id="" class="col-xs-12 col-sm-6 col-md-3 inner_img row_bottom_space1"  style="display:block;">
-                    <img id="" src="/static/images/2001.jpg" class="img-responsive" />               
-                    <div class="col-xs-12 col-sm-12 col-md-12 hotel_entrance"> 
-                      <div class="row ">               
-                         <div class="col-xs-12 col-sm-12 col-md-12">
-                           <h4 id="" class="cor_black"><b>相关线路</b></h4>
-                         </div>
-                         <div class="col-xs-12 col-sm-12 col-md-12">
-                           <p class="cor_black" id="">啦啦啦啦啦啊啦啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦l啦啦啦啦啦啦</p> 
-                        </div> 
-                         <div class="col-xs-12 col-sm-12 col-md-12 look_more text_right row_bottom_space" >
-                          <span id="" class="cor_orange font_size16"><b>￥6666</b></span><span class="cor_gray font_size12">起</span>
-                         </div> 
-                      </div>  
-                 
-                    </div>                                                     
-                 </div>
-                </a>
-
-                <a href="">
-                 <div id="" class="col-xs-12 col-sm-6 col-md-3 inner_img row_bottom_space1"  style="display:block;">
-                    <img id="" src="/static/images/2001.jpg" class="img-responsive" />               
-                    <div class="col-xs-12 col-sm-12 col-md-12 hotel_entrance"> 
-                      <div class="row ">               
-                         <div class="col-xs-12 col-sm-12 col-md-12">
-                           <h4 id="" class="cor_black"><b>相关线路</b></h4>
-                         </div>
-                         <div class="col-xs-12 col-sm-12 col-md-12">
-                           <p class="cor_black" id="">啦啦啦啦啦啊啦啦啦啦啦啦啦啦啦啦啦啦啊啦啦啦l啦啦啦啦啦啦</p> 
-                        </div> 
-                         <div class="col-xs-12 col-sm-12 col-md-12 look_more text_right row_bottom_space" >
-                          <span id="" class="cor_orange font_size16"><b>￥6666</b></span><span class="cor_gray font_size12">起</span>
-                         </div> 
-                      </div>  
-                 
-                    </div>                                                     
-                 </div>
-                </a>
-
+				
+				</div>
+              
+              <div id="relatedRoutes" class="col-xs-12 col-sm-12 col-md-12">
+              <div id="gotoCustomizationTemplate">
                 <a id="gotoCustomization" href="javascript:void(0)">
                  <div id="" class="col-xs-12 col-sm-6 col-md-3 inner_img row_bottom_space1"  style="display:block;">              
                     <div class="col-xs-12 col-sm-12 col-md-12 more_route_back"> 
@@ -357,11 +321,10 @@
                           <i class="fa fa-plus cor_orange click_more_route"></i>
                          </div> 
                       </div>  
-                 
                     </div>                                                     
                  </div>
                 </a>
-                                                              
+               </div>                                          
               </div>
               
             </div>
