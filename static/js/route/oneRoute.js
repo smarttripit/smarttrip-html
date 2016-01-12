@@ -16,6 +16,7 @@ var productType;
                 	 productType = "11";
                  }
                  $("#oneRoute_name").html(oneRoute.name);
+                 $("#oneRoute_bottomPrice").html(oneRoute.bottomPrice);
                  $(".bgimg").css("background-image", "url("+oneRoute.backgroundImg+")");
                  $("#oneRoute_feature").html(oneRoute.feature);
                  $("#oneRoute_detailRecommendation").html(oneRoute.detailRecommendation);
