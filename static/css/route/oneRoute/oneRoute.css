@@ -58,6 +58,9 @@
 }
 /*选择出游详情样式*/
 .date_choose{width:60%;}
-.male_choose{width:20%;}
+.male_choose{width:19%;}
 .password_back{background: #fff;border-radius: 4px;padding:20px 20px 0px 20px;}
 .form-group{margin-bottom:10px;}
+.sure_button{padding:3px 20px;}
+.click_more_route{font-size:80px;color:rgba(235, 157, 85, 0.4);padding-bottom: 40px;padding-top: 40px;}
+.more_route_back{background: #F0F3EB;width:100%;height:100%;}
