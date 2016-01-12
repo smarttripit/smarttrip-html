@@ -1,3 +1,5 @@
+var productType = $.getUrlParam('productType');
+var productId = $.getUrlParam('productId');
 // 提交团建定制需求
 function submitCustomize() {
 	var startPlace = $('#startPlace').val();
@@ -44,7 +46,7 @@ function submitCustomize() {
 		alert("请输入您的人均预算");
 		return false;
 	}else if(!isnumber(price)){
-		alert("价格只能是小数或整数");
+		alert("人均预算只能是小数或整数");
 		return false;
 	}
 	if (name == "") {
@@ -67,6 +69,8 @@ function submitCustomize() {
 		datatype : "json",
 		url : "/customization/create",
 		data : {
+			"productType":productType,
+			"productId":productId,
 			"startPlace" : startPlace,
 			"destination" : destination,
 			"startDate" : startDate,
@@ -82,6 +86,7 @@ function submitCustomize() {
 		success : function(result) {
 			if (result.status == "success") {
 				alert("您的团建定制需求已经提交，我们会尽快联系您的！");
+				window.location.href = "/route/route.html";
 			} else {
 				dealFailedResponse(result);
 			}
