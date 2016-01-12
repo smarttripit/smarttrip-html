@@ -13,7 +13,7 @@
 }
 
 .book_btn_bg{
-    background:rgba(0,0,0,0.07); height:60px; padding-top:20px;
+    background:rgba(0,0,0,0.07); height:60px; padding-top:15px;
 }
 /*“第一天”样式*/
 .tldate {
@@ -35,7 +35,6 @@
 .description{
 
   background:rgba(0,0,0,0.5); 
-  height: 240px;
   overflow: hidden;
   padding: 20px;
   color: #fff;
@@ -57,3 +56,11 @@
   background-color:#000;
   background:rgba(0,0,0,0.5); filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
 }
+/*选择出游详情样式*/
+.date_choose{width:60%;}
+.male_choose{width:19%;}
+.password_back{background: #fff;border-radius: 4px;padding:20px 20px 0px 20px;}
+.form-group{margin-bottom:10px;}
+.sure_button{padding:3px 20px;}
+.click_more_route{font-size:80px;color:rgba(235, 157, 85, 0.4);padding-bottom: 40px;padding-top: 40px;}
+.more_route_back{background: #F0F3EB;width:100%;height:100%;}
