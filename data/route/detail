@@ -4,6 +4,7 @@
 	"tipMsg":"",
 	"data":{
 		"routeId":"1",
+		"thumbnail":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_thumbnail_2.jpg",
 		"routeType":"1",
 		"bottomPrice":"188",
 		"name":"这里显示线路名称",
