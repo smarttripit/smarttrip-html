@@ -1,4 +1,4 @@
-.all_top{background-image: url(http://st-static.oss-cn-beijing.aliyuncs.com/level2-2.gif);
+.all_top{background-image: url(http://st-static.oss-cn-beijing.aliyuncs.com/level2-3.gif);
               background-size:cover;
                /*解决background-size在ie8下的兼容性*/
                  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(
@@ -8,4 +8,4 @@
 .form_head{padding:5px 10px;}
 .products_img{display: inline;max-width: 80px;max-height: 80px;} 
 .label_width{width:70px;}
-.input_width{width:170px;}
+.input_width{width:175px;}
