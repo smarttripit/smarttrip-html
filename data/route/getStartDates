@@ -1,0 +1,21 @@
+{
+    "status": "success",
+    "tipCode": "",
+    "tipMsg": "",
+    "data": [
+        {
+            "startDate": "2016-01-22",
+            "price": 4556,
+            "minCount": 123,
+            "soldCount": 0,
+            "maxCount": 545
+        },
+        {
+            "startDate": "2016-01-29",
+            "price": 98,
+            "minCount": 20,
+            "soldCount": 0,
+            "maxCount": 50
+        }
+    ]
+}
