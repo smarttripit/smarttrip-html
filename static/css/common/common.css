@@ -15,6 +15,9 @@
   a:active {
   text-decoration: none;
   }
+  .container img{
+  	max-width:100%;
+  }
 /*.all_top{height:250px;z-index:1;position: relative;margin-bottom:20px;}*/
 .all_top1{z-index:999;position: relative;margin-bottom:20px;}
 .in_center{text-align: center;}
