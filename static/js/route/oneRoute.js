@@ -166,14 +166,119 @@ var productType;
           return false;
         }
       }
-
+      
+      function initStartDate(){
+    	  jQuery.ajax({
+              type : "GET",
+                  async: true,
+                  cache: false,
+                  datatype : "json",
+                  url : "/route/getStartDates?routeId="+routeId,
+                  success : function(result){
+                 	 if(result.status == "success"){
+                 		 var list = result.data;
+                 		 var len = list.length;
+                 		 if(len > 0){
+                 			 var htmlStr = "";
+                 			 for(var i=0;i<len;i++){
+                     		 	var oneRow =  list[i];
+                     		 	availableDates
+                     		 	htmlStr += "<option value='" + oneRow.startDate + "@" + oneRow.price + "'>"+ oneRow.startDate +"&nbsp;&nbsp;￥" + oneRow.price + "</option>";
+                     		 	if(i == 0){
+                     		 		$('#selectedPrice').val(oneRow.price);
+                     		 		$('#selectedStartDate').val(oneRow.startDate);
+                     		 		
+                     		 	}
+                 			 }
+                 			 $('#availableDates').html(htmlStr);
+                 			 caculateTotalPrice();
+                 		 }
+                 	 }else{
+                 		 dealFailedResponse(result);
+                 	 }
+                  },
+                  error : function(data) {
+                    alert("系统异常");
+                  }
+            });
+      }
+      
+      // 计算总价格
+      function caculateTotalPrice(){
+    	  var price = getSelectedPrice();
+    	  var femaleCount = getFemaleCount();
+    	  var maleCount = getMaleCount();
+    	  var totalPrice = parseFloat(price) * (parseInt(femaleCount) + parseInt(maleCount));
+    	  $('#totalPrice').text(totalPrice);
+      }
+      
+      // 跳转到订单填写页面
+      function gotoBookingPage(){
+    	  window.location.href = "/order/createOrder.html?productType="+productType+
+    	  						"&productId="+routeId+"&femaleCount="+getFemaleCount()+
+    	  						"&maleCount="+getMaleCount()+"&startDate="+getSelectedStartDate()+
+    	  						"&price="+getSelectedPrice(); 
+      }
+      // 获取男性人数
+      function getFemaleCount(){
+    	  var femaleCount = $('#femaleCount').val();
+    	  if(femaleCount == ""){
+    		  femaleCount = "0";
+    	  }
+    	  if(!isint(femaleCount)){
+    		  $('#femaleCount').val("");
+    		  return 0;
+    	  }
+    	  return femaleCount;
+      }
+      // 获取女性人数
+      function getMaleCount(){
+    	  var maleCount = $('#maleCount').val();
+    	  if(maleCount == ""){
+    		  maleCount = "0";
+    	  }
+    	  if(!isint(maleCount)){
+    		  $('#maleCount').val("");
+    		  return 0;
+    	  }
+    	  return maleCount;
+      }
+      // 获取选中的出行时间
+      function getSelectedStartDate(){
+    	  var startDateAndprice = $('#availableDates').val();
+    	  var startDate = startDateAndprice.split("@")[0];
+    	  return startDate;
+      }
+      // 获取选中的价格
+      function getSelectedPrice(){
+    	  var startDateAndprice = $('#availableDates').val();
+    	  var price = startDateAndprice.split("@")[1];
+    	  return price;
+      }
      jQuery(function($) {
        $(document).ready( function() {
+    	   // 初始化出行日期信息
+    	   initStartDate();
     	   // 跳转到订单填写页面
     	   $('#gotoBooking').on('click', function(){
-    		   window.location.href = "/order/createOrder.html?productType="+productType+"&productId="+routeId; 
+    		   gotoBookingPage();// 跳转到订单填写页面
     	   });
-
+    	   // 跳转到订单填写页面
+    	   $('#gotoBooking_bottom').on('click', function(){
+    		   gotoBookingPage();// 跳转到订单填写页面
+    	   });
+    	   // 选择不同出行时间
+    	   $('#availableDates').on('change', function(){
+    		   caculateTotalPrice();// 重新计算价格
+    	   });
+    	   // 输入男性数量
+    	   $('#femaleCount').on('input', function(){
+    		   caculateTotalPrice();// 重新计算价格
+    	   });
+    	   // 输入女性数量
+    	   $('#maleCount').on('input', function(){
+    		   caculateTotalPrice();// 重新计算价格
+    	   });
          //导航栏切换效果
          $('.navbar-wrapper').stickUp({
            parts: {                         
@@ -232,14 +337,6 @@ var productType;
          // 加载相关推荐
          initRelatedRoutes();
 
-          $('.rili_btn').click(function(){
-            if(!isOrderOk()){
-              alert('请选择人数');
-              $('.rili_btn a').attr('href',' ');
-            }else{
-              return 0;
-            }
-          })
 
        });
 

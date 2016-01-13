@@ -129,12 +129,9 @@
                     可选日期：</label>
               
                     <label class="date_choose font_weight500">
-                      <select class="form-control " id="">
-                        <option>2016-01-12&nbsp;&nbsp;￥98</option>
-                        <option>2016-01-12&nbsp;&nbsp;￥98</option>
-                        <option>2016-01-12&nbsp;&nbsp;￥98</option>
-                        <option>2016-01-12&nbsp;&nbsp;￥98</option>
-                        <option>2016-01-12&nbsp;&nbsp;￥98</option>
+                      <input type="hidden" id="selectedPrice" value="" />
+                      <input type="hidden" id="selectedStartDate" value="" />
+                      <select class="form-control" id="availableDates">
                       </select>
                     </label>
                   </div>
@@ -145,17 +142,17 @@
               
                     <label class="control-label font_weight500">男</label>
                     <label class="male_choose ml5">
-                      <input type="text" class="form-control " id=""  placeholder=""/>
+                      <input type="text" class="form-control" id="femaleCount"  placeholder="" value="" />
                     </label>
                     <label class="control-label ml10 font_weight500">女</label>
                     <label class="male_choose ml5">
-                      <input type="text" class="form-control " id=""  placeholder=""/>
+                      <input type="text" class="form-control " id="maleCount"  placeholder=""/>
                     </label>
                   </div>
                            
                   <div class="col-xs-12 col-sm-12 col-md-4  text_left mt10 ">
                     <label class="control-label "><i class="fa fa-shopping-cart"></i>
-                    总价：<span class="font_weight500">￥</span><span class="font_size20 cor_orange ">6666</span></label>
+                    总价：<span class="font_weight500">￥</span><span id="totalPrice" class="font_size20 cor_orange ">0</span></label>
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-12  mt20 ">
                     <a id="gotoBooking" href="javascript:void(0)" class="btn font_size14 btn-danger cor_white sure_button">立即预定</a>
@@ -370,7 +367,7 @@
       <!-- END CONTENT -->
       <nav class="semi-transparent navbar-fixed-bottom">  
         <div class="container-fluid margin_bottom_5 margin_top_5 clear_padding text-center book_btn_bg">  
-          <button class="btn btn-danger book_btn rili_btn" type="button"><a href="/order/sureOrder.html">立即预订</a></button>  
+          <button class="btn btn-danger book_btn rili_btn" type="button"><a id="gotoBooking_bottom" href="javascript:void(0)">立即预订</a></button>  
         </div>  
       </nav>
       <!--# include file="/common/footer.html"  -->
