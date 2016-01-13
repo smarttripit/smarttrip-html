@@ -214,6 +214,11 @@ var productType;
       
       // 跳转到订单填写页面
       function gotoBookingPage(){
+    	  if(getFemaleCount() + getMaleCount() <= 0){
+    		  alert("请输入出游人数");
+    		  $('#femaleCount').focus();
+    		  return false;
+    	  }
     	  window.location.href = "/order/createOrder.html?productType="+productType+
     	  						"&productId="+routeId+"&femaleCount="+getFemaleCount()+
     	  						"&maleCount="+getMaleCount()+"&startDate="+getSelectedStartDate()+
