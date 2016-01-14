@@ -15,6 +15,9 @@
   a:active {
   text-decoration: none;
   }
+  .container img{
+  	max-width:100%;
+  }
 /*.all_top{height:250px;z-index:1;position: relative;margin-bottom:20px;}*/
 .all_top1{z-index:999;position: relative;margin-bottom:20px;}
 .in_center{text-align: center;}
@@ -68,6 +71,7 @@
 .line_height80{line-height:80px;}
 .line_height70{line-height:70px;}
 /*字体大小*/
+.font_size8{font-size:8px;}
 .font_size10{font-size:10px;}
 .font_size12{font-size:12px;}
 .font_size13{font-size:13px;}

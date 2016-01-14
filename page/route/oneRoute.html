@@ -129,12 +129,9 @@
                     可选日期：</label>
               
                     <label class="date_choose font_weight500">
-                      <select class="form-control " id="">
-                        <option>2016-01-12&nbsp;&nbsp;￥98</option>
-                        <option>2016-01-12&nbsp;&nbsp;￥98</option>
-                        <option>2016-01-12&nbsp;&nbsp;￥98</option>
-                        <option>2016-01-12&nbsp;&nbsp;￥98</option>
-                        <option>2016-01-12&nbsp;&nbsp;￥98</option>
+                      <input type="hidden" id="selectedPrice" value="" />
+                      <input type="hidden" id="selectedStartDate" value="" />
+                      <select class="form-control" id="availableDates">
                       </select>
                     </label>
                   </div>
@@ -145,17 +142,17 @@
               
                     <label class="control-label font_weight500">男</label>
                     <label class="male_choose ml5">
-                      <input type="text" class="form-control " id=""  placeholder=""/>
+                      <input type="text" class="form-control" id="femaleCount"  placeholder="" value="" />
                     </label>
                     <label class="control-label ml10 font_weight500">女</label>
                     <label class="male_choose ml5">
-                      <input type="text" class="form-control " id=""  placeholder=""/>
+                      <input type="text" class="form-control " id="maleCount"  placeholder=""/>
                     </label>
                   </div>
                            
                   <div class="col-xs-12 col-sm-12 col-md-4  text_left mt10 ">
                     <label class="control-label "><i class="fa fa-shopping-cart"></i>
-                    总价：<span class="font_weight500">￥</span><span class="font_size20 cor_orange ">6666</span></label>
+                    总价：<span class="font_weight500">￥</span><span id="totalPrice" class="font_size20 cor_orange ">0</span></label>
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-12  mt20 ">
                     <a id="gotoBooking" href="javascript:void(0)" class="btn font_size14 btn-danger cor_white sure_button">立即预定</a>
@@ -180,7 +177,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><b class="spot_title_color">黄草梁2日游</b></a>
+                <a class="navbar-brand" href="#"><b class="spot_title_color">回到顶部</b></a>
               </div> 
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -311,10 +308,10 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 more_route_back"> 
                       <div class="row ">               
                          <div class="mt20 col-xs-12 col-sm-12 col-md-12 in_center">
-                           <h4 id="" class="cor_gray"><b>更多相关线路</b></h4>
+                           <h4 id="" class="cor_gray"><b>团建定制</b></h4>
                          </div>
                          <div class="col-xs-12 col-sm-12 col-md-12 in_center">
-                           <p class="cor_gray">没有找到合适的线路?<br>点击这里查看更多好玩的线路~~</p> 
+                           <p class="cor_gray">没有找到合适的线路?<br>点击这里定制自己的线路！</p> 
                         
                         </div> 
                          <div class="col-xs-12 col-sm-12 col-md-12 look_more  row_bottom_space in_center" >
@@ -356,7 +353,7 @@
                         &times;
                   </button>
                   <h4 class="modal-title" id="myModalLabel">
-                     景区详情
+                     详情
                   </h4>
                </div>
               
@@ -370,7 +367,7 @@
       <!-- END CONTENT -->
       <nav class="semi-transparent navbar-fixed-bottom">  
         <div class="container-fluid margin_bottom_5 margin_top_5 clear_padding text-center book_btn_bg">  
-          <button class="btn btn-danger book_btn rili_btn" type="button"><a href="/order/sureOrder.html">立即预订</a></button>  
+          <button class="btn btn-danger book_btn rili_btn" type="button"><a id="gotoBooking_bottom" href="javascript:void(0)">立即预订</a></button>  
         </div>  
       </nav>
       <!--# include file="/common/footer.html"  -->
