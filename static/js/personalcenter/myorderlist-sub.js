@@ -20,7 +20,7 @@
               $("#orderNo").text(order.orderNo);
               $("#orderThumbnail").attr("src", order.orderThumbnail);
               $("#orderTitle").text(order.orderTitle);
-              $("#sigleprice").text(order.sigleprice);
+              $("#sigleprice").text(order.price);
               $("#startTime").text(order.startTime);
               $("#maleCount").text(order.maleCount);
               $("#femaleCount").text(order.femaleCount);
