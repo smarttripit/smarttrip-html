@@ -429,36 +429,3 @@ $("#js_form").validate({
 
 
 
-/**登录框里的链接**/  
-  /**1、打开忘记密码框**/
-  $('#openForgetModal').click(function(event){
-    event.preventDefault();
-    event.stopPropagation(); 
-    
-    $('#loginModal').modal('hide');
-    $('#loginModal').on('hidden.bs.modal', function () {
-      $('#forgetPasswdModal').modal('show');
-    })
-  });
-  /**1、打开注册框**/
-  $('#openRegisterModal').click(function(event){
-    event.preventDefault();
-    event.stopPropagation();
-    
-    $('#loginModal').modal('hide');
-    $('#loginModal').on('hidden.bs.modal', function (){
-      $('#registerModal').modal('show');
-     
-    })
-  });
-/**注册框里的链接**/
-$('#openLoginModal').click(function(event){
-  event.preventDefault();
-  event.stopPropagation();
- ;
-  
-  $('#registerModal').on('hidden.bs.modal', function (){
-    $('#loginModal').modal('show');
-    
-  })
-});
