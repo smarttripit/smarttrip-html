@@ -199,7 +199,8 @@
       
       <!-- START THE CONTENT -->
       <div id='contents' class="container">
-          <!-- START THE product_detail -->
+        
+        <!-- START THE product_detail -->
 
         <div id="product_detail" class="anchor_place"></div>   
         <div id="product_detail1" class="row featurette  panel panel-default"> 
@@ -383,6 +384,17 @@
     <script src="/static/js/route/oneRoute.js"></script>
     <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <script src="/static/js/datepicker/jquery-ui-datepicker.js"></script> 
+    <script>
+      var navbar_lis = $('#navbar li');
+
+
+      $.each(navbar_lis,function(key,val){
+         $(this).click(function(){
+           var this_key = key;
+           $('#navbar').removeClass('in');
+         })
+      })
+    </script>
     <script>
      function goBack()
        {
