@@ -455,7 +455,7 @@ $("#js_form").validate({
 $('#openLoginModal').click(function(event){
   event.preventDefault();
   event.stopPropagation();
-  $('#openLoginModal').unbind('click');
+ ;
   
   $('#registerModal').on('hidden.bs.modal', function (){
     $('#loginModal').modal('show');
