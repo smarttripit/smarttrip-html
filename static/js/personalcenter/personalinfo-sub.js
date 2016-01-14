@@ -43,6 +43,79 @@
          else{$(this).text(textvalue2_1+"√");}
      });*/
 
+
+     //var spotId = $.getUrlParam('spotId');
+     //console.log(spotId);
+     $(document).ready(function() { 
+        initUserInfo();// 加载游客基本信息
+     });
+
+     // 加载发现北京详情页
+     function initUserInfo(){
+       jQuery.ajax({
+         type : "GET",
+         async: true,
+         cache: false,
+         datatype : "json",
+         url : "/visitor/showVisitorInfo",
+         success : function(result){
+           if(result.status == "success"){
+             var user = result.data;            
+               //$("#user_truename").attr("value",user.userName);
+               //$("#mobileNo").text(user.mobileNo);
+               //$("#headerSmall").attr("src", user.headerSmall);
+               if(user.realName!="" && user.realName!=null )
+                 { $("#user_truename").attr("value",user.realName);}
+
+               if(user.gender!="" && user.gender!=null )
+                 { if(user.gender==1)
+                  { $("#male").checked=true;  }
+                  else
+                    {$("#female").checked=true;}
+                 }
+
+               if(user.birthday!="" && user.birthday!=null )
+                 { $("#user_birthday").attr("value",user.birthday);}
+
+              
+               if(user.city!="" && user.city!=null )
+                 { $("#user_city").attr("value",user.city);}
+
+               if(user.profession!="" && user.profession!=null )
+                 { $("#user_profession").attr("value",user.profession);}
+
+               if(user.education!="" && user.education!=null )
+                 { 
+                  var len=$("#user_education option").size();
+                  console.log(len);
+                  console.log(user.education);
+
+                  for(i=0;i<len;i++)
+                  {
+                    var a=$("#user_education option")[i].value;
+                    //console.log(a);
+                    if(user.education==a)
+                      {
+                        $("#user_education option")[i].selected=true;
+                        //console.log(i);
+                      }
+                  }
+                 }
+                  
+                 if(user.introduction!="" && user.introduction!=null )
+                   { $("#user_introduction").attr("value",user.introduction);}
+
+
+           }else{
+             alert(result.tipMsg);
+           }
+         },
+         error : function(data) {
+           alert("系统异常");
+         }
+       });
+     }
+
       /*修改信息*/
      $("#userinfo_change").click( 
       function() {

@@ -2,7 +2,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">x</button>
+        <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">&times;</button>
         <h2 class="text-center text-primary">登录周游趣</h2>
         <h3 class="text-center text-primary">带你玩转周末</h3>
       </div>
@@ -10,7 +10,7 @@
         <form action="" id="login-form" class="form col-md-12 center-block">
           <div class="form-group">
             <div class="input-group">
-              <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+              <span class="input-group-addon"><i class="fa fa-user"></i></span>
               <input type="text" name="login" id="login" class="form-control input-lg myClass" placeholder="请输入用户名" />
               
             </div>
@@ -20,18 +20,18 @@
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-              <input type="password" name="password1" id="password1" class="form-control input-lg" placeholder="请输入6-18位数字、字母或常用符号" />     
+              <input type="password" name="password1" id="password1" class="form-control input-lg" maxlength="20" placeholder="请输入6-20位数字、字母或常用符号" />     
             </div>
             <div class="h_10"></div> 
           </div>
           
           <div class="form-group">
-            <span><a href="#" id="openRegisterModal" class="pull-right"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>还没有账号？立即注册</a></span>
+            <span><a href="#" class="pull-right" data-dismiss="modal" data-toggle="modal" data-target="#registerModal"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>还没有账号？立即注册</a></span>
             <div style="height:30px;"></div>
             <button class="btn btn-primary btn-lg btn-block">立刻登录</button>
             <div style="height:10px;"></div>
             <!-- <input type="checkbox">记住密码 -->
-            <span id="forgetPw_btn" class="pull-right"><a href="#" id="openForgetModal" class="pull-right">忘记密码？</a></span>
+            <span id="forgetPw_btn" class="pull-right"><a href="#" class="pull-right" data-dismiss="modal" data-toggle="modal" data-target="#forgetPasswdModal">忘记密码？</a></span>
           </div>
 
         </form>
@@ -47,7 +47,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">x</button>
+        <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">&times;</button>
         <h2 class="text-center text-primary">注册周游趣</h2>
         <h3 class="text-center text-primary">带你玩转周末</h3>
       </div>
@@ -64,7 +64,7 @@
           <div class="form-group div-phone">
            <div class="input-group">
               <a class="input-group-addon"><i class="fa fa-phone"></i></a>
-              <input type="text" name="phone2" id="phone2" class="form-control input-lg" placeholder="请输入11位手机号码" />
+              <input type="text" name="phone2" id="phone2" class="form-control input-lg"  placeholder="请输入11位手机号码" />
               <span id="send_code1" class="input-group-addon send1" style="cursor:pointer">发送验证码</span>
             </div>
            <div class="h_10"></div> 
@@ -82,7 +82,7 @@
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-              <input  type="password" name="password2" id="password2" class="form-control input-lg" maxlength="12" placeholder="请输入6-12位数字、字母或常用符号" />
+              <input  type="password" name="password2" id="password2" class="form-control input-lg" maxlength="20" placeholder="请输入6-20位数字、字母或常用符号" />
             </div>
             <div class="h_10"></div> 
           </div>
@@ -91,7 +91,7 @@
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-              <input type="password" name="confirm-password2" id="confirm-password2" class="form-control input-lg" placeholder="请再次输入密码" />
+              <input type="password" name="confirm_password2" id="confirm_password2" class="form-control input-lg" maxlength="20" placeholder="请再次输入密码" />
             </div>
            <div class="h_10"></div>
           </div>
@@ -103,7 +103,7 @@
             <button id="#register_btn" class="btn btn-primary btn-lg btn-block">立刻注册</button>
             <div style="height:10px;"></div>
             
-            <span><a id="openLoginModal" href="#" class="pull-right">已有账号？立即登录</a></span>
+            <span><a href="#" class="pull-right" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">已有账号？立即登录</a></span>
           </div>
         </form>
       </div>
@@ -118,19 +118,19 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">x</button>
+        <button type="button" class="close"  data-dismiss="modal" aria-hidden="true">&times;</button>
         <h2 class="text-center text-primary">找回密码</h2>
       </div>
       <div class="modal-body">
         <form action="" id="forgetPasswd-form" class="form center-block">
         
           <div class="form-group div-phone">
-           <div class="input-group">
-              <a class="input-group-addon"><i class="fa fa-user"></i></a>
-              <input type="text" name="phone3" id="phone3" class="form-control input-lg" placeholder="请输入11位手机号码" />
-              <span id="send_code2" class="input-group-addon send1" style="cursor:pointer">发送验证码</span>
-            </div>
-           <div class="h_10"></div> 
+            <div class="input-group">
+               <a class="input-group-addon"><i class="fa fa-phone"></i></a> 
+               <input type="text" name="phone3" id="phone3" class="form-control input-lg" placeholder="请输入11位手机号码" />
+               <span id="send_code2" class="input-group-addon send1" style="cursor:pointer">发送验证码</span>
+             </div>
+            <div class="h_10"></div> 
           </div>
          
           <div class="form-group">
@@ -145,8 +145,7 @@
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-              <input  type="password" name="password3" id="password3" class="form-control input-lg" maxlength="12" placeholder="请输入6-12位数字、字母或常用符号" />
-              
+              <input  type="password" name="password3" id="password3" class="form-control input-lg" maxlength="20" placeholder="请输入6-20位数字、字母或常用符号" />  
             </div>
             <div class="h_10"></div> 
           </div>
@@ -155,7 +154,7 @@
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-              <input type="password" name="confirm-password3" id="confirm-password3" class="form-control input-lg" placeholder="请再次输入密码" />
+              <input type="password" name="confirm_password3" id="confirm_password3" class="form-control input-lg" maxlength="20" placeholder="请再次输入密码" />
             </div>
            <div class="h_10"></div> 
 
