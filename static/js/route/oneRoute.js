@@ -62,10 +62,10 @@ var productType;
                    var direction = oneLocal.direction;
                    var link = oneLocal.link;
                    
-                   if(direction==1)
+                   if(direction==0)
                    {
                      myDir = "";
-                   }else if(direction==0){
+                   }else if(direction==1){
                      myDir = "class = \"timeline-inverted\"";
                    };
 
