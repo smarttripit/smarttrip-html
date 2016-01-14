@@ -27,7 +27,7 @@ var productType;
                  $("#oneRoute_feeDescription").html(oneRoute.feeDescription);
                  $("#oneRoute_bookingNotice").html(oneRoute.bookingNotice);
               }else{
-                alert(result.tipMsg);
+            	  dealFailedResponse(result);
               }
             },
             error : function(data) {

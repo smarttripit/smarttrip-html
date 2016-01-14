@@ -32,26 +32,34 @@
               <span class="font_size16 bgc_blue cor_white form_head">订单信息</span>
             </div>
             <div id="" class=" col-xs-4 col-sm-3 col-md-3 in_center row_bottom_space">
-              <img id="orderThumbnail" src="\static\images\20160108.jpg" class="img-responsive  products_img mt5">
+              <img id="orderThumbnail" src="" class="img-responsive  products_img mt5">
             </div>
             <div class="col-xs-8 col-sm-9 col-md-9">
           <div class="row">
             <div class="col-xs-12 col-sm-5 col-md-5 row_space mt10">
-              <b class="font_size16" id="orderTitle">北京滑雪嘉年华</b>
+              <b class="font_size16" id="orderTitle"></b>
             </div>
             <div class="col-xs-12 col-sm-7 col-md-7">
             </div>
           </div>
 
           <div class="row row_bottom_space">
-            <div class="col-xs-12 col-sm-4 col-md-12 mb_10">
-              <p class="font_size12"><span class="cor_orange" >￥</span><span class="cor_orange" id="sigleprice">98</span>/人</p>
+            <div class="col-xs-12 col-sm-4 col-md-12 mb_10 pr0">
+              <p class="font_size12">
+              	<span class="cor_orange" >￥</span>
+              	<span class="cor_orange" id="price">98</span>
+              	<span>*</span>
+              	<span class="cor_orange" id="totalCount">23</span>
+              	<span>=</span>
+              	<span class="cor_orange" >￥</span>
+              	<span class="cor_orange" id="totalPrice">4536</span>
+             </p>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-12 mb_10">
-              <p class="font_size12 cor_gray">出行日期：<span id="startTime">2014-12-11</span></p>
+              <p class="font_size12 cor_gray">出行日期：<span id="startDate">2014-12-11</span></p>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-12 mb_10">
-              <p class="font_size12 cor_gray">出游人数：<span id="maleCount">0</span>男<span id="femaleCount">0</span>女</p>
+              <p class="font_size12 cor_gray">出游人数：<span id="femaleCount"></span>男<span id="maleCount"></span>女</p>
             </div>
           </div>
 
@@ -148,6 +156,5 @@
     <!-- 核心js文件 -->
     <!--# include file="/common/corejs.html" -->
     <!-- 这里引入本页面特有的js文件 -->
-    <script src="/static/js/personalcenter/offcanvas.js"></script> 
-    <script src="/static/js/personalcenter/personalinfo-sub.js"></script> 
+    <script src="/static/js/routeOrder/createOrder.js"></script> 
 </html>
