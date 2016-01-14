@@ -26,6 +26,7 @@
 .all {font-size:15px;color: #4ea1f5;}
 .transport_means a {display: inline-block;width: 100%;border: 1px rgba(170, 170, 170, 0.47) solid;border-radius: 4px;padding: 5px;text-align: center;}
 .transport_means a:hover{text-decoration: none;}
+.trip_customize a {display: inline-block;width: 100%;border: 1px rgba(170, 170, 170, 0.47) solid;border-radius: 4px;padding: 5px;text-align: center;}
 .else_active{background: #78A8DA;border-color:#fff;color:#fff;}
 /*横向胶囊导航*/
 .nav-pills .defined_active{background-color: #94DEEC;}
