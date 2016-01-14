@@ -18,6 +18,8 @@
   .container img{
   	max-width:100%;
   }
+  .minheight{min-height:320px;*+height:100%;  //（解决ie7）
+_height:320px; //（解决ie6） ie6超出自动溢出}
 /*.all_top{height:250px;z-index:1;position: relative;margin-bottom:20px;}*/
 .all_top1{z-index:999;position: relative;margin-bottom:20px;}
 .in_center{text-align: center;}

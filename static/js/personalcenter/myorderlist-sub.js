@@ -65,7 +65,8 @@
               {$("#quickly_pay").addClass("disabled")}
               $("#weixinGroupPic").attr("src", order.weixinGroupPic);
           }else{
-            alert(result.tipMsg);
+             dealFailedResponse(result);
+            //alert(result.tipMsg);
           }
         },
         error : function(data) {

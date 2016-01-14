@@ -56,13 +56,14 @@
               else
                 {$("#introduction").text(user.introduction);}
 
-              if(user.themes=="" || user.themes==null)
+             /* if(user.themes=="" || user.themes==null)
                 {$("#themes").text("未填");}
               else
-                {$("#themes").text(user.themes);}
+                {$("#themes").text(user.themes);}*/
 
           }else{
-            alert(result.tipMsg);
+             dealFailedResponse(result);
+            //alert(result.tipMsg);
           }
         },
         error : function(data) {
