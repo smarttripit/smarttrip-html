@@ -428,11 +428,13 @@ $("#js_form").validate({
 });
 
 
+
 /**登录框里的链接**/  
   /**1、打开忘记密码框**/
   $('#openForgetModal').click(function(event){
     event.preventDefault();
     event.stopPropagation(); 
+    
     $('#loginModal').modal('hide');
     $('#loginModal').on('hidden.bs.modal', function () {
       $('#forgetPasswdModal').modal('show');
@@ -442,18 +444,21 @@ $("#js_form").validate({
   $('#openRegisterModal').click(function(event){
     event.preventDefault();
     event.stopPropagation();
+    
     $('#loginModal').modal('hide');
     $('#loginModal').on('hidden.bs.modal', function (){
       $('#registerModal').modal('show');
-      alert(11111);
+     
     })
   });
 /**注册框里的链接**/
-$('#openLoginModal').click(function(){
-  $('#registerModal').modal('hide');
+$('#openLoginModal').click(function(event){
+  event.preventDefault();
+  event.stopPropagation();
+  $('#openLoginModal').unbind('click');
+  
   $('#registerModal').on('hidden.bs.modal', function (){
     $('#loginModal').modal('show');
-    alert("jkdffdaa");
+    
   })
 });
-
