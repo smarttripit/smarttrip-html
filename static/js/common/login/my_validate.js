@@ -4,8 +4,6 @@ $(document).ready(function() {
 });
 
 
-
-
 // 判断是否已经登录
 function judgeHasLogin(){
 	$.ajax({
