@@ -219,7 +219,7 @@ var productType;
     		  $('#femaleCount').focus();
     		  return false;
     	  }
-    	  window.location.href = "/order/createOrder.html?productType="+productType+
+    	  window.location.href = "/routeOrder/createOrder.html?productType="+productType+
     	  						"&productId="+routeId+"&femaleCount="+getFemaleCount()+
     	  						"&maleCount="+getMaleCount()+"&startDate="+getSelectedStartDate()+
     	  						"&price="+getSelectedPrice(); 
