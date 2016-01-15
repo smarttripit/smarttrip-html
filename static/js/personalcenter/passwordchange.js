@@ -21,6 +21,7 @@
             url : "/visitor/changePassword",
             success : function(result){
               if(result.status == "success"){ 
+                $("#passwordchange").attr("href","http://101.200.201.0/personalcenter/personalinfo-main.html");
                             
               }else{
                 dealFailedResponse(result);
@@ -31,6 +32,7 @@
               alert("系统异常");
             }
           }); 
+
         }
         //console.log(user_oldPassword);
 

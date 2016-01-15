@@ -138,7 +138,7 @@
           url : "/visitor/modifyVisitorInfo",
           success : function(result){
             if(result.status == "success"){ 
-              $("#userinfo_change").attr("href","/personalcenter/personalinfo-sub.html");
+              $("#userinfo_change").attr("href","http://101.200.201.0/personalcenter/personalinfo-sub.html");
                           
             }else{
               alert(result.tipMsg);
