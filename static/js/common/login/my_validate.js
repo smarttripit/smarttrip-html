@@ -24,7 +24,7 @@ function judgeHasLogin(){
 function send(oform,elemen,otime){
   var selector = oform+" "+".div-phone span.send1";
   /**当手机号码输入正确时才能发送验证码，并且60秒后才能重发**/
-  if (($(oform).validate().element($(elemen)))&&(!($(elemen).val()==""))&&($(selector).html()=="发送验证码")) {
+  
     var time = otime;
     //验证手机号是否已经被注册
      $.ajax({
@@ -79,10 +79,8 @@ function send(oform,elemen,otime){
     }
     //timeCountDown();
     var timer = setInterval(timeCountDown,1000);
-  }
-  else{
-    
-  }
+  
+
 
 }
 
