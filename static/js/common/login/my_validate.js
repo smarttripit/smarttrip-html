@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	judgeHasLogin();// 判断是否已经登录
-
 });
 
 // 判断是否已经登录
@@ -35,30 +34,34 @@ function send(oform,elemen,otime){
      data: {mobileNo:$(elemen).val()},
      dataType: "json",
      success: function(data){
-              if(data.status == 'success'){
-                  //手机号未被注册，则发送验证码
-                  timeCountDown();
-                    
-                   $.ajax({
-                       type: "GET",
-                       cache: false,
-                       url: "/authCode/send",
-                       data: {mobileNo:$(elemen).val()},
-                       dataType: "json",
-                       success: function(data){
-                                  if(data.status == 'success'){
-                                    
-                                  }else{
-                        alert(data.tipMsg);
-                                  };
-                                }
-                   });
+    	 		if(data.status == 'success'  &&  elemen == '#phone2'){// 注册
+    	 			sendAuthCode();
+    	 		}else if(data.status == 'failed'  &&  elemen == '#phone3'  && data.tipCode == 'hasRegistered'){// 找回密码
+            	  sendAuthCode(); 
                 }else{
-                alert(data.tipMsg);
-                time = 0;
+	                alert(data.tipMsg);
+	                time = 0;
                 };
               }
    });
+     // 发送手机验证码
+     function sendAuthCode(){
+    	 timeCountDown();
+    	 $.ajax({
+             type: "GET",
+             cache: false,
+             url: "/authCode/send",
+             data: {mobileNo:$(elemen).val()},
+             dataType: "json",
+             success: function(data){
+                        if(data.status == 'success'){
+                          
+                        }else{
+              alert(data.tipMsg);
+                        };
+                      }
+         });
+     }
     
     
     function timeCountDown(){
@@ -206,7 +209,7 @@ $("#login-form").validate({
             if(data.status == 'success'){
             	judgeHasLogin();// 判断是否已经登录
             	$('#loginModal').modal('hide');
-              window.location.reload();
+            	aferLogin();
             } else {
             	alert(data.tipMsg);
             }
@@ -260,7 +263,7 @@ $("#register-form").validate({
             if(result.status == 'success'){
               alert("注册成功"); 
               $("#registerModal").modal('hide');
-              window.location.reload();
+              aferLogin();
             }else{
               alert(result.tipMsg);
             }
@@ -328,40 +331,22 @@ $("#forgetPasswd-form").validate({
       $.ajax({
           cache: false,
           type: "POST",
-          url:"/visitor/isMobileRegistered",
-          data:{mobileNo:$("#phone3").val()},
+          url:"/visitor/resetPassword",
+          data:{mobileNo:$("#phone3").val(), authCode:$("#code_number3").val(),password:$("#code_number3").val(),password:$("#password3").val(),passwordAgain:$("#confirm_password3").val()},
           async: false,
           error: function(request) {
           },
           success: function(result) {
             if(result.status == 'success'){
-              $.ajax({
-                  cache: false,
-                  type: "POST",
-                  url:"/visitor/resetPassword",
-                  data:{mobileNo:$("#phone3").val(), authCode:$("#username").val(),password:$("#code_number3").val(),password:$("#password3").val(),passwordAgain:$("#confirm_password3").val()},
-                  async: false,
-                  error: function(request) {
-                  },
-                  success: function(result) {
-                    if(result.status == 'success'){
-                      alert("重置密码成功");
-                    }else{
-                      alert(result.tipMsg);
-                    }
-                  }
-              });
-
+              alert("重置密码成功");
+              $("#forgetPasswdModal").modal('hide');
+              aferLogin();
             }else{
               alert(result.tipMsg);
+              return false;
             }
           }
       });
-
-
-
-
-      $("#forgetPasswdModal").modal('hide');
   },
  
   rules:{
@@ -441,5 +426,11 @@ $("#js_form").validate({
   }
 });
 
-
-
+// 登录成功之后调用该方法
+function aferLogin(){
+	if($('#doNotRefreshAfterLogin').length > 0){
+		judgeHasLogin();
+	}else{
+		window.location.reload();
+	}
+}
