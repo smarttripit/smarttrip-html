@@ -23,7 +23,7 @@ function judgeHasLogin(){
 
 /**发送验证码**/          
 function send(oform,elemen,otime){
-  var selector = oform+" "+".div-phone span";
+  var selector = oform+" "+".div-phone span.send1";
   /**当手机号码输入正确时才能发送验证码，并且60秒后才能重发**/
   if (($(oform).validate().element($(elemen)))&&(!($(elemen).val()==""))&&($(selector).html()=="发送验证码")) {
     var time = otime;
@@ -76,6 +76,9 @@ function send(oform,elemen,otime){
     }
     //timeCountDown();
     var timer = setInterval(timeCountDown,1000);
+  }
+  else{
+    
   }
 
 }
@@ -202,25 +205,27 @@ $("#login-form").validate({
           success: function(data) {
             if(data.status == 'success'){
             	judgeHasLogin();// 判断是否已经登录
-            	$('#loginModal').modal('hide')
+            	$('#loginModal').modal('hide');
+              window.location.reload();
             } else {
             	alert(data.tipMsg);
             }
           }
       });
-      $("#loginModal").modal('hide');
+      
   },
+
   rules:{
 
     password1:{
       required:true,
-      rangelength:[6,12]
+      rangelength:[6,20]
     },
    
     login:{
-      required:true,
-      
+      required:true
     }
+
   },
 
   //自定义提示
@@ -228,7 +233,7 @@ $("#login-form").validate({
 
     password1:{
       required:"请输入密码",
-      rangelength:"密码长度在6~12"
+      rangelength:"密码长度在6~20"
     },
     login:{
       required:"用户名不能为空"
@@ -247,20 +252,20 @@ $("#register-form").validate({
           cache: false,
           type: "POST",
           url:"/visitor/register",
-          data:{mobileNo:$("#phone2").val(), name:$("#username").val(),password:$("#password2").val(),passwordAgain:$("#confirm-password2").val(),verifyCode:$("#code_number2").val()},
+          data:{mobileNo:$("#phone2").val(), name:$("#username").val(),password:$("#password2").val(),passwordAgain:$("#confirm_password2").val(),verifyCode:$("#code_number2").val()},
           async: false,
           error: function(request) {
           },
           success: function(result) {
             if(result.status == 'success'){
-              alert("注册成功");
+              alert("注册成功"); 
+              $("#registerModal").modal('hide');
+              window.location.reload();
             }else{
               alert(result.tipMsg);
-              console.log($("#username").val()+$("#password2").val()+$("#confirm-password2").val()+$("#code_number2").val())
             }
           }
-      });
-      $("#registerModal").modal('hide');
+      });     
   },
  
   
@@ -271,23 +276,11 @@ $("#register-form").validate({
       rangelength:[2,20],    //请输入的数值在2至20位之间
       username_test:true
     },
-    number:{
-      required:true
-    },
-    email:{
-      required:true
-    },
     password2:{
       required:true,
-      rangelength:[6,12]
+      rangelength:[6,20]
     },
-    url:{
-      required:true
-    },
-    date:{
-
-    },
-    "confirm-password2":{
+    "confirm_password2":{
       equalTo:"#password2"     //必须密码相同
     },
     phone2:{
@@ -309,19 +302,19 @@ $("#register-form").validate({
     },
     password2:{
       required:"密码不能为空",
-      rangelength:"密码长度在6~12"
+      rangelength:"密码长度在6~20"
     },
-    "confirm-password2":{
+    confirm_password2:{
       equalTo:"两次密码输入不一致"     //必须密码相同
+    },
+    phone2:{
+      required:"手机号不能为空"
     },
     code_number2:{
       required:"请输入验证码",
       rangelength:"验证码长度为6位",
       number:"请输入合法数字"
-    },
-    phone2:{
-      required:"手机号不能为空"
-    }
+    }    
   }
 });
 
@@ -335,28 +328,48 @@ $("#forgetPasswd-form").validate({
       $.ajax({
           cache: false,
           type: "POST",
-          url:"/visitor/resetPassword",
-          data:{mobileNo:$("#phone3").val(), authCode:$("#username").val(),password:$("#code_number3").val(),password:$("#password3").val(),passwordAgain:$("#confirm-password3").val()},
+          url:"/visitor/isMobileRegistered",
+          data:{mobileNo:$("#phone3").val()},
           async: false,
           error: function(request) {
           },
           success: function(result) {
             if(result.status == 'success'){
-              alert("重置密码成功");
+              $.ajax({
+                  cache: false,
+                  type: "POST",
+                  url:"/visitor/resetPassword",
+                  data:{mobileNo:$("#phone3").val(), authCode:$("#username").val(),password:$("#code_number3").val(),password:$("#password3").val(),passwordAgain:$("#confirm_password3").val()},
+                  async: false,
+                  error: function(request) {
+                  },
+                  success: function(result) {
+                    if(result.status == 'success'){
+                      alert("重置密码成功");
+                    }else{
+                      alert(result.tipMsg);
+                    }
+                  }
+              });
+
             }else{
               alert(result.tipMsg);
             }
           }
       });
+
+
+
+
       $("#forgetPasswdModal").modal('hide');
   },
  
   rules:{
     password3:{
       required:true,
-      rangelength:[6,12]
+      rangelength:[6,20]
     },
-    "confirm-password3":{
+    "confirm_password3":{
       equalTo:"#password3"     //必须密码相同
     },
 
@@ -373,9 +386,9 @@ $("#forgetPasswd-form").validate({
      messages:{
       password3:{
       required:"密码不能为空",
-      rangelength:"密码长度在6~12"
+      rangelength:"密码长度在6~20"
     },
-      "confirm-password3":{
+      "confirm_password3":{
         equalTo:"两次密码输入不一致"     //必须密码相同
       },
       phone3:{
@@ -398,6 +411,7 @@ send('#registerModal','#phone2',60);
 $('#send_code2').click(function(){
 send('#forgetPasswdModal','#phone3',60);
 });
+
 /**订单信息填写验证**/
 $("#js_form").validate({
   debug:true,      //调试模式（并不会提交）

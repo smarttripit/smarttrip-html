@@ -27,7 +27,7 @@ var productType;
                  $("#oneRoute_feeDescription").html(oneRoute.feeDescription);
                  $("#oneRoute_bookingNotice").html(oneRoute.bookingNotice);
               }else{
-                alert(result.tipMsg);
+            	  dealFailedResponse(result);
               }
             },
             error : function(data) {
@@ -62,10 +62,10 @@ var productType;
                    var direction = oneLocal.direction;
                    var link = oneLocal.link;
                    
-                   if(direction==1)
+                   if(direction==0)
                    {
                      myDir = "";
-                   }else if(direction==0){
+                   }else if(direction==1){
                      myDir = "class = \"timeline-inverted\"";
                    };
 
@@ -219,7 +219,7 @@ var productType;
     		  $('#femaleCount').focus();
     		  return false;
     	  }
-    	  window.location.href = "/order/createOrder.html?productType="+productType+
+    	  window.location.href = "/routeOrder/createOrder.html?productType="+productType+
     	  						"&productId="+routeId+"&femaleCount="+getFemaleCount()+
     	  						"&maleCount="+getMaleCount()+"&startDate="+getSelectedStartDate()+
     	  						"&price="+getSelectedPrice(); 

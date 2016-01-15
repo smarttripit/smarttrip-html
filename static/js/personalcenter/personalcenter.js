@@ -3,7 +3,7 @@
     //console.log(spotId);
     $(document).ready(function() { 
        initUserInfo();// 加载游客基本信息
-                var paginationOptions = {
+            var paginationOptions = {
              domId : "pager2",
              url : "/routeOrder/getByPage",
              page : 1,

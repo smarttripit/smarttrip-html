@@ -1,3 +1,7 @@
+	var searchName = $.getUrlParam('searchName');
+	if(searchName == null){
+		searchName = "";
+	}
      // 加载地区
      function initComPlace(){
        jQuery.ajax({
@@ -64,7 +68,7 @@
           //initComTheme();   
 		      var paginationOptions = {
 			       domId : "pager2",
-			       url : "/route/getByPage",
+			       url : "/route/getByPage?searchName="+encodeURI(searchName),
 			       page : 1,
 			       rows : 8,
 			       queryParams : {regionIds:"",themeIds:"",periods:"",seasonIds:"",orderType:"summary",routeType:"",},

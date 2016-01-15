@@ -38,7 +38,8 @@
                 //console.log(data);
                 //data.score=$("#input-21e").val();
               }else{
-                alert(result.tipMsg);
+                 dealFailedResponse(result);
+                //alert(result.tipMsg);
               }
           },
           error : function(data) {

@@ -1,0 +1,158 @@
+ <!DOCTYPE html>
+  <html lang="en">
+   <head>
+     <!-- 要紧接着head标签 -->
+     <!--# include file="/common/head.html" -->
+     <link rel="stylesheet" type="text/css" href="/static/css/routeOrder/createOrder.css" >
+     <link rel="stylesheet" type="text/css" href="/static/css/common/top.css">
+     <!-- 这里引入本页面特有的css文件 -->
+     <title>创建订单</title>
+   </head>
+
+  <body>
+    <!--# include file="/common/login.html"  --> 
+    <div class="all_top">
+      <!--<img src="http://st-static.oss-cn-beijing.aliyuncs.com/level2-2.gif" class="header_image"> -->
+      <!--# include file="/common/top.html"  -->    
+    </div>  
+    <div class="container" >     
+      <!-- 这里开始写真正的业务代码 --> 
+      <div class="row row_bottom_space">
+        <div id="" class=" col-xs-12 col-sm-12 col-md-12 ">
+          <div class="col-xs-12 col-sm-12 col-md-12 password_back border_gray">
+            <div class="col-xs-12 col-sm-12 col-md-12  in_center">
+              <h4 class="form_head"><b><i class="fa fa-edit"></i>&nbsp;订单填写</b></h4>
+            </div>
+            
+            <div class="col-xs-12 col-sm-12 col-md-12">
+              <hr style="border: none;border-top:2px dashed rgba(204, 122, 0, 0.16);margin: 0px;margin-bottom: 20px;"> 
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 mt10 row_bottom_space1">
+              <span class="font_size16 bgc_blue cor_white form_head">订单信息</span>
+            </div>
+            <div id="" class=" col-xs-4 col-sm-3 col-md-3 in_center row_bottom_space">
+              <img id="orderThumbnail" src="" class="img-responsive  products_img mt5">
+            </div>
+            <div class="col-xs-8 col-sm-9 col-md-9">
+          <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-5 row_space mt10">
+              <b class="font_size16" id="orderTitle"></b>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-7">
+            </div>
+          </div>
+
+          <div class="row row_bottom_space">
+            <div class="col-xs-12 col-sm-4 col-md-12 mb_10 pr0">
+              <p class="font_size12">
+              	<span class="cor_orange" >￥</span>
+              	<span class="cor_orange" id="price">98</span>
+              	<span>*</span>
+              	<span class="cor_orange" id="totalCount">23</span>
+              	<span>=</span>
+              	<span class="cor_orange" >￥</span>
+              	<span class="cor_orange" id="totalPrice">4536</span>
+             </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-12 mb_10">
+              <p class="font_size12 cor_gray">出行日期：<span id="startDate">2014-12-11</span></p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-12 mb_10">
+              <p class="font_size12 cor_gray">出游人数：<span id="femaleCount"></span>男<span id="maleCount"></span>女</p>
+            </div>
+          </div>
+
+            </div>
+
+           
+              <div class="col-xs-12 col-sm-12 col-md-12 row_bottom_space1 mt20">
+                <span class="font_size16 bgc_blue cor_white form_head">游客基本信息</span>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 row_bottom_space1">
+                  <div class="col-xs-12 col-sm-12 col-md-12 ">
+                    <p><b class="font_size14 row_bottom_space "><i class="fa fa-user"></i>&nbsp;游客1信息</b></p>
+                  </div>
+                  <div class="form-group  ">
+                    <label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 ">姓名：</label>
+                    <div class="col-xs-8 col-sm-9 col-md-8 pl0 ">
+                      <input id="" type="text" class="form-control" id="" placeholder="必填">
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">手机号：</label>
+                    <div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">
+                      <input id="startPlace" type="text" class="form-control" id="" 
+                         placeholder="必填">
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">身份证号：</label>
+                    <div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">
+                      <input id="startPlace" type="text" class="form-control" id="" 
+                         placeholder="必填">
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">微信号：</label>
+                    <div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">
+                      <input id="startPlace" type="text" class="form-control" id="" 
+                         placeholder="选填">
+                    </div>
+                  </div>               
+                </div>
+                
+                <div class="col-xs-12 col-sm-12 col-md-4 row_bottom_space1">
+                  <div class="col-xs-12 col-sm-12 col-md-12 ">
+                    <p><b class="font_size14 row_bottom_space "><i class="fa fa-user"></i>&nbsp;游客1信息</b></p>
+                  </div>
+                  <div class="form-group  ">
+                    <label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 ">姓名：</label>
+                    <div class="col-xs-8 col-sm-9 col-md-8 pl0 ">
+                      <input id="" type="text" class="form-control" id="" placeholder="必填">
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">手机号：</label>
+                    <div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">
+                      <input id="startPlace" type="text" class="form-control" id="" 
+                         placeholder="必填">
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">身份证号：</label>
+                    <div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">
+                      <input id="startPlace" type="text" class="form-control" id="" 
+                         placeholder="必填">
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">微信号：</label>
+                    <div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">
+                      <input id="startPlace" type="text" class="form-control" id="" 
+                         placeholder="选填">
+                    </div>
+                  </div>               
+                </div>
+              </div>
+
+            <div class="form-group">
+               <div class=" col-sm-12 in_center">
+                  <button id="quickly_pay" type="submit" class="btn font_size16 bgc_blue cor_white">提交订单</button>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/row-->
+   
+
+
+
+    <!--# include file="/common/footer.html"  -->
+    <!-- 核心js文件 -->
+    <!--# include file="/common/corejs.html" -->
+    <!-- 这里引入本页面特有的js文件 -->
+    <script src="/static/js/routeOrder/createOrder.js"></script> 
+</html>

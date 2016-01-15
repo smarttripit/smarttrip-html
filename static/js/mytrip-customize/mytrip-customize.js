@@ -92,7 +92,8 @@ function submitCustomize() {
 			}
 		},
 		error : function(data) {
-			alert("系统异常");
+			 dealFailedResponse(result);
+			//alert("系统异常");
 		}
 	});
 }
