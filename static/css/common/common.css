@@ -48,6 +48,7 @@ _height:320px; //（解决ie6） ie6超出自动溢出}
 .border_gray{border: 2px #ececec solid;}
 /*页面边距*/
 .mt_10{margin-top:-10px;}
+.mt0{margin-top:0px;}
 .mt5{margin-top:5px;}
 .mt10{margin-top:10px;}
 .mt15{margin-top:15px;}
@@ -70,8 +71,9 @@ _height:320px; //（解决ie6） ie6超出自动溢出}
 .pl0{padding-left:0px;}
 .pr0{padding-right:0px;}
 .header_image{height: 250px;width: 100%;margin-bottom: 20px;}
-.line_height80{line-height:80px;}
+.line_height35{line-height:35px;}
 .line_height70{line-height:70px;}
+.line_height80{line-height:80px;}
 /*字体大小*/
 .font_size8{font-size:8px;}
 .font_size10{font-size:10px;}
