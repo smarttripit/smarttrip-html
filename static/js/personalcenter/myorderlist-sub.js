@@ -2,20 +2,9 @@
     var routeOrderId = $.getUrlParam('routeOrderId');
     //console.log(spotId);
     $(document).ready(function() { 
-<<<<<<< HEAD
-        initOrderInfo();// 加载游客基本信息
-        var productType=10;
-        var routeId="96ae4439d6084b38bf60422f1efa1650";
-        $("#toOneRoute").click(function(){
-        if(productType==10||productType==11){
-          $("#toOneRoute").attr("href","/route/oneRoute.html?routeId="+routeId);
-        }
-      })
-=======
-       initOrderInfo();// 加载订单基本信息
-       initUserInfo();
 
->>>>>>> origin/master
+        initOrderInfo();// 加载游客基本信息
+        initUserInfo();       
     });
 
     // 加载订单详情
@@ -36,6 +25,11 @@
               $("#startTime").text(order.startTime);
               $("#maleCount").text(order.maleCount);
               $("#femaleCount").text(order.femaleCount);
+              $("#toOneRoute").click(function(){
+                if(order.productType==10||order.productType==11){
+                  $("#toOneRoute").attr("href","/route/oneRoute.html?routeId="+order.productId);
+                }
+              })
               //console.log(order.orderStatus);
               var orderStatus=parseInt(order.orderStatus);
               switch(orderStatus)
