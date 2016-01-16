@@ -1,5 +1,4 @@
  // 加载订单
-
     var routeOrderId = $.getUrlParam('routeOrderId');
     //console.log(spotId);
     $(document).ready(function() { 

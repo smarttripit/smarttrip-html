@@ -110,7 +110,8 @@ function initOrderInfo(){
           url : "/routeOrder/create",
           success : function(result){
             if(result.status == "success"){ 
-              $("#createorder").attr("href","/personalcenter/myorderlist-sub.html");
+              var routeOrderId=data.routeOrderId;
+              $("#createorder").attr("href","/personalcenter/myorderlist-sub.html?routeOrderId="+routeOrderId);
                           
             }else{
               dealFailedResponse(result);
