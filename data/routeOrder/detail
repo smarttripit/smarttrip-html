@@ -11,6 +11,8 @@
 		"maleCount":"1",
 		"femaleCount":"2",
 		"orderStatus":"01",
-		"weixinGroupPic":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_thumbnail_2.jpg"
+		"weixinGroupPic":"http://st-dev-mock.oss-cn-beijing.aliyuncs.com/route_thumbnail_2.jpg",
+		"productType":"10",
+		"productId":"112435"
 	}
 }
