@@ -120,7 +120,7 @@
         async: true,
         cache: false,
         datatype : "json",
-        url : "/routeOrder/orderPersonList",
+        url : "/routeOrder/orderPersonList?routeOrderId="+routeOrderId,
         success : function(result){
           if(result.status == "success"){
 
@@ -132,7 +132,7 @@
             {
                  console.log(tourist[i]);
               $("#tourist_name_"+i).text(tourist[i].name);
-              $("#tourist_IDCardNo_"+i).text(tourist[i].IDCardNo);
+              $("#tourist_IDCardNo_"+i).text(tourist[i].idcardNo);
               $("#tourist_mobileNo_"+i).text(tourist[i].mobileNo);
               $("#tourist_weixinNo_"+i).text(tourist[i].weixinNo);
             }        
