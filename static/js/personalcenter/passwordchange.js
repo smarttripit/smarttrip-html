@@ -21,8 +21,7 @@
             url : "/visitor/changePassword",
             success : function(result){
               if(result.status == "success"){ 
-                $("#passwordchange").attr("href","/personalcenter/personalinfo-main.html");
-                            
+                window.location.href="/personalcenter/personalinfo-main.html";
               }else{
                 dealFailedResponse(result);
               }

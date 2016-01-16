@@ -48,6 +48,9 @@
      //console.log(spotId);
      $(document).ready(function() { 
         initUserInfo();// 加载游客基本信息
+        $("#userinfo_change").on('click', function(){
+        	modifyUserInfo();
+        });
      });
 
      // 加载游客基本信息
@@ -107,7 +110,7 @@
 
 
            }else{
-             alert(result.tipMsg);
+             dealFailedResponse(result);
            }
          },
          error : function(data) {
@@ -117,35 +120,46 @@
      }
 
       /*修改信息*/
-     $("#userinfo_change").click( 
-      function() {
-        var user_truename=$("#user_truename").val();
-        var user_gender=$('#user_gender label input[name="usergender"]:checked').val();
-        var user_birthday=$("#user_birthday").val();
-        var user_city=$("#user_city").val();
-        var user_profession=$("#user_profession").val();
-        var user_education=$("#user_education").find("option:selected").text();
-        var user_introduction=$("#user_introduction").val();
-
-        console.log(user_gender);
-        console.log(user_education);
-        jQuery.ajax({
-          type : "GET",
-          async: true,
-          data : {realName:user_truename, gender:user_gender, birthday: user_birthday, city:user_city, profession:user_profession,education:user_education,introduction:user_introduction},
-          cache: false,
-          datatype : "json",
-          url : "/visitor/modifyVisitorInfo",
-          success : function(result){
-            if(result.status == "success"){ 
-              $("#userinfo_change").attr("href","/personalcenter/personalinfo-sub.html");
-                          
-            }else{
-              alert(result.tipMsg);
-            }
-          },
-          error : function(data) {
-            alert("系统异常");
-          }
-        });                        
-     });
+     function modifyUserInfo(){
+    	 var user_truename=$("#user_truename").val();
+         var user_gender=$('#user_gender label input[name="usergender"]:checked').val();
+         var user_birthday=$("#user_birthday").val();
+         var user_city=$("#user_city").val();
+         var user_profession=$("#user_profession").val();
+         var user_education=$("#user_education").find("option:selected").text();
+         var user_introduction=$("#user_introduction").val();
+         
+         if(user_birthday != ""  &&  !user_birthday(user_birthday)){
+      		alert("出生日期格式不正确");
+      		return false;
+      	 }
+         
+         console.log(user_gender);
+         console.log(user_education);
+         jQuery.ajax({
+           type : "GET",
+           async: true,
+           cache: false,
+           datatype : "json",
+           url : "/visitor/modifyVisitorInfo",
+           data : {
+        	   realName:user_truename, 
+        	   gender:user_gender, 
+        	   birthday:user_birthday, 
+        	   city:user_city, 
+        	   profession:user_profession,
+        	   education:user_education,
+        	   introduction:user_introduction
+           },
+           success : function(result){
+             if(result.status == "success"){ 
+                window.location.href="/personalcenter/personalinfo-main.html";           
+             }else{
+               dealFailedResponse(result);
+             }
+           },
+           error : function() {
+             alert("系统异常");
+           }
+         });  
+     }

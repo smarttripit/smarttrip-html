@@ -53,7 +53,7 @@
               }
 
           }else{
-            alert(result.tipMsg);
+            dealFailedResponse(result);
           }
         },
         error : function(data) {
