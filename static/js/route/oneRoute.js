@@ -15,6 +15,8 @@ var productType;
                  }else if(oneRoute.routeType == "2"){
                 	 productType = "11";
                  }
+                 // 初始化出行日期信息
+	           	 initStartDate();
                  $("#oneRoute_name").html(oneRoute.name);
                  $("#oneRoute_bottomPrice").html(oneRoute.bottomPrice);
                  $(".bgimg").css("background-image", "url("+oneRoute.backgroundImg+")");
@@ -173,7 +175,7 @@ var productType;
                   async: true,
                   cache: false,
                   datatype : "json",
-                  url : "/route/getStartDates?routeId="+routeId,
+                  url : "/route/getStartDates?routeId="+routeId+"&productType="+productType,
                   success : function(result){
                  	 if(result.status == "success"){
                  		 var list = result.data;
@@ -272,8 +274,6 @@ var productType;
       }
      jQuery(function($) {
        $(document).ready( function() {
-    	   // 初始化出行日期信息
-    	   initStartDate();
     	   // 跳转到订单填写页面
     	   $('#gotoBooking').on('click', function(){
     		   gotoBookingPage();// 跳转到订单填写页面
