@@ -4,7 +4,6 @@
     $(document).ready(function() { 
 
         initOrderInfo();// 加载游客基本信息
-        initUserInfo();       
     });
 
     // 加载订单详情
@@ -104,8 +103,7 @@
                       '</div>\n');
                 //console.log("1");
               }
-              
-
+              initUserInfo();
           }else{
              dealFailedResponse(result);
             //alert(result.tipMsg);
@@ -144,7 +142,6 @@
               
           }else{
              dealFailedResponse(result);
-            //alert(result.tipMsg);
           }
         },
         error : function(data) {
