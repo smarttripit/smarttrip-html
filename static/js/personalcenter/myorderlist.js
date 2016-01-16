@@ -93,8 +93,8 @@
                                         data:{routeOrderId:row.routeOrderId,},
                                         success : function(result){
                                           if(result.status == "success"){ 
-                                             for(var i=0; i<6; i++)
-                                             {$("#route_"+i).css("display","none" );}     
+                                             for(var j=0; j<6; j++)
+                                             {$("#order_"+j).css("display","none" );}     
                                              pagination(paginationOptions);                                     
                                             //$("#order_"+i).css("display","none");
                                             //console.log("/routeOrder/cancel?routeOrderId=");
