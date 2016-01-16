@@ -56,6 +56,8 @@
   background-color:#000;
   background:rgba(0,0,0,0.5); filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
 }
+
+
 /*选择出游详情样式*/
 .date_choose{width:60%;}
 .male_choose{width:19%;}
