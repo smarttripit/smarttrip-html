@@ -3,7 +3,14 @@
     var routeOrderId = $.getUrlParam('routeOrderId');
     //console.log(spotId);
     $(document).ready(function() { 
-       initOrderInfo();// 加载游客基本信息
+        initOrderInfo();// 加载游客基本信息
+        var productType=10;
+        var routeId="96ae4439d6084b38bf60422f1efa1650";
+        $("#toOneRoute").click(function(){
+        if(productType==10||productType==11){
+          $("#toOneRoute").attr("href","/route/oneRoute.html?routeId="+routeId);
+        }
+      })
     });
 
     // 加载发现订单详情
