@@ -26,7 +26,7 @@ function initRoutes(){
         			$("#route_link_"+i).attr("href", "/route/oneRoute.html?routeId="+route.routeId);
         		}
         	}else{
-        		alert(result.tipMsg);
+        		dealFailedResponse(result);
         	}
         },
         error : function(data) {
@@ -57,7 +57,7 @@ function initSpots(){
               $("#spot_link_"+i).attr("href", "/discovery/oneSpot.html?spotId="+spot.spotId);
             }
           }else{
-            alert(result.tipMsg);
+            dealFailedResponse(result);
           }
         },
         error : function(data) {

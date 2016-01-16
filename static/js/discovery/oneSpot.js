@@ -36,7 +36,7 @@
                 $("#spot_themes_"+j).text(spot.themes[j].name);
               }
           }else{
-            alert(result.tipMsg);
+            dealFailedResponse(result);
           }
         },
         error : function(data) {
@@ -73,7 +73,7 @@
                       });
                    });   
          }else{
-            alert(result.tipMsg);
+            dealFailedResponse(result);
           }
         },
         error : function(data) {
@@ -111,7 +111,7 @@
                 }
               }              
          }else{
-            alert(result.tipMsg);
+            dealFailedResponse(result);
           }
         },
         error : function(data) {
@@ -244,7 +244,7 @@
                 //console.log(data);
                 //data.score=$("#input-21e").val();
               }else{
-                alert(result.tipMsg);
+                dealFailedResponse(result);
               }
           },
           error : function(data) {
@@ -266,7 +266,7 @@
             if(result.status == "success"){ 
               pagination(paginationOptions); 
             }else{
-              alert(result.tipMsg);
+              dealFailedResponse(result);
             }
           },
           error : function(data) {

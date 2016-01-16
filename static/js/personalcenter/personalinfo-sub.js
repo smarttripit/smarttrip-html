@@ -110,7 +110,7 @@
 
 
            }else{
-             alert(result.tipMsg);
+             dealFailedResponse(result);
            }
          },
          error : function(data) {
@@ -155,7 +155,7 @@
              if(result.status == "success"){ 
                 window.location.href="/personalcenter/personalinfo-main.html";           
              }else{
-               alert(result.tipMsg);
+               dealFailedResponse(result);
              }
            },
            error : function() {

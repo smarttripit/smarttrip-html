@@ -265,7 +265,7 @@ $("#register-form").validate({
               $("#registerModal").modal('hide');
               aferLogin();
             }else{
-              alert(result.tipMsg);
+              dealFailedResponse(result);
             }
           }
       });     
@@ -342,7 +342,7 @@ $("#forgetPasswd-form").validate({
               $("#forgetPasswdModal").modal('hide');
               aferLogin();
             }else{
-              alert(result.tipMsg);
+              dealFailedResponse(result);
               return false;
             }
           }

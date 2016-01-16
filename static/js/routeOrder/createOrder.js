@@ -86,7 +86,7 @@ function initOrderInfo() {
 				$("#orderThumbnail").attr("src", result.data.thumbnail);
 				$("#orderTitle").text(result.data.name);
 			} else {
-				alert(result.tipMsg);
+				dealFailedResponse(result);
 			}
 		},
 		error : function(data) {

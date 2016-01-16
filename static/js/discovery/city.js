@@ -21,7 +21,7 @@
               }
 
           }else{
-            alert(result.tipMsg);
+            dealFailedResponse(result);
           }
         },
         error : function(data) {
@@ -50,7 +50,7 @@
               }
 
           }else{
-            alert(result.tipMsg);
+            dealFailedResponse(result);
           }
         },
         error : function(data) {
@@ -79,7 +79,7 @@
               }
 
           }else{
-            alert(result.tipMsg);
+            dealFailedResponse(result);
           }
         },
         error : function(data) {
