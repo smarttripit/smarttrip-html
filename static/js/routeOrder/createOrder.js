@@ -40,25 +40,25 @@ function initOrderInfo() {
                   '<div class="form-group  ">\n'+
                     '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 ">姓名：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 ">\n'+
-                      '<input  type="text" class="form-control" id='+tourist_name[i]+' placeholder="必填">\n'+
+                      '<input  type="text" class="form-control" id='+tourist_name[i]+' placeholder="必填，真实姓名，购买保险用">\n'+
                     '</div>\n'+
                   '</div>\n'+
                   '<div class="form-group ">\n'+
                     '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">手机号：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">\n'+
-                      '<input  type="text" class="form-control" id='+ tourist_mobileNos[i]+' placeholder="必填">\n'+
+                      '<input  type="text" class="form-control" id='+ tourist_mobileNos[i]+' placeholder="必填，方便和您沟通">\n'+
                     '</div>\n'+
                   '</div>\n'+
                   '<div class="form-group ">\n'+
                     '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">身份证号：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">\n'+
-                      '<input  type="text" class="form-control" id='+ tourist_IDCardNos[i]+' placeholder="必填">\n'+
+                      '<input  type="text" class="form-control" id='+ tourist_IDCardNos[i]+' placeholder="必填，购买保险用">\n'+
                     '</div>\n'+
                   '</div>\n'+
                   '<div class="form-group ">\n'+
                     '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">微信号：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">\n'+
-                      '<input  type="text" class="form-control" id='+tourist_weixinNos[i]+'  placeholder="选填">\n'+
+                      '<input  type="text" class="form-control" id='+tourist_weixinNos[i]+'  placeholder="选填，方便和您沟通">\n'+
                     '</div>\n'+
                   '</div>\n'+               
                 '</div>\n');

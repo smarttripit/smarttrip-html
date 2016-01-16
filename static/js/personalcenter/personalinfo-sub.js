@@ -129,10 +129,10 @@
          var user_education=$("#user_education").find("option:selected").text();
          var user_introduction=$("#user_introduction").val();
          
-         if(!isdatetime(user_birthday) && user_birthday != ""){
+        /* if(!isdatetime(user_birthday) && user_birthday != ""){
       		alert("出生日期格式不正确");
       		return false;
-      	 }
+      	 }*/
          
          jQuery.ajax({
            type : "GET",
