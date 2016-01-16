@@ -16,11 +16,14 @@
         url : "/routeOrder/detail?routeOrderId="+routeOrderId,
         success : function(result){
           if(result.status == "success"){
-            var order = result.data;            
+            var order = result.data; 
+            var total_Count=parseInt(order.maleCount)+ parseInt(order.femaleCount); 
+            var total_Price=order.price*total_Count;         
               $("#orderNo").text(order.orderNo);
               $("#orderThumbnail").attr("src", order.orderThumbnail);
               $("#orderTitle").text(order.orderTitle);
               $("#sigleprice").text(order.price);
+              $("#price").text(total_Price);
               $("#startTime").text(order.startTime);
               $("#maleCount").text(order.maleCount);
               $("#femaleCount").text(order.femaleCount);
@@ -33,8 +36,7 @@
               var orderStatus=parseInt(order.orderStatus);
               switch(orderStatus)
               {
-                case 01:
-                
+                case 01:                
                 $("#orderStatus").text("未支付");
                 break;
 
@@ -91,14 +93,14 @@
                 //console.log(tourist_name[i]);
                 $("#tourist_info").next().append('<div class="col-xs-12 col-sm-12 col-md-4 row_bottom_space1">\n'+
                       '<div class="col-xs-12 col-sm-12 col-md-12">\n'+
-                        '<p><b class="font_size14 row_bottom_space">游客\n'+j+
+                        '<p><b class="font_size15 row_bottom_space">游客\n'+j+
                         '</b></p>\n'+
                       '</div>\n'+
                       '<div class="col-xs-12 col-sm-12 col-md-12">\n'+
-                        '<p class="font_size12"><b>姓名：</b><span id='+tourist_name[i]+'></span></p>\n'+
-                        '<p class="font_size12"><b>身份证号：</b><span id='+tourist_IDCardNo[i]+'></span></p>\n'+
-                        '<p class="font_size12"><b>手机号：</b><span id='+tourist_mobileNo[i]+'></span></p>\n'+
-                        '<p class="font_size12"><b>微信号：</b><span id='+tourist_weixinNo[i]+'></span></p>\n'+
+                        '<p class="font_size13"><b>姓名：</b><span id='+tourist_name[i]+'></span></p>\n'+
+                        '<p class="font_size13"><b>身份证号：</b><span id='+tourist_IDCardNo[i]+'></span></p>\n'+
+                        '<p class="font_size13"><b>手机号：</b><span id='+tourist_mobileNo[i]+'></span></p>\n'+
+                        '<p class="font_size13"><b>微信号：</b><span id='+tourist_weixinNo[i]+'></span></p>\n'+
                       '</div>\n'+
                       '</div>\n');
                 //console.log("1");
