@@ -50,7 +50,7 @@
         initUserInfo();// 加载游客基本信息
      });
 
-     // 加载发现北京详情页
+     // 加载游客基本信息
      function initUserInfo(){
        jQuery.ajax({
          type : "GET",
@@ -132,7 +132,7 @@
         jQuery.ajax({
           type : "GET",
           async: true,
-          data : {realName:user_truename, gender:user_gender, birthday: user_birthday, city:user_city, profession:user_profession,education:user_education,introduction:user_introduction,},
+          data : {realName:user_truename, gender:user_gender, birthday: user_birthday, city:user_city, profession:user_profession,education:user_education,introduction:user_introduction},
           cache: false,
           datatype : "json",
           url : "/visitor/modifyVisitorInfo",
