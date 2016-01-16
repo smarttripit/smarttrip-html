@@ -434,3 +434,22 @@ function aferLogin(){
 		window.location.reload();
 	}
 }
+
+
+$('#openRM').click(function(){
+  $('#loginModal').on('hidden.bs.modal', function () { 
+  $('body').addClass('modal-open');
+})
+});
+
+$('#openFM').click(function(){
+  $('#loginModal').on('hidden.bs.modal', function () { 
+  $('body').addClass('modal-open');
+})
+});
+
+$('#openLM').click(function(){
+  $('#registerModal').on('hidden.bs.modal', function () { 
+  $('body').addClass('modal-open');
+})
+});
