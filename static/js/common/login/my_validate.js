@@ -24,8 +24,8 @@ function judgeHasLogin(){
 function send(oform,elemen,otime){
   var selector = oform+" "+".div-phone span.send1";
   /**当手机号码输入正确时才能发送验证码，并且60秒后才能重发**/
-  
-    var time = otime;
+    if(($(elemen).valid())&&($(selector).html()=='发送验证码')){
+      var time = otime;
     //验证手机号是否已经被注册
      $.ajax({
      type: "GET",
@@ -34,20 +34,20 @@ function send(oform,elemen,otime){
      data: {mobileNo:$(elemen).val()},
      dataType: "json",
      success: function(data){
-    	 		if(data.status == 'success'  &&  elemen == '#phone2'){// 注册
-    	 			sendAuthCode();
-    	 		}else if(data.status == 'failed'  &&  elemen == '#phone3'  && data.tipCode == 'hasRegistered'){// 找回密码
-            	  sendAuthCode(); 
+          if(data.status == 'success'  &&  elemen == '#phone2'){// 注册
+            sendAuthCode();
+          }else if(data.status == 'failed'  &&  elemen == '#phone3'  && data.tipCode == 'hasRegistered'){// 找回密码
+                sendAuthCode(); 
                 }else{
-	                alert(data.tipMsg);
-	                time = 0;
+                  alert(data.tipMsg);
+                  time = 0;
                 };
               }
    });
      // 发送手机验证码
      function sendAuthCode(){
-    	 timeCountDown();
-    	 $.ajax({
+       timeCountDown();
+       $.ajax({
              type: "GET",
              cache: false,
              url: "/authCode/send",
@@ -79,6 +79,8 @@ function send(oform,elemen,otime){
     }
     //timeCountDown();
     var timer = setInterval(timeCountDown,1000);
+    }
+    
   
 
 
