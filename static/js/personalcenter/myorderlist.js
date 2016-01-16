@@ -92,9 +92,10 @@
                                         url : "/routeOrder/cancel",
                                         data:{routeOrderId:row.routeOrderId,},
                                         success : function(result){
-                                          if(result.status == "success"){                                           
-                                            $("#order_"+i).css("display","none");
-                                            console.log("/routeOrder/cancel?routeOrderId=");
+                                          if(result.status == "success"){      
+                                             pagination(paginationOptions);                                     
+                                            //$("#order_"+i).css("display","none");
+                                            //console.log("/routeOrder/cancel?routeOrderId=");
                                            //$("#passwordchange").attr("href","/personalcenter/personalinfo-main.html");                                                      
                                          }else{
                                            dealFailedResponse(result);
