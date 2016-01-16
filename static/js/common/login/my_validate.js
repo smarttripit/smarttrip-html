@@ -452,4 +452,3 @@ $('#openLM').click(function(){
   $('#registerModal').on('hidden.bs.modal', function () { 
   $('body').addClass('modal-open');
 })
-});
