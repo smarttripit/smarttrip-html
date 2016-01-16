@@ -73,8 +73,11 @@
                                       {$("#quickly_pay_"+i).addClass("disabled")}
                                     if(row.orderStatus!=03)
                                       {$("#quickly_comment_"+i).addClass("disabled")}
-                                  $("#order_totalprice_"+i).text(row.price*(row.maleCount+row.femaleCount));
-                                  $("#order_totalcount_"+i).text(row.maleCount+row.femaleCount);
+                                  var maleCount=parseInt(row.maleCount);
+                                  var femaleCount=parseInt(row.femaleCount);
+                                  var price=parseInt(row.price);
+                                  $("#order_totalprice_"+i).text(price*(maleCount+femaleCount));
+                                  $("#order_totalcount_"+i).text(maleCount+femaleCount);
                                   $("#order_createTime_"+i).text(row.createTime);
                          }
                         }
