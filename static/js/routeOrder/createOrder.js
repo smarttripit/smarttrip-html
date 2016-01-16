@@ -26,13 +26,13 @@ function initOrderInfo(){
   { 
     var j=i+1;
     var tourist_name=[];
-    var tourist_IDCardNo=[];
-    var tourist_mobileNo=[];
-    var tourist_weixinNo=[];
+    var tourist_IDCardNos=[];
+    var tourist_mobileNos=[];
+    var tourist_weixinNos=[];
     tourist_name[i]="tourist_name_"+i;
-    tourist_IDCardNo[i]="tourist_IDCardNo_"+i;
-    tourist_mobileNo[i]="tourist_mobileNo_"+i;
-    tourist_weixinNo[i]="tourist_weixinNo_"+i;
+    tourist_IDCardNos[i]="tourist_IDCardNos_"+i;
+    tourist_mobileNos[i]="tourist_mobileNos_"+i;
+    tourist_weixinNos[i]="tourist_weixinNos_"+i;
 
     $("#tourist_info").next().append('<div class="col-xs-12 col-sm-12 col-md-4 row_bottom_space1">\n'+
                  '<div class="col-xs-12 col-sm-12 col-md-12 ">\n'+
@@ -47,19 +47,19 @@ function initOrderInfo(){
                   '<div class="form-group ">\n'+
                     '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">手机号：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">\n'+
-                      '<input  type="text" class="form-control" id='+ tourist_IDCardNo[i]+' placeholder="必填">\n'+
+                      '<input  type="text" class="form-control" id='+ tourist_IDCardNos[i]+' placeholder="必填">\n'+
                     '</div>\n'+
                   '</div>\n'+
                   '<div class="form-group ">\n'+
                     '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">身份证号：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">\n'+
-                      '<input  type="text" class="form-control" id='+ tourist_mobileNo[i]+' placeholder="必填">\n'+
+                      '<input  type="text" class="form-control" id='+ tourist_mobileNos[i]+' placeholder="必填">\n'+
                     '</div>\n'+
                   '</div>\n'+
                   '<div class="form-group ">\n'+
                     '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">微信号：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">\n'+
-                      '<input  type="text" class="form-control" id='+tourist_weixinNo[i]+'  placeholder="选填">\n'+
+                      '<input  type="text" class="form-control" id='+tourist_weixinNos[i]+'  placeholder="选填">\n'+
                     '</div>\n'+
                   '</div>\n'+               
                 '</div>\n');
@@ -85,32 +85,107 @@ function initOrderInfo(){
       });
 }
 
+
 //提交订单相关的游客信息
  $("#createorder").click(
     function() {
         var totalCount = parseInt(femaleCount) + parseInt(maleCount);
-        var user_name=[];
-        var user_IDCardNos=[];
-        var user_mobileNos=[];
-        var user_weixinNos=[];
+        var user_name;
+        var user_IDCardNos;
+        var user_mobileNos;
+        var user_weixinNos;
         for(i=0;i<totalCount;i++)
         {
-          user_name[i]=$("#tourist_name_"+i).val();
-          user_IDCardNos[i]=$("#tourist_IDCardNo_"+i).val();
-          user_mobileNos[i]=$("#tourist_mobileNos_"+i).val();
-          user_weixinNos[i]=$("#tourist_weixinNos_"+i).val();
-        }
+          //游客姓名
+          var tourist_name=$("#tourist_name_"+i).val();      
+          if(user_name!=" " && user_name!=null)
+          {
+            user_name=user_name+","+tourist_name;
+          }
+          else
+          {
+            user_name=tourist_name;
+          }
+          
+          //游客身份证号
+          var tourist_IDCardNos=$("#tourist_IDCardNos_"+i).val();                          
+          if(user_IDCardNos!=" " && user_IDCardNos!=null)
+          {
+            user_IDCardNos=user_IDCardNos+","+tourist_IDCardNos;
+          }
+          else
+          {
+            user_IDCardNos=tourist_IDCardNos;
+          }
 
+          //游客手机号
+          var  tourist_mobileNos=$("#tourist_mobileNos_"+i).val();      
+          if(user_mobileNos!=" " && user_mobileNos!=null)
+          {
+            user_mobileNos=user_mobileNos+","+tourist_mobileNos;
+          }
+          else
+          {
+            user_mobileNos=tourist_mobileNos;
+          }
+
+          //游客微信号
+          var tourist_weixinNos=$("#tourist_weixinNos_"+i).val();      
+          if(user_weixinNos!=" " && user_weixinNos!=null)
+          {
+            user_weixinNos=user_weixinNos+","+tourist_weixinNos;
+          }
+          else
+          {
+            user_weixinNos=tourist_weixinNos;
+          }
+          
+          if (tourist_name == "") {
+            alert("请输入您的姓名");
+            return false;
+          }
+
+          console.log(tourist_IDCardNos);
+          if (tourist_IDCardNos == "" ) {
+            alert("请输入您的身份证号");
+            return false;
+          }
+       
+
+          if (tourist_mobileNos == "") {
+            alert("请输入您的手机号");
+            return false;
+          }
+
+          if (tourist_weixinNos == "") {
+            alert("请输入您的微信号");
+            return false;
+          }
+
+        }
+        //console.log(user_name);
+
+        
         jQuery.ajax({
           type : "GET",
           async: true,
-          data : {productType:productType, productId:productId, startDate: startDate, maleCount:maleCount, femaleCount:femaleCount, names:user_name, IDCardNos:user_IDCardNos, mobileNos:user_mobileNos, weixinNos:user_weixinNos,},
+          data : {
+            productType:productType, 
+            productId:productId, 
+            startDate: startDate, 
+            maleCount:maleCount, 
+            femaleCount:femaleCount, 
+            names:user_name, 
+            IDCardNos:user_IDCardNos, 
+            mobileNos:user_mobileNos, 
+            weixinNos:user_weixinNos
+          },
           cache: false,
           datatype : "json",
           url : "/routeOrder/create",
           success : function(result){
-            if(result.status == "success"){ 
-              var routeOrderId=data.routeOrderId;
+            if(result.status == "success"){
+              var routeOrderId=result.data.routeOrderId;
               $("#createorder").attr("href","/personalcenter/myorderlist-sub.html?routeOrderId="+routeOrderId);
                           
             }else{
