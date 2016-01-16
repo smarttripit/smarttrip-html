@@ -82,6 +82,31 @@
                                       }
                                     if(row.orderStatus!=03)
                                     	{$("#quickly_comment_"+i).addClass("disabled")}
+                                  $("#quickly_delete_"+i).click(
+                                      function(){
+                                        jQuery.ajax({
+                                        type : "GET",
+                                        async: true,
+                                        cache: false,
+                                        datatype : "json",
+                                        url : "/routeOrder/cancel",
+                                        data:{routeOrderId:row.routeOrderId,},
+                                        success : function(result){
+                                          if(result.status == "success"){                                           
+                                            $("#order_"+i).css("display","none");
+                                            console.log("/routeOrder/cancel?routeOrderId=");
+                                           //$("#passwordchange").attr("href","/personalcenter/personalinfo-main.html");                                                      
+                                         }else{
+                                           dealFailedResponse(result);
+                                         }
+                                       },
+                                       error : function(data) {
+                                         
+                                         alert("系统异常");
+                                       }
+                                     }); 
+
+                                   });
                                		$("#order_totalprice_"+i).text(row.price*(row.maleCount+row.femaleCount));
                                		$("#order_totalcount_"+i).text(row.maleCount+row.femaleCount);
                                		$("#order_createTime_"+i).text(row.createTime);
@@ -122,3 +147,4 @@
 
           pagination(paginationOptions);
 	   });
+
