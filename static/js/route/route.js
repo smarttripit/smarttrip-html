@@ -389,12 +389,13 @@
      });
 
      //好评中评价格
-     $("#good_bad_comment ul li a").click(function()
+     $("#good_bad_comment ul > li > a").click(function()
 	   {
       if($(this).has(".defined_active"))
 	    {
        $(this).addClass("defined_active").parent("li").siblings("li").find("a").removeClass("defined_active");
       }
+       $(".change_cor").removeClass("defined_active");
      }); 
      //全部
      $("#all").click(

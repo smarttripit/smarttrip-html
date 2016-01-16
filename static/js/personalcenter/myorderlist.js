@@ -152,6 +152,16 @@
               //console.log(paginationOptions.queryParams.orderType);
           });
 
+          //已付款
+          $("#AreadlyPay").click(function()
+            { 
+              paginationOptions.queryParams.orderStatus= "02";
+              for(var i=0; i<6; i++)
+              {$("#order_"+i).css("display","none" );}
+              pagination(paginationOptions); 
+              //console.log(paginationOptions.queryParams.orderType);
+          });
+
           pagination(paginationOptions);
 	   });
 
