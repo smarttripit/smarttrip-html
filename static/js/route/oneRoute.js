@@ -178,8 +178,8 @@ var productType;
                  	 if(result.status == "success"){
                  		 var list = result.data;
                  		 var len = list.length;
+             			 var htmlStr = "";
                  		 if(len > 0){
-                 			 var htmlStr = "";
                  			 for(var i=0;i<len;i++){
                      		 	var oneRow =  list[i];
                      		 	availableDates
@@ -187,12 +187,14 @@ var productType;
                      		 	if(i == 0){
                      		 		$('#selectedPrice').val(oneRow.price);
                      		 		$('#selectedStartDate').val(oneRow.startDate);
-                     		 		
                      		 	}
                  			 }
-                 			 $('#availableDates').html(htmlStr);
-                 			 caculateTotalPrice();
                  		 }
+                 		 if(htmlStr == ""){
+                 			htmlStr = "<option value='noStartDate'>暂无可选日期</option>";
+                 		 }
+                 		 $('#availableDates').html(htmlStr);
+            			 caculateTotalPrice();
                  	 }else{
                  		 dealFailedResponse(result);
                  	 }
@@ -214,6 +216,11 @@ var productType;
       
       // 跳转到订单填写页面
       function gotoBookingPage(){
+    	  var startDateAndprice = $('#availableDates').val();
+    	  if(startDateAndprice == "noStartDate"){
+    		 alert("该线路暂无可选日期");
+    		 return false;
+    	  }
     	  if(getFemaleCount() + getMaleCount() <= 0){
     		  alert("请输入出游人数");
     		  $('#femaleCount').focus();
@@ -257,6 +264,9 @@ var productType;
       // 获取选中的价格
       function getSelectedPrice(){
     	  var startDateAndprice = $('#availableDates').val();
+    	  if(startDateAndprice == "noStartDate"){
+    		  return 0;
+    	  }
     	  var price = startDateAndprice.split("@")[1];
     	  return price;
       }
