@@ -25,7 +25,7 @@
 						             var row = dataList[i];
                                		 $("#order_"+i).css("display","block" );                  
                                		 var href=$("#ordermore_"+i).attr("href");
-                               		 console.log(href);
+                               		 //console.log(href);
                                		if(href.indexOf("routeOrderId")!=-1)
                               		 {
                                		 	//console.log(href);
@@ -40,6 +40,7 @@
                                		$("#order_thumbnail_"+i).attr("src", row.orderThumbnail);
                                		$("#order_startTime_"+i).text(row.startTime);
                                		$("#order_Title_"+i).text(row.orderTitle);
+                                  console.log(row.orderStatus);
                                   var orderStatus=parseInt(row.orderStatus);
                                		switch(orderStatus)
                                		{
@@ -76,7 +77,9 @@
                                			break;
                                		}
                                     if(row.orderStatus!=01)
-                                    	{$("#quickly_pay_"+i).addClass("disabled")}
+                                    	{$("#quickly_pay_"+i).addClass("disabled");
+                                       $("#quickly_delete_"+i).addClass("disabled");
+                                      }
                                     if(row.orderStatus!=03)
                                     	{$("#quickly_comment_"+i).addClass("disabled")}
                                		$("#order_totalprice_"+i).text(row.price*(row.maleCount+row.femaleCount));
