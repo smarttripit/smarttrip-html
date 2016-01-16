@@ -75,6 +75,10 @@
                                			case 08:
                                			$("#order_Status_"+i).text("已退款");
                                			break;
+
+                                    case 09:
+                                    $("#order_Status_"+i).text("退款中");
+                                    break;
                                		}
                                     if(row.orderStatus!=01)
                                     	{$("#quickly_pay_"+i).addClass("disabled");

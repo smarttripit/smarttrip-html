@@ -29,7 +29,7 @@
               switch(orderStatus)
               {
                 case 01:
-                console.log(order.orderStatus);
+                //console.log(order.orderStatus);
                 $("#orderStatus").text("未支付");
                 break;
 
@@ -59,6 +59,10 @@
 
                 case 08:
                 $("#orderStatus").text("已退款");
+                break;
+
+                case 09:
+                $("#order_Status_"+i).text("退款中");
                 break;
               }
               //if(order.orderStatus!=01)

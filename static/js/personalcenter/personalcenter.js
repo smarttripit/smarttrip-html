@@ -68,9 +68,14 @@
                                     case 08:
                                     $("#order_Status_"+i).text("已退款");
                                     break;
+
+                                    case 09:
+                                    $("#order_Status_"+i).text("退款中");
+                                    break;
                                   }
                                     if(row.orderStatus!=01)
-                                      {$("#quickly_pay_"+i).addClass("disabled")}
+                                      {$("#quickly_pay_"+i).addClass("disabled");
+                                     $("#quickly_delete_"+i).addClass("disabled");}
                                     if(row.orderStatus!=03)
                                       {$("#quickly_comment_"+i).addClass("disabled")}
                                   console.log("/routeOrder/cancel?routeOrderId="+row.routeOrderId);
