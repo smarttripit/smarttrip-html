@@ -158,10 +158,10 @@ function initOrderInfo() {
             return false;
           }
 
-          if (tourist_weixinNos == "") {
+       /*   if (tourist_weixinNos == "") {
             alert("请输入您的微信号");
             return false;
-          }
+          }*/
 
         }
         //console.log(user_name);
