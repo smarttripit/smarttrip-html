@@ -103,6 +103,7 @@
                         '<p class="font_size13"><b>微信号：</b><span id='+tourist_weixinNo[i]+'></span></p>\n'+
                       '</div>\n'+
                       '</div>\n');
+
                 //console.log("1");
               }
               initUserInfo();
@@ -131,14 +132,18 @@
             var tourist = result.data.rows; 
             var len= tourist.length; 
          
-            console.log(len);
+            //console.log(len);
             for(i=0;i<len;i++) 
             {
-                 console.log(tourist[i]);
+                 //console.log(tourist[i]);
               $("#tourist_name_"+i).text(tourist[i].name);
               $("#tourist_IDCardNo_"+i).text(tourist[i].idcardNo);
               $("#tourist_mobileNo_"+i).text(tourist[i].mobileNo);
-              $("#tourist_weixinNo_"+i).text(tourist[i].weixinNo);
+              console.log(tourist[i].weixinNo);
+              if(tourist[i].weixinNo==" "||tourist[i].weixinNo==null)
+              {$("#tourist_weixinNo_"+i).text("未填");}
+            else{$("#tourist_weixinNo_"+i).text(tourist[i].weixinNo);}
+              
             }        
 
               
