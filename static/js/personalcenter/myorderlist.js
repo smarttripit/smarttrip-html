@@ -40,7 +40,7 @@
                                		$("#order_thumbnail_"+i).attr("src", row.orderThumbnail);
                                		$("#order_startTime_"+i).text(row.startTime);
                                		$("#order_Title_"+i).text(row.orderTitle);
-                                  console.log(row.orderStatus);
+                                 // console.log(row.orderStatus);
                                   var orderStatus=parseInt(row.orderStatus);
                                		switch(orderStatus)
                                		{
@@ -86,15 +86,18 @@
                                       }
                                     if(row.orderStatus!=03)
                                     	{$("#quickly_comment_"+i).addClass("disabled")}
+                                    $("#quickly_delete_"+i).attr("value",row.routeOrderId);
                                   $("#quickly_delete_"+i).click(
-                                      function(){
+                                      function(){                                                                            
+                                        var routeOrderId=$(this).attr("value");
+                                        console.log(routeOrderId);
                                         jQuery.ajax({
                                         type : "GET",
                                         async: true,
                                         cache: false,
                                         datatype : "json",
                                         url : "/routeOrder/cancel",
-                                        data:{routeOrderId:row.routeOrderId,},
+                                        data:{routeOrderId:routeOrderId},
                                         success : function(result){
                                           if(result.status == "success"){ 
                                              for(var j=0; j<6; j++)

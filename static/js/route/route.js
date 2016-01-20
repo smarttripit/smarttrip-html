@@ -70,7 +70,7 @@
 			       domId : "pager2",
 			       url : "/route/getByPage?searchName="+encodeURI(searchName),
 			       page : 1,
-			       rows : 8,
+			       rows : 6,
 			       queryParams : {regionIds:"",themeIds:"",periods:"",seasonIds:"",orderType:"summary",routeType:"",},
 			       dealData : function(dataList){                       
 				                var len = dataList.length;
@@ -79,9 +79,9 @@
 						                   var row = dataList[i];
                                $("#route_"+i).css("display","block" );                  
                                var href=$("#route_"+i).attr("href");
+                               console.log(href);
                                if(href.indexOf("routeId")!=-1)
                                {
-                                console.log(href);
                                 $("#route_"+i).attr("href",href);                               
                                }
                                else
@@ -91,7 +91,7 @@
                                             
                                $("#route_name_"+i).text(row.name);
                                $("#route_thumbnail_"+i).attr("src", row.thumbnail);
-                               $("#route_detailRecommendation_"+i).text(row.detailRecommendation);
+                               $("#route_briefRecommendation_"+i).text(row.briefRecommendation);
                                $("#route_commentRatio_"+i).text(row.commentRatio);
                                $("#route_purchaseCount_"+i).text(row.purchaseCount);
                                $("#route_bottomPrice_"+i).text(row.bottomPrice);
