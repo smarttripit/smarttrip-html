@@ -72,14 +72,17 @@
 			       page : 1,
 			       rows : 6,
 			       queryParams : {regionIds:"",themeIds:"",periods:"",seasonIds:"",orderType:"summary",routeType:"",},
-			       dealData : function(dataList){                       
+			       dealData : function(dataList){ 
+                        for(var i=0; i<6; i++)
+                        {$("#route_"+i).css("display","none" );}                      
 				                var len = dataList.length;
 				                if(len > 0){
 					                 for(var i=0; i<len; i++){
 						                   var row = dataList[i];
-                               $("#route_"+i).css("display","block" );                  
+                               $("#route_"+i).css("display","block" );
+                               $("#route_"+i).attr("href","/route/oneRoute.html"+"?"+"routeId="+row.routeId );                 
                                var href=$("#route_"+i).attr("href");
-                               console.log(href);
+                               //console.log(href);
                                if(href.indexOf("routeId")!=-1)
                                {
                                 $("#route_"+i).attr("href",href);                               
