@@ -38,7 +38,7 @@ _height:320px; //（解决ie6） ie6超出自动溢出}
 .bgc_gray{background-color:#999;}
 .bgc_orange{background-color:#EB9D55;}
 .bgc_red{background-color:#DB6464;}
-.cor_white{color:#fff;}
+.cor_white{color:#fff!important;}
 .cor1{color: #EBEBEB;}
 .cor_blue{color:#09C;}/*蓝色*/
 .cor_orange{color:#EB9D55;}/*橙色*/
@@ -79,6 +79,8 @@ _height:320px; //（解决ie6） ie6超出自动溢出}
 .font_size10{font-size:10px;}
 .font_size12{font-size:12px;}
 .font_size13{font-size:13px;}
+.font_size14{font-size:14px;}
+.font_size15{font-size:15px;}
 .font_size16{font-size:16px;}
 .font_size18{font-size:18px;}
 .font_size20{font-size:20px;}

@@ -35,28 +35,28 @@ function initOrderInfo() {
 
     $("#tourist_info").next().append('<div class="col-xs-12 col-sm-12 col-md-4 row_bottom_space1">\n'+
                  '<div class="col-xs-12 col-sm-12 col-md-12 ">\n'+
-                    '<p><b class="font_size14 row_bottom_space "><i class="fa fa-user"></i>&nbsp;游客\n'+j+'信息</b></p>\n'+
+                    '<p><b class="font_size15 row_bottom_space "><i class="fa fa-user"></i>&nbsp;游客\n'+j+'信息</b></p>\n'+
                   '</div>\n'+
                   '<div class="form-group  ">\n'+
-                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 ">姓名：</label>\n'+
+                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 font_size13">姓名：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 ">\n'+
                       '<input  type="text" class="form-control" id='+tourist_name[i]+' placeholder="必填，真实姓名，购买保险用">\n'+
                     '</div>\n'+
                   '</div>\n'+
                   '<div class="form-group ">\n'+
-                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">手机号：</label>\n'+
+                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10 font_size13">手机号：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">\n'+
                       '<input  type="text" class="form-control" id='+ tourist_mobileNos[i]+' placeholder="必填，方便和您沟通">\n'+
                     '</div>\n'+
                   '</div>\n'+
                   '<div class="form-group ">\n'+
-                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">身份证号：</label>\n'+
+                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10 font_size13">身份证号：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">\n'+
                       '<input  type="text" class="form-control" id='+ tourist_IDCardNos[i]+' placeholder="必填，购买保险用">\n'+
                     '</div>\n'+
                   '</div>\n'+
                   '<div class="form-group ">\n'+
-                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10">微信号：</label>\n'+
+                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10 font_size13">微信号：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">\n'+
                       '<input  type="text" class="form-control" id='+tourist_weixinNos[i]+'  placeholder="选填，方便和您沟通">\n'+
                     '</div>\n'+
@@ -158,10 +158,10 @@ function initOrderInfo() {
             return false;
           }
 
-          if (tourist_weixinNos == "") {
+       /*   if (tourist_weixinNos == "") {
             alert("请输入您的微信号");
             return false;
-          }
+          }*/
 
         }
         //console.log(user_name);
