@@ -87,7 +87,7 @@
                                         cache: false,
                                         datatype : "json",
                                         url : "/routeOrder/cancel",
-                                        data:{routeOrderId:row.routeOrderId,},
+                                        data:{routeOrderId:row.routeOrderId},
                                         success : function(result){
                                           if(result.status == "success"){ 
                                           for(var i=0; i<6; i++)
