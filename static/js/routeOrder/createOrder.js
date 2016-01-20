@@ -52,7 +52,7 @@ function initOrderInfo() {
                   '<div class="form-group ">\n'+
                     '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10 font_size13">身份证号：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">\n'+
-                      '<input  type="text" class="form-control" id='+ tourist_IDCardNos[i]+' placeholder="必填">\n'+
+                      '<input  type="text" class="form-control" id='+ tourist_IDCardNos[i]+' placeholder="必填，用于办理保险">\n'+
                     '</div>\n'+
                   '</div>\n'+
                   '<div class="form-group ">\n'+
