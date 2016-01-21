@@ -16,34 +16,33 @@
 			       page : 1,
 			       rows : 6,
 			       queryParams : {orderStatus:""},
-			       dealData : function(dataList){                       
-				              var len = dataList.length;
-				               if(len > 0)
-				               {
-					              for(var i=0; i<len; i++)
-					              {
-						             var row = dataList[i];
-                               		 $("#order_"+i).css("display","block" );                  
-                               		 var href=$("#ordermore_"+i).attr("href");
-                               		 //console.log(href);
-                               		if(href.indexOf("routeOrderId")!=-1)
-                              		 {
-                               		 	//console.log(href);
-                                		$("#ordermore_"+i).attr("href",href);                               
-                               		 }
-                               		 else
-                               		{
-                                		$("#ordermore_"+i).attr("href",href+"?"+"routeOrderId="+row.routeOrderId);
-                               		}                                 
+			       dealData : function(dataList){ 
+                        for(var j=0; j<6; j++)
+                        {$("#order_"+j).css("display","none" );}                       
+				                var len = dataList.length;
+				                if(len > 0)
+				                {
+					                 for(var i=0; i<len; i++)
+					                 {
+						                  var row = dataList[i];
+                              $("#order_"+i).css("display","block" );                  
+                              var href=$("#ordermore_"+i).attr("href");
+                              if(href.indexOf("routeOrderId")!=-1)
+                              {
+                                $("#ordermore_"+i).attr("href",href);                               
+                              }
+                              else
+                              {
+                                $("#ordermore_"+i).attr("href",href+"?"+"routeOrderId="+row.routeOrderId);
+                              }                                 
                                             
-                               		$("#order_number_"+i).text(row.orderNo);
-                               		$("#order_thumbnail_"+i).attr("src", row.orderThumbnail);
-                               		$("#order_startTime_"+i).text(row.startTime);
-                               		$("#order_Title_"+i).text(row.orderTitle);
-                                 // console.log(row.orderStatus);
-                                  var orderStatus=parseInt(row.orderStatus);
-                               		switch(orderStatus)
-                               		{
+                              $("#order_number_"+i).text(row.orderNo);
+                              $("#order_thumbnail_"+i).attr("src", row.orderThumbnail);
+                              $("#order_startTime_"+i).text(row.startTime);
+                              $("#order_Title_"+i).text(row.orderTitle);
+                              var orderStatus=parseInt(row.orderStatus);
+                              switch(orderStatus)
+                              {
                                			case 01:
                                			$("#order_Status_"+i).text("未支付");
                                			break;
@@ -79,51 +78,29 @@
                                     case 09:
                                     $("#order_Status_"+i).text("退款中");
                                     break;
-                               		}
-                                    if(row.orderStatus!=01)
-                                    	{$("#quickly_pay_"+i).addClass("disabled");
-                                       $("#quickly_delete_"+i).addClass("disabled");
-                                      }
-                                    if(row.orderStatus!=03)
-                                    	{$("#quickly_comment_"+i).addClass("disabled")}
-                                    $("#quickly_delete_"+i).attr("value",row.routeOrderId);
-                                  $("#quickly_delete_"+i).click(
-                                      function(){                                                                            
-                                        var routeOrderId=$(this).attr("value");
-                                        console.log(routeOrderId);
-                                        jQuery.ajax({
-                                        type : "GET",
-                                        async: true,
-                                        cache: false,
-                                        datatype : "json",
-                                        url : "/routeOrder/cancel",
-                                        data:{routeOrderId:routeOrderId},
-                                        success : function(result){
-                                          if(result.status == "success"){ 
-                                             for(var j=0; j<6; j++)
-                                             {$("#order_"+j).css("display","none" );}     
-                                             pagination(paginationOptions);                                     
-                                            //$("#order_"+i).css("display","none");
-                                            //console.log("/routeOrder/cancel?routeOrderId=");
-                                           //$("#passwordchange").attr("href","/personalcenter/personalinfo-main.html");                                                      
-                                         }else{
-                                           dealFailedResponse(result);
-                                         }
-                                       },
-                                       error : function(data) {
-                                         
-                                         alert("系统异常");
-                                       }
-                                     }); 
+                              }
+                                    
+                              if(row.orderStatus!=01)
+                              {
+                                $("#quickly_pay_"+i).addClass("disabled");
+                                $("#quickly_delete_"+i).addClass("disabled");
+                              }
+                              
+                              if(row.orderStatus!=03)
+                              {
+                                $("#quickly_comment_"+i).addClass("disabled")
+                              }
+                                
+                              $("#quickly_delete_"+i).attr("value",row.routeOrderId);
+                                
 
-                                   });
-                               		$("#order_totalprice_"+i).text(row.price*(row.maleCount+row.femaleCount));
-                               		$("#order_totalcount_"+i).text(row.maleCount+row.femaleCount);
-                               		$("#order_createTime_"+i).text(row.createTime);
-					               }
+                              $("#order_totalprice_"+i).text(row.price*(row.maleCount+row.femaleCount));
+                              $("#order_totalcount_"+i).text(row.maleCount+row.femaleCount);
+                              $("#order_createTime_"+i).text(row.createTime);
+					                 }
 			  	              }
-			        }
-	         }
+			       }
+	        }
      		
           //全部排序
           $("#SynthesisComment").click(function()
@@ -163,6 +140,38 @@
               {$("#order_"+i).css("display","none" );}
               pagination(paginationOptions); 
               //console.log(paginationOptions.queryParams.orderType);
+          });
+
+          $(".quickly_delete").click(
+              function(){                                                                            
+                          var routeOrderId=$(this).attr("value");
+                          console.log(routeOrderId);
+                          jQuery.ajax({
+                                        type : "GET",
+                                        async: true,
+                                        cache: false,
+                                        datatype : "json",
+                                        url : "/routeOrder/cancel",
+                                        data:{routeOrderId:routeOrderId},
+                                        success : function(result){
+                                                  if(result.status == "success")
+                                                  { 
+                                                      for(var j=0; j<6; j++)
+                                                      {$("#order_"+j).css("display","none" );}     
+                                                      pagination(paginationOptions);                                     
+                               
+                                                  }
+                                                   else
+                                                   {
+                                                      dealFailedResponse(result);
+                                                   }
+                                        },
+                                        error : function(data) 
+                                        {                                        
+                                              alert("系统异常");
+                                        }
+                          }); 
+
           });
 
           pagination(paginationOptions);
