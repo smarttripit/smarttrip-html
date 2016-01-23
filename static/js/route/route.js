@@ -115,6 +115,7 @@
                 paginationOptions.queryParams.orderType= "summary";
                 for(var i=0; i<6; i++)
                 {$("#route_"+i).css("display","none" );}
+                paginationOptions.page=1;
                 pagination(paginationOptions); 
                 //console.log(paginationOptions.queryParams.orderType);
           });
@@ -125,6 +126,7 @@
               paginationOptions.queryParams.orderType= "commentRatio";
               for(var i=0; i<6; i++)
               {$("#route_"+i).css("display","none" );}
+              paginationOptions.page=1;
               pagination(paginationOptions); 
               //console.log(paginationOptions.queryParams.orderType);
           });
@@ -135,6 +137,7 @@
               paginationOptions.queryParams.orderType= "priceAsc";
               for(var i=0; i<6; i++)
               {$("#route_"+i).css("display","none" );}
+              paginationOptions.page=1;
               pagination(paginationOptions); 
               //console.log(paginationOptions.queryParams.orderType);
           });
@@ -145,6 +148,7 @@
               paginationOptions.queryParams.orderType= "priceDesc";
               for(var i=0; i<6; i++)
               {$("#route_"+i).css("display","none" );}
+              paginationOptions.page=1;
               pagination(paginationOptions); 
               //console.log(paginationOptions.queryParams.orderType);
           });  
@@ -184,6 +188,7 @@
                           paginationOptions.queryParams.regionIds=Complace;
                           for(var i=0; i<6; i++)
                           {$("#route_"+i).css("display","none" );} 
+                          paginationOptions.page=1;
                           pagination(paginationOptions); 
                           //console.log(paginationOptions.queryParams.regionIds);
                           if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
@@ -228,6 +233,7 @@
             paginationOptions.queryParams.themeIds=Comtheme;
             for(var i=0; i<6; i++)
             {$("#route_"+i).css("display","none" );}
+            paginationOptions.page=1;
             pagination(paginationOptions);   
             //console.log(paginationOptions.queryParams.themeIds);
             if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
@@ -271,7 +277,8 @@
                  }
             paginationOptions.queryParams.periods=Comday;
             for(var i=0; i<6; i++)
-            {$("#route_"+i).css("display","none" );}  
+            {$("#route_"+i).css("display","none" );}
+            paginationOptions.page=1;  
             pagination(paginationOptions);  
             //console.log(paginationOptions.queryParams.periods);
             if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
@@ -315,7 +322,8 @@
                  }
             paginationOptions.queryParams.routeType=Comtransport;
             for(var i=0; i<6; i++)
-            {$("#route_"+i).css("display","none" );}  
+            {$("#route_"+i).css("display","none" );} 
+            paginationOptions.page=1; 
             pagination(paginationOptions);  
             //console.log(paginationOptions.queryParams.routeType);
             if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
@@ -361,6 +369,7 @@
               paginationOptions.queryParams.seasonIds=Comtheme;
               for(var i=0; i<6; i++)
               {$("#route_"+i).css("display","none" );}
+              paginationOptions.page=1;
               pagination(paginationOptions);     
               //console.log(paginationOptions.queryParams.seasonIds);
               if($(this).text().indexOf("√")!=-1){$(this).text(textvalue2_2);}
