@@ -1,3 +1,8 @@
+//微信支付相关--开始
+weixin.appId = "wx2421b1c4370ec43b";
+weixin.signType = "MD5";
+//微信支付相关--结束
+
 // 弹出登录模态框
 function needLogin() {
 	$('#loginModal').modal('show');

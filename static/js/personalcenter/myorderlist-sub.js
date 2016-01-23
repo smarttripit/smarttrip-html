@@ -1,10 +1,35 @@
- // 加载订单
+ 	// 加载订单
     var routeOrderId = $.getUrlParam('routeOrderId');
+    var code = $.getUrlParam('code');
+    var state = $.getUrlParam('state');
+    var prepayId = "";
+    //alert("routeOrderId:" + routeOrderId);
+    //alert("code:" + code);
     //console.log(spotId);
     $(document).ready(function() { 
-
-        initOrderInfo();// 加载游客基本信息
+    	initOrderInfo();// 加载订单详情
+    	$("#quickly_pay").on('click', function(){
+    		//alert("go to pay");
+    		payTheOrder();
+    	});
     });
+    
+    function payTheOrder(){
+    	//alert("payTheOrder");
+    	WeixinJSBridge.invoke(
+	       'getBrandWCPayRequest', {
+	           "appId" : weixin.appId,   
+	           "timeStamp":" 1395712654",         
+	           "nonceStr" : "e61463f8efa94090b1f366cccfbbb444",
+	           "package" : "prepay_id=" + prepayId,     
+	           "signType" : weixin.signType,
+	           "paySign" : "70EA570631E4BB79628FBCA90534C63FF7FADD89"
+	       },
+	       function(res){     
+	           if(res.err_msg == "get_brand_wcpay_request:ok" ) {}     // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。 
+	       }
+	   ); 
+    }
 
     // 加载订单详情
     function initOrderInfo(){
@@ -34,6 +59,16 @@
               })
               //console.log(order.orderStatus);
               var orderStatus=parseInt(order.orderStatus);
+              //alert("orderStatus:"+orderStatus);
+              if(orderStatus == 01){
+            	  if(code == null  ||  code == ""){
+              		//alert("code is null, redirect to get code");
+              		window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx416f8f3a376313a9&redirect_uri=http%3a%2f%2fsongjie.ngrok.cc%2fpersonalcenter%2fmyorderlist-sub.html%3frouteOrderId%3d"+routeOrderId+"&response_type=code&scope=snsapi_base&state=123&connect_redirect=1#wechat_redirect";
+            	  }else{
+            		  //alert("go to get prepayid");
+            		  getPrepayId();
+            	  }
+              }
               switch(orderStatus)
               {
                 case 01:                
@@ -117,7 +152,29 @@
         }
       });
     }
+function getPrepayId(){
+	//alert("getPrepayId");
+	jQuery.ajax({
+        type : "GET",
+        async: true,
+        cache: false,
+        datatype : "json",
+        url : "/weixin/getPrepayId?code"+code,
+        success : function(result){
+          if(result.status == "success"){
 
+            //alert("data:" + result.data);
+            prepayId = result.data;
+              
+          }else{
+             dealFailedResponse(result);
+          }
+        },
+        error : function(data) {
+          alert("系统异常");
+        }
+      });
+}
     // 加载发现游客详情
     function initUserInfo(){
       jQuery.ajax({
