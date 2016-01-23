@@ -18,11 +18,11 @@
     	//alert("payTheOrder");
     	WeixinJSBridge.invoke(
 	       'getBrandWCPayRequest', {
-	           "appId" : weixin.appId,   
+	           "appId" : weixin_appId,   
 	           "timeStamp":" 1395712654",         
 	           "nonceStr" : "e61463f8efa94090b1f366cccfbbb444",
 	           "package" : "prepay_id=" + prepayId,     
-	           "signType" : weixin.signType,
+	           "signType" : weixin_signType,
 	           "paySign" : "70EA570631E4BB79628FBCA90534C63FF7FADD89"
 	       },
 	       function(res){     
