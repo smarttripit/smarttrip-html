@@ -19,7 +19,7 @@ gulp.task('scripts', function () {
 
 var revCollector = require('gulp-rev-collector');
 
-gulp.task('rev', function () {
+gulp.task('rev', ['css','scripts'] ,function () {
     return gulp.src(['rev/**/*.json', 'page/**/*.html'])
         .pipe( revCollector({
             replaceReved: true,
@@ -30,3 +30,5 @@ gulp.task('rev', function () {
         }) )
         .pipe( gulp.dest('dist/page') );
 });
+
+gulp.task('default',['rev'] );
