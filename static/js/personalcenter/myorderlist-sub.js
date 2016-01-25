@@ -18,6 +18,7 @@
      * 支付订单
      */
     function payTheOrder(){
+    	//popLoading();
     	if(orderStatus == 01){
       	  if(code == null  ||  code == ""){
         		window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx416f8f3a376313a9&redirect_uri=http%3a%2f%2fsongjie.ngrok.cc%2fpersonalcenter%2fmyorderlist-sub.html%3frouteOrderId%3d"+routeOrderId+"&response_type=code&scope=snsapi_base&state=123&connect_redirect=1#wechat_redirect";
@@ -29,15 +30,16 @@
                 datatype : "json",
                 url : "/weixin/getH5Data?code="+code+"&routeOrderId="+routeOrderId,
                 success : function(result){
-                	alert("result.status=" + result.status);
-                  if(result.status == "success"){
-                    popWeixinPay(result.data);
-                  }else{
-                     dealFailedResponse(result);
-                  }
+                	code = "";// 将code重置为空，以便能够不刷新当前页面也能重新支付
+                    if(result.status == "success"){
+                    	popWeixinPay(result.data);
+                    }else{
+                        dealFailedResponse(result);
+                    }
                 },
                 error : function(data) {
-                  alert("系统异常");
+                	code = "";// 将code重置为空，以便能够不刷新当前页面也能重新支付
+                    alert("系统异常");
                 }
               });
       	  }
@@ -64,13 +66,18 @@
 	           "signType":data.signType,         //微信签名方式：     
 	           "paySign":data.paySign //微信签名 
 	       },
-	       function(res){     
+	       function(res){
+	    	   code = "";// 将code重置为空，以便能够不刷新当前页面也能重新支付
 	    	   // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。 
 	           if(res.err_msg == "get_brand_wcpay_request:ok" ) {
-	        	   alert("支付成功");
-	           }else{
-	        	   alert(res.err_msg);
-	           } 
+	        	   // 支付成功，重新加载页面
+	        	   window.location.href="/personalcenter/myorderlist-sub.html?routeOrderId=" + routeOrderId;
+	           }else if(res.err_msg == "get_brand_wcpay_request:cancel"){
+	        	   // 用户取消支付，则什么都不做
+	           } else{
+	        	   // 支付失败，给用户提示
+	        	   alert("支付失败，请稍后重试");
+	           }
 	       }
 	   ); 
     }
