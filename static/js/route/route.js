@@ -169,7 +169,15 @@
                               ipos=Complace.indexOf(s);
                               if (ComplaceNumber.length>len )
                               {
-                	               str1=Complace.substr(ipos-1,len+1);
+                                if(ipos==0)
+                                {
+                                  str1=Complace.substr(0,len+1);
+                                }
+                                else
+                                {
+                                  str1=Complace.substr(ipos-1,len+1);
+                                }
+                	               //str1=Complace.substr(ipos-1,len+1);
                                  Complace=Complace.replace(str1,"");             
                               }
                               else 
@@ -211,7 +219,15 @@
                
                 if (ComthemeNumber.length>len )
                 {
-                	str1=Comtheme.substr(ipos-1,len+1);
+                  if(ipos==0)
+                  {
+                    str1=Comtheme.substr(0,len+1);
+                  }
+                  else
+                  {
+                    str1=Comtheme.substr(ipos-1,len+1);
+                  }
+                	
                     Comtheme=Comtheme.replace(str1,"");             
                 }
                 else 
@@ -250,13 +266,27 @@
             var ComdayNumber = Comday;
             var  s  = $(this).attr("val");
             var len=s.length;
+            //console.log("哈哈");
             //console.log(len);
+            //console.log(ComdayNumber.length);
+            //console.log(s);
+           // console.log(ComdayNumber);
             ipos=Comday.indexOf(s);
+            //console.log(ipos);
             if($(this).hasClass("place_days_active"))
               { $(this).removeClass("place_days_active");
                 if (ComdayNumber.length>len )
                 {
-                	str1=Comday.substr(ipos-1,len+1);
+                  if(ipos==0)
+                  {
+                    str1=Comday.substr(0,len+1);
+                  }
+                  else
+                  {
+                    str1=Comday.substr(ipos-1,len+1);
+                  }
+                	//str1=Comday.substr(ipos-1,len+1);
+                  //console.info(str1);
                   Comday=Comday.replace(str1,"");             
                 }
                 else 
@@ -272,7 +302,8 @@
                    }
                   else
                    {
-                      Comday=Comday+s;                   
+                      Comday=Comday+s;
+                     // console.log(Comday);                   
                    } 
                  }
             paginationOptions.queryParams.periods=Comday;
@@ -301,7 +332,14 @@
               { $(this).removeClass("else_active");
                 if (ComtransportNumber.length>len )
                 {
-                  str1=Comtransport.substr(ipos-1,len+1);
+                  if(ipos==0)
+                  {
+                    str1=Comtransport.substr(0,len+1);
+                  }
+                  else
+                  {
+                    str1=Comtransport.substr(ipos-1,len+1);
+                  }
                   Comtransport=Comtransport.replace(str1,"");             
                 }
                 else 
@@ -347,7 +385,14 @@
               { $(this).removeClass("else_active");               
                 if (ComthemeNumber.length>len )
                 {
-                	str1=Comtheme.substr(ipos-1,len+1);
+                  if(ipos==0)
+                  {
+                    str1=Comtheme.substr(0,len+1);
+                  }
+                  else
+                  {
+                    str1=Comtheme.substr(ipos-1,len+1);
+                  }
                   Comtheme=Comtheme.replace(str1,"");             
                 }
                 else 

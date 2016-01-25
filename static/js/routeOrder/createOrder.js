@@ -95,11 +95,12 @@ function initOrderInfo() {
         var user_IDCardNos;
         var user_mobileNos;
         var user_weixinNos;
+        var tourist_weixinNos=[];
         for(i=0;i<totalCount;i++)
         {
           //游客姓名
           var tourist_name=$("#tourist_name_"+i).val();      
-          if(user_name!=" " && user_name!=null)
+          if(user_name!="" && user_name!=null)
           {
             user_name=user_name+","+tourist_name;
           }
@@ -110,7 +111,7 @@ function initOrderInfo() {
           
           //游客身份证号
           var tourist_IDCardNos=$("#tourist_IDCardNos_"+i).val();                          
-          if(user_IDCardNos!=" " && user_IDCardNos!=null)
+          if(user_IDCardNos!="" && user_IDCardNos!=null)
           {
             user_IDCardNos=user_IDCardNos+","+tourist_IDCardNos;
           }
@@ -120,8 +121,10 @@ function initOrderInfo() {
           }
 
           //游客手机号
-          var  tourist_mobileNos=$("#tourist_mobileNos_"+i).val();      
-          if(user_mobileNos!=" " && user_mobileNos!=null)
+          var  tourist_mobileNos=$("#tourist_mobileNos_"+i).val(); 
+          //console.log(tourist_mobileNos)  ;
+            
+          if(user_mobileNos!="" && user_mobileNos!=null)
           {
             user_mobileNos=user_mobileNos+","+tourist_mobileNos;
           }
@@ -129,24 +132,33 @@ function initOrderInfo() {
           {
             user_mobileNos=tourist_mobileNos;
           }
+          //console.log(user_mobileNos)  ;
 
           //游客微信号
-          var tourist_weixinNos=$("#tourist_weixinNos_"+i).val();      
-          if(user_weixinNos!=" " && user_weixinNos!=null)
+          
+          var weixin=$("#tourist_weixinNos_"+i).val();
+          tourist_weixinNos.push(weixin); 
+         // console.log(tourist_weixinNos);
+          //console.log(user_weixinNos);
+          if(i==0)  
           {
-            user_weixinNos=user_weixinNos+","+tourist_weixinNos;
-          }
+            user_weixinNos=tourist_weixinNos[i];
+          }        
           else
           {
-            user_weixinNos=tourist_weixinNos;
+            user_weixinNos=user_weixinNos+","+tourist_weixinNos[i];
           }
+
+          //console.log(user_weixinNos);
+         
+
           
           if (tourist_name == "") {
             alert("请输入您的姓名");
             return false;
           }
 
-          console.log(tourist_IDCardNos);
+          //console.log(tourist_IDCardNos);
           if (tourist_IDCardNos == "" ) {
             alert("请输入您的身份证号");
             return false;
@@ -187,8 +199,8 @@ function initOrderInfo() {
           success : function(result){
             if(result.status == "success"){
               var routeOrderId=result.data.routeOrderId;
-              window.location.href="/personalcenter/myorderlist-sub.html?routeOrderId="+routeOrderId;
-
+              //window.location.href="/personalcenter/myorderlist-sub.html?routeOrderId="+routeOrderId;
+              //console.log(user_weixinNos);
                           
             }else{
               dealFailedResponse(result);
