@@ -76,14 +76,14 @@ var productType;
                      Content += "<li"+" "+myDir+"><div class=\"timeline-badge\"><i class=\"fa fa-bus\"></i></div><div class=\"timeline-panel\"><div class=\"timeline-heading\"><h4 class=\"timeline-title\">"+name+"</h4><a><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+period+"</small></a></div></div></li>";
                      break;
                      case 2:
-                     Content +="<li"+ " "+myDir+"><div class=\"timeline-badge danger\"><i class=\"fa fa-money\"></i></div><div class=\"timeline-panel\" data-toggle=\"modal\" data-target=\"#myModal\"><div class=\"timeline-body img_des\"><img src="+thumbnail+" class=\"img-responsive\"></div><div class=\"panel-footer\"><p>"+name+"</p>"+summary+"<br/><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+period+"</small></div></div></li>";
+                     Content +="<li"+ " "+myDir+"><div class=\"timeline-badge danger\"><i class=\"fa fa-home\"></i></div><div class=\"timeline-panel\" data-toggle=\"modal\" data-target=\"#myModal\"><div class=\"timeline-body img_des\"><img src="+thumbnail+" class=\"img-responsive\"></div><div class=\"panel-footer\"><p>"+name+"</p>"+summary+"<br/><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+period+"</small></div></div></li>";
                      break;
                      case 3:
-                     Content +="<li"+ " "+myDir+"><div class=\"timeline-badge danger\"><i class=\"fa fa-map-marker\"></i></div><div class=\"timeline-panel\" data-toggle=\"modal\" data-target=\"#myModal\"><div class=\"timeline-body img_des\"><img src="+thumbnail+" class=\"img-responsive\"></div><div class=\"panel-footer\"><p>"+name+"</p>"+summary+"<br/><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+period+"</small></div></div></li>";
+                     Content +="<li"+ " "+myDir+"><div class=\"timeline-badge danger\"><i class=\"fa fa-coffee\"></i></div><div class=\"timeline-panel\" data-toggle=\"modal\" data-target=\"#myModal\"><div class=\"timeline-body img_des\"><img src="+thumbnail+" class=\"img-responsive\"></div><div class=\"panel-footer\"><p>"+name+"</p>"+summary+"<br/><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+period+"</small></div></div></li>";
      
                      break;
                      case 4:
-                     Content +="<li"+ " "+myDir+"><div class=\"timeline-badge danger\"><i class=\"fa fa-coffee\"></i></div><div class=\"timeline-panel\" data-toggle=\"modal\" data-target=\"#myModal\"><div class=\"timeline-body img_des\"><img src="+thumbnail+" class=\"img-responsive\"></div><div class=\"panel-footer\"><p>"+name+"</p>"+summary+"<br/><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+period+"</small></div></div></li>";
+                     Content +="<li"+ " "+myDir+"><div class=\"timeline-badge danger\"><i class=\"fa fa-map-marker\"></i></div><div class=\"timeline-panel\" data-toggle=\"modal\" data-target=\"#myModal\"><div class=\"timeline-body img_des\"><img src="+thumbnail+" class=\"img-responsive\"></div><div class=\"panel-footer\"><p>"+name+"</p>"+summary+"<br/><small class=\"text-muted\"><i class=\"fa fa-clock-o\"></i>"+period+"</small></div></div></li>";
                        
                      break;
                      case 5:

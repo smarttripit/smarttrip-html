@@ -106,7 +106,7 @@ jQuery.validator.addMethod("username_test", function (value, element) {
   var user =  /^[a-zA-Z0-9_]+$/;
   
 return this.optional(element) || (user.test(value));
-}, "用户名只能为数字字母下划线");
+}, "用户名只能为数字字母下划线的组合");
 
 
 /**身份证号验证**/
