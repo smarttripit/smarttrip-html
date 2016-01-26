@@ -15,7 +15,9 @@
 				"orderStatus":"01",
 				"maleCount":"2",
 				"femaleCount":"1",
-				"createTime":"2016-01-12 11:11:23"
+				"createTime":"2016-01-12 11:11:23",
+				"productType":"10",
+				"productId":"1234565"
 			},
 			{
 				"routeOrderId":"1",
@@ -27,7 +29,9 @@
 				"orderStatus":"01",
 				"maleCount":"2",
 				"femaleCount":"1",
-				"createTime":"2016-01-12 11:11:23"
+				"createTime":"2016-01-12 11:11:23",
+				"productType":"10",
+				"productId":"1234565"
 			},
 			{
 				"routeOrderId":"1",
@@ -39,7 +43,9 @@
 				"orderStatus":"01",
 				"maleCount":"2",
 				"femaleCount":"1",
-				"createTime":"2016-01-12 11:11:23"
+				"createTime":"2016-01-12 11:11:23",
+				"productType":"10",
+				"productId":"1234565"
 			},
 			{
 				"routeOrderId":"1",
@@ -51,7 +57,9 @@
 				"orderStatus":"01",
 				"maleCount":"2",
 				"femaleCount":"1",
-				"createTime":"2016-01-12 11:11:23"
+				"createTime":"2016-01-12 11:11:23",
+				"productType":"10",
+				"productId":"1234565"
 			},
 			{
 				"routeOrderId":"1",
@@ -63,7 +71,9 @@
 				"orderStatus":"01",
 				"maleCount":"2",
 				"femaleCount":"1",
-				"createTime":"2016-01-12 11:11:23"
+				"createTime":"2016-01-12 11:11:23",
+				"productType":"10",
+				"productId":"1234565"
 			},
 			{
 				"routeOrderId":"1",
@@ -75,7 +85,9 @@
 				"orderStatus":"01",
 				"maleCount":"2",
 				"femaleCount":"1",
-				"createTime":"2016-01-12 11:11:23"
+				"createTime":"2016-01-12 11:11:23",
+				"productType":"10",
+				"productId":"1234565"
 			}
 		]
 	}
