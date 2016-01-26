@@ -2,7 +2,7 @@
     //var spotId = $.getUrlParam('spotId');
     //console.log(spotId);
     $(document).ready(function() { 
-       initUserInfo();// 加载游客基本信息
+            initUserInfo();// 加载游客基本信息
             var paginationOptions = {
                 domId : "pager2",
                 url : "/routeOrder/getByPage",
@@ -20,15 +20,10 @@
                             var row = dataList[i];
                             $("#order_"+i).css("display","block" );                  
                             var href=$("#ordermore_"+i).attr("href");
-                            
-                            if(href.indexOf("routeOrderId")!=-1)
-                            {
-                               $("#ordermore_"+i).attr("href",href);                               
-                            }
-                            else
-                            {
-                                $("#ordermore_"+i).attr("href",href+"?"+"routeOrderId="+row.routeOrderId);
-                            }                                 
+                                                        
+                            $("#ordermore_"+i).attr("href","/personalcenter/myorderlist-sub.html"+"?"+"routeOrderId="+row.routeOrderId);
+                            $("#quickly_pay_"+i).attr("href","/personalcenter/myorderlist-sub.html"+"?"+"routeOrderId="+row.routeOrderId);
+                            $("#quickly_comment_"+i).attr("href","/personalcenter/myorderlist-comment.html"+"?"+"routeOrderId="+row.routeOrderId);                               
                                             
                             $("#order_number_"+i).text(row.orderNo);
                             $("#order_thumbnail_"+i).attr("src", row.orderThumbnail);
@@ -88,7 +83,7 @@
                             $("#quickly_delete_"+i).attr("value",row.routeOrderId);
                             var maleCount=parseInt(row.maleCount);
                             var femaleCount=parseInt(row.femaleCount);
-                            var price=parseInt(row.price);
+                            var price=parseFloat(row.price);
                             $("#order_totalprice_"+i).text(price*(maleCount+femaleCount));
                             $("#order_totalcount_"+i).text(maleCount+femaleCount);
                             $("#order_createTime_"+i).text(row.createTime);
@@ -97,10 +92,11 @@
                 }
             }
 
-           $(".quickly_delete").click(
-               function(){                                                                            
+            $(".quickly_delete").click(
+               function(){    
+               console.log("hahahh");                                                                        
                            var routeOrderId=$(this).attr("value");
-                           console.log(routeOrderId);
+                           //console.log(routeOrderId);
                            jQuery.ajax({
                                          type : "GET",
                                          async: true,
@@ -127,8 +123,31 @@
                                          }
                            }); 
 
-           });
-                 pagination(paginationOptions); 
+            });
+            pagination(paginationOptions); 
+
+            //进入订单页已付款页面
+            
+
+            $("#AlreadyPay").click(
+              function(){
+                        console.log("hah");
+                        window.location.href="/personalcenter/myorderlist.html?orderStatus="+"02";
+            });
+
+            //进入订单页未付款页面
+            $("#NeedToPay").click(
+              function(){
+                        window.location.href="/personalcenter/myorderlist.html?orderStatus="+"01";
+            });
+
+            //进入订单页已付款页面
+            $("#NeedToComment").click(
+              function(){
+                        window.location.href="/personalcenter/myorderlist.html?orderStatus="+"03";
+            });
+
+
     });
 
     // 加载游客基本信息
@@ -144,7 +163,17 @@
             var user = result.data;            
               $("#userName").text(user.userName);
               $("#mobileNo").text(user.mobileNo);
-              $("#headerSmall").attr("src", user.headerSmall);
+              //console.log(user.headerSmall);
+              if(user.headerSmall==""||user.headerSmall==null)
+              {
+                //console.log("1");
+                $("#headerSmall").attr("src", "/static/images/default-image.jpg");
+              }
+              else
+              {
+                $("#headerSmall").attr("src", user.headerSmall);
+              }
+              
 
           }else{
         	  dealFailedResponse(result);

@@ -1,3 +1,6 @@
+     
+  var myorderStatus = $.getUrlParam('orderStatus');
+
      $("#orderliststate ul li a").click(function()
 	   {
       if($(this).has(".defined_active"))
@@ -18,7 +21,8 @@
 			       queryParams : {orderStatus:""},
 			       dealData : function(dataList){ 
                         for(var j=0; j<6; j++)
-                        {$("#order_"+j).css("display","none" );}                       
+                        {$("#order_"+j).css("display","none" );} 
+
 				                var len = dataList.length;
 				                if(len > 0)
 				                {
@@ -27,14 +31,10 @@
 						                  var row = dataList[i];
                               $("#order_"+i).css("display","block" );                  
                               var href=$("#ordermore_"+i).attr("href");
-                              if(href.indexOf("routeOrderId")!=-1)
-                              {
-                                $("#ordermore_"+i).attr("href",href);                               
-                              }
-                              else
-                              {
-                                $("#ordermore_"+i).attr("href",href+"?"+"routeOrderId="+row.routeOrderId);
-                              }                                 
+                              
+                              $("#ordermore_"+i).attr("href","/personalcenter/myorderlist-sub.html"+"?"+"routeOrderId="+row.routeOrderId);
+                              $("#quickly_pay_"+i).attr("href","/personalcenter/myorderlist-sub.html"+"?"+"routeOrderId="+row.routeOrderId);
+                              $("#quickly_comment_"+i).attr("href","/personalcenter/myorderlist-comment.html"+"?"+"routeOrderId="+row.routeOrderId);                                
                                             
                               $("#order_number_"+i).text(row.orderNo);
                               $("#order_thumbnail_"+i).attr("src", row.orderThumbnail);
@@ -93,9 +93,10 @@
                                 
                               $("#quickly_delete_"+i).attr("value",row.routeOrderId);
                                 
-
-                              $("#order_totalprice_"+i).text(row.price*(row.maleCount+row.femaleCount));
-                              $("#order_totalcount_"+i).text(row.maleCount+row.femaleCount);
+                              var totalPrice = parseFloat(row.price) * ( parseInt(row.maleCount) + parseInt(row.femaleCount));
+                              var totalCount = parseInt(row.maleCount) + parseInt(row.femaleCount);
+                              $("#order_totalprice_"+i).text(totalPrice);
+                              $("#order_totalcount_"+i).text(totalCount);
                               $("#order_createTime_"+i).text(row.createTime);
 					                 }
 			  	              }
@@ -106,8 +107,7 @@
           $("#SynthesisComment").click(function()
              { 
                 paginationOptions.queryParams.orderStatus= "";
-                for(var i=0; i<6; i++)
-                {$("#order_"+i).css("display","none" );}
+
                 pagination(paginationOptions); 
                 //console.log(paginationOptions.queryParams.orderType);
           });
@@ -116,8 +116,6 @@
           $("#NeedToPay").click(function()
             { 
               paginationOptions.queryParams.orderStatus= "01";
-              for(var i=0; i<6; i++)
-              {$("#order_"+i).css("display","none" );}
               pagination(paginationOptions); 
               //console.log(paginationOptions.queryParams.orderType);
           });
@@ -126,18 +124,16 @@
           $("#NeedToComment").click(function()
             { 
               paginationOptions.queryParams.orderStatus= "03";
-              for(var i=0; i<6; i++)
-              {$("#order_"+i).css("display","none" );}
+
               pagination(paginationOptions); 
               //console.log(paginationOptions.queryParams.orderType);
           });
 
           //已付款
-          $("#AreadlyPay").click(function()
+          $("#AlreadyPay").click(function()
             { 
               paginationOptions.queryParams.orderStatus= "02";
-              for(var i=0; i<6; i++)
-              {$("#order_"+i).css("display","none" );}
+
               pagination(paginationOptions); 
               //console.log(paginationOptions.queryParams.orderType);
           });
@@ -173,6 +169,32 @@
                           }); 
 
           });
+
+          if(myorderStatus==""||myorderStatus==null)
+          {
+            paginationOptions.queryParams.orderStatus= "";
+            pagination(paginationOptions); 
+          }
+          else if(myorderStatus==01)
+          {
+
+            $("#NeedToPay").addClass("defined_active").parent("li").siblings("li").find("a").removeClass("defined_active");
+            
+            paginationOptions.queryParams.orderStatus= "01";
+            pagination(paginationOptions);
+          }
+          else if(myorderStatus==02)
+          {
+            $("#AlreadyPay").addClass("defined_active").parent("li").siblings("li").find("a").removeClass("defined_active");
+            paginationOptions.queryParams.orderStatus= "02";
+            pagination(paginationOptions);
+          }
+          else
+          {
+            $("#NeedToComment").addClass("defined_active").parent("li").siblings("li").find("a").removeClass("defined_active");
+            paginationOptions.queryParams.orderStatus= "03";
+            pagination(paginationOptions);
+          }
 
           pagination(paginationOptions);
 	   });

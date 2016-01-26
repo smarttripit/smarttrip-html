@@ -96,7 +96,7 @@
           if(result.status == "success"){
             var order = result.data; 
             var total_Count=parseInt(order.maleCount)+ parseInt(order.femaleCount); 
-            var total_Price=order.price*total_Count;         
+            var total_Price=parseFloat(order.price)*total_Count;         
               $("#orderNo").text(order.orderNo);
               $("#orderThumbnail").attr("src", order.orderThumbnail);
               $("#orderTitle").text(order.orderTitle);
