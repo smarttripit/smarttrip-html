@@ -24,7 +24,7 @@ gulp.task('rev', ['css','scripts'] ,function () {
         .pipe( revCollector({
             replaceReved: true,
             dirReplacements: {
-                '/static/css/': '/dist/static/css',
+                '/static/css/': '/dist/static/css/',
                 '/static/js/': '/dist/static/js/'
             }
         }) )
