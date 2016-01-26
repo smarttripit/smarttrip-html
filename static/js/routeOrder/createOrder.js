@@ -199,7 +199,7 @@ function initOrderInfo() {
           success : function(result){
             if(result.status == "success"){
               var routeOrderId=result.data.routeOrderId;
-              //window.location.href="/personalcenter/myorderlist-sub.html?routeOrderId="+routeOrderId;
+              window.location.href="/personalcenter/myorderlist-sub.html?routeOrderId="+routeOrderId;
               //console.log(user_weixinNos);
                           
             }else{
