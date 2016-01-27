@@ -302,8 +302,7 @@ var productType;
              2: 'transport-map',
              3: 'cost',
              4: 'book',
-             5: 'recommend',
-             6: 'comment'
+             5: 'recommend'
             
            },
            parts1: {                         
@@ -312,8 +311,7 @@ var productType;
              2: 'transport-map1',
              3: 'cost1',
              4: 'book1',
-             5: 'recommend1',
-             6: 'comment1'
+             5: 'recommend1'
             
            },
            itemClass: 'menuItem',
