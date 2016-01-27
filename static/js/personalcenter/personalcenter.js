@@ -147,7 +147,11 @@
                         window.location.href="/personalcenter/myorderlist.html?orderStatus="+"03";
             });
 
-
+            //进入全部订单页面
+            $("#Allorderlist").click(
+              function(){
+                        window.location.href="/personalcenter/myorderlist.html?orderStatus="+"";
+            });
     });
 
     // 加载游客基本信息
