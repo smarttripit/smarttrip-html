@@ -1,0 +1,28 @@
+         #hidebg { position:absolute;left:0px;top:0px;
+                  background-color:#000;
+                  width:100%;  /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+                  filter:alpha(opacity=60);  /*设置透明度为60%*/
+                  opacity:0.6;  /*非IE浏览器下设置透明度为60%*/
+                  display:none; /* http://www.jb51.net */
+                  z-Index:2;}
+
+         .loading{  
+            display:none;
+             width:160px;  
+             height:56px;  
+             position: absolute;  
+             
+             
+             line-height:56px;  
+             color:#fff;  
+             padding-left:60px;  
+             font-size:15px;  
+             background: #000 url(/static/images/loader.gif) no-repeat 10px 50%;  
+             opacity: 0.7;  
+             z-index:3;  
+             cursor:pointer;
+             -moz-border-radius:20px;  
+             -webkit-border-radius:20px;  
+             border-radius:20px;  
+             filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);  
+         } 

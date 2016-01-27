@@ -5,9 +5,11 @@ var maleCount = $.getUrlParam('maleCount');
 var startDate = $.getUrlParam('startDate');
 var price = $.getUrlParam('price');
 
+
 $(document).ready(function() {
 	// 初始化订单信息
 	initOrderInfo();
+
 });
 
 // 初始化订单信息
@@ -198,6 +200,7 @@ function initOrderInfo() {
           url : "/routeOrder/create",
           success : function(result){
             if(result.status == "success"){
+              hide();
               var routeOrderId=result.data.routeOrderId;
               window.location.href="/personalcenter/myorderlist-sub.html?routeOrderId="+routeOrderId;
               //console.log(user_weixinNos);
