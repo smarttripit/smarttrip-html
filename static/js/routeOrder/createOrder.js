@@ -180,7 +180,7 @@ function initOrderInfo() {
         }
         //console.log(user_name);
 
-        
+        showLoading();// 弹出正在提交的提示
         jQuery.ajax({
           type : "GET",
           async: true,
@@ -200,7 +200,7 @@ function initOrderInfo() {
           url : "/routeOrder/create",
           success : function(result){
             if(result.status == "success"){
-              hide();
+              hideLoading();// 关闭正在提交的提示
               var routeOrderId=result.data.routeOrderId;
               window.location.href="/personalcenter/myorderlist-sub.html?routeOrderId="+routeOrderId;
               //console.log(user_weixinNos);
@@ -210,7 +210,7 @@ function initOrderInfo() {
             }
           },
           error : function(data) {
-            
+        	hideLoading();// 关闭正在提交的提示
             alert("系统异常");
           }
         }); 

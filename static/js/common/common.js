@@ -5,6 +5,7 @@ var weixin_signType = "MD5";
 
 // 弹出登录模态框
 function needLogin() {
+	hideLoading();//要先隐藏掉正在处理的弹出框
 	$('#loginModal').modal('show');
 }
 

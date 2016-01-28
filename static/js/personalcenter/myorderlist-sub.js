@@ -199,7 +199,7 @@
       });
     }
 
-    // 加载发现游客详情
+    // 加载游客详情
     function initUserInfo(){
       jQuery.ajax({
         type : "GET",

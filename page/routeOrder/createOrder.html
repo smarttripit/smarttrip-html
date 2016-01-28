@@ -3,10 +3,9 @@
    <head>
      <!-- 要紧接着head标签 -->
      <!--# include file="/common/head.html" -->
-     <link rel="stylesheet" type="text/css" href="/static/css/routeOrder/createOrder.css" >
      <link rel="stylesheet" type="text/css" href="/static/css/common/top.css">
      <!-- 这里引入本页面特有的css文件 -->
-     <link rel="stylesheet" type="text/css" href="/static/css/common/loading.css">
+     <link rel="stylesheet" type="text/css" href="/static/css/routeOrder/createOrder.css" >
      <title>创建订单</title>
    </head>
 
@@ -142,7 +141,7 @@
 
             <div class="form-group">
                <div class=" col-sm-12 in_center row_bottom_space1">
-                  <a id="createorder" onClick="show();" class="btn font_size16 bgc_blue cor_white">提交订单</a>
+                  <a id="createorder" onClick="showLoading();" class="btn font_size16 bgc_blue cor_white">提交订单</a>
                </div>
             </div>
           </div>
@@ -150,14 +149,9 @@
       </div>
     </div><!--/row-->
    
-
-
-
     <!--# include file="/common/footer.html"  -->
-    <!--# include file="/common/loading.html"  -->
     <!-- 核心js文件 -->
     <!--# include file="/common/corejs.html" -->
     <!-- 这里引入本页面特有的js文件 -->
-    <script src="/static/js/common/loading.js"></script> 
     <script src="/static/js/routeOrder/createOrder.js"></script> 
 </html>
