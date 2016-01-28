@@ -1,4 +1,4 @@
-var loading_html = "<div id='loading_hide_bg'></div><div class='container'><div id='loading_tips' class='loading_tips'>正在提交...</div></div>";
+var loading_html = "<div id='loading_hide_bg'></div><div class='container'><div id='loading_tips' class='loading_tips'>正在处理...</div></div>";
 /**
  * 显示隐藏层和弹出层
  */
