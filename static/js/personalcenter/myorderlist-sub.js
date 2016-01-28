@@ -18,7 +18,7 @@
      * 支付订单
      */
     function payTheOrder(){
-    	//popLoading();
+    	showLoading();// 弹出正在处理的蒙版
     	if(orderStatus == 01){
       	  if(code == null  ||  code == ""){
         		window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx416f8f3a376313a9&redirect_uri=http%3a%2f%2fsongjie.ngrok.cc%2fpersonalcenter%2fmyorderlist-sub.html%3frouteOrderId%3d"+routeOrderId+"&response_type=code&scope=snsapi_base&state=123&connect_redirect=1#wechat_redirect";
@@ -30,6 +30,7 @@
                 datatype : "json",
                 url : "/weixin/getH5Data?code="+code+"&routeOrderId="+routeOrderId,
                 success : function(result){
+                	hideLoading();// 关闭正在处理的蒙版
                 	code = "";// 将code重置为空，以便能够不刷新当前页面也能重新支付
                     if(result.status == "success"){
                     	popWeixinPay(result.data);
@@ -38,12 +39,14 @@
                     }
                 },
                 error : function(data) {
+                	hideLoading();// 关闭正在处理的蒙版
                 	code = "";// 将code重置为空，以便能够不刷新当前页面也能重新支付
                     alert("系统异常");
                 }
               });
       	  }
         }else{
+        	showLoading();// 弹出正在处理的蒙版
         	alert("该订单不是未支付状态");
         }
     }

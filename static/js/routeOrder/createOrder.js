@@ -40,25 +40,25 @@ function initOrderInfo() {
                     '<p><b class="font_size15 row_bottom_space "><i class="fa fa-user"></i>&nbsp;游客\n'+j+'信息</b></p>\n'+
                   '</div>\n'+
                   '<div class="form-group  ">\n'+
-                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 font_size13">姓名：</label>\n'+
+                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 font_size13 line_height24">姓名：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 ">\n'+
                       '<input  type="text" class="form-control" id='+tourist_name[i]+' placeholder="必填，真实姓名，购买保险用">\n'+
                     '</div>\n'+
                   '</div>\n'+
                   '<div class="form-group ">\n'+
-                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10 font_size13">手机号：</label>\n'+
+                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10 font_size13 line_height24">手机号：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">\n'+
                       '<input  type="text" class="form-control" id='+ tourist_mobileNos[i]+' placeholder="必填，方便和您沟通">\n'+
                     '</div>\n'+
                   '</div>\n'+
                   '<div class="form-group ">\n'+
-                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10 font_size13">身份证号：</label>\n'+
+                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10 font_size13 line_height24">身份证号：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">\n'+
                       '<input  type="text" class="form-control" id='+ tourist_IDCardNos[i]+' placeholder="必填，购买保险用">\n'+
                     '</div>\n'+
                   '</div>\n'+
                   '<div class="form-group ">\n'+
-                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10 font_size13">微信号：</label>\n'+
+                    '<label for="" class="col-xs-4 col-sm-3 col-md-4 control-label pr0 mt5 mt10 font_size13 line_height24">微信号：</label>\n'+
                     '<div class="col-xs-8 col-sm-9 col-md-8 pl0 mt10">\n'+
                       '<input  type="text" class="form-control" id='+tourist_weixinNos[i]+'  placeholder="选填，及时获得保险信息">\n'+
                     '</div>\n'+
@@ -151,10 +151,6 @@ function initOrderInfo() {
             user_weixinNos=user_weixinNos+","+tourist_weixinNos[i];
           }
 
-          //console.log(user_weixinNos);
-         
-
-          
           if (tourist_name == "") {
             alert("请输入您的姓名");
             return false;
@@ -165,18 +161,21 @@ function initOrderInfo() {
             alert("请输入您的身份证号");
             return false;
           }
-       
-
+          
+          if(IdentityCodeValid(tourist_IDCardNos) == false){
+        	  alert("您输入的身份证号格式不正确");
+        	  return false;
+          }
+          
           if (tourist_mobileNos == "") {
             alert("请输入您的手机号");
             return false;
           }
-
-       /*   if (tourist_weixinNos == "") {
-            alert("请输入您的微信号");
-            return false;
-          }*/
-
+          
+          if(isMobileNo(tourist_mobileNos) == false){
+        	  alert("您输入的手机号格式不正确");
+        	  return false;
+          }
         }
         //console.log(user_name);
 

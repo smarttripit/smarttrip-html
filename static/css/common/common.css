@@ -73,6 +73,7 @@ _height:320px; //（解决ie6） ie6超出自动溢出}
 .pl0{padding-left:0px;}
 .pr0{padding-right:0px;}
 .header_image{height: 250px;width: 100%;margin-bottom: 20px;}
+.line_height24{line-height:24px;}
 .line_height35{line-height:35px;}
 .line_height70{line-height:70px;}
 .line_height80{line-height:80px;}
