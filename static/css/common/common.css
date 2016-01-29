@@ -68,15 +68,18 @@ _height:320px; //（解决ie6） ie6超出自动溢出}
 .row_top_space{margin-top: 10px;}
 .row_bottom_space{margin-bottom: 10px;}
 .row_bottom_space1{margin-bottom: 20px;}
+.p5{padding: 5px;}
 .pt5{padding-top:5px;}
 .pt15{padding-top:15px;}
 .pl0{padding-left:0px;}
 .pr0{padding-right:0px;}
 .header_image{height: 250px;width: 100%;margin-bottom: 20px;}
 .line_height24{line-height:24px;}
+.line_height30{line-height:30px;}
 .line_height35{line-height:35px;}
 .line_height70{line-height:70px;}
 .line_height80{line-height:80px;}
+.fb{font-weight:bold!important}
 /*字体大小*/
 .font_size8{font-size:8px;}
 .font_size10{font-size:10px;}
