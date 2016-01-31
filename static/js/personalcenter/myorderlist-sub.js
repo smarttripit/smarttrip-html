@@ -48,7 +48,7 @@
               });
       	  }
         }else{
-        	showLoading();// 弹出正在处理的蒙版
+        	hideLoading();// 关闭正在处理的蒙版
         	alert("该订单不是未支付状态");
         }
     }
