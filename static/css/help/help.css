@@ -1,0 +1,19 @@
+.font20 {
+	font-size: 20px;
+}
+
+.title1, .title2, .title3, .title4 {
+	font-size: 16px;
+}
+
+.title2, .title3, .title4 {
+	text-indent: 2em;
+}
+
+.helpTable th{
+	padding: 5px;
+}
+
+.helpTable td{
+	padding: 5px;
+}

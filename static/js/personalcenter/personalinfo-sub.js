@@ -121,6 +121,7 @@
 
       /*修改信息*/
      function modifyUserInfo(){
+    	 showLoading();// 弹出正在提交的提示
     	 var user_truename=$("#user_truename").val();
          var user_gender=$('#user_gender label input[name="usergender"]:checked').val();
          var user_birthday=$("#user_birthday").val();
@@ -150,6 +151,7 @@
         	   introduction:user_introduction
            },
            success : function(result){
+        	 hideLoading();// 关闭正在提交的提示
              if(result.status == "success"){ 
                 window.location.href="/personalcenter/personalinfo-main.html";           
              }else{
@@ -157,6 +159,7 @@
              }
            },
            error : function() {
+        	 hideLoading();// 关闭正在提交的提示
              alert("系统异常");
            }
          });  

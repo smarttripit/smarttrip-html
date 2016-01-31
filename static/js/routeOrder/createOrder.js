@@ -198,8 +198,8 @@ function initOrderInfo() {
           datatype : "json",
           url : "/routeOrder/create",
           success : function(result){
+            hideLoading();// 关闭正在提交的提示
             if(result.status == "success"){
-              hideLoading();// 关闭正在提交的提示
               var routeOrderId=result.data.routeOrderId;
               window.location.href="/personalcenter/myorderlist-sub.html?routeOrderId="+routeOrderId;
               //console.log(user_weixinNos);
@@ -214,10 +214,5 @@ function initOrderInfo() {
           }
         }); 
 
-
-
-
-
 		}
-
 );

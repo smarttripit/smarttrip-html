@@ -41,11 +41,13 @@
                                     break;
 
                                     case 03:
-                                    $("#order_Status_"+i).text("待评价");
+                                    //$("#order_Status_"+i).text("待评价");
+                                    $("#order_Status_"+i).text("已支付");// 先屏蔽掉待评价状态
                                     break;
 
                                     case 04:
-                                    $("#order_Status_"+i).text("已评价");
+                                    //$("#order_Status_"+i).text("已评价");
+                                    $("#order_Status_"+i).text("已支付");// 先屏蔽掉已评价状态
                                     break;
 
                                     case 05:
