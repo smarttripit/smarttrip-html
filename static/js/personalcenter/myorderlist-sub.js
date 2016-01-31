@@ -21,7 +21,8 @@
     	showLoading();// 弹出正在处理的蒙版
     	if(orderStatus == 01){
       	  if(code == null  ||  code == ""){
-        		window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx416f8f3a376313a9&redirect_uri=http%3a%2f%2fsongjie.ngrok.cc%2fpersonalcenter%2fmyorderlist-sub.html%3frouteOrderId%3d"+routeOrderId+"&response_type=code&scope=snsapi_base&state=123&connect_redirect=1#wechat_redirect";
+      		  	var domain = window.location.host;
+        		window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx416f8f3a376313a9&redirect_uri=http%3a%2f%2f"+domain+"%2fpersonalcenter%2fmyorderlist-sub.html%3frouteOrderId%3d"+routeOrderId+"&response_type=code&scope=snsapi_base&state=123&connect_redirect=1#wechat_redirect";
       	  }else{
       		jQuery.ajax({
                 type : "GET",
