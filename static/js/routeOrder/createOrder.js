@@ -104,6 +104,7 @@ function addOnePersonInfo(){
 
 //提交订单相关的游客信息
 $("#createorder").click(function(){
+	var user_genders;
     var user_name;
     var user_IDCardNos;
     var user_mobileNos;
@@ -117,6 +118,14 @@ $("#createorder").click(function(){
       if(tourist_gender == -1){
     	  alert("请选择游客"+(i+1)+"的性别");
     	  return false;
+      }
+      if(user_genders!="" && user_genders!=null)
+      {
+    	  user_genders=user_genders+","+tourist_gender;
+      }
+      else
+      {
+    	  user_genders=tourist_gender;
       }
     	
       //游客姓名
