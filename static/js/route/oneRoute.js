@@ -210,9 +210,8 @@ var productType;
       // 计算总价格
       function caculateTotalPrice(){
     	  var price = getSelectedPrice();
-    	  var femaleCount = getFemaleCount();
-    	  var maleCount = getMaleCount();
-    	  var totalPrice = parseFloat(price) * (parseInt(femaleCount) + parseInt(maleCount));
+    	  var totalCount = getTotalCount();
+    	  var totalPrice = parseFloat(price) * parseInt(totalCount);
     	  $('#totalPrice').text(totalPrice);
       }
       
@@ -223,16 +222,30 @@ var productType;
     		 alert("该线路暂无可选日期");
     		 return false;
     	  }
-    	  if(getFemaleCount() + getMaleCount() <= 0){
-    		  alert("请输入出游人数");
-    		  $('#femaleCount').focus();
+    	  if(getTotalCount() <= 0){
+    		  alert("请输入购买份数");
+    		  $('#totalCount').focus();
     		  return false;
     	  }
     	  window.location.href = "/routeOrder/createOrder.html?productType="+productType+
-    	  						"&productId="+routeId+"&femaleCount="+getFemaleCount()+
-    	  						"&maleCount="+getMaleCount()+"&startDate="+getSelectedStartDate()+
+    	  						"&productId="+routeId+"&totalCount="+getTotalCount()+
+    	  						"&startDate="+getSelectedStartDate()+
     	  						"&price="+getSelectedPrice(); 
       }
+      
+      // 获取购买份数
+      function getTotalCount(){
+    	  var totalCount = $('#totalCount').val();
+    	  if(totalCount == ""){
+    		  totalCount = "0";
+    	  }
+    	  if(!isint(totalCount)){
+    		  $('#totalCount').val("");
+    		  return 0;
+    	  }
+    	  return totalCount;
+      }
+      
       // 获取男性人数
       function getFemaleCount(){
     	  var femaleCount = $('#femaleCount').val();
@@ -287,11 +300,7 @@ var productType;
     		   caculateTotalPrice();// 重新计算价格
     	   });
     	   // 输入男性数量
-    	   $('#femaleCount').on('input', function(){
-    		   caculateTotalPrice();// 重新计算价格
-    	   });
-    	   // 输入女性数量
-    	   $('#maleCount').on('input', function(){
+    	   $('#totalCount').on('input', function(){
     		   caculateTotalPrice();// 重新计算价格
     	   });
          //导航栏切换效果
