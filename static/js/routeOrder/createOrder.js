@@ -208,6 +208,7 @@ $("#createorder").click(function(){
         productId:productId, 
         startDate: startDate, 
         totalCount:totalCount, 
+        genders:user_genders,
         names:user_name, 
         IDCardNos:user_IDCardNos, 
         mobileNos:user_mobileNos, 

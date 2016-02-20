@@ -100,7 +100,7 @@
         success : function(result){
           if(result.status == "success"){
             var order = result.data; 
-            var total_Count=parseInt(order.maleCount)+ parseInt(order.femaleCount); 
+            var total_Count=parseInt(order.totalCount); 
             var total_Price=parseFloat(order.price)*total_Count;         
               $("#orderNo").text(order.orderNo);
               $("#orderThumbnail").attr("src", order.orderThumbnail);
@@ -108,14 +108,12 @@
               $("#sigleprice").text(order.price);
               $("#price").text(total_Price);
               $("#startTime").text(order.startTime);
-              $("#maleCount").text(order.maleCount);
-              $("#femaleCount").text(order.femaleCount);
+              $("#totalCount").text(order.totalCount);
               $("#toOneRoute").click(function(){
                 if(order.productType==10||order.productType==11){
                   $("#toOneRoute").attr("href","/route/oneRoute.html?routeId="+order.productId);
                 }
               })
-              //console.log(order.orderStatus);
               orderStatus=parseInt(order.orderStatus);
               if(!(code == null)){
 	          	payTheOrder();
@@ -164,7 +162,6 @@
               var male=parseInt(order.maleCount);
               var female=parseInt(order.femaleCount);
               var people_total_number=male+female;
-              //console.log(people_total_number);
               for(i=0;i<people_total_number;i++)
               { 
                 var j=i+1;
@@ -190,12 +187,10 @@
                       '</div>\n'+
                       '</div>\n');
 
-                //console.log("1");
               }
               initUserInfo();
           }else{
              dealFailedResponse(result);
-            //alert(result.tipMsg);
           }
         },
         error : function(data) {
@@ -214,11 +209,8 @@
         url : "/routeOrder/orderPersonList?routeOrderId="+routeOrderId,
         success : function(result){
           if(result.status == "success"){
-
             var tourist = result.data.rows; 
             var len= tourist.length; 
-         
-            //console.log(len);
             for(i=0;i<len;i++) 
             {
                  //console.log(tourist[i]);
