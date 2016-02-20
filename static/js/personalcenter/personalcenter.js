@@ -83,11 +83,10 @@
                             }
                                   
                             $("#quickly_delete_"+i).attr("value",row.routeOrderId);
-                            var maleCount=parseInt(row.maleCount);
-                            var femaleCount=parseInt(row.femaleCount);
+                            var totalCount=parseInt(row.totalCount);
                             var price=parseFloat(row.price);
-                            $("#order_totalprice_"+i).text(price*(maleCount+femaleCount));
-                            $("#order_totalcount_"+i).text(maleCount+femaleCount);
+                            $("#order_totalprice_"+i).text(price*totalCount);
+                            $("#order_totalcount_"+i).text(totalCount);
                             $("#order_createTime_"+i).text(row.createTime);
                         }
                       }

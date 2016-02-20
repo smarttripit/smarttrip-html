@@ -11,8 +11,6 @@
     
 	   // 加载经典线路列表
      $(document).ready(function() { 
- 
- 
 		      var paginationOptions = {
 			       domId : "pager2",
 			       url : "/routeOrder/getByPage",
@@ -95,8 +93,8 @@
                                 
                               $("#quickly_delete_"+i).attr("value",row.routeOrderId);
                                 
-                              var totalPrice = parseFloat(row.price) * ( parseInt(row.maleCount) + parseInt(row.femaleCount));
-                              var totalCount = parseInt(row.maleCount) + parseInt(row.femaleCount);
+                              var totalCount = parseInt(row.totalCount);
+                              var totalPrice = parseFloat(row.price) * totalCount;
                               $("#order_totalprice_"+i).text(totalPrice);
                               $("#order_totalcount_"+i).text(totalCount);
                               $("#order_createTime_"+i).text(row.createTime);
