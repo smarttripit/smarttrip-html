@@ -112,7 +112,6 @@ $("#createorder").click(function(){
     var tourist_weixinNos=[];
     for(i=0;i<currentUserInfoIndex;i++)
     {
-    	
       // 游客性别
       var tourist_gender = $("#tourist_gender_"+i).val();
       if(tourist_gender == -1){
