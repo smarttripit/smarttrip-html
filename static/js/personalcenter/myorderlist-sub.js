@@ -159,21 +159,20 @@
               if(order.orderStatus!=01)
               {$("#quickly_pay").addClass("disabled")}
               $("#weixinGroupPic").attr("src", order.weixinGroupPic);
-              var male=parseInt(order.maleCount);
-              var female=parseInt(order.femaleCount);
-              var people_total_number=male+female;
-              for(i=0;i<people_total_number;i++)
+              for(i=0;i<order.totalCount;i++)
               { 
                 var j=i+1;
+                var tourist_gender=[];
                 var tourist_name=[];
                 var tourist_IDCardNo=[];
                 var tourist_mobileNo=[];
                 var tourist_weixinNo=[];
+                tourist_gender[i]="tourist_gender_"+i;
                 tourist_name[i]="tourist_name_"+i;
                 tourist_IDCardNo[i]="tourist_IDCardNo_"+i;
                 tourist_mobileNo[i]="tourist_mobileNo_"+i;
                 tourist_weixinNo[i]="tourist_weixinNo_"+i;
-                //console.log(tourist_name[i]);
+                console.log(tourist_name[i]);
                 $("#tourist_info").next().append('<div class="col-xs-12 col-sm-12 col-md-4 row_bottom_space1">\n'+
                       '<div class="col-xs-12 col-sm-12 col-md-12">\n'+
                         '<p><b class="font_size15 row_bottom_space">游客\n'+j+
@@ -181,6 +180,7 @@
                       '</div>\n'+
                       '<div class="col-xs-12 col-sm-12 col-md-12">\n'+
                         '<p class="font_size13"><b>姓名：</b><span id='+tourist_name[i]+'></span></p>\n'+
+                        '<p class="font_size13"><b>性别：</b><span id='+tourist_gender[i]+'></span></p>\n'+
                         '<p class="font_size13"><b>身份证号：</b><span id='+tourist_IDCardNo[i]+'></span></p>\n'+
                         '<p class="font_size13"><b>手机号：</b><span id='+tourist_mobileNo[i]+'></span></p>\n'+
                         '<p class="font_size13"><b>微信号：</b><span id='+tourist_weixinNo[i]+'></span></p>\n'+
@@ -213,7 +213,13 @@
             var len= tourist.length; 
             for(i=0;i<len;i++) 
             {
-                 //console.log(tourist[i]);
+            	if(tourist[i].gender == 0){
+            		$("#tourist_gender_"+i).text("女");
+            	}else if(tourist[i].gender == 1){
+            		$("#tourist_gender_"+i).text("男");
+            	}else{
+            		$("#tourist_gender_"+i).text("未知");
+            	}
               $("#tourist_name_"+i).text(tourist[i].name);
               $("#tourist_IDCardNo_"+i).text(tourist[i].idcardNo);
               $("#tourist_mobileNo_"+i).text(tourist[i].mobileNo);
