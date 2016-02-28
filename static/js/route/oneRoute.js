@@ -20,7 +20,7 @@ var productType;
                  $("#oneRoute_name").html(oneRoute.name);
                  $("#oneRoute_bottomPrice").html(oneRoute.bottomPrice);
                  $(".bgimg").css("background-image", "url("+oneRoute.backgroundImg+")");
-                 $("#oneRoute_feature").html(oneRoute.feature);
+                 $("#oneRoute_feature").html("特色：" + oneRoute.feature);
                  $("#oneRoute_detailRecommendation").html(oneRoute.detailRecommendation);
                  $("#oneRoute_commentRatio").html(oneRoute.commentRatio);
                  $("#oneRoute_period").html(oneRoute.period);
